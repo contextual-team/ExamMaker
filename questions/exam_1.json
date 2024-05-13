@@ -1,0 +1,1406 @@
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "mHv3tU1Dh5pd9e2RPrhM",
+                "question_images": [],
+                "timestamp": "2021-06-01 20:11:00",
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "topic": "1",
+                "isMC": true,
+                "answer": "B",
+                "unix_timestamp": 1622571060,
+                "exam_id": 5,
+                "url": "https://www.examtopics.com/discussions/google/view/54119-exam-professional-cloud-devops-engineer-topic-1-question-1/",
+                "question_id": 1,
+                "answer_ET": "B",
+                "question_text": "You support a Node.js application running on Google Kubernetes Engine (GKE) in production. The application makes several HTTP requests to dependent applications. You want to anticipate which dependent applications might cause performance issues. What should you do?",
+                "choices": {
+                    "A": "Instrument all applications with Stackdriver Profiler.",
+                    "C": "Use Stackdriver Debugger to review the execution of logic within each application to instrument all applications.",
+                    "D": "Modify the Node.js application to log HTTP request and response times to dependent applications. Use Stackdriver Logging to find dependent applications that are performing poorly.",
+                    "B": "Instrument all applications with Stackdriver Trace and review inter-service HTTP requests."
+                },
+                "discussion": [
+                    {
+                        "poster": "tdm4649",
+                        "timestamp": "1628938320.0",
+                        "comments": [
+                            {
+                                "comments": [
+                                    {
+                                        "upvote_count": "1",
+                                        "content": "have you submitted exact answers from site ?",
+                                        "timestamp": "1632144720.0",
+                                        "poster": "karthik0077",
+                                        "comment_id": "448253"
+                                    },
+                                    {
+                                        "poster": "Manumj",
+                                        "content": "this is the first time i am seeing such things happening with ET , i always depended on this site and i cleared my exams , but for this one i am seeing some negative comments . \ncan some suggest how can i proceed further",
+                                        "upvote_count": "1",
+                                        "comment_id": "450796",
+                                        "timestamp": "1632475680.0"
+                                    },
+                                    {
+                                        "comment_id": "446236",
+                                        "poster": "WakandaF",
+                                        "timestamp": "1631839380.0",
+                                        "comments": [
+                                            {
+                                                "comments": [
+                                                    {
+                                                        "poster": "Aws_guru69",
+                                                        "timestamp": "1634216520.0",
+                                                        "comment_id": "462031",
+                                                        "content": "12/10, 10/50 questions, proceed with caution",
+                                                        "upvote_count": "1"
+                                                    }
+                                                ],
+                                                "content": "I agree with WakandaF. I passed the exam 22 September, I found 49/50 questions from this dump. When I failed on July, I found only 20 questions.",
+                                                "timestamp": "1632313560.0",
+                                                "poster": "syslog",
+                                                "comment_id": "449499",
+                                                "upvote_count": "2"
+                                            }
+                                        ],
+                                        "upvote_count": "1",
+                                        "content": "Hi, tdm46.\n\nThe reason is simple. The first time that you failed, they assign you another exam 2. All the questions and answers here belong to that exam1."
+                                    }
+                                ],
+                                "comment_id": "443215",
+                                "upvote_count": "6",
+                                "poster": "tdm4649",
+                                "timestamp": "1631409480.0",
+                                "content": "OK...I want to say this to guys.\nI took the exam 9/11 as my second try, and 48/50 came from this dump. I passed. I don't know that I was just lucky or the new question version will not come up any more ..."
+                            },
+                            {
+                                "comment_id": "706309",
+                                "timestamp": "1666948500.0",
+                                "upvote_count": "4",
+                                "poster": "BIGQUERY_ALT_ALT",
+                                "content": "Passed the exam last week 17/10/2022, 50/50 questions from this site. The questions are valid 100%. Go with the discussion answers who is saying majority. All the best"
+                            }
+                        ],
+                        "comment_id": "424750",
+                        "content": "8/7, I failed the exam.. 20/50 were from this dump, ilI need new version's 30 questions sets.",
+                        "upvote_count": "11"
+                    },
+                    {
+                        "comment_id": "474156",
+                        "timestamp": "1636357080.0",
+                        "poster": "Manh",
+                        "upvote_count": "11",
+                        "content": "Answer is B.\n\nThe keyword is \"make several requests to dependent app\". So you need trace for it.\n\nCloud Trace\nFind performance bottlenecks in production.\n\nCloud Profiler\nContinuous CPU and heap profiling to improve performance and reduce costs."
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "If anyone need full questions dump you can contact me @ pandeyvishal1987@gmail.com",
+                        "timestamp": "1704305700.0",
+                        "poster": "vishalpandey1987",
+                        "comment_id": "1113009"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "comment_id": "1082403",
+                        "timestamp": "1701166440.0",
+                        "content": "Extremly happy I passed my Exam with 82.7%. I just followed the community answers (not the actual answers and cleared exam on 10th Nov2023). Latest update: Stackdriver Monitoring is now reflect as Cloud Monitoring due to the name change in GCP hence pls don't get confused in exam. Thanks to Examtopics and pass4surehub.com for helping me out!",
+                        "poster": "stevesmith112"
+                    },
+                    {
+                        "content": "Selected Answer: B\nRight Answer, Cleared the exam yesterday , All the questions were from this study material , Always go with community answers and prepare well.",
+                        "comment_id": "1060542",
+                        "upvote_count": "3",
+                        "poster": "Jason_Cloud_at",
+                        "timestamp": "1698928080.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "1021027",
+                        "timestamp": "1696016400.0",
+                        "content": "Took the exam today 29/09/2023 and passed.\n\nMost of the quesions were new about 5 came from here.\nCombined this material with Whizlab material and I was able to pass the exam.",
+                        "comments": [
+                            {
+                                "comment_id": "1022316",
+                                "upvote_count": "1",
+                                "timestamp": "1696168980.0",
+                                "content": "could you please share the material with me, happy to connect 9875645292",
+                                "poster": "kish18"
+                            },
+                            {
+                                "poster": "rivia123",
+                                "content": "Hi friend, Could you please share the material with me to below email.\nmikesmith.new123456@gmail.com\n\nThank you",
+                                "timestamp": "1696556340.0",
+                                "comment_id": "1026136",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "poster": "Kapello10"
+                    },
+                    {
+                        "timestamp": "1694450040.0",
+                        "poster": "LowJi",
+                        "comment_id": "1004989",
+                        "upvote_count": "1",
+                        "content": "B is right answer."
+                    },
+                    {
+                        "comment_id": "983749",
+                        "content": "Pattern has changed . No questions are from this dumps",
+                        "upvote_count": "5",
+                        "timestamp": "1692283380.0",
+                        "poster": "chetanchhabra"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "tuanuv1",
+                        "content": "Answer is B.",
+                        "comment_id": "982316",
+                        "timestamp": "1692173160.0"
+                    },
+                    {
+                        "comment_id": "971713",
+                        "upvote_count": "6",
+                        "timestamp": "1691129460.0",
+                        "poster": "m4r1k",
+                        "comments": [
+                            {
+                                "timestamp": "1692283500.0",
+                                "comment_id": "983751",
+                                "upvote_count": "3",
+                                "poster": "chetanchhabra",
+                                "content": "From where did you practice for the exams ?"
+                            }
+                        ],
+                        "content": "I’ve passed this exam on 2nd August 2023. Only a single question on the exam from this dump. With the May update, the exam is now different"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "This dump is not valid, 7/50 question has come from this dump.",
+                        "poster": "mohan97",
+                        "comment_id": "971677",
+                        "timestamp": "1691122920.0"
+                    },
+                    {
+                        "comment_id": "968691",
+                        "poster": "Hiren_Meghnathi",
+                        "upvote_count": "1",
+                        "content": "B is correct answer.",
+                        "timestamp": "1690861260.0"
+                    },
+                    {
+                        "content": "B is the answer",
+                        "upvote_count": "1",
+                        "timestamp": "1690379520.0",
+                        "poster": "Pulk",
+                        "comment_id": "963793"
+                    },
+                    {
+                        "content": "Selected Answer: B\nB. Instrument all applications with Stackdriver Trace and review inter-service HTTP requests.\n\nStackdriver Trace allows you to collect and analyze performance data for all the applications that make up your system, including the applications running on GKE. By instrumenting your application with Stackdriver Trace, you can see detailed performance information for each request, including the time spent in each component of your system, as well as any inter-service HTTP requests. This will allow you to identify which dependent applications might be causing performance issues, so that you can focus on optimizing those services specifically.",
+                        "comment_id": "771993",
+                        "poster": "JonathanSJ",
+                        "upvote_count": "4",
+                        "timestamp": "1673409060.0"
+                    },
+                    {
+                        "poster": "floppino",
+                        "timestamp": "1671865560.0",
+                        "comment_id": "754737",
+                        "content": "Selected Answer: B\nAns: B\nKeyword: HTTP requests -> Trace",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: B\nSubmitted B on the exam",
+                        "poster": "chelbsik",
+                        "comment_id": "736617",
+                        "upvote_count": "1",
+                        "timestamp": "1670314980.0"
+                    },
+                    {
+                        "comment_id": "716682",
+                        "content": "are these questions still valid .. i can only see 44 questions it says 81 question",
+                        "poster": "abhishrek",
+                        "upvote_count": "1",
+                        "timestamp": "1668256740.0",
+                        "comments": [
+                            {
+                                "poster": "KarthikSiva3535",
+                                "timestamp": "1668517800.0",
+                                "comment_id": "718732",
+                                "upvote_count": "1",
+                                "content": "You got to buy contributor access to get the full list of questions."
+                            }
+                        ]
+                    },
+                    {
+                        "timestamp": "1666612020.0",
+                        "poster": "zellck",
+                        "upvote_count": "1",
+                        "comment_id": "702977",
+                        "content": "Selected Answer: B\nB is the answer.\n\nhttps://cloud.google.com/trace/docs/overview\nCloud Trace, a distributed tracing system for Google Cloud, helps you understand how long it takes your application to handle incoming requests from users or other applications, and how long it takes to complete operations like RPC calls performed when handling the requests."
+                    },
+                    {
+                        "comment_id": "702405",
+                        "timestamp": "1666551180.0",
+                        "upvote_count": "1",
+                        "content": "B is right answer.",
+                        "poster": "AzureDP900"
+                    },
+                    {
+                        "comment_id": "646331",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nThe answer is B.",
+                        "poster": "GCP72",
+                        "timestamp": "1660395180.0"
+                    },
+                    {
+                        "timestamp": "1650622680.0",
+                        "upvote_count": "1",
+                        "content": "The answer is B.",
+                        "poster": "Sav94",
+                        "comment_id": "589890"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "comment_id": "575260",
+                                "content": "Update to my update: March 25, 2022\n\nI took the exam and like 49/50 questions came from this. Aside from maybe 1 or 2 questions, the questions were exactly how they were setup from this bank. So you can better get away with how question choices are ordered here than in other exams.",
+                                "poster": "Goatee_McGee",
+                                "timestamp": "1648243080.0",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "upvote_count": "1",
+                        "content": "Update: March 21, 2022\n\nThis guide is still valid. A person I handed this dump to had 90% of their questions come from this.",
+                        "poster": "Goatee_McGee",
+                        "timestamp": "1647886380.0",
+                        "comment_id": "572423"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "comment_id": "562352",
+                        "timestamp": "1646617560.0",
+                        "poster": "LannHath",
+                        "content": "I took the test on 4th March, most of the questions are from here. Good luck guys."
+                    },
+                    {
+                        "poster": "Havicky",
+                        "timestamp": "1645979760.0",
+                        "upvote_count": "1",
+                        "comment_id": "557445",
+                        "content": "Whether I should follow answer recommended by this site or the answers here in the discussion?"
+                    },
+                    {
+                        "comment_id": "524869",
+                        "comments": [
+                            {
+                                "timestamp": "1642331640.0",
+                                "comments": [
+                                    {
+                                        "upvote_count": "1",
+                                        "poster": "thulasi39",
+                                        "comments": [
+                                            {
+                                                "poster": "Nidie",
+                                                "content": "follow the discussion. You are fine",
+                                                "comment_id": "534717",
+                                                "timestamp": "1643376180.0",
+                                                "upvote_count": "1"
+                                            }
+                                        ],
+                                        "timestamp": "1643080200.0",
+                                        "comment_id": "531810",
+                                        "content": "Thank God. You mentioned again \"This dump is up to date\". Any conclusion about some of the answers debate in this forum?"
+                                    }
+                                ],
+                                "content": "Sorry, I commented in wrong dump. This dump is up to date. I took it on Jan 12th 2022 and got pass.",
+                                "upvote_count": "2",
+                                "poster": "Nidie",
+                                "comment_id": "524875"
+                            }
+                        ],
+                        "content": "I took on Jan 14th 2022. Only about 5 questions are from here. Rest are totally new questions.",
+                        "timestamp": "1642331400.0",
+                        "upvote_count": "1",
+                        "poster": "Nidie"
+                    },
+                    {
+                        "comment_id": "520868",
+                        "content": "Took my test 3rd week of (2021) - my first attempt - 50/50 came from this dump !!",
+                        "poster": "Biden",
+                        "timestamp": "1641820980.0",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Took my exam on 12/22/2021 (during holidays). 50/50 came from this dump !!",
+                        "poster": "Biden",
+                        "comment_id": "519815",
+                        "timestamp": "1641682860.0",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "515181",
+                        "comments": [
+                            {
+                                "poster": "Biden",
+                                "comment_id": "522833",
+                                "content": "YES...took my exam in Dec...50/50 came from here",
+                                "timestamp": "1642077780.0",
+                                "upvote_count": "1"
+                            },
+                            {
+                                "timestamp": "1660393920.0",
+                                "upvote_count": "1",
+                                "comment_id": "646326",
+                                "content": "Gave the exam and passed -- Only few questions from here(1-44), But comments in discussion session is very useful.",
+                                "poster": "GCP72"
+                            }
+                        ],
+                        "content": "is this dump still valid?",
+                        "poster": "jits1984",
+                        "timestamp": "1641153660.0"
+                    },
+                    {
+                        "timestamp": "1639449240.0",
+                        "upvote_count": "4",
+                        "content": "why are questions 82-88 missing ?",
+                        "comment_id": "501008",
+                        "poster": "Biden"
+                    },
+                    {
+                        "content": "Has anyone given the exam in the last 1-2 weeks. Did questions appear from here?\nAlso if someone is willing to collaborate on questions 55-81",
+                        "timestamp": "1637242620.0",
+                        "poster": "PJ_2021",
+                        "upvote_count": "4",
+                        "comment_id": "480741"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "has anyone passed with the stuff from the new section?",
+                        "comment_id": "478637",
+                        "poster": "jimrr",
+                        "comments": [
+                            {
+                                "timestamp": "1637369280.0",
+                                "upvote_count": "3",
+                                "poster": "Oujsh_1",
+                                "comment_id": "482184",
+                                "content": "any idea?"
+                            }
+                        ],
+                        "timestamp": "1636977120.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1636977060.0",
+                        "content": "has anyone passed with the stuff from the nez section?",
+                        "poster": "jimrr",
+                        "comment_id": "478636"
+                    },
+                    {
+                        "comment_id": "477005",
+                        "upvote_count": "3",
+                        "poster": "tee_dee26",
+                        "timestamp": "1636729260.0",
+                        "content": "Took the exam twice, on my 1st try (Oct), I failed. I wasn't aware of this dump. I went the questions and literally 99% of the questions I saw in the exam was here. My 2nd try was a couple of days ago, all the questions came from here. All the best to those writing theirs in the nearest time. Cheers"
+                    },
+                    {
+                        "poster": "SuperDevops",
+                        "upvote_count": "1",
+                        "timestamp": "1636161900.0",
+                        "comment_id": "473268",
+                        "content": "The exam real is different.",
+                        "comments": [
+                            {
+                                "comment_id": "474688",
+                                "poster": "TNT87",
+                                "upvote_count": "1",
+                                "content": "what are you saying?",
+                                "timestamp": "1636448880.0"
+                            }
+                        ]
+                    },
+                    {
+                        "timestamp": "1635754440.0",
+                        "comments": [
+                            {
+                                "comment_id": "471809",
+                                "timestamp": "1635886440.0",
+                                "upvote_count": "2",
+                                "content": "can you please help with the correct Answer",
+                                "poster": "Alaaelanwr"
+                            },
+                            {
+                                "timestamp": "1635924120.0",
+                                "comment_id": "471965",
+                                "content": "Help answer the questions please , like from n number 56 -81",
+                                "poster": "TNT87",
+                                "upvote_count": "3"
+                            },
+                            {
+                                "poster": "jits1984",
+                                "content": "Hi, how many questions did you get from this dump?",
+                                "comment_id": "471668",
+                                "timestamp": "1635862620.0",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "upvote_count": "5",
+                        "content": "This dump is valid and and passed the exam on 1st Nov",
+                        "poster": "satz1234",
+                        "comment_id": "471077"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "There're only 81 questions, not 88 as advertised.",
+                        "comment_id": "470960",
+                        "poster": "NXD",
+                        "timestamp": "1635722880.0"
+                    },
+                    {
+                        "timestamp": "1635273420.0",
+                        "poster": "Nik22",
+                        "content": "Lot of new questions have been added.",
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "content": "I sent them an email last week begging them to..and they surely did",
+                                "poster": "TNT87",
+                                "comments": [
+                                    {
+                                        "poster": "jits1984",
+                                        "comment_id": "471686",
+                                        "upvote_count": "1",
+                                        "timestamp": "1635865140.0",
+                                        "content": "please let us know how many questions you got from this dump in your actual exam?"
+                                    }
+                                ],
+                                "upvote_count": "2",
+                                "timestamp": "1635316440.0",
+                                "comment_id": "468405"
+                            }
+                        ],
+                        "comment_id": "468227"
+                    },
+                    {
+                        "poster": "Alaaelanwr",
+                        "timestamp": "1635263340.0",
+                        "comment_id": "468139",
+                        "content": "Hi, guys \nMay anyone tell me how many questions do I need to answer correctly in order to pass the exam?",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "timestamp": "1635842520.0",
+                                "poster": "TNT87",
+                                "comment_id": "471559",
+                                "upvote_count": "1",
+                                "content": "Unfortunately Google doesnt reveal anything ,even after passing the exam ,they just say pass,they dnt give you marks. Only Google knows that secret"
+                            }
+                        ]
+                    },
+                    {
+                        "upvote_count": "4",
+                        "poster": "imperial_max",
+                        "content": "26oct i gave exam, just 1 day back i can see more 30 questions got added wherefrom 80% of the questions are there in the exam. Unfortunately those were not discussed from the community perspective and the answers mentioned seems to be incorrect which i followed and most of it are tricky. I failed the exam. Will try again. Everyone please try to give expert opinion for the new questions from 51-81",
+                        "timestamp": "1635214740.0",
+                        "comments": [
+                            {
+                                "poster": "TNT87",
+                                "timestamp": "1635316560.0",
+                                "content": "OK...i want to write the exam soon,....last week i sent them an email to update the exam and surely they did... lets try and asnwer all questions fro 56-88",
+                                "comment_id": "468406",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "comment_id": "467767"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "content": "which dump can i use to get the latest and relevant questions?",
+                        "timestamp": "1634805300.0",
+                        "poster": "TNT87",
+                        "comment_id": "465629"
+                    },
+                    {
+                        "comment_id": "464610",
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "poster": "TNT87",
+                                "content": "which dump are you getting these from,please help",
+                                "timestamp": "1634809500.0",
+                                "comment_id": "465653"
+                            },
+                            {
+                                "content": "For selecting SLO target i will select C ( because D it is a too relexed for a SLA), but I'm not sure B could also be a good choice if you want a more challenging SLO",
+                                "timestamp": "1635401640.0",
+                                "upvote_count": "1",
+                                "comment_id": "469030",
+                                "poster": "giammydell"
+                            }
+                        ],
+                        "upvote_count": "4",
+                        "poster": "WakandaF",
+                        "timestamp": "1634640900.0",
+                        "content": "You need to define Service Level Objectives (SLOs) for a high-traffic multi-region web\napplication. Customers expect the application to always be available and have fast response times.\nCustomers are currently happy with the application performance and availability. Based on current\nmeasurement, you observe that the 90th percentile of latency is 120ms and the 95th percentile of\nlatency is 275ms over a 28-day window. What latency SLO would you recommend to the team to\npublish?\nA. 90th percentile - 100ms\n95th percentile - 250ms\nB. 90th percentile - 120ms\n95th percentile - 275ms\nC. 90th percentile - 150ms\n95th percentile - 300ms\nD. 90th percentile - 250ms\n95th percentile - 400ms"
+                    },
+                    {
+                        "timestamp": "1634572020.0",
+                        "comments": [
+                            {
+                                "content": "B. Assign all instances a label specific to the system they run. Configure BigQuery billing export and query costs per label.\n\nOne way to determine the cost of running each system on GCP is to use labels to tag each Compute Engine instance with the specific system it runs. Then, you can configure BigQuery billing export to export the billing data to BigQuery. This will allow you to use SQL queries to break down the costs based on the labels and see how much each system costs. You can use the GCP Console or the gcloud command-line tool to assign labels to instances. Once you've done that, you can configure BigQuery billing export in the console, and create a Bigquery table to store the exported billing data.",
+                                "comment_id": "771984",
+                                "timestamp": "1673408160.0",
+                                "upvote_count": "1",
+                                "poster": "JonathanSJ"
+                            }
+                        ],
+                        "comment_id": "464194",
+                        "content": "You manage several production systems that run on Compute Engine in the same Google\nCloud Platform (GCP) project. Each system has its own set of dedicated Compute Engine instances.\nYou want to know how must it costs to run each of the systems. What should you do?\nA. In the Google Cloud Platform Console, use the Cost Breakdown section to visualize the costs per\nsystem.\nB. Assign all instances a label specific to the system they run. Configure BigQuery billing export and\nquery costs per label.\nC. Enrich all instances with metadata specific to the system they run. Configure Stackdriver Logging\nto export to BigQuery, and query costs based on the metadata.\nD. Name each virtual machine (VM) after the system it runs. Set up a usage report export to a Cloud\nStorage bucket. Configure the bucket as a source in BigQuery to query costs based on VM name",
+                        "upvote_count": "3",
+                        "poster": "WakandaF"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "Are 55 questions updated? Does it cover most of the questions as I see many negative reviews?",
+                        "poster": "meetplanet",
+                        "timestamp": "1634261520.0",
+                        "comment_id": "462340",
+                        "comments": [
+                            {
+                                "poster": "WakandaF",
+                                "upvote_count": "4",
+                                "comment_id": "464269",
+                                "timestamp": "1634583240.0",
+                                "content": "This exam does not contain all the 30 plus questions that are available.\n\nWe still working to get those!!!!"
+                            }
+                        ]
+                    },
+                    {
+                        "poster": "Aws_guru69",
+                        "comment_id": "462030",
+                        "upvote_count": "2",
+                        "timestamp": "1634216460.0",
+                        "content": "12/10, managed to pass exam but just want to give you guys a heads up, I did not count the questions however, my impression was that less than 10 came from this dump... there is an alternative set of questions that are not with examtopics. Please attempt with caution if you do not have extensive DevOps experience on GCP"
+                    },
+                    {
+                        "content": "I wonder when there will be an update here with the new questions. Anybody would know where to find them?",
+                        "timestamp": "1634142360.0",
+                        "poster": "JohnnieWalker",
+                        "comment_id": "461638",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "passed today, 48/50 from here.",
+                        "timestamp": "1633413240.0",
+                        "upvote_count": "2",
+                        "poster": "thankyougoogle",
+                        "comment_id": "457518"
+                    },
+                    {
+                        "comment_id": "442928",
+                        "timestamp": "1631354700.0",
+                        "poster": "jesraj",
+                        "upvote_count": "1",
+                        "content": "How to get the free contribution access account?"
+                    },
+                    {
+                        "comment_id": "440930",
+                        "timestamp": "1631020680.0",
+                        "content": "You are deploying an application that needs to access sensitive information. You need to ensure that this informatioins\nencrypted and the risk of exposure is minimal if a breach occurs. What should you do?\nA.) Store the encryption keys in Cloud Key Management Service (KMS) and rotate the keys frequently.\nB. _> Inject the secret at the time of instance creation via an encrypted configuration management system.\nC._) Integrate the application with a Single sign-on (SSO) system and do not expose secrets to the application.\nD. > Leverage a continuous build pipeline that produces multiple versions of the secret for each instance of the\napplication.",
+                        "comments": [
+                            {
+                                "content": "I think A, you rotate the keys so the risk is minimal if a breach occurs.",
+                                "comments": [
+                                    {
+                                        "upvote_count": "1",
+                                        "poster": "JonathanSJ",
+                                        "timestamp": "1673408580.0",
+                                        "comment_id": "771986",
+                                        "content": "Agree with A option"
+                                    }
+                                ],
+                                "comment_id": "441831",
+                                "upvote_count": "5",
+                                "poster": "syslog",
+                                "timestamp": "1631174040.0"
+                            }
+                        ],
+                        "upvote_count": "4",
+                        "poster": "vipulg291280"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "comments": [
+                                    {
+                                        "content": "not gce but just gcp...",
+                                        "poster": "tdm4649",
+                                        "timestamp": "1630233300.0",
+                                        "comment_id": "434494",
+                                        "upvote_count": "3"
+                                    },
+                                    {
+                                        "upvote_count": "1",
+                                        "poster": "JonathanSJ",
+                                        "comment_id": "771989",
+                                        "content": "Agree with A option.\nThe option D could be the second thing to check:\n\"Confirm that the application is using the required client library and the service account key has proper permissions.\"",
+                                        "timestamp": "1673408940.0"
+                                    }
+                                ],
+                                "timestamp": "1630048260.0",
+                                "comment_id": "432848",
+                                "content": "The answer is A, you should check if the stackdriver agent is installed",
+                                "poster": "Prosperous_Kenny"
+                            }
+                        ],
+                        "timestamp": "1629875760.0",
+                        "comment_id": "431221",
+                        "poster": "vipulg291280",
+                        "content": "You are using Stackdriver to monitor applications hosted on Google Cloud Platform (GCP). You recently deployed a new\napplication, but its logs are not appearing on the Stackdriver dashboard. You need to troubleshoot the issue. What should\nyou do?\nConfirm that the Stackdriver agent has been installed in the hosting virtual machine.\nConfirm that your account has the proper permissions to use the Stackdriver dashboard.\nConfirm that port 25 has been opened in the firewall to allow messages through to Stackdriver.\nConfirm that the application is using the required client library and the service account key has proper\npermissions.",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1629784260.0",
+                        "upvote_count": "2",
+                        "comment_id": "430483",
+                        "poster": "syslog",
+                        "content": "I can't see 51-54 questions. Is it only my problem?",
+                        "comments": [
+                            {
+                                "content": "You got to have a contributor access I think so that you can be able yto view the questions",
+                                "timestamp": "1629881100.0",
+                                "comments": [
+                                    {
+                                        "content": "Contributor access account",
+                                        "timestamp": "1629881160.0",
+                                        "upvote_count": "2",
+                                        "comments": [
+                                            {
+                                                "content": "No. even if you have a contributor access, you can't see those...",
+                                                "upvote_count": "2",
+                                                "comment_id": "434491",
+                                                "comments": [
+                                                    {
+                                                        "timestamp": "1630350600.0",
+                                                        "upvote_count": "2",
+                                                        "poster": "WakandaF",
+                                                        "comment_id": "435764",
+                                                        "content": "I suggest commenting on the first page.\n\nAlso, as a contributor, there is no view of those 5 additional questions so far.\n\nWakandaF"
+                                                    }
+                                                ],
+                                                "timestamp": "1630233240.0",
+                                                "poster": "tdm4649"
+                                            }
+                                        ],
+                                        "comment_id": "431290",
+                                        "poster": "Prosperous_Kenny"
+                                    }
+                                ],
+                                "upvote_count": "2",
+                                "comment_id": "431289",
+                                "poster": "Prosperous_Kenny"
+                            },
+                            {
+                                "poster": "devops202",
+                                "comment_id": "430854",
+                                "upvote_count": "1",
+                                "content": "Same for me as well",
+                                "timestamp": "1629817500.0"
+                            }
+                        ]
+                    },
+                    {
+                        "content": "why dont you guys comment at the main page?",
+                        "comment_id": "425620",
+                        "comments": [
+                            {
+                                "content": "Coz the comment about new questions haven't been approved yet since 8/5",
+                                "comments": [
+                                    {
+                                        "comment_id": "428665",
+                                        "comments": [
+                                            {
+                                                "comments": [
+                                                    {
+                                                        "comment_id": "443142",
+                                                        "timestamp": "1631386380.0",
+                                                        "upvote_count": "1",
+                                                        "poster": "WakandaF",
+                                                        "content": "There is another exam, with additional 40 questions. Those questions are not here yet!"
+                                                    }
+                                                ],
+                                                "poster": "Prosperous_Kenny",
+                                                "content": "So those commenting on the main page saying that they got 49 or 48 are literally placed or lied. Or is it that google offers different questions or version of exam to different people",
+                                                "comment_id": "429866",
+                                                "timestamp": "1629713700.0",
+                                                "upvote_count": "7"
+                                            }
+                                        ],
+                                        "content": "True, added a comment on August the 9th and still not approved... Took the exam on 9th August and only 15 questions from here",
+                                        "upvote_count": "4",
+                                        "poster": "iron883",
+                                        "timestamp": "1629548160.0"
+                                    }
+                                ],
+                                "comment_id": "425744",
+                                "timestamp": "1629113100.0",
+                                "upvote_count": "1",
+                                "poster": "tdm4649"
+                            }
+                        ],
+                        "poster": "gcpengineer",
+                        "upvote_count": "1",
+                        "timestamp": "1629094620.0"
+                    },
+                    {
+                        "timestamp": "1629089040.0",
+                        "upvote_count": "1",
+                        "comment_id": "425586",
+                        "content": "Anyone recently passed the exam ? How many question came from here?",
+                        "poster": "devops202"
+                    },
+                    {
+                        "poster": "devopsbatch",
+                        "timestamp": "1626978120.0",
+                        "comment_id": "411833",
+                        "upvote_count": "1",
+                        "content": "@Aldo86 did you pass?"
+                    },
+                    {
+                        "poster": "Aldo86",
+                        "upvote_count": "8",
+                        "comment_id": "410327",
+                        "comments": [
+                            {
+                                "comments": [
+                                    {
+                                        "poster": "Aldo86",
+                                        "upvote_count": "3",
+                                        "comment_id": "419193",
+                                        "content": "@WakandaF, yes another one that I remember is the delivery proccess of APIs...",
+                                        "timestamp": "1627989840.0",
+                                        "comments": [
+                                            {
+                                                "upvote_count": "4",
+                                                "timestamp": "1628151060.0",
+                                                "comment_id": "420140",
+                                                "poster": "syslog",
+                                                "content": "I remember also a question on how to speed up the Cloud Build building (with caching on Cloud Storage)"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "comment_id": "417424",
+                                "timestamp": "1627651320.0",
+                                "upvote_count": "4",
+                                "poster": "WakandaF",
+                                "content": "I got the same exam, 30 questions new!!! Terraform questions, gcr.io questions."
+                            }
+                        ],
+                        "timestamp": "1626789900.0",
+                        "content": "19th July, Only 20 Questions of 50 from Examtopics... 30 questions totally new... update the questions :)"
+                    },
+                    {
+                        "content": "@charun.. have you given exam? wat was ur result?",
+                        "comments": [
+                            {
+                                "timestamp": "1625135340.0",
+                                "content": "Passed :-D. I use the most voted answers of all the discussions here on the ET. So mate trust in the discussion here and will be fine. 47/50 questions came from this dump",
+                                "upvote_count": "4",
+                                "comment_id": "395816",
+                                "poster": "Charun"
+                            }
+                        ],
+                        "upvote_count": "1",
+                        "comment_id": "393799",
+                        "poster": "devopsbatch",
+                        "timestamp": "1624972080.0"
+                    },
+                    {
+                        "timestamp": "1624930620.0",
+                        "content": "I feel B is the answer. If we re-word the question, in simple English, as some HTTPS reqs to couple apps, and use which tool to decide which app is slow. Option A profile only measure functions in an app slow; it does not compare ACROSS apps. C and D wrong obviously.",
+                        "poster": "zanhsieh",
+                        "comment_id": "393401",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "comment_id": "393244",
+                        "content": "I have submitted B answer",
+                        "upvote_count": "6",
+                        "timestamp": "1624915560.0",
+                        "poster": "Charun"
+                    },
+                    {
+                        "comment_id": "385300",
+                        "timestamp": "1624085460.0",
+                        "poster": "ralf_cc",
+                        "upvote_count": "5",
+                        "content": "B - you want to find out latency info for dependent apps, Trace is the tool"
+                    },
+                    {
+                        "poster": "WakandaF",
+                        "content": "The answers are not accurate at all, I fail the first time, 2 months ago!",
+                        "upvote_count": "2",
+                        "timestamp": "1623670980.0",
+                        "comment_id": "381825",
+                        "comments": [
+                            {
+                                "comment_id": "390876",
+                                "poster": "guruguru",
+                                "timestamp": "1624675860.0",
+                                "content": "how did you know you fail this question?",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "@akg001 submitted ans for 49 and 50 .. guys who attempt this and pass with the below ans.. let everyone know here..thanks",
+                        "timestamp": "1623615360.0",
+                        "comment_id": "381317",
+                        "poster": "devopsbatch"
+                    },
+                    {
+                        "content": "After carefully reading the question and study, answer A is very close.\n\n\nPerformance and cost management Cloud Profiler provides continuous profiling of resource consumption in your production applications, helping you identify and eliminate potential performance issues.\n\nLatency management Cloud Trace provides latency sampling and reporting for App Engine, including per-URL statistics and latency distributions\n\nplease refer below URL :\nhttps://cloud.google.com/products/operations#all-features",
+                        "comments": [
+                            {
+                                "poster": "guruguru",
+                                "upvote_count": "3",
+                                "timestamp": "1624676040.0",
+                                "content": "performance issue could be identified by latency between different services in the requests. Hence, tracer is the answer, B.",
+                                "comment_id": "390878"
+                            },
+                            {
+                                "poster": "francisco_guerra",
+                                "timestamp": "1624116300.0",
+                                "comments": [
+                                    {
+                                        "comment_id": "468399",
+                                        "upvote_count": "1",
+                                        "content": "lot of new questions added now for devops and answers provided seems to be wrong, we all need to discuss and provide correct solutions for the devops community here. Questions are too good and mostly non tech",
+                                        "poster": "imperial_max",
+                                        "timestamp": "1635315900.0"
+                                    },
+                                    {
+                                        "upvote_count": "1",
+                                        "content": "Also as stated here: https://cloud.google.com/trace\n\nDistributed tracing for everyone\n\nCloud Trace is a distributed tracing system that collects latency data from your applications and displays it in the Google Cloud Console. You can track how requests propagate through your application and receive detailed near real-time performance insights. Cloud Trace automatically analyzes all of your application's traces to generate in-depth latency reports to surface performance degradations, and can capture traces from all of your VMs, containers, or App Engine projects.",
+                                        "poster": "cetanx",
+                                        "timestamp": "1631520660.0",
+                                        "comment_id": "443827"
+                                    }
+                                ],
+                                "content": "The answer is B because the question says: \"anticipate\" \nLooks like A could be the answer but remember: You want to anticipate which dependent applications might cause performance issues. NO to optimize performance and reduce cost of computation of the application.\n\nStackdriver Trace provides detailed insight into your application’s run time performance and latency in near real-time. The service continuously evaluates data from each traced request and checks for patterns that indicate performance bottlenecks. To remove the operational overhead for performance analysis, Stackdriver Trace automatically analyzes your application’s performance over time.",
+                                "comment_id": "385590",
+                                "upvote_count": "8"
+                            }
+                        ],
+                        "upvote_count": "5",
+                        "timestamp": "1623406620.0",
+                        "comment_id": "379678",
+                        "poster": "akg001"
+                    },
+                    {
+                        "poster": "devopsbatch",
+                        "comments": [
+                            {
+                                "poster": "akg001",
+                                "content": "No. i am preparing for the same. preparing through ACloudGuru's and Google's Qwiklabs course and then will review this pool.",
+                                "timestamp": "1622716740.0",
+                                "upvote_count": "2",
+                                "comment_id": "373485"
+                            }
+                        ],
+                        "timestamp": "1622640720.0",
+                        "upvote_count": "1",
+                        "comment_id": "372728",
+                        "content": "it could be right @ akg001.. have you given test?"
+                    },
+                    {
+                        "timestamp": "1622578140.0",
+                        "content": "B this could be right one",
+                        "poster": "devopsbatch",
+                        "comment_id": "372185",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "akg001",
+                        "content": "Looks like answer is D",
+                        "timestamp": "1622571060.0",
+                        "comments": [
+                            {
+                                "content": "sorry D is not the correct answer because Cloud Logging doesn't use for performance.",
+                                "timestamp": "1623406740.0",
+                                "poster": "akg001",
+                                "upvote_count": "1",
+                                "comment_id": "379680"
+                            },
+                            {
+                                "upvote_count": "2",
+                                "content": "i have given the exam and failed first time... i got almost same questions but i put wrong answers it seems..need more discussion here",
+                                "comment_id": "378583",
+                                "timestamp": "1623280440.0",
+                                "poster": "devopsbatch",
+                                "comments": [
+                                    {
+                                        "content": "when you attempted this exam?",
+                                        "upvote_count": "1",
+                                        "poster": "akg001",
+                                        "comments": [
+                                            {
+                                                "poster": "devopsbatch",
+                                                "timestamp": "1623544560.0",
+                                                "comments": [
+                                                    {
+                                                        "content": "can you please help on reviewing question 49 and 50?",
+                                                        "upvote_count": "1",
+                                                        "timestamp": "1623573720.0",
+                                                        "comment_id": "380963",
+                                                        "poster": "akg001"
+                                                    }
+                                                ],
+                                                "content": "2 weeks back",
+                                                "upvote_count": "1",
+                                                "comment_id": "380745"
+                                            }
+                                        ],
+                                        "timestamp": "1623318000.0",
+                                        "comment_id": "378921"
+                                    }
+                                ]
+                            }
+                        ],
+                        "comment_id": "372111"
+                    }
+                ],
+                "answer_description": "",
+                "answer_images": []
+            },
+            {
+                "id": "mMTWJwf0H0My0pvMJKJk",
+                "timestamp": "2021-06-02 16:56:00",
+                "question_id": 2,
+                "answer_description": "",
+                "question_images": [],
+                "answer_images": [],
+                "answer_ET": "B",
+                "exam_id": 5,
+                "url": "https://www.examtopics.com/discussions/google/view/54235-exam-professional-cloud-devops-engineer-topic-1-question-10/",
+                "isMC": true,
+                "topic": "1",
+                "answer": "A",
+                "question_text": "You have a pool of application servers running on Compute Engine. You need to provide a secure solution that requires the least amount of configuration and allows developers to easily access application logs for troubleshooting. How would you implement the solution on GCP?",
+                "answers_community": [
+                    "A (93%)",
+                    "7%"
+                ],
+                "unix_timestamp": 1622645760,
+                "discussion": [
+                    {
+                        "timestamp": "1622645760.0",
+                        "poster": "devopsbatch",
+                        "comment_id": "372802",
+                        "comments": [
+                            {
+                                "timestamp": "1623486900.0",
+                                "comment_id": "380318",
+                                "content": "correct - A . least privilege principle",
+                                "upvote_count": "9",
+                                "poster": "akg001"
+                            },
+                            {
+                                "poster": "AzureDP900",
+                                "timestamp": "1666581960.0",
+                                "content": "A is right",
+                                "upvote_count": "2",
+                                "comment_id": "702665"
+                            }
+                        ],
+                        "content": "A \nroles/logging.viewer (Logs Viewer) gives you read-only access to all features of Logging, except Access Transparency logs and Data Access audit logs.",
+                        "upvote_count": "27"
+                    },
+                    {
+                        "upvote_count": "11",
+                        "comment_id": "393256",
+                        "timestamp": "1624915920.0",
+                        "content": "correct A",
+                        "poster": "Charun"
+                    },
+                    {
+                        "timestamp": "1709814480.0",
+                        "poster": "jinaldesailive",
+                        "comment_id": "1167970",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nA is the correct answer. As B is talking about private logs viewer, there is nothing like that role in GCP."
+                    },
+                    {
+                        "timestamp": "1703720580.0",
+                        "comment_id": "1107268",
+                        "content": "B, https://cloud.google.com/logging/docs/routing/overview",
+                        "poster": "fdsfsdgsdfxcvxcv",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "jomonkp",
+                        "timestamp": "1701496860.0",
+                        "comment_id": "1085732",
+                        "content": "A - correct option"
+                    },
+                    {
+                        "content": "Selected Answer: A\nthe correct answer is A, the privateLogViewer gives extra access to Data Access Logs that's is not required\n\nhttps://cloud.google.com/logging/docs/view/logs-explorer-interface",
+                        "upvote_count": "1",
+                        "timestamp": "1699536780.0",
+                        "poster": "maxdanny",
+                        "comment_id": "1066438"
+                    },
+                    {
+                        "comment_id": "772036",
+                        "content": "Selected Answer: A\nAnswer A",
+                        "poster": "JonathanSJ",
+                        "upvote_count": "1",
+                        "timestamp": "1673412480.0"
+                    },
+                    {
+                        "timestamp": "1668088620.0",
+                        "content": "A is correct, Private Logs Viewer gives you extra access to Data access logs and the question was about viewing application logs.",
+                        "poster": "mohan999",
+                        "upvote_count": "2",
+                        "comment_id": "715277"
+                    },
+                    {
+                        "timestamp": "1660453800.0",
+                        "comment_id": "646570",
+                        "poster": "GCP72",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: A\nThe correct answer is \"A\""
+                    },
+                    {
+                        "comment_id": "628086",
+                        "content": "Selected Answer: B\nDefault tier is premium. There is NO mention of the load balancer being used and there is no default for this.",
+                        "timestamp": "1657133700.0",
+                        "upvote_count": "1",
+                        "poster": "mgm7"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nAns: Option A. :Logs Viewer role. Least config setup (as per question). Option B is incorrect due to additional audit log viewing access which is inappropriate to this question. ref: https://cloud.google.com/logging/docs/access-control",
+                        "poster": "prasathdv",
+                        "comment_id": "606193",
+                        "timestamp": "1653322080.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1653321960.0",
+                        "comment_id": "606192",
+                        "poster": "prasathdv",
+                        "content": "Option A (Least config settings).\nOption B - Private viewer log is for viewing data audit logs. \"The Logs Viewer role doesn't let principals read the Data Access audit logs that are in the _Default bucket. To read these Data Access audit logs, principals need the Private Logs Viewer role (roles/logging.privateLogViewer) for the appropriate log view.\" ref: https://cloud.google.com/logging/docs/access-control"
+                    },
+                    {
+                        "comment_id": "548366",
+                        "poster": "buldas",
+                        "timestamp": "1644996060.0",
+                        "content": "Selected Answer: A\nA. OK\nB. Logs Private Logs is for Data Logs\nC. Nope\nD. what?",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "poster": "PhilipKoku",
+                        "timestamp": "1643914020.0",
+                        "upvote_count": "2",
+                        "comment_id": "539902",
+                        "content": "Selected Answer: A\nA) You only need logging.viewer https://cloud.google.com/logging/docs/access-control"
+                    },
+                    {
+                        "content": "Looks like answer A is correct. A logging agent is required to enable the custom logs pushed to Stackdriver https://cloud.google.com/logging/docs/agent/logging . Developers need only Log Viewer permission, which is enough in this case and Private Log viewer is a superset of log viewer permission with elevated permission to view the private data in logs. Which is not needed in this case.",
+                        "comment_id": "520584",
+                        "upvote_count": "3",
+                        "poster": "roastc",
+                        "timestamp": "1641782040.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "516382",
+                        "timestamp": "1641286800.0",
+                        "content": "Correct Answer is A",
+                        "poster": "simbu1299"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "poster": "pddddd",
+                                "timestamp": "1643193240.0",
+                                "comment_id": "532793",
+                                "upvote_count": "1",
+                                "content": "and why do you need the Data Access Logs?"
+                            }
+                        ],
+                        "content": "B is correct as it talks about application logs \nhttps://cloud.google.com/logging/docs/access-control\n\nThe Logs Viewer role doesn't let you read the Data Access audit logs that are in the _Default bucket\n\nroles/logging.privateLogViewer (Private Logs Viewer) includes all the permissions contained by roles/logging.viewer, plus the ability to read Data Access audit logs in the _Default",
+                        "comment_id": "515432",
+                        "poster": "scjs",
+                        "timestamp": "1641193980.0"
+                    },
+                    {
+                        "poster": "alaahakim",
+                        "upvote_count": "1",
+                        "timestamp": "1638705780.0",
+                        "content": "Ans : A",
+                        "comment_id": "494297"
+                    },
+                    {
+                        "poster": "Wwhite44",
+                        "timestamp": "1638353640.0",
+                        "comment_id": "491526",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: A\nA is good"
+                    },
+                    {
+                        "poster": "Manh",
+                        "timestamp": "1636467540.0",
+                        "upvote_count": "1",
+                        "comment_id": "474844",
+                        "content": "A for sure"
+                    },
+                    {
+                        "poster": "danchoif2",
+                        "timestamp": "1630252980.0",
+                        "comment_id": "434718",
+                        "content": "https://cloud.google.com/logging/docs/audit#access-control\n\n\n\nA is correct.\nB is incorrect because developers only need to access application logs, not private logs.",
+                        "upvote_count": "4"
+                    }
+                ],
+                "choices": {
+                    "C": "ג€¢ Deploy the Stackdriver monitoring agent to the application servers. ג€¢ Give the developers the IAM Monitoring Viewer role to access Stackdriver and view metrics.",
+                    "D": "ג€¢ Install the gsutil command line tool on your application servers. ג€¢ Write a script using gsutil to upload your application log to a Cloud Storage bucket, and then schedule it to run via cron every 5 minutes. ג€¢ Give the developers the IAM Object Viewer access to view the logs in the specified bucket.",
+                    "A": "ג€¢ Deploy the Stackdriver logging agent to the application servers. ג€¢ Give the developers the IAM Logs Viewer role to access Stackdriver and view logs.",
+                    "B": "ג€¢ Deploy the Stackdriver logging agent to the application servers. ג€¢ Give the developers the IAM Logs Private Logs Viewer role to access Stackdriver and view logs."
+                }
+            },
+            {
+                "id": "3NpxHu74p6RCIWyr0RPo",
+                "question_text": "",
+                "answer_images": [],
+                "answer": "A",
+                "timestamp": "2023-10-11 05:05:00",
+                "url": "https://www.examtopics.com/discussions/google/view/123218-exam-professional-cloud-devops-engineer-topic-1-question-100/",
+                "answer_description": "",
+                "question_id": 3,
+                "question_images": [],
+                "answers_community": [
+                    "A (93%)",
+                    "7%"
+                ],
+                "answer_ET": "B",
+                "unix_timestamp": 1696993500,
+                "discussion": [
+                    {
+                        "timestamp": "1696993500.0",
+                        "poster": "PrayasMohanty",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "timestamp": "1698253680.0",
+                                "comment_id": "1053903",
+                                "comments": [
+                                    {
+                                        "timestamp": "1698920700.0",
+                                        "poster": "lelele2023",
+                                        "upvote_count": "1",
+                                        "comment_id": "1060468",
+                                        "content": "no PrayasM meant that canary fits what got asked more"
+                                    }
+                                ],
+                                "content": "You meant option B?",
+                                "poster": "Jason_Cloud_at"
+                            }
+                        ],
+                        "upvote_count": "13",
+                        "content": "Selected Answer: A\nI vote for A as in Blue/Green deployment you can rollback quickly after facing the performance issue, but in Canary you can detect performance issue on partial deployment and rollback before the issue get affected.",
+                        "comment_id": "1040131"
+                    },
+                    {
+                        "comment_id": "1176585",
+                        "content": "Selected Answer: A\nAfter consideration, Canary approach is better in this specific scenario as it allows for monitoring the performance of the new version in production while minimizing the risk of widespread issues.",
+                        "poster": "BleHi",
+                        "timestamp": "1710774480.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1707765600.0",
+                        "comment_id": "1148531",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "content": "After consideration, Canary approach is better in this specific scenario as it allows for monitoring the performance of the new version in production while minimizing the risk of widespread issues.",
+                                "timestamp": "1710774420.0",
+                                "upvote_count": "1",
+                                "comment_id": "1176584",
+                                "poster": "BleHi"
+                            }
+                        ],
+                        "poster": "BleHi",
+                        "content": "Selected Answer: B\nB. Blue/green deployments involve deploying the new version alongside the existing one, routing only a portion of the traffic to the new version initially. Once you verify that the new version is performing well and there are no issues, you can fully migrate traffic to the new version. This allows for a safe rollback if any issues arise."
+                    },
+                    {
+                        "timestamp": "1701826980.0",
+                        "content": "The recommended approach to automate the deployment of the new version of a containerized application to production on Google Kubernetes Engine (GKE) while addressing potential performance issues is (Option A).\n\nUtilizing canary deployments within a continuous delivery pipeline allows for a controlled and gradual rollout of the new version. By monitoring performance metrics with Cloud Monitoring, the deployment process can be informed by real-time insights. The traffic can be incrementally increased as supported by the monitored metrics, minimizing the risk of performance problems.\n\nThis approach provides a safety net, allowing for quick identification and mitigation of issues before a full deployment, ensuring a smooth transition to the new version with minimal impact on production.",
+                        "poster": "xhilmi",
+                        "comment_id": "1088939",
+                        "upvote_count": "2"
+                    }
+                ],
+                "isMC": true,
+                "exam_id": 5,
+                "choices": {
+                    "D": "Deploy the application by using kubectl and set the spec.updateStrategy.type field to RollingUpdate. Use Cloud Monitoring to look for performance issues, and run the kubectl rollback command if there are any issues.",
+                    "A": "Deploy the application through a continuous delivery pipeline by using canary deployments. Use Cloud Monitoring to look for performance issues, and ramp up traffic as supported by the metrics.",
+                    "B": "Deploy the application through a continuous delivery pipeline by using blue/green deployments. Migrate traffic to the new version of the application and use Cloud Monitoring to look for performance issues.",
+                    "C": "Deploy the application by using kubectl and use Config Connector to slowly ramp up traffic between versions. Use Cloud Monitoring to look for performance issues."
+                },
+                "topic": "1"
+            },
+            {
+                "id": "PL5A0ZW7D8mWWJ4ZEX7K",
+                "answers_community": [
+                    "D (90%)",
+                    "10%"
+                ],
+                "timestamp": "2023-10-01 13:48:00",
+                "choices": {
+                    "D": "Enable VPC Flow Logs on the subnet.",
+                    "A": "Enable Packet Mirroring on the VPC.",
+                    "B": "Install the Ops Agent on the Compute Engine instances.",
+                    "C": "Enable logging on the firewall rule."
+                },
+                "answer_ET": "C",
+                "topic": "1",
+                "question_images": [],
+                "url": "https://www.examtopics.com/discussions/google/view/122025-exam-professional-cloud-devops-engineer-topic-1-question-101/",
+                "discussion": [
+                    {
+                        "timestamp": "1696993860.0",
+                        "poster": "PrayasMohanty",
+                        "content": "Selected Answer: D\nOption D uses fewest number of steps.",
+                        "comment_id": "1040137",
+                        "upvote_count": "6"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "1184636",
+                        "content": "Selected Answer: C\nBe careful. The question states \"each IP address that accesses the API\". VPC Flow Logs is sampling records:\n\n\"VPC Flow Logs records a sample of network flows sent from and received by VM instances, including instances used as GKE nodes. These logs can be used for network monitoring, forensics, real-time security analysis, and expense optimization.\"\nSource: https://cloud.google.com/vpc/docs/using-flow-logs\n\nC. Is the correct answer.",
+                        "poster": "N_A",
+                        "timestamp": "1711614240.0"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "timestamp": "1701827460.0",
+                        "comment_id": "1088945",
+                        "poster": "xhilmi",
+                        "content": "Selected Answer: D\nChoose option D.\n\nTo configure Cloud Logging to log each IP address accessing the API with the fewest steps in a Compute Engine environment using an internal TCP/UDP load balancer, the first step would be to enable VPC Flow Logs on the subnet. That will allows you to capture network flow information, including source and destination IP addresses, as traffic passes through the load balancer.\n\nVPC Flow Logs provide detailed visibility into network activity without requiring modifications to individual instances or the installation of additional agents. Enabling VPC Flow Logs is a straightforward and efficient way to capture the necessary information for logging IP addresses accessing the API in a Compute Engine environment."
+                    },
+                    {
+                        "poster": "ManishKS",
+                        "timestamp": "1696160880.0",
+                        "upvote_count": "2",
+                        "content": "D. Enable VPC Flow Logs on the subnet.\n\nThis will capture the network traffic details you need for logging in Cloud Logging without requiring additional configurations on the instances or firewall rules.",
+                        "comment_id": "1022216"
+                    }
+                ],
+                "unix_timestamp": 1696160880,
+                "answer_description": "",
+                "answer_images": [],
+                "question_id": 4,
+                "answer": "D",
+                "isMC": true,
+                "exam_id": 5,
+                "question_text": ""
+            },
+            {
+                "id": "XqeBDJGWQo6Q87jtncGD",
+                "choices": {
+                    "C": "Configure the Horizontal Pod Autoscaler, but keep the node pool size static.",
+                    "B": "Configure the Vertical Pod Autoscaler, and enable the cluster autoscaler.",
+                    "A": "Configure the Vertical Pod Autoscaler, but keep the node pool size static.",
+                    "D": "Configure the Horizontal Pod Autoscaler, and enable the cluster autoscaler."
+                },
+                "answer": "D",
+                "topic": "1",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "timestamp": "2023-10-01 13:54:00",
+                "answer_ET": "A",
+                "question_images": [],
+                "unix_timestamp": 1696161240,
+                "url": "https://www.examtopics.com/discussions/google/view/122026-exam-professional-cloud-devops-engineer-topic-1-question-102/",
+                "question_id": 5,
+                "answer_images": [],
+                "answer_description": "",
+                "question_text": "",
+                "exam_id": 5,
+                "isMC": true,
+                "discussion": [
+                    {
+                        "timestamp": "1703091480.0",
+                        "poster": "LaxmanTiwari",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: D\nplease read this how to use vertical pod autoscaler https://cloud.google.com/kubernetes-engine/docs/concepts/verticalpodautoscaler , so it suggest use Horizontal Pod Autoscaler (HPA) with the VPA to get the best of autoscaling.",
+                        "comment_id": "1101761"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1701828120.0",
+                        "comment_id": "1088955",
+                        "poster": "xhilmi",
+                        "content": "Selected Answer: D\nTo automate scaling for the JVM-based applications and microservices architecture in Google Kubernetes Engine (GKE), especially to handle varying loads throughout the day, the recommended approach is (Option D).\n\nThis involves configuring the Horizontal Pod Autoscaler (HPA) to dynamically adjust the number of Pods based on application metrics. Additionally, enabling the cluster autoscaler allows for automatic scaling of the node pool, ensuring an adequate number of nodes to accommodate the varying workload. The HPA monitors resource utilization and adjusts the number of Pods, while the cluster autoscaler ensures that the underlying infrastructure scales up or down to meet the demand.\n\nThis combined approach optimizes resource allocation, providing an efficient and automated solution for managing workload fluctuations in a cost-effective manner."
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "1070661",
+                        "content": "D is correct\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler?hl=es-419\nhttps://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-metrics-apis",
+                        "poster": "TereRolon",
+                        "timestamp": "1699980480.0"
+                    },
+                    {
+                        "content": "You want to automate scaling by only running enough Pods and nodes for the load. Answer D answers this requirement.",
+                        "timestamp": "1697073660.0",
+                        "upvote_count": "3",
+                        "comment_id": "1041277",
+                        "poster": "activist"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "poster": "PrayasMohanty",
+                        "content": "Selected Answer: D\nThere is no Vertical Pod Autoscaler, and cluster autoscaler must be enabled. Therefor D appears the best answer.",
+                        "timestamp": "1696994280.0",
+                        "comment_id": "1040141"
+                    },
+                    {
+                        "content": "Answer Should be D",
+                        "timestamp": "1696161240.0",
+                        "comment_id": "1022220",
+                        "upvote_count": "3",
+                        "poster": "ManishKS"
+                    }
+                ]
+            }
+        ],
+        "exam": {
+            "provider": "Google",
+            "numberOfQuestions": 166,
+            "isMCOnly": true,
+            "id": 5,
+            "isImplemented": true,
+            "name": "Professional Cloud DevOps Engineer",
+            "lastUpdated": "1 May 2024",
+            "isBeta": false
+        },
+        "currentPage": 1
+    },
+    "__N_SSP": true
+}

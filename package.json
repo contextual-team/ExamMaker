@@ -1,0 +1,25 @@
+{
+  "name": "exammaker",
+  "version": "1.0.0",
+  "description": "An utility to generate test exams from jsons.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HachebeDLC/ExamMaker.git"
+  },
+  "author": "HachebeDLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HachebeDLC/ExamMaker/issues"
+  },
+  "homepage": "https://github.com/HachebeDLC/ExamMaker#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0-rc.12",
+    "fs": "^0.0.1-security",
+    "readline-sync": "^1.4.10"
+  }
+}

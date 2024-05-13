@@ -1,0 +1,96 @@
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "TPWXiM5JtCAxOBeOVp0z",
+                "unix_timestamp": 1696152720,
+                "question_images": [],
+                "isMC": true,
+                "exam_id": 5,
+                "answer": "D",
+                "discussion": [
+                    {
+                        "comment_id": "1026227",
+                        "upvote_count": "6",
+                        "poster": "PrayasMohanty",
+                        "timestamp": "1696565940.0",
+                        "content": "I vote for B"
+                    },
+                    {
+                        "poster": "nhiguchi",
+                        "content": "Selected Answer: D\nI think D",
+                        "timestamp": "1697949540.0",
+                        "upvote_count": "5",
+                        "comment_id": "1050207"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "poster": "xhilmi",
+                        "comment_id": "1088937",
+                        "content": "Selected Answer: D\nThe optimal approach for establishing a CI/CD pipeline for a containerized application in Google Cloud is (Option D).\n\nIn this method, unit tests are seamlessly integrated into the initial stages of the pipeline, automatically triggered when code is pushed. Successful unit tests then prompt Cloud Build to construct and push the application container to a central registry. The pipeline subsequently orchestrates the deployment of the container to a testing environment, where comprehensive integration and acceptance tests are executed. Only when all tests pass successfully does the pipeline advance to deploying the application to the production environment, accompanied by the execution of smoke tests.\n\nThis systematic and thorough process ensures that any code changes undergo rigorous testing at various stages, ensuring high-quality standards and instilling confidence in the deployment process to production.",
+                        "timestamp": "1701826800.0"
+                    },
+                    {
+                        "content": "You can use Cloud Build to build a container. A is correct.",
+                        "upvote_count": "1",
+                        "timestamp": "1698084240.0",
+                        "comment_id": "1052143",
+                        "poster": "PGontijo"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "poster": "florian_cartron",
+                        "comment_id": "1039173",
+                        "timestamp": "1696915200.0",
+                        "content": "Selected Answer: D\nI would chose D as question states that we want to run all tests in the pipeline, which is not the case with a hook for unit tests. Option D also adds smoke tests in production env.",
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "poster": "PrayasMohanty",
+                                "content": "Smoke testing is the practice of testing fundamental and core elements of a software program in the early phases of development to identify minor issues that might delay the product's release. At its core, smoke testing is used to establish whether the released software build is reliable or not.",
+                                "comment_id": "1040115",
+                                "timestamp": "1696991940.0"
+                            }
+                        ]
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1696152720.0",
+                        "content": "Answer Should be B",
+                        "poster": "ManishKS",
+                        "comment_id": "1022148"
+                    }
+                ],
+                "topic": "1",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "answer_ET": "A",
+                "question_text": "",
+                "question_id": 166,
+                "answer_description": "",
+                "url": "https://www.examtopics.com/discussions/google/view/122021-exam-professional-cloud-devops-engineer-topic-1-question-99/",
+                "choices": {
+                    "B": "1. Install a Git hook to require developers to run unit tests before pushing the code to a central repository. If all tests are successful, build a container.\n2. Trigger Cloud Build to deploy the application container to a testing environment, and run integration tests and acceptance tests.\n3. If all tests are successful, tag the code as production ready. Trigger Cloud Build to build and deploy the application container to the production environment.",
+                    "C": "1. Trigger Cloud Build to build the application container, and run unit tests with the container.\n2. If unit tests are successful, deploy the application container to a testing environment, and run integration tests.\n3. If the integration tests are successful, the pipeline deploys the application container to the production environment. After that, run acceptance tests.",
+                    "A": "1. Install a Git hook to require developers to run unit tests before pushing the code to a central repository.\n2. Trigger Cloud Build to build the application container. Deploy the application container to a testing environment, and run integration tests.\n3. If the integration tests are successful, deploy the application container to your production environment, and run acceptance tests.",
+                    "D": "1. Trigger Cloud Build to run unit tests when the code is pushed. If all unit tests are successful, build and push the application container to a central registry.\n2. Trigger Cloud Build to deploy the container to a testing environment, and run integration tests and acceptance tests.\n3. If all tests are successful, the pipeline deploys the application to the production environment and runs smoke tests"
+                },
+                "answer_images": [],
+                "timestamp": "2023-10-01 11:32:00"
+            }
+        ],
+        "exam": {
+            "lastUpdated": "1 May 2024",
+            "isBeta": false,
+            "provider": "Google",
+            "id": 5,
+            "isMCOnly": true,
+            "isImplemented": true,
+            "name": "Professional Cloud DevOps Engineer",
+            "numberOfQuestions": 166
+        },
+        "currentPage": 34
+    },
+    "__N_SSP": true
+}
