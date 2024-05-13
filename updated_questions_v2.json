@@ -8,7 +8,8 @@
       "C": "Use Stackdriver Debugger to review the execution of logic within each application to instrument all applications.",
       "D": "Modify the Node.js application to log HTTP request and response times to dependent applications. Use Stackdriver Logging to find dependent applications that are performing poorly.",
       "B": "Instrument all applications with Stackdriver Trace and review inter-service HTTP requests."
-    }
+    },
+    "id": 1
   },
   {
     "answer": "B",
@@ -19,7 +20,8 @@
       "D": "ג€¢ Install the gsutil command line tool on your application servers. ג€¢ Write a script using gsutil to upload your application log to a Cloud Storage bucket, and then schedule it to run via cron every 5 minutes. ג€¢ Give the developers the IAM Object Viewer access to view the logs in the specified bucket.",
       "A": "ג€¢ Deploy the Stackdriver logging agent to the application servers. ג€¢ Give the developers the IAM Logs Viewer role to access Stackdriver and view logs.",
       "B": "ג€¢ Deploy the Stackdriver logging agent to the application servers. ג€¢ Give the developers the IAM Logs Private Logs Viewer role to access Stackdriver and view logs."
-    }
+    },
+    "id": 2
   },
   {
     "answer": "B",
@@ -30,7 +32,8 @@
       "A": "Deploy the application through a continuous delivery pipeline by using canary deployments. Use Cloud Monitoring to look for performance issues, and ramp up traffic as supported by the metrics.",
       "B": "Deploy the application through a continuous delivery pipeline by using blue/green deployments. Migrate traffic to the new version of the application and use Cloud Monitoring to look for performance issues.",
       "C": "Deploy the application by using kubectl and use Config Connector to slowly ramp up traffic between versions. Use Cloud Monitoring to look for performance issues."
-    }
+    },
+    "id": 3
   },
   {
     "answer": "C",
@@ -41,7 +44,8 @@
       "A": "Enable Packet Mirroring on the VPC.",
       "B": "Install the Ops Agent on the Compute Engine instances.",
       "C": "Enable logging on the firewall rule."
-    }
+    },
+    "id": 4
   },
   {
     "answer": "A",
@@ -52,7 +56,8 @@
       "B": "Configure the Vertical Pod Autoscaler, and enable the cluster autoscaler.",
       "A": "Configure the Vertical Pod Autoscaler, but keep the node pool size static.",
       "D": "Configure the Horizontal Pod Autoscaler, and enable the cluster autoscaler."
-    }
+    },
+    "id": 5
   },
   {
     "answer": "D",
@@ -63,7 +68,8 @@
       "A": "Calculate the value of improved availability to be $900, and determine that the increase in availability is not worth the investment.",
       "D": "Calculate the value of improved availability to be $9,000, and determine that the increase in availability is worth the investment.",
       "B": "Calculate the value of improved availability to be $1,000, and determine that the increase in availability is not worth the investment."
-    }
+    },
+    "id": 6
   },
   {
     "answer": "B",
@@ -74,7 +80,8 @@
       "B": "Remove the iam.disableServiceAccountKeyCreation policy at the organization level, and create a key.",
       "D": "Add a rule to set the iam.disableServiceAccountKeyCreation policy to off in your project, and create a key.",
       "C": "Disable the service account key creation policy at the project's folder, and download the default key."
-    }
+    },
+    "id": 7
   },
   {
     "answer": "AB",
@@ -86,7 +93,8 @@
       "B": "Data is lost due to an incident.",
       "E": "The CD pipeline detects an issue and rolls back a problematic release.",
       "C": "An internal stakeholder requests a postmortem."
-    }
+    },
+    "id": 8
   },
   {
     "answer": "C",
@@ -97,7 +105,8 @@
       "A": "Cloud Build with Packer",
       "D": "Cloud Build with kpt",
       "B": "Cloud Build with Google Cloud Deploy"
-    }
+    },
+    "id": 9
   },
   {
     "answer": "D",
@@ -108,7 +117,8 @@
       "D": "Configure Cloud Trace in your application.",
       "B": "Configure Google Cloud Managed Service for Prometheus in your application.",
       "A": "Configure Error Reporting in your application."
-    }
+    },
+    "id": 10
   },
   {
     "answer": "AB",
@@ -120,7 +130,8 @@
       "E": "Enable the Approval option on the trigger.",
       "D": "Configure a branch protection rule for the main branch on the repository.",
       "B": "Add the OWNERS file to the Included files filter on the trigger."
-    }
+    },
+    "id": 11
   },
   {
     "answer": "D",
@@ -131,7 +142,8 @@
       "C": "Use Cloud Monitoring to monitor the container CPU and memory utilization of the application.",
       "B": "Use Cloud Profiler with Ops Agent to monitor the CPU and memory utilization of the application.",
       "D": "Use Cloud Ops to create logs-based metrics to monitor the resource utilization of the application."
-    }
+    },
+    "id": 12
   },
   {
     "answer": "C",
@@ -142,7 +154,8 @@
       "D": "Configure a Google Cloud HTTP Load Balancer as Ingress.",
       "B": "Configure your network services on the Standard Tier.",
       "A": "Configure the VPC as a Shared VPC Host project."
-    }
+    },
+    "id": 13
   },
   {
     "answer": "B",
@@ -153,7 +166,8 @@
       "B": "Run the gcloud run services update-traffic booking-engine --to-revisions LATEST=1 command. Use the https://booking-engine-abcdef.a.run.app URL for testing.",
       "D": "Grant the roles/run.invoker role to the developers testing the booking-engine service. Use the https://booking-engine-abcdef.private.run.app URL for testing.",
       "C": "Pass the curl –H “Authorization:Bearer $(gcloud auth print-identity-token)” auth token. Use the https://booking-engine-abcdef.a.run.app URL to test privately."
-    }
+    },
+    "id": 14
   },
   {
     "answer": "D",
@@ -164,7 +178,8 @@
       "D": "Enable VPC Flow Logs in both VPCs, and monitor packet drops.",
       "A": "Install a toolbox container on the node in Cluster Confirm that the routes to Cluster B are configured appropriately.",
       "B": "Use Network Connectivity Center to perform a Connectivity Test from Cluster A to Cluster B."
-    }
+    },
+    "id": 15
   },
   {
     "answer": "A",
@@ -175,7 +190,8 @@
       "A": "Update the Deployment app-blue to use the new version of the application.",
       "D": "Change the selector on the Service app-svc to app: my-app, version: blue.",
       "C": "Change the selector on the Service app-svc to app: my-app."
-    }
+    },
+    "id": 16
   },
   {
     "answer": "B",
@@ -185,7 +201,8 @@
       "B": "Update the application to export the IP address request metrics to the Cloud Monitoring API.",
       "C": "Configure the Ops Agent with a metrics receiver.",
       "A": "Configure the Ops Agent with a logging receiver. Create a logs-based metric.\nB Create a script to scrape the web server log. Export the IP address request metrics to the Cloud Monitoring API."
-    }
+    },
+    "id": 17
   },
   {
     "answer": "A",
@@ -196,7 +213,8 @@
       "C": "Store public and private charts by using Git repository. Configure Cloud Build to synchronize contents of the repository into a Cloud Storage bucket. Connect Helm to the bucket by using https://[bucket].storage-googleapis.com/[helmchart] as the Helm repository.",
       "B": "Store public and private charts by using GitHub Enterprise with Google Workspace as the identity provider.",
       "D": "Configure a Helm chart repository server to run in Google Kubernetes Engine (GKE) with Cloud Storage bucket as the storage backend."
-    }
+    },
+    "id": 18
   },
   {
     "answer": "B",
@@ -207,18 +225,20 @@
       "D": "Set the create_before_destroy meta-argument to true in the lifecycle block on the instance template.",
       "B": "Add a new instance template, update the managed instance group to use the new instance template, and delete the old instance template.",
       "A": "Delete the managed instance group, and recreate it after updating the instance template."
-    }
+    },
+    "id": 19
   },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/122735-exam-professional-cloud-devops-engineer-topic-1-question-116/",
-    "question_text": "Your company operates in a highly regulated domain that requires you to store all organization logs for seven years. You want to minimize logging infrastructure complexity by using managed services. You need to avoid any future loss of log capture or stored logs due to misconfiguration or human error. What should you do?",
+    "question_text": "",
     "choices": {
       "D": "Use Cloud Logging to configure an export sink at each project level to export all logs into Cloud Storage with a seven-year retention policy and Bucket Lock.",
       "B": "Use Cloud Logging to configure an aggregated sink at the organization level to export all logs into Cloud Storage with a seven-year retention policy and Bucket Lock.",
       "C": "Use Cloud Logging to configure an export sink at each project level to export all logs into a BigQuery dataset",
       "A": "Use Cloud Logging to configure an aggregated sink at the organization level to export all logs into a BigQuery dataset."
-    }
+    },
+    "id": 20
   },
   {
     "answer": "C",
@@ -229,7 +249,8 @@
       "B": "Delete the new container image, and delete the running Pods.",
       "A": "Run the kubectl rollout undo command.",
       "C": "Update the Kubernetes Service to point to the previous Kubernetes Deployment."
-    }
+    },
+    "id": 21
   },
   {
     "answer": "D",
@@ -240,7 +261,8 @@
       "D": "Create a logs bucket and logging sink. Set the retention on the logs bucket to 365 days. Configure the logging sink to send logs to the bucket. Give your client access to the bucket to retrieve the logs.",
       "A": "Update all images in Cloud Run and all functions in Cloud Functions to send logs to both Cloud Logging and the client's logging service. Ensure that all the ports required to send logs are open in the VPC firewall.",
       "B": "Create a Pub/Sub topic, subscription, and logging sink. Configure the logging sink to send all logs into the topic. Give your client access to the topic to retrieve the logs."
-    }
+    },
+    "id": 22
   },
   {
     "answer": "A",
@@ -251,7 +273,8 @@
       "A": "Deploy Falco or Twistlock on GKE to monitor for vulnerabilities on your running Pods.",
       "C": "Use Binary Authorization to attest images during your CI/CD pipeline.",
       "B": "Configure Identity and Access Management (IAM) policies to create a least privilege model on your GKE clusters."
-    }
+    },
+    "id": 23
   },
   {
     "answer": "A",
@@ -262,7 +285,8 @@
       "D": "Require the engineer responsible to write an apology email to all stakeholders.",
       "C": "Send the Incident State Document to all the stakeholders.",
       "A": "Call individual stakeholders to explain what happened."
-    }
+    },
+    "id": 24
   },
   {
     "answer": "C",
@@ -273,29 +297,32 @@
       "C": "Monitor the Pods, and terminate any Pods that have been running for more than five hours.",
       "A": "Create a cron job to terminate any Pods that have been running for more than five hours.",
       "B": "Add a HTTP liveness probe to the microservice's deployment."
-    }
+    },
+    "id": 25
   },
   {
     "answer": "C",
     "url": "https://www.examtopics.com/discussions/google/view/122340-exam-professional-cloud-devops-engineer-topic-1-question-121/",
-    "question_text": "",
+    "question_text": "You want to share a Cloud Monitoring custom dashboard with a partner team. What should you do?",
     "choices": {
       "A": "Provide the partner team with the dashboard URL to enable the partner team to create a copy of the dashboard.",
       "C": "Copy the Monitoring Query Language (MQL) query from the dashboard, and send the ML query to the partner team.",
       "B": "Export the metrics to BigQuery. Use Looker Studio to create a dashboard, and share the dashboard with the partner team.",
       "D": "Download the JSON definition of the dashboard, and send the JSON file to the partner team."
-    }
+    },
+    "id": 26
   },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/122490-exam-professional-cloud-devops-engineer-topic-1-question-122/",
-    "question_text": "",
+    "question_text": "You are building an application that runs on Cloud Run. The application needs to access a third-party API by using an API key. You need to determine a secure way to store and use the API key in your application by following Google-recommended practices. What should you do?",
     "choices": {
       "C": "Save the API key in Cloud Key Management Service (Cloud KMS) as a key. Reference the key as an environment variable in the Cloud Run application.",
       "D": "Encrypt the API key by using Cloud Key Management Service (Cloud KMS), and pass the key to Cloud Run as an environment variable. Decrypt and use the key in Cloud Run.",
       "A": "Save the API key in Secret Manager as a secret. Reference the secret as an environment variable in the Cloud Run application.",
       "B": "Save the API key in Secret Manager as a secret key. Mount the secret key under the /sys/api_key directory, and decrypt the key in the Cloud Run application."
-    }
+    },
+    "id": 27
   },
   {
     "answer": "C",
@@ -306,7 +333,8 @@
       "D": "Use the current app-one-dev, app-one-staging, and app-one-prod projects as the scoping project for each folder.",
       "C": "Use the current app-one-prod project as the scoping project.",
       "B": "Create new scoping projects for each folder."
-    }
+    },
+    "id": 28
   },
   {
     "answer": "B",
@@ -317,7 +345,8 @@
       "D": "Assign the roles/logging.privateLogViewer role to a group with all the security team members.",
       "A": "Assign the roles/logging.viewer role to each member of the security team.",
       "B": "Assign the roles/logging.viewer role to a group with all the security team members."
-    }
+    },
+    "id": 29
   },
   {
     "answer": "D",
@@ -328,7 +357,8 @@
       "C": "Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nCreate a Cloud Function with a google.storage.object.finalize Cloud Storage trigger. Write code so that the function can scale up a Compute Engine autoscaling managed instance group.\nUse an image pre-loaded with the data processing software that terminates the instances when processing completes.",
       "D": "Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nUse Cloud Monitoring to detect new batches of data in the bucket and trigger a Cloud Function that processes the data.\nSet a Cloud Function to use the largest CPU possible to minimize the runtime of the processing.",
       "A": "Provide a secure file transfer protocol (SFTP) server on a Compute Engine instance so that third parties can upload batches of data, and provide appropriate credentials to the server.\nCreate a Cloud Function with a google.storage.object.finalize Cloud Storage trigger. Write code so that the function can scale up a Compute Engine autoscaling managed instance group\nUse an image pre-loaded with the data processing software that terminates the instances when processing completes."
-    }
+    },
+    "id": 30
   },
   {
     "answer": "BE",
@@ -340,18 +370,20 @@
       "B": "Divide the automation steps into smaller tasks.",
       "C": "Use a script to automate the creation of the deployment pipeline in Google Cloud Deploy.",
       "E": "Automate promotion approvals from the development environment to the test environment."
-    }
+    },
+    "id": 31
   },
   {
     "answer": "C",
     "url": "https://www.examtopics.com/discussions/google/view/124316-exam-professional-cloud-devops-engineer-topic-1-question-127/",
-    "question_text": "",
+    "question_text": "You work for a global organization and are running a monolithic application on Compute Engine. You need to select the machine type for the application to use that optimizes CPU utilization by using the fewest number of steps. You want to use historical system metrics to identify the machine type for the application to use. You want to follow Google-recommended practices. What should you do?",
     "choices": {
       "B": "Create an Agent Policy to automatically install Ops Agent in all VMs.",
       "A": "Use the Recommender API and apply the suggested recommendations.",
       "D": "Review the Cloud Monitoring dashboard for the VM and choose the machine type with the lowest CPU utilization.",
       "C": "Install the Ops Agent in a fleet of VMs by using the gcloud CLI."
-    }
+    },
+    "id": 32
   },
   {
     "answer": "B",
@@ -362,18 +394,20 @@
       "B": "Configure a Horizontal Pod Autoscaler.",
       "D": "Configure cluster autoscaling on the node pool.",
       "A": "Configure a cron job to scale the deployment on a schedule"
-    }
+    },
+    "id": 33
   },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/124662-exam-professional-cloud-devops-engineer-topic-1-question-129/",
-    "question_text": "",
+    "question_text": "You need to deploy a new service to production. The service needs to automatically scale using a managed instance group and should be deployed across multiple regions. The service needs a large number of resources for each instance and you need to plan for capacity. What should you do?",
     "choices": {
       "D": "Validate that the resource requirements are within the available project quota limits of each region.",
       "C": "Deploy the service in multiple regions and use an internal load balancer to route traffic.",
       "A": "Monitor results of Cloud Trace to determine the optimal sizing.",
       "B": "Use the n2-highcpu-96 machine type in the configuration of the managed instance group."
-    }
+    },
+    "id": 34
   },
   {
     "answer": "B",
@@ -384,7 +418,8 @@
       "B": "Because you are deployed on GKE and are using a cluster autoscaler, your GKE cluster will scale automatically, regardless of growth rate.",
       "A": "Verify the maximum node pool size, enable a horizontal pod autoscaler, and then perform a load test to verify your expected resource needs.",
       "D": "Proactively add 60% more node capacity to account for six months of 10% growth rate, and then perform a load test to make sure you have enough capacity."
-    }
+    },
+    "id": 35
   },
   {
     "answer": "AD",
@@ -396,7 +431,8 @@
       "D": "Examine the latency time the wall-clock time and the CPU time of the application. If the latency time is slowly burning down the error budget, and the difference between wall-clock time and CPU time is minimal mark the application for optimization.",
       "A": "Examine the wall-clock time and the CPU time of the application. If the difference is substantial increase the CPU resource allocation.",
       "E": "Examine the heap usage of the application. If the usage is low, mark the application for optimization."
-    }
+    },
+    "id": 36
   },
   {
     "answer": "C",
@@ -407,18 +443,20 @@
       "B": "Create Identity and Access Management (IAM) roles for each project team and restrict access to the _Default log view in their individual Google Cloud project. Grant viewer access to the operations team in the central logging project.",
       "C": "Create log views for each project team and only show each project team their application logs. Grant the operations team access to the _AllLogs view in the central logging project.",
       "D": "Export logs to BigQuery tables for each project team. Grant project teams access to their tables. Grant logs writer access to the operations team in the central logging project."
-    }
+    },
+    "id": 37
   },
   {
     "answer": "A",
     "url": "https://www.examtopics.com/discussions/google/view/125235-exam-professional-cloud-devops-engineer-topic-1-question-132/",
-    "question_text": "",
+    "question_text": "Your company uses Jenkins running on Google Cloud VM instances for CI/CD. You need to extend the functionality to use infrastructure as code automation by using Terraform. You must ensure that the Terraform Jenkins instance is authorized to create Google Cloud resources. You want to follow Google-recommended practices. What should you do?",
     "choices": {
       "C": "Create a dedicated service account for the Terraform instance. Download and copy the secret key value to the GOOGLE_CREDENTIALS environment variable on the Jenkins server.",
       "D": "Add the gcloud auth application-default login command as a step in Jenkins before running the Terraform commands.",
       "B": "Use the Terraform module so that Secret Manager can retrieve credentials.",
       "A": "Confirm that the Jenkins VM instance has an attached service account with the appropriate Identity and Access Management (IAM) permissions."
-    }
+    },
+    "id": 38
   },
   {
     "answer": "A",
@@ -429,7 +467,8 @@
       "A": "Eliminate alerts that are not actionable",
       "D": "Create an incident report for each of the alerts",
       "C": "Distribute the alerts to engineers in different time zones"
-    }
+    },
+    "id": 39
   },
   {
     "answer": "B",
@@ -440,7 +479,8 @@
       "C": "Configure Identity and Access Management (IAM) policies to create a least privilege model on your GKE clusters.",
       "D": "Deploy Falco or Twistlock on GKE to monitor for vulnerabilities on your running Pods",
       "A": "Enable Container Analysis in Artifact Registry, and check for common vulnerabilities and exposures (CVEs) in your container images"
-    }
+    },
+    "id": 40
   },
   {
     "answer": "A",
@@ -451,7 +491,8 @@
       "C": "Use Cloud Run to write and deploy a custom validator. Enable an Eventarc trigger to perform validations when new images are uploaded.",
       "B": "Grant the roles/artifactregistry.writer role to the Cloud Build service account. Confirm that no employee has Artifact Registry write permission.",
       "A": "Configure Binary Authorization in your GKE clusters to enforce deploy-time security policies."
-    }
+    },
+    "id": 41
   },
   {
     "answer": "AC",
@@ -463,7 +504,8 @@
       "C": "Ensure that all postmortems include the severity of the incident, how to prevent a future occurrence of the incident, and what caused the incident without naming internal system components.",
       "B": "Ensure that all postmortems include what caused the incident, how the incident could have been worse, and how to prevent a future occurrence of the incident.",
       "D": "Ensure that all postmortems include how the incident was resolved and what caused the incident without naming customer information."
-    }
+    },
+    "id": 42
   },
   {
     "answer": "A",
@@ -474,7 +516,8 @@
       "D": "Use Cloud Build to run tests in a specific folder. Trigger Cloud Build for every GitHub pull request.",
       "B": "Ask the pull request reviewers to run the integration tests before approving the code.",
       "C": "Use Cloud Build to run the tests. Trigger all tests to run after a pull request is merged."
-    }
+    },
+    "id": 43
   },
   {
     "answer": "D",
@@ -485,7 +528,8 @@
       "C": "Periodically run the go tool pprof command against the application instance. Analyze the results by using flame graphs.",
       "A": "Use Cloud Monitoring to assess the App Engine CPU utilization metric.",
       "D": "Configure Cloud Profiler, and initialize the cloud.google.com/go/profiler library in the application."
-    }
+    },
+    "id": 44
   },
   {
     "answer": "C",
@@ -496,7 +540,8 @@
       "A": "Run the gcloud container clusters update --logging=SYSTEM command for the development cluster.",
       "B": "Run the gcloud container clusters update --logging=WORKLOAD command for the development cluster.",
       "D": "Add the severity >= DEBUG resource.type = \"k8s_container\" exclusion filter to the _Default logging sink in the project associated with the development environment."
-    }
+    },
+    "id": 45
   },
   {
     "answer": "D",
@@ -507,7 +552,8 @@
       "D": "Use Cloud Pub/Sub to trigger a custom deployment service running in Google Kubernetes Engine (GKE).",
       "A": "Use Cloud Build to trigger a Spinnaker pipeline.",
       "B": "Use Cloud Pub/Sub to trigger a Spinnaker pipeline."
-    }
+    },
+    "id": 46
   },
   {
     "answer": "C",
@@ -518,7 +564,8 @@
       "D": "Grant the logging.logWriter and monitoring.editor roles to the Compute Engine service accounts.",
       "A": "Grant the logging.logWriter and monitoring.metricWriter roles to the Compute Engine service accounts.",
       "C": "Grant the logging.editor and monitoring.metricWriter roles to the Compute Engine service accounts."
-    }
+    },
+    "id": 47
   },
   {
     "answer": "D",
@@ -529,7 +576,8 @@
       "D": "Review the design of the product with the product development team to provide feedback early in the design phase.",
       "A": "Deploy the prototype product in a test environment, run a load test, and share the results with the product development team.",
       "C": "When the new product is used by at least one internal customer in production, share error logs and monitoring metrics with the product development team."
-    }
+    },
+    "id": 48
   },
   {
     "answer": "B",
@@ -540,18 +588,20 @@
       "B": "Alter the deployment to point to the sha256 digest of the previously working container.",
       "D": "Apply the latest tag to the previous container image, and do a rolling update on the deployment.",
       "C": "Build a new container from a previous Git tag, and do a rolling update on the deployment to the new container."
-    }
+    },
+    "id": 49
   },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/124243-exam-professional-cloud-devops-engineer-topic-1-question-143/",
-    "question_text": "",
+    "question_text": "You need to create a Cloud Monitoring SLO for a service that will be published soon. You want to verify that requests to the service will be addressed in fewer than 300 ms at least 90% of the time per calendar month. You need to identify the metric and evaluation method to use. What should you do?",
     "choices": {
       "D": "Select an availability metric for a window-based method of evaluation.",
       "B": "Select a latency metric for a window-based method of evaluation.",
       "C": "Select an availability metric for a request-based method of evaluation.",
       "A": "Select a latency metric for a request-based method of evaluation."
-    }
+    },
+    "id": 50
   },
   {
     "answer": "CD",
@@ -563,7 +613,8 @@
       "C": "Deploy a new Cloud Run revision without a tag and use the --no-traffic option.",
       "E": "Deploy the new application version, and split traffic to the new version.",
       "A": "Deploy the application as a new Cloud Run service."
-    }
+    },
+    "id": 51
   },
   {
     "answer": "D",
@@ -574,7 +625,8 @@
       "D": "Look through other metrics related to the product and find SLOs with remaining error budget. Reallocate the error budgets and allow the feature launch.",
       "B": "Notify the team that their error budget is used up. Negotiate with the team for a launch freeze or tolerate a slightly worse user experience.",
       "C": "Escalate the situation and request additional error budget."
-    }
+    },
+    "id": 52
   },
   {
     "answer": "B C",
@@ -586,7 +638,8 @@
       "C": "Encourage your senior leadership to acknowledge and participate in postmortems.",
       "A": "Encourage new employees to conduct postmortems to team through practice.",
       "D": "Ensure that writing effective postmortems is a rewarded and celebrated practice."
-    }
+    },
+    "id": 53
   },
   {
     "answer": "C",
@@ -597,7 +650,8 @@
       "A": "Set up a GitHub action to trigger Cloud Build when there is a parameter change. In Cloud Build, run a gcloud CLI command to apply the change.",
       "D": "Configure Config Connector with the GitHub repository. When there is a change in the repository, use Config Connector to apply the change.",
       "B": "When there is a change in GitHub. use a web hook to send a request to Anthos Service Mesh, and apply the change."
-    }
+    },
+    "id": 54
   },
   {
     "answer": "A",
@@ -608,7 +662,8 @@
       "B": "1. Communicate your intent to the incident team.\n2. Add a new node to the pool, and wait for the new node to report as healthy.\n3. When traffic is being served on the new node, drain traffic from the unhealthy node, and remove the old node from service.",
       "C": "1. Drain traffic from the unhealthy node and remove the node from service.\n2. Monitor traffic to ensure that the error is resolved and that the other nodes in the pool are handling the traffic appropriately.\n3. Scale the pool as necessary to handle the new load.\n4. Communicate your actions to the incident team.",
       "A": "1. Communicate your intent to the incident team.\n2. Perform a load analysis to determine if the remaining nodes can handle the increase in traffic offloaded from the removed node, and scale appropriately.\n3. When any new nodes report healthy, drain traffic from the unhealthy node, and remove the unhealthy node from service."
-    }
+    },
+    "id": 55
   },
   {
     "answer": "B",
@@ -619,7 +674,8 @@
       "B": "Create an attestation for the builds that pass the load test by using a private key stored in Cloud Key Management Service (Cloud KMS) with a service account JSON key stored as a Kubernetes Secret.",
       "D": "Create an attestation for the builds that pass the load test by requiring the lead quality assurance engineer to sign the attestation by using a key stored in Cloud Key Management Service (Cloud KMS).",
       "A": "Create an attestation for the builds that pass the load test by requiring the lead quality assurance engineer to sign the attestation by using their personal private key."
-    }
+    },
+    "id": 56
   },
   {
     "answer": "C",
@@ -630,7 +686,8 @@
       "B": "MTTD: 5 MTTR: 20 MTBF: 90 Impact: 33%",
       "C": "MTTD: 5 MTTR: 10 MTBF: 90 Impact: 50%",
       "A": "MTTD: 5 MTTR: 10 MTBF: 90 Impact: 33%"
-    }
+    },
+    "id": 57
   },
   {
     "answer": "C",
@@ -641,7 +698,8 @@
       "A": "Store the password in Secret Manager and send the secret to the application by using environment variables.",
       "B": "Store the password in Secret Manager and mount the secret as a volume within the application.",
       "D": "Store the password directly in the code. Use Cloud Build to rebuild and deploy the application each time the password changes."
-    }
+    },
+    "id": 58
   },
   {
     "answer": "D",
@@ -652,29 +710,32 @@
       "C": "Create a Pod resource with a Terraform docker image to execute terraform plan and terraform apply commands.",
       "A": "Install and configure Config Connector in Google Kubernetes Engine (GKE).",
       "D": "Create a Job resource with a Terraform docker image to execute terraform plan and terraform apply commands."
-    }
+    },
+    "id": 59
   },
   {
     "answer": "A",
     "url": "https://www.examtopics.com/discussions/google/view/125154-exam-professional-cloud-devops-engineer-topic-1-question-152/",
-    "question_text": "",
+    "question_text": "You are designing a system with three different environments: development, quality assurance (QA), and production. Each environment will be deployed with Terraform and has a Google Kubernetes Engine (GKE) cluster created so that application teams can deploy their applications. Anthos Config Management will be used and templated to deploy infrastructure level resources in each GKE cluster. All users (for example, infrastructure operators and application owners) will use GitOps. How should you structure your source control repositories for both Infrastructure as Code (IaC) and application code?",
     "choices": {
       "B": "• Cloud Infrastructure (Terraform) repository is shared: different directories are different environments\n• GKE Infrastructure (Anthos Config Management Kustomize manifests) repositories are separated: different branches are different environments\n• Application (app source code) repositories are separated: different branches are different features",
       "D": "• Cloud Infrastructure (Terraform) repositories are separated: different branches are different environments\n• GKE Infrastructure (Anthos Config Management Kustomize manifests) repositories are separated: different overlay directories are different environments\n• Application (app source code) repositories are separated: different branches are different",
       "A": "• Cloud Infrastructure (Terraform) repository is shared: different directories are different environments\n• GKE Infrastructure (Anthos Config Management Kustomize manifests) repository is shared: different overlay directories are different environments\n• Application (app source code) repositories are separated: different branches are different features",
       "C": "• Cloud Infrastructure (Terraform) repository is shared: different branches are different environments\n• GKE Infrastructure (Anthos Config Management Kustomize manifests) repository is shared: different overlay directories are different environments\n• Application (app source code) repository is shared: different directories are different features"
-    }
+    },
+    "id": 60
   },
   {
     "answer": "B",
     "url": "https://www.examtopics.com/discussions/google/view/124265-exam-professional-cloud-devops-engineer-topic-1-question-153/",
-    "question_text": "",
+    "question_text": "You are configuring Cloud Logging for a new application that runs on a Compute Engine instance with a public IP address. A user-managed service account is attached to the instance. You confirmed that the necessary agents are running on the instance but you cannot see any log entries from the instance in Cloud Logging. You want to resolve the issue by following Google-recommended practices. What should you do?",
     "choices": {
       "B": "Update the instance to use the default Compute Engine service account.",
       "A": "Export the service account key and configure the agents to use the key.",
       "D": "Enable Private Google Access on the subnet that the instance is in.",
       "C": "Add the Logs Writer role to the service account."
-    }
+    },
+    "id": 61
   },
   {
     "answer": "A",
@@ -685,7 +746,8 @@
       "D": "Add Cloud Trace to the application, and redeploy.",
       "C": "Increase the memory limit in the application deployment.",
       "B": "Add high memory compute nodes to the cluster."
-    }
+    },
+    "id": 62
   },
   {
     "answer": "D",
@@ -696,7 +758,8 @@
       "A": "Change the Terraform code to use local state.",
       "D": "Grant the roles/storage.objectAdmin Identity and Access Management (1AM) role to the Cloud Build service account on the state file bucket.",
       "C": "Grant the roles/owner Identity and Access Management (IAM) role to the Cloud Build service account on the project."
-    }
+    },
+    "id": 63
   },
   {
     "answer": "C",
@@ -707,18 +770,20 @@
       "B": "Check the container/ephemeral_storage/used_bytes metric by using Metrics Explorer.",
       "A": "Check the node/ephemeral_storage/used_bytes metric by using Metrics Explorer.",
       "D": "Locate all the Pods with emptyDir volumes. Use the df -sh * command to measure volume disk usage."
-    }
+    },
+    "id": 64
   },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/124852-exam-professional-cloud-devops-engineer-topic-1-question-157/",
-    "question_text": "",
+    "question_text": "You are designing a new Google Cloud organization for a client. Your client is concerned with the risks associated with long-lived credentials created in Google Cloud. You need to design a solution to completely eliminate the risks associated with the use of JSON service account keys while minimizing operational overhead. What should you do?",
     "choices": {
       "C": "Apply the constraints/iam.disableServiceAccountKeyUpload constraint to the organization.",
       "A": "Apply the constraints/iam.disableServiceAccountKevCreation constraint to the organization.",
       "B": "Use custom versions of predefined roles to exclude all iam.serviceAccountKeys.* service account role permissions.",
       "D": "Grant the roles/iam.serviceAccountKeyAdmin IAM role to organization administrators only."
-    }
+    },
+    "id": 65
   },
   {
     "answer": "C",
@@ -729,7 +794,8 @@
       "A": "Use A/B testing with blue/green deployment.",
       "C": "Use canary testing with rolling updates deployment.",
       "B": "Use canary testing with continuous deployment."
-    }
+    },
+    "id": 66
   },
   {
     "answer": "D",
@@ -740,7 +806,8 @@
       "A": "Modify the application to use Cloud Logging software development kit (SDK), and send log entries with a jsonPayload field.",
       "B": "Install a Fluent Bit sidecar container, and use a JSON parser.",
       "C": "Install the log agent in the Cloud Run container image, and use the log agent to forward logs to Cloud Logging."
-    }
+    },
+    "id": 67
   },
   {
     "answer": "B",
@@ -751,7 +818,8 @@
       "B": "Enable Vulnerability Analysis on the Container Registry.",
       "D": "Set up the Kubernetes Engine clusters with Binary Authorization.",
       "C": "Set up the Kubernetes Engine clusters as private clusters."
-    }
+    },
+    "id": 68
   },
   {
     "answer": "AE",
@@ -763,7 +831,8 @@
       "B": "Ensure that relevant system metrics are being captured with Cloud Monitoring, and create alerts at levels of interest.",
       "D": "Monitor latency of your services for average percentile latency.",
       "C": "Review your increased capacity requirements and plan for the required quota management."
-    }
+    },
+    "id": 69
   },
   {
     "answer": "B",
@@ -774,7 +843,8 @@
       "B": "Write a script by using the gcloud CLI that passes the appropriate parameters from the request. Save the script in a Git repository.",
       "C": "Write a Terraform module and save it in your source control repository. Copy and run the terraform apply command to create the new project.",
       "A": "Use the Google Cloud console to create projects."
-    }
+    },
+    "id": 70
   },
   {
     "answer": "D",
@@ -785,9 +855,21 @@
       "A": "Use Cloud Build private pools to connect to the private VPC.",
       "C": "Use Cloud Build as a pipeline runner. Configure Internal HTTP(S) Load Balancing for API access.",
       "D": "Use Cloud Build as a pipeline runner. Configure External HTTP(S) Load Balancing with a Google Cloud Armor policy for API access."
-    }
+    },
+    "id": 71
   },
-  
+  {
+    "answer": "C",
+    "url": "https://www.examtopics.com/discussions/google/view/124320-exam-professional-cloud-devops-engineer-topic-1-question-163/",
+    "question_text": "You are leading a DevOps project for your organization. The DevOps team is responsible for managing the service infrastructure and being on-call for incidents. The Software Development team is responsible for writing, submitting, and reviewing code. Neither team has any published SLOs. You want to design a new joint-ownership model for a service between the DevOps team and the Software Development team. Which responsibilities should be assigned to each team in the new joint-ownership model?",
+    "choices": {
+      "C": "",
+      "B": "",
+      "A": "",
+      "D": ""
+    },
+    "id": 72
+  },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/124268-exam-professional-cloud-devops-engineer-topic-1-question-164/",
@@ -797,7 +879,8 @@
       "A": "Migrate the application to Cloud Run, and use autoscaling.",
       "D": "Pre-provision the additional compute power that was used last season, and expect growth.",
       "B": "Create a Terraform configuration for the application's underlying infrastructure to quickly deploy to additional regions."
-    }
+    },
+    "id": 73
   },
   {
     "answer": "B",
@@ -808,7 +891,8 @@
       "D": "Deploy the Ops Agent to export additional monitoring metrics.",
       "A": "Add additional network interface controllers (NICs) to your VMs.",
       "B": "Deploy a Cloud NAT gateway and attach the gateway to the subnet of the VMs."
-    }
+    },
+    "id": 74
   },
   {
     "answer": "C",
@@ -819,7 +903,8 @@
       "D": "Configure Container Registry as an OCI-based container registry for container images.",
       "B": "Configure an open source container registry server to run in GKE with a restrictive role-based access control (RBAC) configuration.",
       "A": "Use Docker to configure a Cloud Storage driver pointed at the bucket owned by your organization."
-    }
+    },
+    "id": 75
   },
   {
     "answer": "B",
@@ -830,7 +915,8 @@
       "D": "Use Stackdriver Logging to export application logs to BigQuery, aggregate logs per container, and then analyze CPU and memory consumption.",
       "A": "Use Stackdriver Kubernetes Engine Monitoring.",
       "B": "Use Prometheus to collect and aggregate logs per container, and then analyze the results in Grafana."
-    }
+    },
+    "id": 76
   },
   {
     "answer": "A",
@@ -841,7 +927,8 @@
       "A": "Create an automated testing script in production to detect failures as soon as they occur.",
       "C": "Secure the production environment to ensure that developers can't change it and set up one controlled update per year.",
       "D": "Create a development environment for writing code and a test environment for configurations, experiments, and load testing."
-    }
+    },
+    "id": 77
   },
   {
     "answer": "D",
@@ -852,7 +939,8 @@
       "A": "flex/connections/current",
       "C": "tcp_ssl_proxy/open_connections",
       "D": "flex/instance/connections/current"
-    }
+    },
+    "id": 78
   },
   {
     "answer": "A",
@@ -863,7 +951,8 @@
       "A": "Share the workspace Project ID with the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project.",
       "D": "Click ג€Share chart by URLג€ and provide the URL to the SRE team. Assign the SRE team the Dashboard Viewer IAM role in the workspace project.",
       "C": "Click ג€Share chart by URLג€ and provide the URL to the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project."
-    }
+    },
+    "id": 79
   },
   {
     "answer": "C",
@@ -874,7 +963,8 @@
       "D": "Use Cloud Security Scanner to see whether your Cloud SQL is under a Distributed Denial of Service (DDoS) attack.",
       "C": "Determine whether there is an increased number of connections to the Cloud SQL instance.",
       "B": "Use Stackdriver Profiler to visualize the resources utilization throughout the application."
-    }
+    },
+    "id": 80
   },
   {
     "answer": "C",
@@ -885,7 +975,8 @@
       "B": "Supply the source control tag as a parameter within the image name.",
       "D": "Use GCR digest versioning to match the image to the tag in source control.",
       "C": "Use Cloud Build to include the release version tag in the application image."
-    }
+    },
+    "id": 81
   },
   {
     "answer": "C",
@@ -896,7 +987,8 @@
       "B": "Contact the affected service owners and update them on the status of the incident.",
       "D": "Start a postmortem, add incident information, circulate the draft internally, and ask internal stakeholders for input.",
       "A": "Look for ways to mitigate user impact and deploy the mitigations to production."
-    }
+    },
+    "id": 82
   },
   {
     "answer": "C",
@@ -907,7 +999,8 @@
       "B": "Grant relevant team members the Project Viewer IAM role on all GCP production projects. Create Stackdriver workspaces inside each project.",
       "C": "Choose an existing GCP production project to host the monitoring workspace. Attach the production projects to this workspace. Grant relevant team members read access to the Stackdriver Workspace.",
       "A": "Grant relevant team members read access to all GCP production projects. Create Stackdriver workspaces inside each project."
-    }
+    },
+    "id": 83
   },
   {
     "answer": "A",
@@ -918,7 +1011,8 @@
       "D": "1. Export VM utilization logs from Stackdriver to a Cloud Storage bucket. 2. Enable the Cloud Storage API to pull the logs programmatically. 3. Build a custom data visualization application. 4. Display the pulled logs in a custom dashboard.",
       "C": "1. Export VM utilization logs from Stackdriver to BigQuery. 2. From BigQuery, export the logs to a CSV file. 3. Import the CSV file into Google Sheets. 4. Build a dashboard in Google Sheets and share it with your stakeholders.",
       "B": "1. Export VM utilization logs from Stackdriver to Cloud Pub/Sub. 2. From Cloud Pub/Sub, send the logs to a Security Information and Event Management (SIEM) system. 3. Build the dashboards in the SIEM system and share with your stakeholders."
-    }
+    },
+    "id": 84
   },
   {
     "answer": "C",
@@ -929,7 +1023,8 @@
       "D": "Create an Unmanaged Instance Group for the instances used to run the workload.",
       "B": "Migrate the instances to a Managed Instance Group.",
       "A": "Purchase Committed Use Discounts."
-    }
+    },
+    "id": 85
   },
   {
     "answer": "B",
@@ -940,7 +1035,8 @@
       "B": "Notify the development team that they will have to provide production support for the service.",
       "D": "Bring the service into production with no SLOs and build them when you have collected operational data.",
       "C": "Identify recommended reliability improvements to the service to be completed before handover."
-    }
+    },
+    "id": 86
   },
   {
     "answer": "D",
@@ -951,7 +1047,8 @@
       "A": "Roll back the experimental canary release.",
       "C": "Record data for the postmortem document of the incident.",
       "D": "Trace the origin of 500 errors and the root cause of increased latency."
-    }
+    },
+    "id": 87
   },
   {
     "answer": "A",
@@ -962,7 +1059,8 @@
       "C": "ג€¢ Store your code as text files in Google Drive in a defined folder structure that organizes the files. ג€¢ At the end of each day, confirm that all changes have been captured in the files within the folder structure. ג€¢ Rename the folder structure with a predefined naming convention that increments the version.",
       "B": "ג€¢ Store your code in a Git-based version control system. ג€¢ Establish a process that includes code reviews by peers and unit testing to ensure integrity and functionality before integration of code. ג€¢ Establish a process where the fully integrated code in the repository becomes the latest master version.",
       "D": "ג€¢ Store your code as text files in Google Drive in a defined folder structure that organizes the files. ג€¢ At the end of each day, confirm that all changes have been captured in the files within the folder structure and create a new .zip archive with a predefined naming convention. ג€¢ Upload the .zip archive to a versioned Cloud Storage bucket and accept it as the latest version."
-    }
+    },
+    "id": 88
   },
   {
     "answer": "D",
@@ -973,7 +1071,8 @@
       "B": "An availability SLI: the ratio of healthy microservices to the total number of microservices.",
       "C": "A freshness SLI: the proportion of widgets that have been updated within the last 10 minutes.",
       "A": "A quality SLI: the ratio of non-degraded responses to total responses."
-    }
+    },
+    "id": 89
   },
   {
     "answer": "B",
@@ -984,7 +1083,8 @@
       "C": "Develop a postmortem that includes the root causes, resolution, lessons learned, the list of people responsible, and a list of action items for each person. Share it with the manager only.",
       "B": "Develop a postmortem that includes the root causes, resolution, lessons learned, and a prioritized list of action items. Share it on the engineering organization's document portal.",
       "A": "Develop a postmortem that includes the root causes, resolution, lessons learned, and a prioritized list of action items. Share it with the manager only."
-    }
+    },
+    "id": 90
   },
   {
     "answer": "CD",
@@ -996,7 +1096,8 @@
       "A": "Your application servers' logs.",
       "C": "Metrics exported from the application servers.",
       "E": "A synthetic client that periodically sends simulated user requests."
-    }
+    },
+    "id": 91
   },
   {
     "answer": "C",
@@ -1007,7 +1108,8 @@
       "A": "Publish various metrics from the application directly to the Stackdriver Monitoring API, and then observe these custom metrics in Stackdriver.",
       "D": "Emit all metrics in the form of application-specific log messages, pass these messages from the containers to the Stackdriver logging collector, and then observe metrics in Stackdriver.",
       "B": "Install the Cloud Pub/Sub client libraries, push various metrics from the application to various topics, and then observe the aggregated metrics in Stackdriver."
-    }
+    },
+    "id": 92
   },
   {
     "answer": "A",
@@ -1018,7 +1120,8 @@
       "C": "Add a Load Balancer in front of the Compute Engine instance and use health checks to determine the system status.",
       "B": "Create a Managed instance Group with a single instance and use health checks to determine the system status.",
       "A": "File a bug with the development team so they can find the root cause of the crashing instance."
-    }
+    },
+    "id": 93
   },
   {
     "answer": "C",
@@ -1029,7 +1132,8 @@
       "C": "Store secrets in Cloud Storage encrypted with a key from Cloud KMS. Provide the CI/CD pipeline with access to Cloud KMS via IAM.",
       "B": "Store secrets in a separate configuration file on Git. Provide select developers with access to the configuration file.",
       "A": "Prompt developers for secrets at build time. Instruct developers to not store secrets at rest."
-    }
+    },
+    "id": 94
   },
   {
     "answer": "C",
@@ -1040,7 +1144,8 @@
       "A": "Focus on responding to internal stakeholders at least every 30 minutes. Commit to ג€next updateג€ times.",
       "D": "Provide all internal stakeholder emails to the Incident Commander, and allow them to manage internal communications. Focus on providing responses directly to customers.",
       "C": "Delegate the responding to internal stakeholder emails to another member of the Incident Response Team. Focus on providing responses directly to customers."
-    }
+    },
+    "id": 95
   },
   {
     "answer": "C",
@@ -1051,7 +1156,8 @@
       "B": "Specify the Container Developer role for Cloud Build in the cloudbuild.yaml file.",
       "A": "Assign the Container Developer role to the Cloud Build service account.",
       "D": "Create a separate step in Cloud Build to retrieve service account credentials and pass these to kubectl."
-    }
+    },
+    "id": 96
   },
   {
     "answer": "C",
@@ -1062,7 +1168,8 @@
       "D": "Configure BigQuery as a sink for Stackdriver Logging. Create a scheduled query to filter the cache miss logs and write them to a separate table.",
       "A": "Link Stackdriver Logging as a source in Google Data Studio. Filter the logs on the cache misses.",
       "C": "Create a logs-based metric in Stackdriver Logging and a dashboard for that metric in Stackdriver Monitoring."
-    }
+    },
+    "id": 97
   },
   {
     "answer": "D",
@@ -1073,7 +1180,8 @@
       "B": "Monitor results of Stackdriver Trace to determine the required amount of resources.",
       "D": "Deploy the service in one region and use a global load balancer to route traffic to this region.",
       "C": "Validate that the resource requirements are within the available quota limits of each region."
-    }
+    },
+    "id": 98
   },
   {
     "answer": "A",
@@ -1084,7 +1192,8 @@
       "B": "Use a Fluentd filter plugin with the Stackdriver Agent to remove log entries containing userinfo, and then copy the entries to a Cloud Storage bucket.",
       "C": "Create an advanced log filter matching userinfo, configure a log export in the Stackdriver console with Cloud Storage as a sink, and then configure a log exclusion with userinfo as a filter.",
       "A": "Create a basic log filter matching userinfo, and then configure a log export in the Stackdriver console with Cloud Storage as a sink."
-    }
+    },
+    "id": 99
   },
   {
     "answer": "B",
@@ -1095,7 +1204,8 @@
       "C": "Upload the configuration YAML file to Cloud Storage and use Error Reporting to identify and fix the issue.",
       "B": "Change the CI pipeline to push the artifacts is Container Registry instead of Docker Hub.",
       "A": "Disable the CI pipeline and revert to manually building and pushing the artifacts."
-    }
+    },
+    "id": 100
   },
   {
     "answer": "B",
@@ -1106,7 +1216,8 @@
       "B": "Deploy a Fluentd daemonset to GKE. Then create a customized input and output configuration to tail the log file in the application's pods and write to Stackdriver Logging.",
       "C": "Install Kubernetes on Google Compute Engine (GCE) and redeploy your applications. Then customize the built-in Stackdriver Logging configuration to tail the log file in the application's pods and write to Stackdriver Logging.",
       "A": "Use the default Stackdriver Kubernetes Engine Monitoring agent configuration."
-    }
+    },
+    "id": 101
   },
   {
     "answer": "C",
@@ -1117,7 +1228,8 @@
       "A": "Identify engineers responsible for the incident and escalate to their senior management.",
       "C": "Follow up with the employees who reviewed the changes and prescribe practices they should follow in the future.",
       "D": "Design a policy that will require on-call teams to immediately call engineers and management to discuss a plan of action if an incident occurs."
-    }
+    },
+    "id": 102
   },
   {
     "answer": "BD",
@@ -1129,7 +1241,8 @@
       "C": "Analyze the web proxy logs only and capture response time of each request.",
       "A": "Review current application metrics and add new ones as needed.",
       "B": "Modify the code to capture additional information for user interaction."
-    }
+    },
+    "id": 103
   },
   {
     "answer": "A",
@@ -1140,7 +1253,8 @@
       "D": "Create an Organizational Policy in Cloud IAM to allow only these members to create log exports.",
       "A": "Grant the team members the IAM role of logging.configWriter on Cloud IAM.",
       "C": "Create and grant a custom IAM role with the permissions logging.sinks.list and logging.sink.get."
-    }
+    },
+    "id": 104
   },
   {
     "answer": "D",
@@ -1151,7 +1265,8 @@
       "A": "Create a custom builder for Cloud Build that will only push images to gcr.io/altostrat-images.",
       "B": "Use a Binary Authorization policy that includes the whitelist name pattern gcr.io/altostrat-images/.",
       "C": "Add logic to the deployment pipeline to check that all manifests contain only images from gcr.io/altostrat-images."
-    }
+    },
+    "id": 105
   },
   {
     "answer": "B",
@@ -1162,7 +1277,8 @@
       "C": "Install the Stackdriver custom metrics adapter and configure a horizontal pod autoscaler to use the number of requests provided by the GCLB.",
       "A": "Configure the horizontal pod autoscaler to use the average response time from the Liveness and Readiness probes.",
       "B": "Configure the vertical pod autoscaler in GKE and enable the cluster autoscaler to scale the cluster as pods expand."
-    }
+    },
+    "id": 106
   },
   {
     "answer": "AE",
@@ -1174,7 +1290,8 @@
       "B": "Engineering Lead",
       "D": "Customer Impact Assessor",
       "C": "Communications Lead"
-    }
+    },
+    "id": 107
   },
   {
     "answer": "D",
@@ -1185,7 +1302,8 @@
       "D": "Configure a Slack notification for each alerting policy. Set up a Slack-to-SMS integration to send SMS messages when Slack messages are received. Ensure that your team members add their SMS/phone numbers to the external integration.",
       "B": "Select the Webhook notifications option for each alerting policy, and configure it to use a third-party integration tool. Ensure that your team members add their SMS/phone numbers to the external tool.",
       "C": "Ensure that your team members set their SMS/phone numbers in their Stackdriver Profile. Select the SMS notification option for each alerting policy and then select the appropriate SMS/phone numbers from the list."
-    }
+    },
+    "id": 108
   },
   {
     "answer": "A",
@@ -1196,7 +1314,8 @@
       "D": "ג€¢ In your application, create a metric with a metricKind set to METRIC_KIND_UNSPECIFIED and a valueType set to INT64. ג€¢ In Stackdriver's Metrics Explorer, use a Stacked Area graph to visualize the metric.",
       "C": "ג€¢ In your application, create a metric with a metricKind set to GAUGE and a valueType set to DISTRIBUTION. ג€¢ In Stackdriver's Metrics Explorer, use a Heatmap graph to visualize the metric.",
       "B": "ג€¢ In your application, create a metric with a metricKind set to CUMULATIVE and a valueType set to DOUBLE. ג€¢ In Stackdriver's Metrics Explorer, use a Line graph to visualize the metric."
-    }
+    },
+    "id": 109
   },
   {
     "answer": "B",
@@ -1207,7 +1326,8 @@
       "A": "Import the Stackdriver Profiler package, and configure it to relay function timing data to Stackdriver for further analysis.",
       "D": "Install an Application Performance Monitoring (APM) tool in both locations, and configure an export to a central data storage location for analysis.",
       "C": "Instrument the code using a timing library, and publish the metrics via a health check endpoint that is scraped by Stackdriver."
-    }
+    },
+    "id": 110
   },
   {
     "answer": "D",
@@ -1218,7 +1338,8 @@
       "B": "The organization's public-facing website.",
       "D": "A GPU-accelerated video rendering platform that retrieves and stores videos in a storage bucket.",
       "C": "A distributed, eventually consistent NoSQL database cluster with sufficient quorum."
-    }
+    },
+    "id": 111
   },
   {
     "answer": "D",
@@ -1229,7 +1350,8 @@
       "A": "Look for the agent's test log entry in the Logs Viewer.",
       "D": "SSH to the VM and execute the following commands on your VM: ps ax | grep fluentd.",
       "B": "Install the most recent version of the Stackdriver agent."
-    }
+    },
+    "id": 112
   },
   {
     "answer": "C",
@@ -1240,7 +1362,8 @@
       "D": "Enable binary authorization inside the Kubernetes cluster and configure the build pipeline as an attestor.",
       "C": "Leverage Kubernetes Role-Based Access Control (RBAC) to restrict access to only approved users.",
       "A": "Configure the build system with protected branches that require pull request approval."
-    }
+    },
+    "id": 113
   },
   {
     "answer": "C",
@@ -1251,7 +1374,8 @@
       "D": "Set up additional service instances in other zones and use them as a failover in case the primary instance is unavailable",
       "B": "Move the service to higher-specification compute instances with more memory",
       "A": "Change the specified SLO to match the measured SLI"
-    }
+    },
+    "id": 114
   },
   {
     "answer": "D",
@@ -1262,7 +1386,8 @@
       "A": "Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 0.5.",
       "C": "Enable VPC Flow Logs on the testing and production VPC network frontend and backend subnets with a volume scale of 0.5. Apply changes in testing before production.",
       "B": "Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 1.0."
-    }
+    },
+    "id": 115
   },
   {
     "answer": "A",
@@ -1273,7 +1398,8 @@
       "A": "Store the Terraform code in a version-control system. Establish procedures for pushing new versions and merging with the master.",
       "C": "Store the Terraform code in a Cloud Storage bucket using object versioning. Give access to the bucket to every team member so they can download the files.",
       "B": "Store the Terraform code in a network shared folder with child folders for each version release. Ensure that everyone works on different files."
-    }
+    },
+    "id": 116
   },
   {
     "answer": "B",
@@ -1284,7 +1410,8 @@
       "D": "Confirm that the application is using the required client library and the service account key has proper permissions.",
       "C": "Confirm that port 25 has been opened in the firewall to allow messages through to Stackdriver.",
       "A": "Confirm that the Stackdriver agent has been installed in the hosting virtual machine."
-    }
+    },
+    "id": 117
   },
   {
     "answer": "A",
@@ -1295,7 +1422,8 @@
       "C": "Reconfigure the existing operating system vulnerability software to exist inside the container.",
       "A": "Set up Container Analysis to scan and report Common Vulnerabilities and Exposures.",
       "B": "Configure the containers in the build pipeline to always update themselves before release."
-    }
+    },
+    "id": 118
   },
   {
     "answer": "C",
@@ -1306,7 +1434,8 @@
       "D": "Use larger Cloud Build virtual machines (VMs) by using the machine-type option.",
       "B": "Run multiple Jenkins agents to parallelize the build.",
       "C": "Use multiple smaller build steps to minimize execution time."
-    }
+    },
+    "id": 119
   },
   {
     "answer": "C",
@@ -1317,7 +1446,8 @@
       "A": "Roll back the recent release.",
       "D": "Deploy a new release to see whether it fixes the problem.",
       "B": "Review the Stackdriver monitoring."
-    }
+    },
+    "id": 120
   },
   {
     "answer": "A",
@@ -1328,7 +1458,8 @@
       "A": "Store the encryption keys in Cloud Key Management Service (KMS) and rotate the keys frequently",
       "D": "Leverage a continuous build pipeline that produces multiple versions of the secret for each instance of the application.",
       "C": "Integrate the application with a Single sign-on (SSO) system and do not expose secrets to the application."
-    }
+    },
+    "id": 121
   },
   {
     "answer": "A",
@@ -1339,7 +1470,8 @@
       "A": "Eliminate unactionable alerts.",
       "C": "Distribute the alerts to engineers in different time zones.",
       "B": "Create an incident report for each of the alerts."
-    }
+    },
+    "id": 122
   },
   {
     "answer": "D",
@@ -1350,7 +1482,8 @@
       "D": "Create a Cloud Pub/Sub push subscription to the Cloud Build cloud-builds PubSub topic to HTTP POST the build information to a webhook.",
       "B": "Add a new step at the end of the pipeline in Cloud Build to HTTP POST the build information to a webhook.",
       "C": "Use Stackdriver Logging to create a logs-based metric from the Cloud Build logs. Create an Alert with a Webhook notification type."
-    }
+    },
+    "id": 123
   },
   {
     "answer": "B",
@@ -1361,7 +1494,8 @@
       "A": "Load teat the application to profile its performance for scaling.",
       "D": "Create a runbook on inflating the disaster recovery (DR) environment if there is growth.",
       "C": "Pre-provision double the compute power used last season, expecting growth."
-    }
+    },
+    "id": 124
   },
   {
     "answer": "B",
@@ -1372,7 +1506,8 @@
       "A": "Upgrade the GCS buckets to Multi-Regional.",
       "C": "Move the application from App Engine to Compute Engine.",
       "D": "Modify the App Engine configuration to have additional idle instances."
-    }
+    },
+    "id": 125
   },
   {
     "answer": "D",
@@ -1383,7 +1518,8 @@
       "B": "Implement Jenkins on Kubernetes on-premises.",
       "D": "Implement Jenkins on Compute Engine virtual machines.",
       "C": "Implement Jenkins on Google Cloud Functions."
-    }
+    },
+    "id": 126
   },
   {
     "answer": "D",
@@ -1394,7 +1530,8 @@
       "B": "Develop an App Engine application that pulls the logs from Stackdriver and saves them in BigQuery.",
       "D": "Create a sink in Stackdriver, name it, create a bucket on Cloud Storage for storing archived logs, and then select the bucket as the log export destination.",
       "C": "Create an export in Stackdriver and configure Cloud Pub/Sub to store logs in permanent storage for seven years."
-    }
+    },
+    "id": 127
   },
   {
     "answer": "C",
@@ -1405,7 +1542,8 @@
       "B": "Install the Stackdriver Error Reporting library for Python, and then run your code on Google Kubernetes Engine.",
       "C": "Install the Stackdriver Error Reporting library for Python, and then run your code on App Engine flexible environment.",
       "D": "Use the Stackdriver Error Reporting API to write errors from your application to ReportedErrorEvent, and then generate log entries with properly formatted error messages in Stackdriver Logging."
-    }
+    },
+    "id": 128
   },
   {
     "answer": "B",
@@ -1416,7 +1554,8 @@
       "C": "90 percentile ג€\" 150ms th 95 percentile ג€\" 300ms th",
       "B": "90 percentile ג€\" 120ms th 95 percentile ג€\" 275ms th",
       "D": "90 percentile ג€\" 250ms th 95 percentile ג€\" 400ms th"
-    }
+    },
+    "id": 129
   },
   {
     "answer": "B",
@@ -1427,7 +1566,8 @@
       "B": "Negotiate with the product team to always prioritize service reliability over releasing new features.",
       "D": "Add a plugin to your Jenkins pipeline that prevents new releases whenever your service is out of SLO.",
       "A": "Develop an appropriate error budget policy in cooperation with all service stakeholders."
-    }
+    },
+    "id": 130
   },
   {
     "answer": "D",
@@ -1438,7 +1578,8 @@
       "C": "Create a Development and a Production GKE cluster in separate projects. In each cluster, create a Kubernetes namespace per team, and then configure Identity Aware Proxy so that each team can only access its own namespace.",
       "D": "Create a Development and a Production GKE cluster in separate projects. In each cluster, create a Kubernetes namespace per team, and then configure Kubernetes Role-based access control (RBAC) so that each team can only access its own namespace.",
       "B": "Create one GCP Project per team. In each project, create a cluster with a Kubernetes namespace for Development and one for Production. Grant the teams IAM access to their respective clusters."
-    }
+    },
+    "id": 131
   },
   {
     "answer": "B",
@@ -1449,7 +1590,8 @@
       "D": "Push the images to a private image registry running on a Compute Engine instance in the eu-west-1 region.",
       "B": "Push the images to Google Container Registry (GCR) using the us.gcr.io hostname.",
       "C": "Push the images to Google Container Registry (GCR) using the eu.gcr.io hostname."
-    }
+    },
+    "id": 132
   },
   {
     "answer": "D",
@@ -1460,7 +1602,8 @@
       "B": "Assign all instances a label specific to the system they run. Configure BigQuery billing export and query costs per label.",
       "C": "Enrich all instances with metadata specific to the system they run. Configure Stackdriver Logging to export to BigQuery, and query costs based on the metadata.",
       "D": "Name each virtual machine (VM) after the system it runs. Set up a usage report export to a Cloud Storage bucket. Configure the bucket as a source in BigQuery to query costs based on VM name."
-    }
+    },
+    "id": 133
   },
   {
     "answer": "D",
@@ -1471,7 +1614,8 @@
       "A": "Compare the canary with a new deployment of the current production version.",
       "B": "Compare the canary with a new deployment of the previous production version.",
       "D": "Compare the canary with the average performance of a sliding window of previous production versions."
-    }
+    },
+    "id": 134
   },
   {
     "answer": "D",
@@ -1482,7 +1626,8 @@
       "B": "Encrypt the secrets and store them in the application repository. Store a decryption key in a separate repository and grant Cloud Build access to the repository.",
       "A": "Create a Cloud Storage bucket and use the built-in encryption at rest. Store the secrets in the bucket and grant Cloud Build access to the bucket.",
       "D": "Use Cloud Key Management Service (Cloud KMS) to encrypt the secrets and include them in your Cloud Build deployment configuration. Grant Cloud Build access to the KeyRing."
-    }
+    },
+    "id": 135
   },
   {
     "answer": "D",
@@ -1493,7 +1638,8 @@
       "A": "Reroute the user traffic from the affected region to other regions that don't report issues.",
       "D": "Use Stackdriver Logging to filter on the clusters in the affected region, and inspect error messages in the logs.",
       "B": "Use Stackdriver Monitoring to check for a spike in CPU or memory usage for the affected region."
-    }
+    },
+    "id": 136
   },
   {
     "answer": "AB",
@@ -1505,7 +1651,8 @@
       "D": "Your opinion of the incident's severity compared to past incidents",
       "B": "A list of employees responsible for causing the incident",
       "C": "A list of action items to prevent a recurrence of the incident"
-    }
+    },
+    "id": 137
   },
   {
     "answer": "A",
@@ -1516,7 +1663,8 @@
       "A": "Use a partitioned rolling update.",
       "B": "Use Node taints with NoExecute.",
       "D": "Use a stateful set with parallel pod management policy."
-    }
+    },
+    "id": 138
   },
   {
     "answer": "C",
@@ -1527,7 +1675,8 @@
       "A": "As the I/O wait times aggregated across all report generation backends",
       "C": "As the application's report generation queue size compared to a known-good threshold",
       "D": "As the reporting backend PD throughout capacity compared to a known-good threshold"
-    }
+    },
+    "id": 139
   },
   {
     "answer": "C",
@@ -1538,7 +1687,8 @@
       "B": "Investigate the Liveness and Readiness probes for each service.",
       "C": "Create a Dataflow pipeline to analyze service metrics in real time.",
       "D": "Use a distributed tracing framework such as OpenTelemetry or Stackdriver Trace."
-    }
+    },
+    "id": 140
   },
   {
     "answer": "A",
@@ -1549,7 +1699,8 @@
       "C": "Assign collaborators but no individual owners to the items to keep the postmortem blameless.",
       "D": "Assign the team lead as the owner for all action items because they are in charge of the SRE team.",
       "B": "Assign multiple owners for each item to guarantee that the team addresses items quickly."
-    }
+    },
+    "id": 141
   },
   {
     "answer": "B",
@@ -1560,7 +1711,8 @@
       "D": "Introduce the new version of the API. Contact remaining users of the old API. Announce deprecation of the old version of the API. Deprecate the old version of the API. Turn down the old version of the API. Provide best effort support to users of the old API.",
       "B": "Announce deprecation of the old version of the API. Introduce the new version of the API. Contact remaining users on the old API. Deprecate the old version of the API. Turn down the old version of the API. Provide best effort support to users of the old API.",
       "A": "Introduce the new version of the API. Announce deprecation of the old version of the API. Deprecate the old version of the API. Contact remaining users of the old API. Provide best effort support to users of the old API. Turn down the old version of the API."
-    }
+    },
+    "id": 142
   },
   {
     "answer": "B",
@@ -1571,7 +1723,8 @@
       "D": "Stage log entries to Cloud Storage, and then trigger a Cloud Function to remove the fields and write the entries to Stackdriver via the Stackdriver Logging API.",
       "C": "Wait for the application developers to patch the application, and then verify that the log entries are no longer exposing PII.",
       "A": "Use the filter-record-transformer Fluentd filter plugin to remove the fields from the log entries in flight."
-    }
+    },
+    "id": 143
   },
   {
     "answer": "B",
@@ -1582,7 +1735,8 @@
       "D": "Use the Git history to find the related code commit. Prevent the engineer who made that commit from working on production services.",
       "C": "Plan individual meetings with all the engineers involved. Determine who approved and pushed the new release to production.",
       "A": "Focus on developing new features rather than avoiding the outages from recurring."
-    }
+    },
+    "id": 144
   },
   {
     "answer": "C",
@@ -1593,7 +1747,8 @@
       "D": "Count the number of home page request that load in under 100 ms, and then divide by the total number of all web application requests.",
       "B": "Bucketize the request latencies into ranges, and then compute the median and 90th percentiles.",
       "A": "Bucketize the request latencies into ranges, and then compute the percentile at 100 ms."
-    }
+    },
+    "id": 145
   },
   {
     "answer": "AD",
@@ -1605,7 +1760,8 @@
       "E": "Announce planned downtime to consume more error budget, and ensure that users are not depending on a tighter SLO.",
       "C": "Tighten the SLO match the application's observed reliability.",
       "D": "Implement and measure additional Service Level Indicators (SLIs) fro the application."
-    }
+    },
+    "id": 146
   },
   {
     "answer": "DE",
@@ -1617,30 +1773,33 @@
       "E": "Change the implementation of your Service Level Indicators (SLIs) to increase coverage.",
       "C": "Shift engineering time to other services that need more reliability.",
       "B": "Increase the service's deployment velocity and/or risk."
-    }
+    },
+    "id": 147
   },
   {
     "answer": "C",
     "url": "https://www.examtopics.com/discussions/google/view/122000-exam-professional-cloud-devops-engineer-topic-1-question-82/",
-    "question_text": "",
+    "question_text": "Your company follows Site Reliability Engineering principles. You are writing a postmortem for an incident, triggered by a software change that severely affected users. You want to prevent severe incident from happening in the future. What should you do?",
     "choices": {
       "D": "Design a policy that will require on-call teams to immediately call engineers and management to discuss a plan of action if an incident occurs.",
       "A": "Identify engineers responsible for the incident and escalate to the senior management.",
       "C": "Follow up with the employees who reviewed the changes and prescribe practices they should follow in the future.",
       "B": "Ensure that test cases that catch errors of this type are run successfully before new software releases."
-    }
+    },
+    "id": 148
   },
   {
     "answer": "AD",
     "url": "https://www.examtopics.com/discussions/google/view/122001-exam-professional-cloud-devops-engineer-topic-1-question-83/",
-    "question_text": "",
+    "question_text": "Your organization uses a change advisory board (CAB) to approve all changes to an existing service. You want to revise this process to eliminate any negative impact on the software delivery performance. What should you do? (Choose two.)",
     "choices": {
       "D": "Batch changes into larger but less frequent software releases.",
       "B": "Let developers merge their own changes, but ensure that the team's deployment platform can roll back changes if any issues are discovered.",
       "C": "Move to a peer-review based process for individual changes that is enforced at code check-in time and supported by automated tests.",
       "E": "Ensure that the team's development platform enables developers to get fast feedback on the impact of their changes.",
       "A": "Replace the CAB with a senior manager to ensure continuous oversight from development to deployment."
-    }
+    },
+    "id": 149
   },
   {
     "answer": "C",
@@ -1651,18 +1810,20 @@
       "C": "Deploy the canary release of the application to Compute Engine. Use Anthos Service Mesh with Compute Engine to direct 10% of user traffic to the canary release by configuring the virtual service.",
       "D": "Deploy the canary release to Google Kubernetes Engine with Anthos Service Mesh. Use traffic splitting to direct 10% of user traffic to the new version based on the user-agent header configured in the virtual service.",
       "B": "Deploy the canary release of the application to App Engine. Use traffic splitting to direct a subset of user traffic to the new version based on the IP address."
-    }
+    },
+    "id": 150
   },
   {
     "answer": "B",
     "url": "https://www.examtopics.com/discussions/google/view/122003-exam-professional-cloud-devops-engineer-topic-1-question-85/",
-    "question_text": "",
+    "question_text": "Your team is running microservices in Google Kubernetes Engine (GKE). You want to detect consumption of an error budget to protect customers and define release policies. What should you do?",
     "choices": {
       "D": "Create a SLO and configure uptime checks for your services. Enable Alert Policies if the services do not pass.",
       "A": "Create SLIs from metrics. Enable Alert Policies if the services do not pass.",
       "C": "Create a SLO. Create an Alert Policy on select_slo_burn_rate.",
       "B": "Use the metrics from Anthos Service Mesh to measure the health of the microservices."
-    }
+    },
+    "id": 151
   },
   {
     "answer": "A",
@@ -1673,40 +1834,44 @@
       "A": "Use the gcloud CLI to install the Ops Agent on each VM listed in the Cloud Asset Inventory,",
       "C": "Use the gcloud CLI to create an Agent Policy.",
       "B": "Select all VMs with an Agent status of Not detected on the Cloud Operations VMs dashboard. Then select Install agents."
-    }
+    },
+    "id": 152
   },
   {
     "answer": "C",
     "url": "https://www.examtopics.com/discussions/google/view/123441-exam-professional-cloud-devops-engineer-topic-1-question-87/",
-    "question_text": "",
+    "question_text": "Your company has a Google Cloud resource hierarchy with folders for production, test, and development. Your cyber security team needs to review your company's Google Cloud security posture to accelerate security issue identification and resolution. You need to centralize the logs generated by Google Cloud services from all projects only inside your production folder to allow for alerting and near-real time analysis. What should you do?",
     "choices": {
       "A": "Enable the Workflows API and route all the logs to Cloud Logging.",
       "D": "Create an aggregated log sink associated with the production folder that uses a Cloud Logging bucket as the destination.",
       "C": "Create an aggregated log sink associated with the production folder that uses a Pub/Sub topic as the destination.",
       "B": "Create a central Cloud Monitoring workspace and attach all related projects."
-    }
+    },
+    "id": 153
   },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/122005-exam-professional-cloud-devops-engineer-topic-1-question-88/",
-    "question_text": "",
+    "question_text": "You are configuring the frontend tier of an application deployed in Google Cloud. The frontend tier is hosted in nginx and deployed using a managed instance group with an Envoy-based external HTTP(S) load balancer in front. The application is deployed entirely within the europe-west2 region, and only serves users based in the United Kingdom. You need to choose the most cost-effective network tier and load balancing configuration. What should you use?",
     "choices": {
       "A": "Premium Tier with a global load balancer",
       "D": "Standard Tier with a regional load balancer",
       "B": "Premium Tier with a regional load balancer",
       "C": "Standard Tier with a global load balancer"
-    }
+    },
+    "id": 154
   },
   {
     "answer": "D",
     "url": "https://www.examtopics.com/discussions/google/view/122006-exam-professional-cloud-devops-engineer-topic-1-question-89/",
-    "question_text": "",
+    "question_text": "You recently deployed your application in Google Kubernetes Engine (GKE) and now need to release a new version of the application. You need the ability to instantly roll back to the previous version of the application in case there are issues with the new version. Which deployment model should you use?",
     "choices": {
       "A": "Perform a rolling deployment, and test your new application after the deployment is complete.",
       "D": "Perform a blue/green deployment, and test your new application after the deployment is complete.",
       "C": "Perform a canary deployment, and test your new application periodically after the new version is deployed.",
       "B": "Perform A/B testing, and test your application periodically after the deployment is complete."
-    }
+    },
+    "id": 155
   },
   {
     "answer": "AC",
@@ -1718,18 +1883,20 @@
       "D": "Require developers to run automated integration tests on their local development environments before release.",
       "C": "Integrate a code linting tool to validate coding standards before any code is accepted into the repository.",
       "A": "Before merging new code, require 2 different peers to review the code changes."
-    }
+    },
+    "id": 156
   },
   {
     "answer": "A",
     "url": "https://www.examtopics.com/discussions/google/view/122008-exam-professional-cloud-devops-engineer-topic-1-question-90/",
-    "question_text": "",
+    "question_text": "You are building and deploying a microservice on Cloud Run for your organization. Your service is used by many applications internally. You are deploying a new release, and you need to test the new version extensively in the staging and production environments. You must minimize user and developer impact. What should you do?",
     "choices": {
       "C": "Deploy the new version of the service to the staging environment with a new-release tag without serving traffic. Test the new-release version. If the test passes, gradually roll out this tagged version. Repeat for the production environment.",
       "A": "Deploy the new version of the service to the staging environment. Split the traffic, and allow 1% of traffic through to the latest version. Test the latest version. If the test passes, gradually roll out the latest version to the staging and production environments.",
       "B": "Deploy the new version of the service to the staging environment. Split the traffic, and allow 50% of traffic through to the latest version. Test the latest version. If the test passes, send all traffic to the latest version. Repeat for the production environment.",
       "D": "Deploy a new environment with the green tag to use as the staging environment. Deploy the new version of the service to the green environment and test the new version. If the tests pass, send all traffic to the green environment and delete the existing staging environment. Repeat for the production environment."
-    }
+    },
+    "id": 157
   },
   {
     "answer": "C",
@@ -1740,7 +1907,8 @@
       "B": "Identify, measure, and eliminate toil by automating repetitive tasks.",
       "C": "Define an error budget for your service level availability and minimize the remaining error budget.",
       "A": "Add N+1 redundancy to your service by adding additional compute resources to the service."
-    }
+    },
+    "id": 158
   },
   {
     "answer": "B",
@@ -1751,19 +1919,21 @@
       "C": "Rolling update deployment and A/B testing",
       "D": "Rolling update deployment and shadow testing",
       "A": "Recreate deployment and canary testing"
-    }
+    },
+    "id": 159
   },
   {
     "answer": "BE",
     "url": "https://www.examtopics.com/discussions/google/view/122633-exam-professional-cloud-devops-engineer-topic-1-question-93/",
-    "question_text": "",
+    "question_text": "You are creating a CI/CD pipeline to perform Terraform deployments of Google Cloud resources. Your CI/CD tooling is running in Google Kubernetes Engine (GKE) and uses an ephemeral Pod for each pipeline run. You must ensure that the pipelines that run in the Pods have the appropriate Identity and Access Management (IAM) permissions to perform the Terraform deployments. You want to follow Google-recommended practices for identity management. What should you do? (Choose two.)",
     "choices": {
       "A": "Create a new Kubernetes service account, and assign the service account to the Pods. Use Workload Identity to authenticate as the Google service account.",
       "D": "Create a new JSON service account key for the Google service account, store the key in the secret management store for the CI/CD tool, and configure Terraform to use this key for authentication.",
       "C": "Create a new Google service account, and assign the appropriate IAM permissions.",
       "E": "Assign the appropriate IAM permissions to the Google service account associated with the Compute Engine VM instances that run the Pods.",
       "B": "Create a new JSON service account key for the Google service account, store the key as a Kubernetes secret, inject the key into the Pods, and set the GOOGLE_APPLICATION_CREDENTIALS environment variable."
-    }
+    },
+    "id": 160
   },
   {
     "answer": "C",
@@ -1774,7 +1944,8 @@
       "B": "Add a virtual queue to the online store that allows typical traffic levels.",
       "C": "Increase the number of Pod replicas.",
       "D": "Increase the Pod CPU and memory limits."
-    }
+    },
+    "id": 161
   },
   {
     "answer": "C",
@@ -1785,7 +1956,8 @@
       "B": "Use Google Cloud Deploy to deploy the DaemonSet and use Policy Controller to configure the network policies. Use Cloud Monitoring to detect drifts from the source in the repository and Cloud Functions to correct the drifts.",
       "D": "Use Cloud Build to render and deploy the network policies and the DaemonSet. Set up a Policy Controller to enforce the configurations for the three environments.",
       "A": "Use Google Cloud Deploy to deploy the network policies and the DaemonSet. Use Cloud Monitoring to trigger an alert if the network policies and DaemonSet drift from your source in the repository."
-    }
+    },
+    "id": 162
   },
   {
     "answer": "D",
@@ -1796,7 +1968,8 @@
       "B": "Confirm that the pipeline is storing and retrieving the terraform.tfstate file from Cloud Storage with the Terraform gcs backend.",
       "D": "Update the pipeline to remove any existing infrastructure before you apply the latest configuration.",
       "C": "Verify that the pipeline is storing and retrieving the terraform.tfstate file from a source control."
-    }
+    },
+    "id": 163
   },
   {
     "answer": "A",
@@ -1807,18 +1980,20 @@
       "A": "Create a single aggregated log sink at the organization level.",
       "D": "Create an aggregated log sink in the Dev and Prod folders.",
       "C": "Create two aggregated log sinks at the organization level, and filter by project ID."
-    }
+    },
+    "id": 164
   },
   {
     "answer": "A",
     "url": "https://www.examtopics.com/discussions/google/view/122383-exam-professional-cloud-devops-engineer-topic-1-question-98/",
-    "question_text": "",
+    "question_text": "Your company runs services by using multiple globally distributed Google Kubernetes Engine (GKE) clusters. Your operations team has set up workload monitoring that uses Prometheus-based tooling for metrics, alerts, and generating dashboards. This setup does not provide a method to view metrics globally across all clusters. You need to implement a scalable solution to support global Prometheus querying and minimize management overhead. What should you do?",
     "choices": {
       "B": "Configure workload metrics within Cloud Operations for GKE.",
       "D": "Configure Google Cloud Managed Service for Prometheus.",
       "C": "Configure Prometheus hierarchical federation for centralized data access.",
       "A": "Configure Prometheus cross-service federation for centralized data access."
-    }
+    },
+    "id": 165
   },
   {
     "answer": "A",
@@ -1829,6 +2004,7 @@
       "C": "1. Trigger Cloud Build to build the application container, and run unit tests with the container.\n2. If unit tests are successful, deploy the application container to a testing environment, and run integration tests.\n3. If the integration tests are successful, the pipeline deploys the application container to the production environment. After that, run acceptance tests.",
       "A": "1. Install a Git hook to require developers to run unit tests before pushing the code to a central repository.\n2. Trigger Cloud Build to build the application container. Deploy the application container to a testing environment, and run integration tests.\n3. If the integration tests are successful, deploy the application container to your production environment, and run acceptance tests.",
       "D": "1. Trigger Cloud Build to run unit tests when the code is pushed. If all unit tests are successful, build and push the application container to a central registry.\n2. Trigger Cloud Build to deploy the container to a testing environment, and run integration tests and acceptance tests.\n3. If all tests are successful, the pipeline deploys the application to the production environment and runs smoke tests"
-    }
+    },
+    "id": 166
   }
 ]

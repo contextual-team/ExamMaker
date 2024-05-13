@@ -6,6 +6,8 @@ const questions = JSON.parse(fs.readFileSync('updated_questions_v2.json', 'utf8'
 
 // Function to generate a practice exam
 function generatePracticeExam(questions) {
+    console.clear();
+
     const numQuestions = readlineSync.question('How many questions will the test have?: ')
     // Shuffle questions to randomize order
     const shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, numQuestions);
@@ -17,7 +19,7 @@ function generatePracticeExam(questions) {
 
     // Display questions and get user's answers
     shuffledQuestions.forEach((question, index) => {
-        console.log(`Question ${index + 1}: ${question.question_text}:`);
+        console.log(`Question ${question.question_id}: ${question.question_text}:`);
         const sortedChoices = Object.keys(question.choices).sort().reduce((acc, key) => {
             acc[key] = question.choices[key];
             return acc;
@@ -34,6 +36,7 @@ function generatePracticeExam(questions) {
         if (answer !== question.answer) {
             errors++;
             wrongAnswers.push({
+                number: question.question_id,
                 question: question.question_text,
                 yourAnswer: answer,
                 correctAnswer: question.answer,
@@ -60,8 +63,8 @@ function generatePracticeExam(questions) {
     if (wrongAnswers.length === 0) {
         console.log('None');
     } else {
-        wrongAnswers.forEach((wrongAnswer, index) => {
-            console.log(`Question ${index + 1}:`);
+        wrongAnswers.forEach(wrongAnswer => {
+            console.log(`Question ${wrongAnswer.number}:`);
             console.log(`Your Answer: ${wrongAnswer.yourAnswer}`);
             console.log(`Correct Answer: ${wrongAnswer.correctAnswer}`);
             console.log(`Discussion: ${wrongAnswer.discussion}`);

@@ -2,18 +2,19 @@ const fs = require('fs');
 const axios = require('axios');
 const cheerio = require('cheerio');
 // Read the JSON files and return a Promise that resolves with the questions array
-async function readQuestions() {
-    const questions = [];
+const questions = [];
+async function readQuestions(questions) {
     for (let i = 1; i < 35; i++) {
         try {
-            const data = await fs.promises.readFile(`exam_${i}.json`, 'utf8');
+            const data = await fs.promises.readFile(`questions/exam_${i}.json`, 'utf8');
             const jsonObject = JSON.parse(data).pageProps.questions;
             jsonObject.forEach(element => {
                 let examQuestion = {
                     answer: element.answer_ET,
                     url: element.url,
                     question_text: element.question_text,
-                    choices: element.choices
+                    choices: element.choices,
+                    id: element.question_id
                 }
                 questions.push(examQuestion);
             });
@@ -27,7 +28,7 @@ async function readQuestions() {
 // Write the questions array to a JSON file
 async function writeQuestionsToFile() {
     try {
-        const questions = await readQuestions();
+        questions = await readQuestions(questions);
         fs.writeFileSync('questions.json', JSON.stringify(questions, null, 2));
         console.log('Questions written to questions.json');
     } catch (error) {
