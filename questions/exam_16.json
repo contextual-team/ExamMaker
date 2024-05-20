@@ -1,1 +1,1553 @@
-{"pageProps":{"questions":[{"id":"q4H3gnPxVeXyJ9SdSPJS","isMC":true,"timestamp":"2021-06-02 17:33:00","choices":{"C":"Use the Stackdriver Monitoring API to create custom metrics, and then organize your containers using groups.","D":"Use Stackdriver Logging to export application logs to BigQuery, aggregate logs per container, and then analyze CPU and memory consumption.","A":"Use Stackdriver Kubernetes Engine Monitoring.","B":"Use Prometheus to collect and aggregate logs per container, and then analyze the results in Grafana."},"answers_community":["A (70%)","B (23%)","7%"],"answer_ET":"B","answer_description":"","question_id":76,"discussion":[{"comment_id":"437697","content":"* https://cloud.google.com/anthos/clusters/docs/on-prem\nGKE on-prem is also called Anthos clusters on VMware\n\n* https://cloud.google.com/anthos/clusters/docs/on-prem/concepts/logging-and-monitoring\nYou have several logging and monitoring options for your Anthos clusters on VMware:\n+ Cloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with Anthos clusters on VMware.\n+ Prometheus and Grafana, disabled by default.\n+ Validated configurations with third-party solutions.\n\n=> it means, if not a special situation, the correct should be using the first option: Logging and Monitoring. In this case, we want metrics, so Monitoring (aka. Cloud Monitoring, Stackdriver Monitoring) should be used. We are talking about GKE, so we will use Kubernetest Engine Monitoring (https://cloud.google.com/kubernetes-engine-monitoring).\n\nObviously, A is correct.","poster":"danchoif2","upvote_count":"22","timestamp":"1630567620.0","comments":[{"poster":"helg","upvote_count":"6","comment_id":"523059","content":"we are talking about GKE and GKE on Premise \nso you need a multi cloud monitoring option not a GKE logging option like A","timestamp":"1642104300.0","comments":[{"upvote_count":"2","comments":[{"timestamp":"1703608140.0","upvote_count":"2","content":"I found another link indicating B is the answer, https://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring\nI copy a slice:\nYou have several logging and monitoring options for your GKE on-prem clusters:\n- Cloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE on-prem.\n- Prometheus and Grafana, disabled by default.\n- Validated configurations with third-party solutions.","comment_id":"1106213","poster":"Feliphus"}],"content":"I agree with @helg, if you check the link: https://cloud.google.com/kubernetes-engine/docs/concepts/observability. It says: \"Note: The provided GKE dashboards only display information for GKE clusters running on Google Cloud. They don't display information for GKE clusters running anywhere else, for example using on-premises or bare-metal servers.\"","timestamp":"1703405700.0","comment_id":"1104496","poster":"Feliphus"}]}]},{"content":"B correct","poster":"Charun","comment_id":"393265","upvote_count":"13","timestamp":"1624916100.0","comments":[{"comment_id":"421669","content":"Point for discussion : \nGoogle highly recommends Google Logging and monitoring when running workloads only on GKE on-prem and GKE. For applications with component running on GKE on-prem and traditional on-premises infrastructure, other monitoring and logging solutions for an end-to-end view of application can be considered\n\nconsidering what is stated in the question \"GKE cluster deployed on-premises and Google Cloud Platform\", should \"A\" be the answer","poster":"raf2121","timestamp":"1628432520.0","comments":[{"content":"nor for A! \nSTackdriver Kub Engine only supports GKE not GKE on premise!","upvote_count":"2","timestamp":"1642104240.0","poster":"helg","comment_id":"523057"}],"upvote_count":"13"}]},{"content":"Selected Answer: B\nThe answer will change pre and post GKE 1.24 release.\nIf the question is asked before the release of GKE 1.24 the answer should be A.\nPost GKE 1.24 release metrics deprecated, B is the answer.","comment_id":"1168006","timestamp":"1709816640.0","poster":"jinaldesailive","upvote_count":"1"},{"upvote_count":"1","poster":"alpha_canary","comment_id":"1135015","timestamp":"1706536380.0","content":"Selected Answer: A\nIf the on-prem was a non-GKE kubernetes solution, the the answer would be B. \nBut it's GKE on-prem, A is the best option here"},{"timestamp":"1701497820.0","content":"option A","poster":"jomonkp","comment_id":"1085745","upvote_count":"1"},{"content":"Selected Answer: B\nGKE workload monitoring has been deprecated, so should be Prometheus\nhttps://cloud.google.com/stackdriver/docs/solutions/gke/managing-metrics","upvote_count":"2","poster":"SarumanMX","comment_id":"976210","timestamp":"1691552520.0"},{"comment_id":"956296","timestamp":"1689746940.0","content":"Selected Answer: B\nIt should be B check this link\nIt is clearly mentioned if you are application running on GKE or anthos cluster on Vmware you use stack driver counter part but if it is on On-prem then better find other solution\nWith respect to options we have here it is prometheus\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/logging-and-monitoring#:~:text=For%20applications%20with%20components%20running%20on%20Anthos%20clusters%20on%20VMware%20and%20traditional%20on%2Dpremises%20infrastructure%2C%20you%20might%20consider%20other%20solutions%20for%20an%20end%2Dto%2Dend%20view%20of%20those%20applications","poster":"Ajitshetty","upvote_count":"2"},{"poster":"felipeschossler","upvote_count":"1","comments":[{"content":"Its telling to pick which uses most cpu and memory this has nothing to do with logs","comment_id":"938252","upvote_count":"1","comments":[{"content":"are these questions still relevant?","comment_id":"952774","poster":"aswani","timestamp":"1689464460.0","upvote_count":"2"}],"timestamp":"1688048700.0","poster":"sidharthwader"}],"timestamp":"1681291200.0","content":"Selected Answer: A\nPrometheus is made for metrics not logs, in this way the correct answer is A, not be.","comment_id":"868096"},{"poster":"taqihurr","comment_id":"785053","timestamp":"1674456660.0","upvote_count":"2","content":"B. Use Prometheus to collect and aggregate logs per container, and then analyze the results in Grafana.\n\nPrometheus is a popular open-source monitoring and alerting system that is well-suited for monitoring containers running in a Kubernetes cluster. It can scrape metrics from the Kubernetes API server and export them to a time series database, where they can be queried and visualized in Grafana. This approach allows you to monitor CPU and memory usage of individual containers, and set up alerts if usage exceeds certain thresholds."},{"timestamp":"1673415240.0","upvote_count":"1","comment_id":"772057","content":"Selected Answer: B\nI think the answer is B.\nA cant be because is not for on premises.","poster":"JonathanSJ"},{"comment_id":"755468","content":"Selected Answer: A\nAns: A\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/","timestamp":"1671952740.0","poster":"floppino","upvote_count":"2","comments":[{"content":"any way to take dump of the discussions?","comment_id":"792963","upvote_count":"1","poster":"jaykumarjkd99","timestamp":"1675091580.0"}]},{"poster":"DoodleDo","content":"Ans A - Anthos GKE On-Prem agent collects systems metric however it doesn't collect applications metric. Given that question asks for CPU and Memory GKE On-Prem agent should suffice of containers in on-prem. Source - https://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring","timestamp":"1669497900.0","upvote_count":"1","comment_id":"727822"},{"content":"for anthos clusters, need cloud monitoring & cloud logging agent, not GKE monitoring.","timestamp":"1669337340.0","upvote_count":"1","comment_id":"726300","poster":"hanweiCN"},{"content":"The Cloud Operations Suite for GKE only displays information for GKE clusters running on Google Cloud. It does not display information for GKE clusters running elsewhere, such as using on-premises or bare metal servers \nhttps://cloud-google-com.translate.goog/stackdriver/docs/solutions/gke?hl=fr&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc","poster":"hanweiCN","upvote_count":"1","comment_id":"726295","timestamp":"1669336980.0","comments":[{"poster":"hanweiCN","timestamp":"1671088260.0","content":"\" Cloud Operations Suite for GKE \" is a tailored cloud monitoring & logging service for GKE. not cloud monitoring & logging service. A is correct.","comment_id":"745786","upvote_count":"1"}]},{"comment_id":"718087","timestamp":"1668442200.0","poster":"enter_co","content":"Selected Answer: B\nThe eCommerce app is a workload. \nSince v. 1.24 GKE workload metrics were deprecated and replaced with Prometheus https://cloud.google.com/stackdriver/docs/solutions/gke/workload-metrics#gcloud\nhttps://cloud.google.com/stackdriver/docs/solutions/gke/gmp-migration","upvote_count":"1"},{"poster":"mudot","timestamp":"1667647260.0","comment_id":"711714","upvote_count":"4","content":"Selected Answer: A\nI work in the hybrid environment [anthos] and can confirm the required metric availability"},{"timestamp":"1666781100.0","upvote_count":"1","content":"A is correct\nCloud Operations for GKE is designed to monitor GKE clusters. It manages Monitoring and Logging services together and features a Cloud Operations for GKE dashboard that provides a customized interface for GKE clusters:\n\nYou can view a cluster's key metrics, such as CPU utilization, memory utilization, and the number of open incidents.\n\nYou can view clusters by their infrastructure, workloads, or services.\n\nYou can inspect namespaces, nodes, workloads, services, pods, and containers.\nFor pods and containers, you can view metrics as a function of time and view log entries.https://cloud.google.com/stackdriver/docs/solutions/gke","comment_id":"704578","poster":"AzureDP900"},{"content":"Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/logging-and-monitoring#logging_and_monitoring\nGoogle Cloud's operations suite (formerly Stackdriver) is the built-in observability solution for Google Cloud. It offers a fully managed logging solution, metrics collection, monitoring, dashboarding, and alerting. Cloud Monitoring monitors Anthos clusters on VMware clusters in a similar way as cloud-based GKE clusters.","timestamp":"1666618500.0","upvote_count":"2","poster":"zellck","comment_id":"703056"},{"timestamp":"1658859480.0","comment_id":"637564","poster":"gcp_learner123","upvote_count":"1","content":"\"Note: Cloud Operations for GKE only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.\"\n\n\nSo, A is wrong. Correct ans is B\n\n\nSource: https://cloud.google.com/stackdriver/docs/solutions/gke#about-skm"},{"comment_id":"635923","content":"Selected Answer: A\nA is correct","poster":"GCP72","timestamp":"1658649660.0","upvote_count":"2"},{"upvote_count":"2","comment_id":"623635","timestamp":"1656385680.0","poster":"[Removed]","content":"Pass exam and Submit B\nThere has a little different about Option A in exam.\nIn exam, Option A was \"Use Cloud Operations for GKE\".\nBut based on description as below:\n\nNote: Cloud Operations for GKE only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.\n\nhttps://cloud.google.com/stackdriver/docs/solutions/gke#about-skm\n\nSo B is better in this question."},{"timestamp":"1645477020.0","upvote_count":"2","comment_id":"553256","poster":"zygomar","content":"Selected Answer: C\nagree with francisco_guerra, gcpengineer, & helg. Cloud operations for GKE only displays information for GKE Clusters running on Google cloud."},{"upvote_count":"1","poster":"Nalex9ja","comment_id":"531822","content":"From this documentation, A should be the answer.\nIt is the recommend way. If application logs were to be collected, this solution won't work an Prometheus would have been the desired solution. I this case only system a system metric (CPU utilisation) is required. \nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring#:~:text=GKE%20on%2Dprem%20includes%20multiple,proper%20solution%20for%20your%20environment.","timestamp":"1643085300.0"},{"comment_id":"523077","content":"C for monitoring containers ..\nA - No because Stackdriver Kubernetes Engine Monitoring only supports GKE (on Google Cloud) - https://cloud.google.com/stackdriver/docs/solutions/gke \nB - nope for prometheus / Grafana (non managed and non GCP solutions) \nD- Nope for logging \nC - Yes - Cloud Monitoring can help https://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring#configure_stackdriver_agents","timestamp":"1642104840.0","upvote_count":"2","poster":"helg"},{"poster":"helg","content":"No for A! \nNote: Cloud Operations for GKE only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.","timestamp":"1642104000.0","comment_id":"523052","upvote_count":"1"},{"upvote_count":"3","content":"Selected Answer: A\nCorrect Answer is A","timestamp":"1641304320.0","comment_id":"516672","poster":"simbu1299"},{"poster":"TNT87","upvote_count":"2","timestamp":"1640650380.0","comment_id":"510683","content":"Selected Answer: A\nA is the answer...check GKE monitoring onthe doc"},{"content":"The question is application is running on Google Kubernetes Engine (GKE) cluster deployed on-premises and also on the Google Cloud Platform, this means we need to add grouping for containers that are running on-prem GKE and also in GKE GCP. Option C is more relevant in this case as compared to A","upvote_count":"2","comment_id":"506120","poster":"guid1984","timestamp":"1640092440.0"},{"comment_id":"494316","timestamp":"1638706260.0","content":"Ans : B","upvote_count":"1","poster":"alaahakim"},{"upvote_count":"1","timestamp":"1638691920.0","content":"C is he answer, B is not in GCP\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.0/concepts/logging-and-monitoring","comment_id":"494150","poster":"TNT87"},{"timestamp":"1637881320.0","content":"Selected Answer: A\nCloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE on-prem.\n\nReference:https://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring","poster":"muk5658","upvote_count":"2","comment_id":"486973"},{"poster":"awrgdasfg","upvote_count":"2","timestamp":"1637147640.0","comment_id":"479975","content":"Selected Answer: A\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.9/concepts/logging-and-monitoring#logging_and_monitoring"},{"poster":"Biden","comment_id":"477123","timestamp":"1636743720.0","content":"Answer is A. Reason - this statement \"We highly recommend Logging and Monitoring when running workloads only on GKE on-prem, or workloads on GKE and GKE on-prem. For applications with components running on GKE on-prem and traditional on-premises infrastructure, you might consider other solutions for an end-to-end view of those applications.\"\nTHis question is about app running on GKE on-prem & GKE on Cloud - hence answer is A\nReference: https://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring","upvote_count":"2"},{"upvote_count":"1","content":"it's should be A\n\nOptions for GKE on-prem\nYou have several logging and monitoring options for your GKE on-prem clusters:\n\nCloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE on-prem.\nPrometheus and Grafana, disabled by default.\nValidated configurations with third-party solutions.\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring#stackdriver_gkeop","timestamp":"1636509360.0","comment_id":"475164","poster":"Manh","comments":[{"content":"Read the article you posted - pod metrics are not exported.","comment_id":"532834","upvote_count":"1","poster":"pddddd","timestamp":"1643196840.0"}]},{"content":"B- You have several logging and monitoring options for your GKE On-Prem clusters:\n\nCloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE On-Prem.\nPrometheus and Grafana, enabled by default in new clusters.","poster":"MF2C","timestamp":"1631014500.0","comment_id":"440882","upvote_count":"2"},{"upvote_count":"2","poster":"TNT87","timestamp":"1630646340.0","comment_id":"438280","content":"B\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.7/concepts/logging-and-monitoring"},{"content":"1. both prometheus & stackdriver need to be configured\n2. Prometheus doesn't collect & aggregate logs, it only plays metrics.\n3. stackdriver is a default component for GKE on-prem\nI would choose C.","timestamp":"1627395600.0","upvote_count":"3","poster":"grace_lau","comment_id":"415523"},{"poster":"WakandaF","comments":[{"timestamp":"1627824000.0","upvote_count":"4","comment_id":"418266","poster":"[Removed]","content":"The application runs on a large Google Kubernetes Engine (GKE) cluster deployed on-premises and on Google Cloud Platform ==> so they use Anthos (GKE on PREM = Anthos).\nThe answer is A."}],"timestamp":"1625059500.0","comment_id":"394760","upvote_count":"2","content":"Monitoring(Stackdriver) allows you to view and address that type of behavior, but yes you need to have Anthos!\nNot sure if is A or B?"},{"content":"A - because CPU and memory are standard metrics, you shouldn't need to create any custom metric for them. And as holahola mentioned, \"Cloud Monitoring monitors GKE on-prem clusters in a similar way as cloud-based GKE clusters.\" \nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.7/concepts/logging-and-monitoring","timestamp":"1624575660.0","comments":[{"poster":"francisco_guerra","upvote_count":"2","timestamp":"1624989240.0","content":"Like you say Cloud monitoring is not the same that Kubernetes engine monitoring","comment_id":"394124"}],"comment_id":"389967","upvote_count":"3","poster":"guruguru"},{"timestamp":"1624231200.0","content":"Ans: C\n\nA: No, Cloud Operations for GKE (Stackdriver Kubernetes Engine Monitoring)only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.\n\nB: Google only recommed prometeus and Grafana if you have previous knowledge about it\nC: Correct its the Google's recommendation \nD: You want to monitoring\n\nhttps://cloud.google.com/stackdriver/docs/solutions/gke\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.7/concepts/logging-and-monitoring","poster":"francisco_guerra","comments":[{"content":"stackdiver monitoring displays GKE on prem.","comment_id":"423322","upvote_count":"1","timestamp":"1628686500.0","poster":"gcpengineer"}],"upvote_count":"4","comment_id":"386614"},{"content":"A - because \"Cloud Monitoring monitors GKE on-prem clusters in a similar way as cloud-based GKE clusters.\" It includes CPU and RAM utilization. https://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring.\nPrometheus and grafana - disabled by default.","poster":"holahola","comment_id":"384787","timestamp":"1624017480.0","upvote_count":"5"},{"timestamp":"1623927360.0","poster":"ralf_cc","upvote_count":"6","comment_id":"384119","content":"C - workload is only on GKE, https://cloud.google.com/anthos/clusters/docs/on-prem/1.0/concepts/logging-and-monitoring"},{"timestamp":"1623495900.0","comment_id":"380400","upvote_count":"1","content":"Answer -B\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring","poster":"akg001"},{"timestamp":"1622647980.0","poster":"devopsbatch","content":"B because on gcp it provides stack driver by default but on premise we need to setup promotheus and graphana to monitor metrics like cpu memory etc","upvote_count":"2","comment_id":"372832"}],"exam_id":5,"answer_images":[],"topic":"1","question_text":"You support an e-commerce application that runs on a large Google Kubernetes Engine (GKE) cluster deployed on-premises and on Google Cloud Platform. The application consists of microservices that run in containers. You want to identify containers that are using the most CPU and memory. What should you do?","question_images":[],"unix_timestamp":1622647980,"url":"https://www.examtopics.com/discussions/google/view/54245-exam-professional-cloud-devops-engineer-topic-1-question-17/","answer":"A"},{"id":"j6k454kwlZXetmzQSbew","answer_ET":"A","choices":{"B":"Create a development environment with smaller server capacity and give access only to developers and testers.","A":"Create an automated testing script in production to detect failures as soon as they occur.","C":"Secure the production environment to ensure that developers can't change it and set up one controlled update per year.","D":"Create a development environment for writing code and a test environment for configurations, experiments, and load testing."},"question_images":[],"question_id":77,"answer_images":[],"answer_description":"","timestamp":"2021-06-02 17:34:00","url":"https://www.examtopics.com/discussions/google/view/54246-exam-professional-cloud-devops-engineer-topic-1-question-18/","topic":"1","answer":"D","discussion":[{"content":"D i think creating seperate env for dev and testers","poster":"devopsbatch","upvote_count":"22","comment_id":"372834","timestamp":"1622648040.0"},{"poster":"Charun","upvote_count":"10","comment_id":"393267","content":"answer is D","timestamp":"1624916100.0"},{"upvote_count":"2","poster":"jomonkp","content":"option B","timestamp":"1701497940.0","comment_id":"1085747"},{"comment_id":"1066473","poster":"maxdanny","content":"Selected Answer: D\nIt is necessary to check the environment, one of development and one of test","upvote_count":"1","timestamp":"1699540320.0"},{"timestamp":"1698381660.0","content":"Selected Answer: D\nRight answer","poster":"Jason_Cloud_at","upvote_count":"1","comment_id":"1055109"},{"upvote_count":"1","content":"Selected Answer: D\nA makes no sense","poster":"SarumanMX","comment_id":"976212","timestamp":"1691552640.0"},{"content":"i thinks is D because the questions is about how redesign the system...","upvote_count":"1","comment_id":"860248","timestamp":"1680547800.0","poster":"Ale_valdivia_vivar"},{"timestamp":"1673415420.0","content":"Selected Answer: D\nD. Create a development environment for writing code and a test environment for configurations, experiments, and load testing.\n\nCreating separate environments for development, testing and production is a best practice for software development. This will enable the company to have control over the changes that are made in each environment and reduce the risk of bugs, outages and slowness in production.\n\nA development environment would be used by developers to write code, test new features and do initial debugging. This environment should be isolated from production so that bugs or issues that occur during development don't affect the production systems or users.\n\nA test environment should be created to perform configurations, experiments, and load testing. This environment should be identical to production so that it can be used to test how the systems will behave in a real-world scenario. Testers can use this environment to load test new features without affecting production systems or users.","comment_id":"772060","upvote_count":"2","poster":"JonathanSJ"},{"poster":"LEONIDA85","timestamp":"1672152060.0","content":"why not B?","comment_id":"758640","comments":[{"comment_id":"771590","poster":"Greg123123","timestamp":"1673366220.0","upvote_count":"1","content":"Even if we let alone the env separation in D, B doesn't address all the needs in the question. For example, they want to perform load test, if B has a smaller capacity the load test isn't accurate."},{"comment_id":"761970","timestamp":"1672405860.0","poster":"Swepu","content":"Please do know why not B","upvote_count":"1"}],"upvote_count":"2"},{"timestamp":"1671952740.0","content":"Selected Answer: D\nAns: D\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/","comment_id":"755469","poster":"floppino","upvote_count":"2"},{"timestamp":"1670695920.0","comment_id":"741165","content":"Selected Answer: D\nanswer is D","upvote_count":"1","poster":"sri1016"},{"upvote_count":"1","poster":"zellck","content":"Selected Answer: D\nD is the answer.","timestamp":"1666618560.0","comment_id":"703057"},{"content":"D is right","timestamp":"1666581000.0","comment_id":"702654","poster":"AzureDP900","upvote_count":"1"},{"upvote_count":"1","timestamp":"1662271380.0","poster":"EricaZhao","content":"Selected Answer: D\nD is correct","comment_id":"658995"},{"comment_id":"635924","content":"Selected Answer: D\nanswer is D","timestamp":"1658649720.0","poster":"GCP72","upvote_count":"1"},{"timestamp":"1652111100.0","content":"Selected Answer: D\nSubmitted D in the exam","comment_id":"599121","poster":"Ananda","upvote_count":"1"},{"content":"Selected Answer: D\nD is the answer, keep production separated, dev environment to write the code, test environment to test functionality and load before deployments to prod","upvote_count":"3","timestamp":"1644663360.0","comment_id":"545769","poster":"PhilipKoku"},{"timestamp":"1643418960.0","comment_id":"535062","upvote_count":"2","poster":"cyrus86","content":"Selected Answer: D\nD looks right to me"},{"poster":"vijaigcp","upvote_count":"3","timestamp":"1643290800.0","content":"Selected Answer: D\nCreating Separate ENVs for DEV and QA is an age old best practice. Same applies here","comment_id":"533789"},{"upvote_count":"1","timestamp":"1642413600.0","content":"Selected Answer: D\nD for sure","poster":"elaribk","comment_id":"525674"},{"comment_id":"503225","timestamp":"1639692300.0","upvote_count":"1","poster":"not_thanos","content":"Selected Answer: D\nBest practice to separate the dev and test environments"},{"content":"Selected Answer: D\nD because Developrs can test in Dev with out touching PR environment","poster":"Yog14","comment_id":"503083","upvote_count":"1","timestamp":"1639674360.0"},{"comment_id":"494318","timestamp":"1638706500.0","poster":"alaahakim","upvote_count":"1","content":"Selected Answer: D\nAns : D"},{"timestamp":"1638355920.0","upvote_count":"1","poster":"Wwhite44","comment_id":"491560","content":"Selected Answer: D\nD for sure"},{"poster":"pacman_user","content":"D for sure 100% recommended","upvote_count":"2","timestamp":"1633876020.0","comment_id":"460103"},{"content":"Having a separate environment is a best practice. Answer is D.","upvote_count":"5","timestamp":"1623496080.0","poster":"akg001","comment_id":"380403"}],"isMC":true,"answers_community":["D (100%)"],"unix_timestamp":1622648040,"question_text":"Your company experiences bugs, outages, and slowness in its production systems. Developers use the production environment for new feature development and bug fixes. Configuration and experiments are done in the production environment, causing outages for users. Testers use the production environment for load testing, which often slows the production systems. You need to redesign the environment to reduce the number of bugs and outages in production and to enable testers to toad test new features. What should you do?","exam_id":5},{"id":"6gjBatwyEvNfO3hrsQlb","question_text":"You support an application running on App Engine. The application is used globally and accessed from various device types. You want to know the number of connections. You are using Stackdriver Monitoring for App Engine. What metric should you use?","topic":"1","unix_timestamp":1622648220,"url":"https://www.examtopics.com/discussions/google/view/54247-exam-professional-cloud-devops-engineer-topic-1-question-19/","answer":"A","question_id":78,"question_images":[],"choices":{"B":"tcp_ssl_proxy/new_connections","A":"flex/connections/current","C":"tcp_ssl_proxy/open_connections","D":"flex/instance/connections/current"},"isMC":true,"answer_ET":"D","exam_id":5,"answers_community":["A (100%)"],"timestamp":"2021-06-02 17:37:00","answer_images":[],"discussion":[{"comments":[{"upvote_count":"1","timestamp":"1635696840.0","content":"agree, the question is about number of connections of the app (could be multiple instances), not an instance.","comment_id":"470752","poster":"danchoif2"}],"timestamp":"1624237920.0","poster":"francisco_guerra","comment_id":"386677","upvote_count":"23","content":"Ans A\nA: Metric for App engine & for version\nB: NO, Metrics for Cloud Load Balancing.\nC: NO, Metrics for Cloud Load Balancing.\nD Metric for App engine & for instance\n\nAn App Engine app is made up of a single application resource that consists of one or more services. Each service can be configured to use different runtimes and to operate with different performance settings. Within each service, you deploy versions of that service. Each version then runs within one or more instances, depending on how much traffic you configured it to handle.\n\nif the version runs within one or more instances we need for the version."},{"timestamp":"1624916160.0","comment_id":"393268","upvote_count":"6","poster":"Charun","content":"A correct"},{"content":"option A","upvote_count":"1","comment_id":"1085753","timestamp":"1701498240.0","poster":"jomonkp"},{"poster":"maxdanny","upvote_count":"1","timestamp":"1699540800.0","comment_id":"1066482","content":"Selected Answer: A\nA is correct answer \nhttps://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine\nflex/connections/current show the current active connections for all instance in appengine"},{"comment_id":"772072","poster":"JonathanSJ","upvote_count":"1","content":"Selected Answer: A\nAnswer is A","timestamp":"1673415840.0"},{"poster":"floppino","content":"Selected Answer: A\nAns: A\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/","comment_id":"755470","timestamp":"1671952800.0","upvote_count":"1"},{"timestamp":"1666781460.0","upvote_count":"1","poster":"AzureDP900","content":"A \nflex/connections/current GA\nConnections\nGAUGE, DOUBLE, 1\ngae_app Number of current active connections per App Engine flexible environment version. Sampled every 60 seconds. After sampling, data is not visible for up to 240 seconds.","comment_id":"704587"},{"content":"Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine\nflex/connections/current\n- Number of current active connections per App Engine flexible environment version","comments":[{"comment_id":"868103","timestamp":"1681291560.0","content":"Thank you for providing the docs, you're right, the answer is A 100%!","poster":"felipeschossler","upvote_count":"1"}],"upvote_count":"2","comment_id":"702716","timestamp":"1666589580.0","poster":"zellck"},{"upvote_count":"2","poster":"GCP72","content":"Selected Answer: A\nThe correct answer is \"A\"","comment_id":"646697","timestamp":"1660472580.0"},{"poster":"Ananda","content":"Selected Answer: A\nSubmitted A","comment_id":"599122","timestamp":"1652111100.0","upvote_count":"1"},{"poster":"PhilipKoku","content":"Selected Answer: A\nA) Is the correct answer https://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine","comment_id":"540417","timestamp":"1643978460.0","upvote_count":"3"},{"poster":"alaahakim","timestamp":"1638706500.0","upvote_count":"1","comment_id":"494319","content":"Ans : A"},{"poster":"TNT87","upvote_count":"5","timestamp":"1630646820.0","comment_id":"438291","content":"A\nhttps://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine"},{"comment_id":"384122","poster":"ralf_cc","content":"A it is","upvote_count":"5","timestamp":"1623927540.0"},{"comment_id":"372836","comments":[{"comments":[{"timestamp":"1623496140.0","content":"Agree for the answer -A","comment_id":"380405","upvote_count":"2","poster":"akg001"}],"content":"what about option A\nwe need to count application connection count and the count at instance level. no. of instance will keep on changing in app engine in the backend.","timestamp":"1622994600.0","poster":"rinkeshgala1","upvote_count":"2","comment_id":"376177"}],"poster":"devopsbatch","upvote_count":"1","content":"flex/instance/connections/current GA\nConnections\nGAUGE, DOUBLE, 1\ngae_instance Number of current active connections per App Engine flexible environment instance. Sampled every 60 seconds. After sampling, data is not visible for up to 240 seconds.","timestamp":"1622648220.0"}],"answer_description":"Reference:\nhttps://cloud.google.com/monitoring/api/metrics_gcp"},{"id":"z9th28y0ymepaD9chaIO","question_text":"You created a Stackdriver chart for CPU utilization in a dashboard within your workspace project. You want to share the chart with your Site Reliability Engineering\n(SRE) team only. You want to ensure you follow the principle of least privilege. What should you do?","unix_timestamp":1622571060,"timestamp":"2021-06-01 20:11:00","isMC":true,"answer":"C","discussion":[{"timestamp":"1623049080.0","content":"I think it's C, because dashboard viewer \"Read-only access to dashboard configurations.\"\nSRE team wants to view data, not configurations.","comment_id":"376579","comments":[{"content":"correct there is no such role - \"dashboard viewer\" the correct name is monitoring dashboard configuration viewer (and the permission is - Read-only access to dashboard configurations).\n\nso correct answer should be - C","timestamp":"1623080160.0","poster":"akg001","upvote_count":"9","comment_id":"376878","comments":[{"content":"but it gives access to all list in monitoring of the project.","comment_id":"422948","poster":"gcpengineer","upvote_count":"1","timestamp":"1628621940.0"},{"upvote_count":"3","comment_id":"707445","timestamp":"1667073240.0","content":"C is correct","poster":"AzureDP900"},{"comment_id":"1101063","upvote_count":"1","timestamp":"1703027940.0","poster":"Raz0r","content":"There is, but only the single role won't give sufficient access.\nhttps://cloud.google.com/monitoring/access-control?hl=de#monitoring.dashboardViewer"}]}],"poster":"syslog","upvote_count":"18"},{"comment_id":"434663","upvote_count":"12","poster":"danchoif2","content":"I did a test and see that:\n\nThe valid roles are: Monitoring Viewer and Monitoring Dashboard Configuration Viewer.\nYou can only share chart by URL using Metrics explorer.\n\n\nWith only Monitoring Dashboard Configuration Viewer role, user cannot see anything in Monitoring page.\n\nI create a custom role from Monitoring Dashboard Configuration Viewer role and add resourcemanager.projects.get permission.\n\nNow user can see list of custom dashboards and the charts in these custom dashboards. User cannot see standard GCP dashboards.\n\nUser cannot see the the chart in Metrics explorer (using the shared URL).\nOpening the URL, user will see errors: \"Invalid resource type\" and \"Invalid metric type\".\n\nSo even if I ignore the typo of Dashboard Viewer role in B and D, they are still incorrect answers.\n\nSo only A and C are valid. But I think C is better because the question is: \"You want to share the chart\" not the whole dashboard.","timestamp":"1630246740.0","comments":[{"comment_id":"702409","content":"I agree with you, I am okay with C.","timestamp":"1666551780.0","upvote_count":"1","poster":"AzureDP900"}]},{"timestamp":"1709807580.0","upvote_count":"1","poster":"jinaldesailive","content":"There is no such role as \"Dashboard Viewer\"","comment_id":"1167904"},{"timestamp":"1701166500.0","upvote_count":"3","comment_id":"1082404","content":"Extremly happy I passed my Exam with 82.7%. I just followed the community answers (not the actual answers and cleared exam on 10th Nov2023). Latest update: Stackdriver Monitoring is now reflect as Cloud Monitoring due to the name change in GCP hence pls don't get confused in exam. Thanks to Examtopics and pass4surehub.com for helping me out!","poster":"stevesmith112"},{"comment_id":"1066329","content":"Selected Answer: C\nThe answer is C because :\nDashboard viewer role not exists , monitor-viewer only\nhttps://cloud.google.com/iam/docs/understanding-roles#monitoring.viewer\nand Cloud Monitoring allows you to share the URL of the individual Dashboard and not of the entire project ID","poster":"maxdanny","timestamp":"1699524960.0","upvote_count":"1"},{"poster":"Jason_Cloud_at","upvote_count":"1","content":"Selected Answer: C\nIt is the right answer","timestamp":"1698371040.0","comment_id":"1055041"},{"content":"Selected Answer: A\nhttps://cloud.google.com/monitoring/charts/share-dashboards","poster":"jeffersonkozak","comment_id":"926295","timestamp":"1687037760.0","upvote_count":"1"},{"upvote_count":"1","timestamp":"1673409780.0","comment_id":"772001","poster":"JonathanSJ","content":"Selected Answer: C\nThe best option in this case would be C. Click \"Share chart by URL\" and provide the URL to the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project.\nThis option allows you to share the specific chart with the SRE team only, granting them read-only access to the chart's data, this way the team can view the CPU utilization chart and troubleshoot any performance issues related to the chart.\nYou can use the feature of \"Share chart by URL\" to share the specific chart with the SRE team only, and provide a secure URL that can only be access by members of the team. And also giving them the \"Monitoring Viewer\" role, will give them just enough privilege to see the chart and its data but not the ability to make changes to the project, dashboard or other charts."},{"upvote_count":"2","timestamp":"1671865620.0","content":"Selected Answer: C\nAns: C\n\nExam take on 19/12/2022, 50/50 from this dump without buying the full access.","poster":"floppino","comment_id":"754738"},{"upvote_count":"2","poster":"MTS88","content":"Selected Answer: A\nI think is A, because there isn't any button \"Share chart by URL\", and least role is Monitoring Viewer (Dashboard viewer can see only dashboard configurations)","comment_id":"741941","timestamp":"1670780640.0"},{"timestamp":"1670315040.0","poster":"chelbsik","content":"Selected Answer: A\nDecided to go for A on the exam because there is no \"Share chart by URL\" button, it's just \"Share by URL\".","upvote_count":"1","comments":[{"comment_id":"741942","poster":"MTS88","timestamp":"1670780700.0","content":"But \"Share by URL\" is in chart? I remember it's only logging explorer","upvote_count":"1"}],"comment_id":"736618"},{"comments":[{"poster":"hanweiCN","timestamp":"1668733680.0","content":"and this is not \" share chart by URL \" option, it is \" share by URL\"","comment_id":"720995","upvote_count":"1"}],"timestamp":"1668733500.0","content":"i think it is A, i assume add chart into custom/default dashboard is best practice for creating chart and share URL would more like one time trade.\nMetrics Explorer lets you create a chart that you can use to explore a metric. However, the charts created by this tool aren't persistent. When you navigate away from the Metrics Explorer page, the chart is discarded.\n\nTo save a chart you've configured with Metrics Explorer for future reference, add the chart to a custom dashboard or save the chart's URL: \nTo keep a reference to the chart configuration, save the chart URL. Because the chart URL encodes the chart configuration, when you paste this URL into a browser the chart you configured is displayed.","poster":"hanweiCN","comment_id":"720992","upvote_count":"2"},{"upvote_count":"2","timestamp":"1667916600.0","poster":"mohan999","content":"I have verified this, both A and C do the same thing except C gives you comfort to see the chart directly using the link without having to browse through all the way to the chart.","comment_id":"713888"},{"timestamp":"1666779000.0","upvote_count":"1","comment_id":"704562","poster":"AzureDP900","content":"C \nThere are a number of IAM security roles related to monitoring. The big three are\nviewer, editor, and admin.\nTo create the monitoring Workspace initially, a user will need the Monitoring Editor or\nAdmin role in the Workspace's host project.\nThe Monitoring Viewer can get read-only access to the Monitoring console and API.\nThe Monitoring Editor has read-write access to the Monitoring console and APIs and\ncan write monitoring data and configurations into the Workspace.\nAnd the Monitoring Admin has full access to, and control over, all monitoring\nresources.\nPast these big three roles, monitoring roles exist to provide and limit access to alert\npolicies, dashboards, notification channels, service monitoring, and uptime checks."},{"content":"Selected Answer: C\nC is the answer.\n\nhttps://cloud.google.com/monitoring/access-control#mon_roles_desc\nroles/monitoring.viewer\n- Monitoring Viewer Grants read-only access to Monitoring in the Google Cloud console and API.","upvote_count":"1","timestamp":"1666612380.0","poster":"zellck","comment_id":"702982"},{"comments":[{"timestamp":"1660395540.0","poster":"GCP72","comment_id":"646332","content":"there is no role called dashboard viewer .","upvote_count":"1"}],"timestamp":"1658632500.0","poster":"GCP72","comment_id":"635860","content":"Selected Answer: C\nThe answer is C","upvote_count":"2"},{"comment_id":"600222","upvote_count":"2","timestamp":"1652288220.0","content":"Selected Answer: C\nGoogle Cloud courses say: \"Monitoring dashboard viewer can view dashboard settings while monitoring viewer can view charts and dashboards\", so i think I need to see Dashboards and chart content, not settings only","poster":"GoReplyGCPExam"},{"poster":"Ananda","timestamp":"1652110380.0","comment_id":"599108","content":"Selected Answer: C\nI submit C in my exam","upvote_count":"1"},{"poster":"buldas","content":"Selected Answer: C\nThere is no such role as Dashboard Viewer","timestamp":"1644993540.0","comment_id":"548343","upvote_count":"1"},{"comments":[{"comment_id":"559137","poster":"walkwolf3","content":"roles/monitoring.dashboardViewer gives you read-only access to dashboard configurations.\n\nroles/monitoring.viewer gives you read-only access to Monitoring in the Google Cloud Console and API.\n\nSo the answer is C instead of D.","timestamp":"1646186760.0","upvote_count":"2"}],"upvote_count":"1","content":"Selected Answer: D\nD) Share Dashboard with URL to only the team required and shared IAM roles/monitoring.dashboardViewer, as described in reference below.\nhttps://cloud.google.com/monitoring/access-control","poster":"PhilipKoku","timestamp":"1644660720.0","comment_id":"545744"},{"timestamp":"1641245760.0","poster":"gcpz","upvote_count":"1","content":"Selected Answer: C\nvoted c","comment_id":"516071"},{"comments":[{"upvote_count":"1","timestamp":"1645365240.0","comment_id":"551825","poster":"zygomar","content":"There is but description says it is for the configurations of the dashboard: \"roles/monitoring.dashboardViewer. - Monitoring Dashboard Configuration Viewer. Gives you read-only access to dashboard configurations.\"\nfrom https://cloud.google.com/monitoring/access-control#dashboard_roles_desc"}],"content":"The answer is C...not D, do not confuse the 2 and there is no role called dashboard viewer","poster":"TNT87","timestamp":"1640590320.0","comment_id":"510093","upvote_count":"2"},{"content":"Selected Answer: C\nits Ccccccccc","timestamp":"1637865000.0","comment_id":"486858","upvote_count":"1","poster":"azuretestingpoc"},{"upvote_count":"2","poster":"TNT87","comment_id":"483928","timestamp":"1637565420.0","content":"https://cloud.google.com/monitoring/access-control#mon_roles_desc"},{"timestamp":"1635402480.0","comment_id":"469034","poster":"giammydell","upvote_count":"1","content":"the question is: If you share a URL link containing the chart the SRE team can see the chart without knowing the workspace and the project-ID associated to the workspace"},{"upvote_count":"2","comment_id":"468408","timestamp":"1635316740.0","content":"Ans A,you dnt share the link,but the ID...","poster":"TNT87"},{"comment_id":"456655","timestamp":"1633275360.0","content":"why not A?\nwe dont have an option for sharing the chart url by clicking on share chart by URL","upvote_count":"1","poster":"maddy94"},{"comment_id":"454380","upvote_count":"1","content":"monitoring viewer is correct. - C","poster":"sticky","timestamp":"1632939060.0"},{"timestamp":"1630912440.0","poster":"MF2C","upvote_count":"1","comment_id":"440169","content":"is there share chart provided by GCP dashboard? if not, A is correct"},{"comment_id":"437758","timestamp":"1630574280.0","upvote_count":"1","content":"therenis no role called dasboard viewer.","poster":"TNT87"},{"poster":"pondai","upvote_count":"2","comment_id":"436093","content":"I think answer is C . I try to give user dashboard viewer and share url, but user can't watch content .If I give user Monitor Viewer and share url can watch.So I pick C","timestamp":"1630394040.0"},{"upvote_count":"2","timestamp":"1626683040.0","content":"I think it should be C\nhttps://cloud.google.com/monitoring/access-control\ndashboard viewer role is for dashboard configuration.\nmonitoring viewer for monitoring.","poster":"skm4690","comment_id":"409380"},{"comment_id":"393245","content":"I have submitted D answer","upvote_count":"6","poster":"Charun","timestamp":"1624915560.0","comments":[{"timestamp":"1624971240.0","content":"Have you done the exam?","comment_id":"393791","upvote_count":"1","poster":"WakandaF","comments":[{"content":"Yes mate on 28th, passed","upvote_count":"1","poster":"Charun","comment_id":"395817","timestamp":"1625135400.0"}]},{"poster":"TNT87","upvote_count":"1","timestamp":"1640590380.0","comment_id":"510094","content":"The answer is C...not D , there is no role called dashboard viwer."}]},{"upvote_count":"5","timestamp":"1624119300.0","poster":"francisco_guerra","comment_id":"385617","content":"Ans: C\nthis question is kind of weird because the role is: roles/monitoring.dashboardViewer \"Monitoring Dashboard Configuration Viewer\" but monitoring viewer its too much access so I tested in console\n\nhttps://cloud.google.com/iam/docs/understanding-roles\n\nwith Dashboard Viewer I would´nt be allowed to see the chart URL\nwith monitoring works fine\n\nDashboard Viewer Provides read-only access to get and list information about all monitoring data and configurations."},{"content":"the rol Dashboard Viewer doesn't exist in the GCP, the real name is monitoring dashboard configuration viewer, so in this case I think is C or the anwser is not correct with the rol name","poster":"JuanitoNN","upvote_count":"2","timestamp":"1623802080.0","comment_id":"382980"},{"comment_id":"372741","poster":"devopsbatch","content":"yes right one seems to be D","timestamp":"1622641800.0","upvote_count":"3"},{"content":"B least previlege can be dahsborad viewer","upvote_count":"1","timestamp":"1622578200.0","poster":"devopsbatch","comment_id":"372186"},{"upvote_count":"4","timestamp":"1622571060.0","comment_id":"372113","poster":"akg001","content":"Correct answer should be D"}],"choices":{"B":"Share the workspace Project ID with the SRE team. Assign the SRE team the Dashboard Viewer IAM role in the workspace project.","A":"Share the workspace Project ID with the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project.","D":"Click ג€Share chart by URLג€ and provide the URL to the SRE team. Assign the SRE team the Dashboard Viewer IAM role in the workspace project.","C":"Click ג€Share chart by URLג€ and provide the URL to the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project."},"exam_id":5,"question_images":[],"answers_community":["C (74%)","A (21%)","5%"],"url":"https://www.examtopics.com/discussions/google/view/54120-exam-professional-cloud-devops-engineer-topic-1-question-2/","answer_description":"","topic":"1","answer_images":[],"answer_ET":"A","question_id":79},{"id":"cQMeJoDCmq9MQZzukZD4","exam_id":5,"discussion":[{"comment_id":"386684","timestamp":"1624239540.0","comments":[{"poster":"Manh","upvote_count":"3","comment_id":"475174","timestamp":"1636510800.0","content":"Agree. Ans B"}],"content":"Ans: B\nI don't find anything about ddos attacks and Cloud security Scanner & databases; its most used with App engine and compute so.\n\nI go with Stackdriver profiler","upvote_count":"24","poster":"francisco_guerra"},{"upvote_count":"10","comment_id":"384134","timestamp":"1623928800.0","poster":"ralf_cc","content":"B - getting to know the app perf"},{"content":"option C","upvote_count":"2","timestamp":"1701500700.0","comment_id":"1085834","poster":"jomonkp"},{"poster":"alve","upvote_count":"1","timestamp":"1677994500.0","comment_id":"829650","content":"Ans: B\nI don't find anything about ddos attacks and Cloud security Scanner & databases; its most used with App engine and compute so."},{"comment_id":"825788","upvote_count":"1","poster":"izekc","timestamp":"1677672480.0","content":"Selected Answer: C\nC would be correct"},{"upvote_count":"4","timestamp":"1677636120.0","comment_id":"825473","content":"Selected Answer: B\nI would go for B:\nAs it says, \"The **number** of concurrent active users remained stable.\"\nSince users report database timeout errors, the newly deployed version can only service a particular load and that load is **lower than** expected number.\nIt is likely that the new version has changes that lead to high CPU utilization or any other bottleneck, so we should use the profiler to locate the issue.","poster":"07397"},{"content":"Selected Answer: B\nB. Use Stackdriver Profiler to visualize the resources utilization throughout the application\n\nThe most probable cause of the database timeout when the number of concurrent active users remained stable is a performance issue. Stackdriver Profiler can be used to identify and diagnose performance issues in the application. Profiler can help you to visualize the resources utilization throughout the application, including CPU and memory usage, and identify any parts of the application that might be causing high load. This can help you understand how the application is utilizing the resources and identify any bottlenecks in the code that might be causing the timeouts.\n\nOther possible solutions, while they can be useful in certain situations, are not as relevant in this scenario.\nOption A is not relevant as it is not related to the issue.\nOption C while it can be helpful in certain scenarios, in this case it's less likely to be the cause of the problem.\nOption D is a security tool that can detect vulnerabilities in the application, but it's not related to the database timeouts.","comment_id":"772082","poster":"JonathanSJ","upvote_count":"3","timestamp":"1673416080.0"},{"timestamp":"1673367300.0","comment_id":"771605","content":"I would go for C. \nC. Determine whether there is an increased number of connections to the Cloud SQL instance.\n1. Because users report the error message saying \"database timeout\". If the errors is from the application then it wouldn't be \"database timeout\", so rather than running Profiler in your application, go check whether there is an increased number of connections is more intuitive. 2. Other than that, the question mentions \"After an update to the application\" which imply that there could be a bug regarding to SQL so that's why if \"concurrent active users remained stable\", the database could still timeout because of bugs. Please be aware that \"concurrent active users remained stable\" doesn't mean qps (query-per-second) is still the same.","upvote_count":"8","poster":"Greg123123"},{"comment_id":"755471","content":"Selected Answer: B\nAns: B\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/","timestamp":"1671952800.0","upvote_count":"2","poster":"floppino"},{"timestamp":"1658649840.0","upvote_count":"2","comment_id":"635925","content":"Selected Answer: B\nAns: B","poster":"GCP72"},{"poster":"Ananda","timestamp":"1652111160.0","comment_id":"599123","content":"Selected Answer: B\nSubmit B","upvote_count":"2"},{"timestamp":"1650074520.0","content":"Answer B: Use Stackdriver Profiler to visualize the resources utilization throughout the application.\n\nHigh CPU usage can most definitely cause dropped or ignored connections. The database engine and underlying OS are fighting for resources and aren't able to respond to the connection in time. \nFinding out why the query is eating so much CPU usage and optimizing it.\nhttps://stackoverflow.com/questions/69919454/high-cpu-usage-on-cloud-sql-causing-timeouts\n\n# Cloud Profiler is a statistical, low-overhead profiler that continuously gathers CPU usage and memory-allocation information (supported profile types: CPU time, Heap, Allocated heap, Contention, Threads, Wall time) from your production applications. It attributes that information to the source code that generated it, helping you identify the parts of your application that are consuming the most resources, and otherwise illuminating your applications performance characteristics.\nhttps://cloud.google.com/profiler/docs/about-profiler","poster":"paul223344","comment_id":"586547","upvote_count":"5"},{"poster":"sankofa","upvote_count":"3","comment_id":"548297","content":"C as app update could have introduced a bug where although app user concurrency remain stable, could have introduced more db connections","timestamp":"1644988620.0"},{"content":"Ans C is more feasible. If the user not changed but the devs forgot to close the unneeded connection can increase the connection count and produce this error.","comment_id":"547577","poster":"alexweberlopes","upvote_count":"2","timestamp":"1644909480.0"},{"comment_id":"545772","content":"Selected Answer: B\nB - Profiler allows you to see each specific process running in your application to find out bottle necks and resource intensive components","poster":"PhilipKoku","upvote_count":"2","timestamp":"1644663600.0"},{"timestamp":"1643728980.0","content":"Selected Answer: B\nCannot be A as it is Cloud SQL instance\nCannot be D as problem started after a deployment\nTo find out what is mentioned in C you will have to use Stack Driver, thus the answer should be B.","poster":"rfd","comment_id":"537955","upvote_count":"4"},{"timestamp":"1641865920.0","content":"I will go with C, because when developers did the code change (nothing else changed), may be they have introduced a bug due to which the connection to the DB is increasing (DB connections need to be closed after use). DB connection is also something that should have an upper limit, otherwise, DB Read/Write will be badly affected. See the documentation for any DaaS, it has a limit on parallel connection","comment_id":"521218","upvote_count":"3","poster":"roastc"},{"content":"A\nhttps://cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console","upvote_count":"2","comments":[{"timestamp":"1643728800.0","upvote_count":"2","comment_id":"537950","content":"How can it be A? serial port is for VMs (Compute engine). And from the question it is clear that database is running on Cloud SQL. You will not get access to underlying VM on cloud sql.","poster":"rfd","comments":[{"poster":"drpcc","content":"I believe that A is correct.\nThe VM should have a scope to connect to Cloud SQL through the service account hence, the logs of the VM should show whether the connection was successful or not.\nThat's what I think","timestamp":"1707570420.0","upvote_count":"1","comment_id":"1146323"}]},{"upvote_count":"2","poster":"Manh","content":"serial-port for SSH mate. A wrong","timestamp":"1636510740.0","comment_id":"475173","comments":[{"comment_id":"478608","poster":"TNT87","content":"I do not copy answers from here https://quizlet.com/605380672/cloud-devops-flash-cards/ like you, i research, thats why i include links,im not fighting you but write your answer, dnt go arouund marking other people's answers and commenting negatively","upvote_count":"1","timestamp":"1636972560.0"},{"timestamp":"1636971300.0","content":"No write your answer dnt argue with me cause i have proof for what i wrote ....","upvote_count":"1","poster":"TNT87","comment_id":"478595"}]}],"comment_id":"438295","timestamp":"1630647000.0","poster":"TNT87"},{"poster":"[Removed]","comment_id":"418270","content":"For me it is first C) then if number of connections is normal than B).\nWith the new version there is a bug performance that can for example not close connections to the base. So even if there is the same number of user of the application , in the base there can be lot of connections.\nIf you have app reports time out database the first things to do is to check the database if there are slow queries but there is not answer for that.","timestamp":"1627824900.0","upvote_count":"5","comments":[{"poster":"danchoif2","timestamp":"1630584420.0","comment_id":"437850","content":"Totally agree!","upvote_count":"1"}]},{"content":"Ans:B - not C as The number of concurrent active users remained stable","timestamp":"1625916420.0","comment_id":"403295","poster":"MikeFR","upvote_count":"4"},{"comments":[{"poster":"TNT87","comment_id":"508376","timestamp":"1640331660.0","upvote_count":"1","content":"It cant be C, you just copied a wrong answer, logicically what does that C answer do to solve the problem?"}],"content":"C 100%","poster":"Charun","timestamp":"1624916160.0","comment_id":"393269","upvote_count":"7"},{"upvote_count":"4","content":"B. Because timeout happened after app update, this is likely related to the app itself. Timeout could be due to no available resources in GCE.","comment_id":"389986","poster":"guruguru","timestamp":"1624576860.0"},{"content":"Why not B?","timestamp":"1623496740.0","upvote_count":"3","comment_id":"380410","poster":"akg001"},{"content":"A or D not sure","poster":"devopsbatch","comment_id":"372841","timestamp":"1622648520.0","comments":[{"comment_id":"374120","comments":[{"poster":"jagadeeshs","timestamp":"1643484480.0","comment_id":"535675","content":"It is numbers are calculated based on average. DDOS can be a single request/connection. Anyways, the answer likely should be B.","upvote_count":"1"}],"content":"Can not be D as \"The number of concurrent active users remained stable\" so should not be DDOS attack","upvote_count":"1","poster":"DucLee3110","timestamp":"1622787300.0"}],"upvote_count":"2"}],"answer_images":[],"question_images":[],"topic":"1","isMC":true,"answer_ET":"C","unix_timestamp":1622648520,"question_id":80,"answers_community":["B (95%)","5%"],"choices":{"A":"Check the serial port logs of the Compute Engine instance.","D":"Use Cloud Security Scanner to see whether your Cloud SQL is under a Distributed Denial of Service (DDoS) attack.","C":"Determine whether there is an increased number of connections to the Cloud SQL instance.","B":"Use Stackdriver Profiler to visualize the resources utilization throughout the application."},"url":"https://www.examtopics.com/discussions/google/view/54248-exam-professional-cloud-devops-engineer-topic-1-question-20/","timestamp":"2021-06-02 17:42:00","answer":"B","question_text":"You support an application deployed on Compute Engine. The application connects to a Cloud SQL instance to store and retrieve data. After an update to the application, users report errors showing database timeout messages. The number of concurrent active users remained stable. You need to find the most probable cause of the database timeout. What should you do?","answer_description":""}],"exam":{"id":5,"isMCOnly":true,"provider":"Google","lastUpdated":"1 May 2024","numberOfQuestions":166,"isImplemented":true,"name":"Professional Cloud DevOps Engineer","isBeta":false},"currentPage":16},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "q4H3gnPxVeXyJ9SdSPJS",
+                "isMC": true,
+                "timestamp": "2021-06-02 17:33:00",
+                "choices": {
+                    "C": "Use the Stackdriver Monitoring API to create custom metrics, and then organize your containers using groups.",
+                    "D": "Use Stackdriver Logging to export application logs to BigQuery, aggregate logs per container, and then analyze CPU and memory consumption.",
+                    "A": "Use Stackdriver Kubernetes Engine Monitoring.",
+                    "B": "Use Prometheus to collect and aggregate logs per container, and then analyze the results in Grafana."
+                },
+                "answers_community": [
+                    "A (70%)",
+                    "B (23%)",
+                    "7%"
+                ],
+                "answer_ET": "B",
+                "answer_description": "",
+                "question_id": 76,
+                "discussion": [
+                    {
+                        "comment_id": "437697",
+                        "content": "* https://cloud.google.com/anthos/clusters/docs/on-prem\nGKE on-prem is also called Anthos clusters on VMware\n\n* https://cloud.google.com/anthos/clusters/docs/on-prem/concepts/logging-and-monitoring\nYou have several logging and monitoring options for your Anthos clusters on VMware:\n+ Cloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with Anthos clusters on VMware.\n+ Prometheus and Grafana, disabled by default.\n+ Validated configurations with third-party solutions.\n\n=> it means, if not a special situation, the correct should be using the first option: Logging and Monitoring. In this case, we want metrics, so Monitoring (aka. Cloud Monitoring, Stackdriver Monitoring) should be used. We are talking about GKE, so we will use Kubernetest Engine Monitoring (https://cloud.google.com/kubernetes-engine-monitoring).\n\nObviously, A is correct.",
+                        "poster": "danchoif2",
+                        "upvote_count": "22",
+                        "timestamp": "1630567620.0",
+                        "comments": [
+                            {
+                                "poster": "helg",
+                                "upvote_count": "6",
+                                "comment_id": "523059",
+                                "content": "we are talking about GKE and GKE on Premise \nso you need a multi cloud monitoring option not a GKE logging option like A",
+                                "timestamp": "1642104300.0",
+                                "comments": [
+                                    {
+                                        "upvote_count": "2",
+                                        "comments": [
+                                            {
+                                                "timestamp": "1703608140.0",
+                                                "upvote_count": "2",
+                                                "content": "I found another link indicating B is the answer, https://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring\nI copy a slice:\nYou have several logging and monitoring options for your GKE on-prem clusters:\n- Cloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE on-prem.\n- Prometheus and Grafana, disabled by default.\n- Validated configurations with third-party solutions.",
+                                                "comment_id": "1106213",
+                                                "poster": "Feliphus"
+                                            }
+                                        ],
+                                        "content": "I agree with @helg, if you check the link: https://cloud.google.com/kubernetes-engine/docs/concepts/observability. It says: \"Note: The provided GKE dashboards only display information for GKE clusters running on Google Cloud. They don't display information for GKE clusters running anywhere else, for example using on-premises or bare-metal servers.\"",
+                                        "timestamp": "1703405700.0",
+                                        "comment_id": "1104496",
+                                        "poster": "Feliphus"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "content": "B correct",
+                        "poster": "Charun",
+                        "comment_id": "393265",
+                        "upvote_count": "13",
+                        "timestamp": "1624916100.0",
+                        "comments": [
+                            {
+                                "comment_id": "421669",
+                                "content": "Point for discussion : \nGoogle highly recommends Google Logging and monitoring when running workloads only on GKE on-prem and GKE. For applications with component running on GKE on-prem and traditional on-premises infrastructure, other monitoring and logging solutions for an end-to-end view of application can be considered\n\nconsidering what is stated in the question \"GKE cluster deployed on-premises and Google Cloud Platform\", should \"A\" be the answer",
+                                "poster": "raf2121",
+                                "timestamp": "1628432520.0",
+                                "comments": [
+                                    {
+                                        "content": "nor for A! \nSTackdriver Kub Engine only supports GKE not GKE on premise!",
+                                        "upvote_count": "2",
+                                        "timestamp": "1642104240.0",
+                                        "poster": "helg",
+                                        "comment_id": "523057"
+                                    }
+                                ],
+                                "upvote_count": "13"
+                            }
+                        ]
+                    },
+                    {
+                        "content": "Selected Answer: B\nThe answer will change pre and post GKE 1.24 release.\nIf the question is asked before the release of GKE 1.24 the answer should be A.\nPost GKE 1.24 release metrics deprecated, B is the answer.",
+                        "comment_id": "1168006",
+                        "timestamp": "1709816640.0",
+                        "poster": "jinaldesailive",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "alpha_canary",
+                        "comment_id": "1135015",
+                        "timestamp": "1706536380.0",
+                        "content": "Selected Answer: A\nIf the on-prem was a non-GKE kubernetes solution, the the answer would be B. \nBut it's GKE on-prem, A is the best option here"
+                    },
+                    {
+                        "timestamp": "1701497820.0",
+                        "content": "option A",
+                        "poster": "jomonkp",
+                        "comment_id": "1085745",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: B\nGKE workload monitoring has been deprecated, so should be Prometheus\nhttps://cloud.google.com/stackdriver/docs/solutions/gke/managing-metrics",
+                        "upvote_count": "2",
+                        "poster": "SarumanMX",
+                        "comment_id": "976210",
+                        "timestamp": "1691552520.0"
+                    },
+                    {
+                        "comment_id": "956296",
+                        "timestamp": "1689746940.0",
+                        "content": "Selected Answer: B\nIt should be B check this link\nIt is clearly mentioned if you are application running on GKE or anthos cluster on Vmware you use stack driver counter part but if it is on On-prem then better find other solution\nWith respect to options we have here it is prometheus\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/logging-and-monitoring#:~:text=For%20applications%20with%20components%20running%20on%20Anthos%20clusters%20on%20VMware%20and%20traditional%20on%2Dpremises%20infrastructure%2C%20you%20might%20consider%20other%20solutions%20for%20an%20end%2Dto%2Dend%20view%20of%20those%20applications",
+                        "poster": "Ajitshetty",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "poster": "felipeschossler",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "content": "Its telling to pick which uses most cpu and memory this has nothing to do with logs",
+                                "comment_id": "938252",
+                                "upvote_count": "1",
+                                "comments": [
+                                    {
+                                        "content": "are these questions still relevant?",
+                                        "comment_id": "952774",
+                                        "poster": "aswani",
+                                        "timestamp": "1689464460.0",
+                                        "upvote_count": "2"
+                                    }
+                                ],
+                                "timestamp": "1688048700.0",
+                                "poster": "sidharthwader"
+                            }
+                        ],
+                        "timestamp": "1681291200.0",
+                        "content": "Selected Answer: A\nPrometheus is made for metrics not logs, in this way the correct answer is A, not be.",
+                        "comment_id": "868096"
+                    },
+                    {
+                        "poster": "taqihurr",
+                        "comment_id": "785053",
+                        "timestamp": "1674456660.0",
+                        "upvote_count": "2",
+                        "content": "B. Use Prometheus to collect and aggregate logs per container, and then analyze the results in Grafana.\n\nPrometheus is a popular open-source monitoring and alerting system that is well-suited for monitoring containers running in a Kubernetes cluster. It can scrape metrics from the Kubernetes API server and export them to a time series database, where they can be queried and visualized in Grafana. This approach allows you to monitor CPU and memory usage of individual containers, and set up alerts if usage exceeds certain thresholds."
+                    },
+                    {
+                        "timestamp": "1673415240.0",
+                        "upvote_count": "1",
+                        "comment_id": "772057",
+                        "content": "Selected Answer: B\nI think the answer is B.\nA cant be because is not for on premises.",
+                        "poster": "JonathanSJ"
+                    },
+                    {
+                        "comment_id": "755468",
+                        "content": "Selected Answer: A\nAns: A\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/",
+                        "timestamp": "1671952740.0",
+                        "poster": "floppino",
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "content": "any way to take dump of the discussions?",
+                                "comment_id": "792963",
+                                "upvote_count": "1",
+                                "poster": "jaykumarjkd99",
+                                "timestamp": "1675091580.0"
+                            }
+                        ]
+                    },
+                    {
+                        "poster": "DoodleDo",
+                        "content": "Ans A - Anthos GKE On-Prem agent collects systems metric however it doesn't collect applications metric. Given that question asks for CPU and Memory GKE On-Prem agent should suffice of containers in on-prem. Source - https://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring",
+                        "timestamp": "1669497900.0",
+                        "upvote_count": "1",
+                        "comment_id": "727822"
+                    },
+                    {
+                        "content": "for anthos clusters, need cloud monitoring & cloud logging agent, not GKE monitoring.",
+                        "timestamp": "1669337340.0",
+                        "upvote_count": "1",
+                        "comment_id": "726300",
+                        "poster": "hanweiCN"
+                    },
+                    {
+                        "content": "The Cloud Operations Suite for GKE only displays information for GKE clusters running on Google Cloud. It does not display information for GKE clusters running elsewhere, such as using on-premises or bare metal servers \nhttps://cloud-google-com.translate.goog/stackdriver/docs/solutions/gke?hl=fr&_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc",
+                        "poster": "hanweiCN",
+                        "upvote_count": "1",
+                        "comment_id": "726295",
+                        "timestamp": "1669336980.0",
+                        "comments": [
+                            {
+                                "poster": "hanweiCN",
+                                "timestamp": "1671088260.0",
+                                "content": "\" Cloud Operations Suite for GKE \" is a tailored cloud monitoring & logging service for GKE. not cloud monitoring & logging service. A is correct.",
+                                "comment_id": "745786",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "comment_id": "718087",
+                        "timestamp": "1668442200.0",
+                        "poster": "enter_co",
+                        "content": "Selected Answer: B\nThe eCommerce app is a workload. \nSince v. 1.24 GKE workload metrics were deprecated and replaced with Prometheus https://cloud.google.com/stackdriver/docs/solutions/gke/workload-metrics#gcloud\nhttps://cloud.google.com/stackdriver/docs/solutions/gke/gmp-migration",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "mudot",
+                        "timestamp": "1667647260.0",
+                        "comment_id": "711714",
+                        "upvote_count": "4",
+                        "content": "Selected Answer: A\nI work in the hybrid environment [anthos] and can confirm the required metric availability"
+                    },
+                    {
+                        "timestamp": "1666781100.0",
+                        "upvote_count": "1",
+                        "content": "A is correct\nCloud Operations for GKE is designed to monitor GKE clusters. It manages Monitoring and Logging services together and features a Cloud Operations for GKE dashboard that provides a customized interface for GKE clusters:\n\nYou can view a cluster's key metrics, such as CPU utilization, memory utilization, and the number of open incidents.\n\nYou can view clusters by their infrastructure, workloads, or services.\n\nYou can inspect namespaces, nodes, workloads, services, pods, and containers.\nFor pods and containers, you can view metrics as a function of time and view log entries.https://cloud.google.com/stackdriver/docs/solutions/gke",
+                        "comment_id": "704578",
+                        "poster": "AzureDP900"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/latest/concepts/logging-and-monitoring#logging_and_monitoring\nGoogle Cloud's operations suite (formerly Stackdriver) is the built-in observability solution for Google Cloud. It offers a fully managed logging solution, metrics collection, monitoring, dashboarding, and alerting. Cloud Monitoring monitors Anthos clusters on VMware clusters in a similar way as cloud-based GKE clusters.",
+                        "timestamp": "1666618500.0",
+                        "upvote_count": "2",
+                        "poster": "zellck",
+                        "comment_id": "703056"
+                    },
+                    {
+                        "timestamp": "1658859480.0",
+                        "comment_id": "637564",
+                        "poster": "gcp_learner123",
+                        "upvote_count": "1",
+                        "content": "\"Note: Cloud Operations for GKE only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.\"\n\n\nSo, A is wrong. Correct ans is B\n\n\nSource: https://cloud.google.com/stackdriver/docs/solutions/gke#about-skm"
+                    },
+                    {
+                        "comment_id": "635923",
+                        "content": "Selected Answer: A\nA is correct",
+                        "poster": "GCP72",
+                        "timestamp": "1658649660.0",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "623635",
+                        "timestamp": "1656385680.0",
+                        "poster": "[Removed]",
+                        "content": "Pass exam and Submit B\nThere has a little different about Option A in exam.\nIn exam, Option A was \"Use Cloud Operations for GKE\".\nBut based on description as below:\n\nNote: Cloud Operations for GKE only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.\n\nhttps://cloud.google.com/stackdriver/docs/solutions/gke#about-skm\n\nSo B is better in this question."
+                    },
+                    {
+                        "timestamp": "1645477020.0",
+                        "upvote_count": "2",
+                        "comment_id": "553256",
+                        "poster": "zygomar",
+                        "content": "Selected Answer: C\nagree with francisco_guerra, gcpengineer, & helg. Cloud operations for GKE only displays information for GKE Clusters running on Google cloud."
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "Nalex9ja",
+                        "comment_id": "531822",
+                        "content": "From this documentation, A should be the answer.\nIt is the recommend way. If application logs were to be collected, this solution won't work an Prometheus would have been the desired solution. I this case only system a system metric (CPU utilisation) is required. \nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring#:~:text=GKE%20on%2Dprem%20includes%20multiple,proper%20solution%20for%20your%20environment.",
+                        "timestamp": "1643085300.0"
+                    },
+                    {
+                        "comment_id": "523077",
+                        "content": "C for monitoring containers ..\nA - No because Stackdriver Kubernetes Engine Monitoring only supports GKE (on Google Cloud) - https://cloud.google.com/stackdriver/docs/solutions/gke \nB - nope for prometheus / Grafana (non managed and non GCP solutions) \nD- Nope for logging \nC - Yes - Cloud Monitoring can help https://cloud.google.com/anthos/clusters/docs/on-prem/1.3/concepts/logging-and-monitoring#configure_stackdriver_agents",
+                        "timestamp": "1642104840.0",
+                        "upvote_count": "2",
+                        "poster": "helg"
+                    },
+                    {
+                        "poster": "helg",
+                        "content": "No for A! \nNote: Cloud Operations for GKE only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.",
+                        "timestamp": "1642104000.0",
+                        "comment_id": "523052",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "content": "Selected Answer: A\nCorrect Answer is A",
+                        "timestamp": "1641304320.0",
+                        "comment_id": "516672",
+                        "poster": "simbu1299"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "upvote_count": "2",
+                        "timestamp": "1640650380.0",
+                        "comment_id": "510683",
+                        "content": "Selected Answer: A\nA is the answer...check GKE monitoring onthe doc"
+                    },
+                    {
+                        "content": "The question is application is running on Google Kubernetes Engine (GKE) cluster deployed on-premises and also on the Google Cloud Platform, this means we need to add grouping for containers that are running on-prem GKE and also in GKE GCP. Option C is more relevant in this case as compared to A",
+                        "upvote_count": "2",
+                        "comment_id": "506120",
+                        "poster": "guid1984",
+                        "timestamp": "1640092440.0"
+                    },
+                    {
+                        "comment_id": "494316",
+                        "timestamp": "1638706260.0",
+                        "content": "Ans : B",
+                        "upvote_count": "1",
+                        "poster": "alaahakim"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1638691920.0",
+                        "content": "C is he answer, B is not in GCP\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.0/concepts/logging-and-monitoring",
+                        "comment_id": "494150",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "timestamp": "1637881320.0",
+                        "content": "Selected Answer: A\nCloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE on-prem.\n\nReference:https://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring",
+                        "poster": "muk5658",
+                        "upvote_count": "2",
+                        "comment_id": "486973"
+                    },
+                    {
+                        "poster": "awrgdasfg",
+                        "upvote_count": "2",
+                        "timestamp": "1637147640.0",
+                        "comment_id": "479975",
+                        "content": "Selected Answer: A\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.9/concepts/logging-and-monitoring#logging_and_monitoring"
+                    },
+                    {
+                        "poster": "Biden",
+                        "comment_id": "477123",
+                        "timestamp": "1636743720.0",
+                        "content": "Answer is A. Reason - this statement \"We highly recommend Logging and Monitoring when running workloads only on GKE on-prem, or workloads on GKE and GKE on-prem. For applications with components running on GKE on-prem and traditional on-premises infrastructure, you might consider other solutions for an end-to-end view of those applications.\"\nTHis question is about app running on GKE on-prem & GKE on Cloud - hence answer is A\nReference: https://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "it's should be A\n\nOptions for GKE on-prem\nYou have several logging and monitoring options for your GKE on-prem clusters:\n\nCloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE on-prem.\nPrometheus and Grafana, disabled by default.\nValidated configurations with third-party solutions.\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring#stackdriver_gkeop",
+                        "timestamp": "1636509360.0",
+                        "comment_id": "475164",
+                        "poster": "Manh",
+                        "comments": [
+                            {
+                                "content": "Read the article you posted - pod metrics are not exported.",
+                                "comment_id": "532834",
+                                "upvote_count": "1",
+                                "poster": "pddddd",
+                                "timestamp": "1643196840.0"
+                            }
+                        ]
+                    },
+                    {
+                        "content": "B- You have several logging and monitoring options for your GKE On-Prem clusters:\n\nCloud Logging and Cloud Monitoring, enabled by in-cluster agents deployed with GKE On-Prem.\nPrometheus and Grafana, enabled by default in new clusters.",
+                        "poster": "MF2C",
+                        "timestamp": "1631014500.0",
+                        "comment_id": "440882",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "TNT87",
+                        "timestamp": "1630646340.0",
+                        "comment_id": "438280",
+                        "content": "B\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.7/concepts/logging-and-monitoring"
+                    },
+                    {
+                        "content": "1. both prometheus & stackdriver need to be configured\n2. Prometheus doesn't collect & aggregate logs, it only plays metrics.\n3. stackdriver is a default component for GKE on-prem\nI would choose C.",
+                        "timestamp": "1627395600.0",
+                        "upvote_count": "3",
+                        "poster": "grace_lau",
+                        "comment_id": "415523"
+                    },
+                    {
+                        "poster": "WakandaF",
+                        "comments": [
+                            {
+                                "timestamp": "1627824000.0",
+                                "upvote_count": "4",
+                                "comment_id": "418266",
+                                "poster": "[Removed]",
+                                "content": "The application runs on a large Google Kubernetes Engine (GKE) cluster deployed on-premises and on Google Cloud Platform ==> so they use Anthos (GKE on PREM = Anthos).\nThe answer is A."
+                            }
+                        ],
+                        "timestamp": "1625059500.0",
+                        "comment_id": "394760",
+                        "upvote_count": "2",
+                        "content": "Monitoring(Stackdriver) allows you to view and address that type of behavior, but yes you need to have Anthos!\nNot sure if is A or B?"
+                    },
+                    {
+                        "content": "A - because CPU and memory are standard metrics, you shouldn't need to create any custom metric for them. And as holahola mentioned, \"Cloud Monitoring monitors GKE on-prem clusters in a similar way as cloud-based GKE clusters.\" \nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.7/concepts/logging-and-monitoring",
+                        "timestamp": "1624575660.0",
+                        "comments": [
+                            {
+                                "poster": "francisco_guerra",
+                                "upvote_count": "2",
+                                "timestamp": "1624989240.0",
+                                "content": "Like you say Cloud monitoring is not the same that Kubernetes engine monitoring",
+                                "comment_id": "394124"
+                            }
+                        ],
+                        "comment_id": "389967",
+                        "upvote_count": "3",
+                        "poster": "guruguru"
+                    },
+                    {
+                        "timestamp": "1624231200.0",
+                        "content": "Ans: C\n\nA: No, Cloud Operations for GKE (Stackdriver Kubernetes Engine Monitoring)only displays information for GKE clusters running on Google Cloud. It doesn't display information for GKE clusters running anywhere else, for example using on-premise or bare-metal servers.\n\nB: Google only recommed prometeus and Grafana if you have previous knowledge about it\nC: Correct its the Google's recommendation \nD: You want to monitoring\n\nhttps://cloud.google.com/stackdriver/docs/solutions/gke\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.7/concepts/logging-and-monitoring",
+                        "poster": "francisco_guerra",
+                        "comments": [
+                            {
+                                "content": "stackdiver monitoring displays GKE on prem.",
+                                "comment_id": "423322",
+                                "upvote_count": "1",
+                                "timestamp": "1628686500.0",
+                                "poster": "gcpengineer"
+                            }
+                        ],
+                        "upvote_count": "4",
+                        "comment_id": "386614"
+                    },
+                    {
+                        "content": "A - because \"Cloud Monitoring monitors GKE on-prem clusters in a similar way as cloud-based GKE clusters.\" It includes CPU and RAM utilization. https://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring.\nPrometheus and grafana - disabled by default.",
+                        "poster": "holahola",
+                        "comment_id": "384787",
+                        "timestamp": "1624017480.0",
+                        "upvote_count": "5"
+                    },
+                    {
+                        "timestamp": "1623927360.0",
+                        "poster": "ralf_cc",
+                        "upvote_count": "6",
+                        "comment_id": "384119",
+                        "content": "C - workload is only on GKE, https://cloud.google.com/anthos/clusters/docs/on-prem/1.0/concepts/logging-and-monitoring"
+                    },
+                    {
+                        "timestamp": "1623495900.0",
+                        "comment_id": "380400",
+                        "upvote_count": "1",
+                        "content": "Answer -B\n\nhttps://cloud.google.com/anthos/clusters/docs/on-prem/1.5/concepts/logging-and-monitoring",
+                        "poster": "akg001"
+                    },
+                    {
+                        "timestamp": "1622647980.0",
+                        "poster": "devopsbatch",
+                        "content": "B because on gcp it provides stack driver by default but on premise we need to setup promotheus and graphana to monitor metrics like cpu memory etc",
+                        "upvote_count": "2",
+                        "comment_id": "372832"
+                    }
+                ],
+                "exam_id": 5,
+                "answer_images": [],
+                "topic": "1",
+                "question_text": "You support an e-commerce application that runs on a large Google Kubernetes Engine (GKE) cluster deployed on-premises and on Google Cloud Platform. The application consists of microservices that run in containers. You want to identify containers that are using the most CPU and memory. What should you do?",
+                "question_images": [],
+                "unix_timestamp": 1622647980,
+                "url": "https://www.examtopics.com/discussions/google/view/54245-exam-professional-cloud-devops-engineer-topic-1-question-17/",
+                "answer": "A"
+            },
+            {
+                "id": "j6k454kwlZXetmzQSbew",
+                "answer_ET": "A",
+                "choices": {
+                    "B": "Create a development environment with smaller server capacity and give access only to developers and testers.",
+                    "A": "Create an automated testing script in production to detect failures as soon as they occur.",
+                    "C": "Secure the production environment to ensure that developers can't change it and set up one controlled update per year.",
+                    "D": "Create a development environment for writing code and a test environment for configurations, experiments, and load testing."
+                },
+                "question_images": [],
+                "question_id": 77,
+                "answer_images": [],
+                "answer_description": "",
+                "timestamp": "2021-06-02 17:34:00",
+                "url": "https://www.examtopics.com/discussions/google/view/54246-exam-professional-cloud-devops-engineer-topic-1-question-18/",
+                "topic": "1",
+                "answer": "D",
+                "discussion": [
+                    {
+                        "content": "D i think creating seperate env for dev and testers",
+                        "poster": "devopsbatch",
+                        "upvote_count": "22",
+                        "comment_id": "372834",
+                        "timestamp": "1622648040.0"
+                    },
+                    {
+                        "poster": "Charun",
+                        "upvote_count": "10",
+                        "comment_id": "393267",
+                        "content": "answer is D",
+                        "timestamp": "1624916100.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "jomonkp",
+                        "content": "option B",
+                        "timestamp": "1701497940.0",
+                        "comment_id": "1085747"
+                    },
+                    {
+                        "comment_id": "1066473",
+                        "poster": "maxdanny",
+                        "content": "Selected Answer: D\nIt is necessary to check the environment, one of development and one of test",
+                        "upvote_count": "1",
+                        "timestamp": "1699540320.0"
+                    },
+                    {
+                        "timestamp": "1698381660.0",
+                        "content": "Selected Answer: D\nRight answer",
+                        "poster": "Jason_Cloud_at",
+                        "upvote_count": "1",
+                        "comment_id": "1055109"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nA makes no sense",
+                        "poster": "SarumanMX",
+                        "comment_id": "976212",
+                        "timestamp": "1691552640.0"
+                    },
+                    {
+                        "content": "i thinks is D because the questions is about how redesign the system...",
+                        "upvote_count": "1",
+                        "comment_id": "860248",
+                        "timestamp": "1680547800.0",
+                        "poster": "Ale_valdivia_vivar"
+                    },
+                    {
+                        "timestamp": "1673415420.0",
+                        "content": "Selected Answer: D\nD. Create a development environment for writing code and a test environment for configurations, experiments, and load testing.\n\nCreating separate environments for development, testing and production is a best practice for software development. This will enable the company to have control over the changes that are made in each environment and reduce the risk of bugs, outages and slowness in production.\n\nA development environment would be used by developers to write code, test new features and do initial debugging. This environment should be isolated from production so that bugs or issues that occur during development don't affect the production systems or users.\n\nA test environment should be created to perform configurations, experiments, and load testing. This environment should be identical to production so that it can be used to test how the systems will behave in a real-world scenario. Testers can use this environment to load test new features without affecting production systems or users.",
+                        "comment_id": "772060",
+                        "upvote_count": "2",
+                        "poster": "JonathanSJ"
+                    },
+                    {
+                        "poster": "LEONIDA85",
+                        "timestamp": "1672152060.0",
+                        "content": "why not B?",
+                        "comment_id": "758640",
+                        "comments": [
+                            {
+                                "comment_id": "771590",
+                                "poster": "Greg123123",
+                                "timestamp": "1673366220.0",
+                                "upvote_count": "1",
+                                "content": "Even if we let alone the env separation in D, B doesn't address all the needs in the question. For example, they want to perform load test, if B has a smaller capacity the load test isn't accurate."
+                            },
+                            {
+                                "comment_id": "761970",
+                                "timestamp": "1672405860.0",
+                                "poster": "Swepu",
+                                "content": "Please do know why not B",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1671952740.0",
+                        "content": "Selected Answer: D\nAns: D\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/",
+                        "comment_id": "755469",
+                        "poster": "floppino",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1670695920.0",
+                        "comment_id": "741165",
+                        "content": "Selected Answer: D\nanswer is D",
+                        "upvote_count": "1",
+                        "poster": "sri1016"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "zellck",
+                        "content": "Selected Answer: D\nD is the answer.",
+                        "timestamp": "1666618560.0",
+                        "comment_id": "703057"
+                    },
+                    {
+                        "content": "D is right",
+                        "timestamp": "1666581000.0",
+                        "comment_id": "702654",
+                        "poster": "AzureDP900",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1662271380.0",
+                        "poster": "EricaZhao",
+                        "content": "Selected Answer: D\nD is correct",
+                        "comment_id": "658995"
+                    },
+                    {
+                        "comment_id": "635924",
+                        "content": "Selected Answer: D\nanswer is D",
+                        "timestamp": "1658649720.0",
+                        "poster": "GCP72",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1652111100.0",
+                        "content": "Selected Answer: D\nSubmitted D in the exam",
+                        "comment_id": "599121",
+                        "poster": "Ananda",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: D\nD is the answer, keep production separated, dev environment to write the code, test environment to test functionality and load before deployments to prod",
+                        "upvote_count": "3",
+                        "timestamp": "1644663360.0",
+                        "comment_id": "545769",
+                        "poster": "PhilipKoku"
+                    },
+                    {
+                        "timestamp": "1643418960.0",
+                        "comment_id": "535062",
+                        "upvote_count": "2",
+                        "poster": "cyrus86",
+                        "content": "Selected Answer: D\nD looks right to me"
+                    },
+                    {
+                        "poster": "vijaigcp",
+                        "upvote_count": "3",
+                        "timestamp": "1643290800.0",
+                        "content": "Selected Answer: D\nCreating Separate ENVs for DEV and QA is an age old best practice. Same applies here",
+                        "comment_id": "533789"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1642413600.0",
+                        "content": "Selected Answer: D\nD for sure",
+                        "poster": "elaribk",
+                        "comment_id": "525674"
+                    },
+                    {
+                        "comment_id": "503225",
+                        "timestamp": "1639692300.0",
+                        "upvote_count": "1",
+                        "poster": "not_thanos",
+                        "content": "Selected Answer: D\nBest practice to separate the dev and test environments"
+                    },
+                    {
+                        "content": "Selected Answer: D\nD because Developrs can test in Dev with out touching PR environment",
+                        "poster": "Yog14",
+                        "comment_id": "503083",
+                        "upvote_count": "1",
+                        "timestamp": "1639674360.0"
+                    },
+                    {
+                        "comment_id": "494318",
+                        "timestamp": "1638706500.0",
+                        "poster": "alaahakim",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nAns : D"
+                    },
+                    {
+                        "timestamp": "1638355920.0",
+                        "upvote_count": "1",
+                        "poster": "Wwhite44",
+                        "comment_id": "491560",
+                        "content": "Selected Answer: D\nD for sure"
+                    },
+                    {
+                        "poster": "pacman_user",
+                        "content": "D for sure 100% recommended",
+                        "upvote_count": "2",
+                        "timestamp": "1633876020.0",
+                        "comment_id": "460103"
+                    },
+                    {
+                        "content": "Having a separate environment is a best practice. Answer is D.",
+                        "upvote_count": "5",
+                        "timestamp": "1623496080.0",
+                        "poster": "akg001",
+                        "comment_id": "380403"
+                    }
+                ],
+                "isMC": true,
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "unix_timestamp": 1622648040,
+                "question_text": "Your company experiences bugs, outages, and slowness in its production systems. Developers use the production environment for new feature development and bug fixes. Configuration and experiments are done in the production environment, causing outages for users. Testers use the production environment for load testing, which often slows the production systems. You need to redesign the environment to reduce the number of bugs and outages in production and to enable testers to toad test new features. What should you do?",
+                "exam_id": 5
+            },
+            {
+                "id": "6gjBatwyEvNfO3hrsQlb",
+                "question_text": "You support an application running on App Engine. The application is used globally and accessed from various device types. You want to know the number of connections. You are using Stackdriver Monitoring for App Engine. What metric should you use?",
+                "topic": "1",
+                "unix_timestamp": 1622648220,
+                "url": "https://www.examtopics.com/discussions/google/view/54247-exam-professional-cloud-devops-engineer-topic-1-question-19/",
+                "answer": "A",
+                "question_id": 78,
+                "question_images": [],
+                "choices": {
+                    "B": "tcp_ssl_proxy/new_connections",
+                    "A": "flex/connections/current",
+                    "C": "tcp_ssl_proxy/open_connections",
+                    "D": "flex/instance/connections/current"
+                },
+                "isMC": true,
+                "answer_ET": "D",
+                "exam_id": 5,
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "timestamp": "2021-06-02 17:37:00",
+                "answer_images": [],
+                "discussion": [
+                    {
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "timestamp": "1635696840.0",
+                                "content": "agree, the question is about number of connections of the app (could be multiple instances), not an instance.",
+                                "comment_id": "470752",
+                                "poster": "danchoif2"
+                            }
+                        ],
+                        "timestamp": "1624237920.0",
+                        "poster": "francisco_guerra",
+                        "comment_id": "386677",
+                        "upvote_count": "23",
+                        "content": "Ans A\nA: Metric for App engine & for version\nB: NO, Metrics for Cloud Load Balancing.\nC: NO, Metrics for Cloud Load Balancing.\nD Metric for App engine & for instance\n\nAn App Engine app is made up of a single application resource that consists of one or more services. Each service can be configured to use different runtimes and to operate with different performance settings. Within each service, you deploy versions of that service. Each version then runs within one or more instances, depending on how much traffic you configured it to handle.\n\nif the version runs within one or more instances we need for the version."
+                    },
+                    {
+                        "timestamp": "1624916160.0",
+                        "comment_id": "393268",
+                        "upvote_count": "6",
+                        "poster": "Charun",
+                        "content": "A correct"
+                    },
+                    {
+                        "content": "option A",
+                        "upvote_count": "1",
+                        "comment_id": "1085753",
+                        "timestamp": "1701498240.0",
+                        "poster": "jomonkp"
+                    },
+                    {
+                        "poster": "maxdanny",
+                        "upvote_count": "1",
+                        "timestamp": "1699540800.0",
+                        "comment_id": "1066482",
+                        "content": "Selected Answer: A\nA is correct answer \nhttps://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine\nflex/connections/current show the current active connections for all instance in appengine"
+                    },
+                    {
+                        "comment_id": "772072",
+                        "poster": "JonathanSJ",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nAnswer is A",
+                        "timestamp": "1673415840.0"
+                    },
+                    {
+                        "poster": "floppino",
+                        "content": "Selected Answer: A\nAns: A\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/",
+                        "comment_id": "755470",
+                        "timestamp": "1671952800.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1666781460.0",
+                        "upvote_count": "1",
+                        "poster": "AzureDP900",
+                        "content": "A \nflex/connections/current GA\nConnections\nGAUGE, DOUBLE, 1\ngae_app Number of current active connections per App Engine flexible environment version. Sampled every 60 seconds. After sampling, data is not visible for up to 240 seconds.",
+                        "comment_id": "704587"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine\nflex/connections/current\n- Number of current active connections per App Engine flexible environment version",
+                        "comments": [
+                            {
+                                "comment_id": "868103",
+                                "timestamp": "1681291560.0",
+                                "content": "Thank you for providing the docs, you're right, the answer is A 100%!",
+                                "poster": "felipeschossler",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "upvote_count": "2",
+                        "comment_id": "702716",
+                        "timestamp": "1666589580.0",
+                        "poster": "zellck"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "GCP72",
+                        "content": "Selected Answer: A\nThe correct answer is \"A\"",
+                        "comment_id": "646697",
+                        "timestamp": "1660472580.0"
+                    },
+                    {
+                        "poster": "Ananda",
+                        "content": "Selected Answer: A\nSubmitted A",
+                        "comment_id": "599122",
+                        "timestamp": "1652111100.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "PhilipKoku",
+                        "content": "Selected Answer: A\nA) Is the correct answer https://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine",
+                        "comment_id": "540417",
+                        "timestamp": "1643978460.0",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "poster": "alaahakim",
+                        "timestamp": "1638706500.0",
+                        "upvote_count": "1",
+                        "comment_id": "494319",
+                        "content": "Ans : A"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "upvote_count": "5",
+                        "timestamp": "1630646820.0",
+                        "comment_id": "438291",
+                        "content": "A\nhttps://cloud.google.com/monitoring/api/metrics_gcp#gcp-appengine"
+                    },
+                    {
+                        "comment_id": "384122",
+                        "poster": "ralf_cc",
+                        "content": "A it is",
+                        "upvote_count": "5",
+                        "timestamp": "1623927540.0"
+                    },
+                    {
+                        "comment_id": "372836",
+                        "comments": [
+                            {
+                                "comments": [
+                                    {
+                                        "timestamp": "1623496140.0",
+                                        "content": "Agree for the answer -A",
+                                        "comment_id": "380405",
+                                        "upvote_count": "2",
+                                        "poster": "akg001"
+                                    }
+                                ],
+                                "content": "what about option A\nwe need to count application connection count and the count at instance level. no. of instance will keep on changing in app engine in the backend.",
+                                "timestamp": "1622994600.0",
+                                "poster": "rinkeshgala1",
+                                "upvote_count": "2",
+                                "comment_id": "376177"
+                            }
+                        ],
+                        "poster": "devopsbatch",
+                        "upvote_count": "1",
+                        "content": "flex/instance/connections/current GA\nConnections\nGAUGE, DOUBLE, 1\ngae_instance Number of current active connections per App Engine flexible environment instance. Sampled every 60 seconds. After sampling, data is not visible for up to 240 seconds.",
+                        "timestamp": "1622648220.0"
+                    }
+                ],
+                "answer_description": "Reference:\nhttps://cloud.google.com/monitoring/api/metrics_gcp"
+            },
+            {
+                "id": "z9th28y0ymepaD9chaIO",
+                "question_text": "You created a Stackdriver chart for CPU utilization in a dashboard within your workspace project. You want to share the chart with your Site Reliability Engineering\n(SRE) team only. You want to ensure you follow the principle of least privilege. What should you do?",
+                "unix_timestamp": 1622571060,
+                "timestamp": "2021-06-01 20:11:00",
+                "isMC": true,
+                "answer": "C",
+                "discussion": [
+                    {
+                        "timestamp": "1623049080.0",
+                        "content": "I think it's C, because dashboard viewer \"Read-only access to dashboard configurations.\"\nSRE team wants to view data, not configurations.",
+                        "comment_id": "376579",
+                        "comments": [
+                            {
+                                "content": "correct there is no such role - \"dashboard viewer\" the correct name is monitoring dashboard configuration viewer (and the permission is - Read-only access to dashboard configurations).\n\nso correct answer should be - C",
+                                "timestamp": "1623080160.0",
+                                "poster": "akg001",
+                                "upvote_count": "9",
+                                "comment_id": "376878",
+                                "comments": [
+                                    {
+                                        "content": "but it gives access to all list in monitoring of the project.",
+                                        "comment_id": "422948",
+                                        "poster": "gcpengineer",
+                                        "upvote_count": "1",
+                                        "timestamp": "1628621940.0"
+                                    },
+                                    {
+                                        "upvote_count": "3",
+                                        "comment_id": "707445",
+                                        "timestamp": "1667073240.0",
+                                        "content": "C is correct",
+                                        "poster": "AzureDP900"
+                                    },
+                                    {
+                                        "comment_id": "1101063",
+                                        "upvote_count": "1",
+                                        "timestamp": "1703027940.0",
+                                        "poster": "Raz0r",
+                                        "content": "There is, but only the single role won't give sufficient access.\nhttps://cloud.google.com/monitoring/access-control?hl=de#monitoring.dashboardViewer"
+                                    }
+                                ]
+                            }
+                        ],
+                        "poster": "syslog",
+                        "upvote_count": "18"
+                    },
+                    {
+                        "comment_id": "434663",
+                        "upvote_count": "12",
+                        "poster": "danchoif2",
+                        "content": "I did a test and see that:\n\nThe valid roles are: Monitoring Viewer and Monitoring Dashboard Configuration Viewer.\nYou can only share chart by URL using Metrics explorer.\n\n\nWith only Monitoring Dashboard Configuration Viewer role, user cannot see anything in Monitoring page.\n\nI create a custom role from Monitoring Dashboard Configuration Viewer role and add resourcemanager.projects.get permission.\n\nNow user can see list of custom dashboards and the charts in these custom dashboards. User cannot see standard GCP dashboards.\n\nUser cannot see the the chart in Metrics explorer (using the shared URL).\nOpening the URL, user will see errors: \"Invalid resource type\" and \"Invalid metric type\".\n\nSo even if I ignore the typo of Dashboard Viewer role in B and D, they are still incorrect answers.\n\nSo only A and C are valid. But I think C is better because the question is: \"You want to share the chart\" not the whole dashboard.",
+                        "timestamp": "1630246740.0",
+                        "comments": [
+                            {
+                                "comment_id": "702409",
+                                "content": "I agree with you, I am okay with C.",
+                                "timestamp": "1666551780.0",
+                                "upvote_count": "1",
+                                "poster": "AzureDP900"
+                            }
+                        ]
+                    },
+                    {
+                        "timestamp": "1709807580.0",
+                        "upvote_count": "1",
+                        "poster": "jinaldesailive",
+                        "content": "There is no such role as \"Dashboard Viewer\"",
+                        "comment_id": "1167904"
+                    },
+                    {
+                        "timestamp": "1701166500.0",
+                        "upvote_count": "3",
+                        "comment_id": "1082404",
+                        "content": "Extremly happy I passed my Exam with 82.7%. I just followed the community answers (not the actual answers and cleared exam on 10th Nov2023). Latest update: Stackdriver Monitoring is now reflect as Cloud Monitoring due to the name change in GCP hence pls don't get confused in exam. Thanks to Examtopics and pass4surehub.com for helping me out!",
+                        "poster": "stevesmith112"
+                    },
+                    {
+                        "comment_id": "1066329",
+                        "content": "Selected Answer: C\nThe answer is C because :\nDashboard viewer role not exists , monitor-viewer only\nhttps://cloud.google.com/iam/docs/understanding-roles#monitoring.viewer\nand Cloud Monitoring allows you to share the URL of the individual Dashboard and not of the entire project ID",
+                        "poster": "maxdanny",
+                        "timestamp": "1699524960.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "Jason_Cloud_at",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: C\nIt is the right answer",
+                        "timestamp": "1698371040.0",
+                        "comment_id": "1055041"
+                    },
+                    {
+                        "content": "Selected Answer: A\nhttps://cloud.google.com/monitoring/charts/share-dashboards",
+                        "poster": "jeffersonkozak",
+                        "comment_id": "926295",
+                        "timestamp": "1687037760.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1673409780.0",
+                        "comment_id": "772001",
+                        "poster": "JonathanSJ",
+                        "content": "Selected Answer: C\nThe best option in this case would be C. Click \"Share chart by URL\" and provide the URL to the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project.\nThis option allows you to share the specific chart with the SRE team only, granting them read-only access to the chart's data, this way the team can view the CPU utilization chart and troubleshoot any performance issues related to the chart.\nYou can use the feature of \"Share chart by URL\" to share the specific chart with the SRE team only, and provide a secure URL that can only be access by members of the team. And also giving them the \"Monitoring Viewer\" role, will give them just enough privilege to see the chart and its data but not the ability to make changes to the project, dashboard or other charts."
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1671865620.0",
+                        "content": "Selected Answer: C\nAns: C\n\nExam take on 19/12/2022, 50/50 from this dump without buying the full access.",
+                        "poster": "floppino",
+                        "comment_id": "754738"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "MTS88",
+                        "content": "Selected Answer: A\nI think is A, because there isn't any button \"Share chart by URL\", and least role is Monitoring Viewer (Dashboard viewer can see only dashboard configurations)",
+                        "comment_id": "741941",
+                        "timestamp": "1670780640.0"
+                    },
+                    {
+                        "timestamp": "1670315040.0",
+                        "poster": "chelbsik",
+                        "content": "Selected Answer: A\nDecided to go for A on the exam because there is no \"Share chart by URL\" button, it's just \"Share by URL\".",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "comment_id": "741942",
+                                "poster": "MTS88",
+                                "timestamp": "1670780700.0",
+                                "content": "But \"Share by URL\" is in chart? I remember it's only logging explorer",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "comment_id": "736618"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "poster": "hanweiCN",
+                                "timestamp": "1668733680.0",
+                                "content": "and this is not \" share chart by URL \" option, it is \" share by URL\"",
+                                "comment_id": "720995",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "timestamp": "1668733500.0",
+                        "content": "i think it is A, i assume add chart into custom/default dashboard is best practice for creating chart and share URL would more like one time trade.\nMetrics Explorer lets you create a chart that you can use to explore a metric. However, the charts created by this tool aren't persistent. When you navigate away from the Metrics Explorer page, the chart is discarded.\n\nTo save a chart you've configured with Metrics Explorer for future reference, add the chart to a custom dashboard or save the chart's URL: \nTo keep a reference to the chart configuration, save the chart URL. Because the chart URL encodes the chart configuration, when you paste this URL into a browser the chart you configured is displayed.",
+                        "poster": "hanweiCN",
+                        "comment_id": "720992",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1667916600.0",
+                        "poster": "mohan999",
+                        "content": "I have verified this, both A and C do the same thing except C gives you comfort to see the chart directly using the link without having to browse through all the way to the chart.",
+                        "comment_id": "713888"
+                    },
+                    {
+                        "timestamp": "1666779000.0",
+                        "upvote_count": "1",
+                        "comment_id": "704562",
+                        "poster": "AzureDP900",
+                        "content": "C \nThere are a number of IAM security roles related to monitoring. The big three are\nviewer, editor, and admin.\nTo create the monitoring Workspace initially, a user will need the Monitoring Editor or\nAdmin role in the Workspace's host project.\nThe Monitoring Viewer can get read-only access to the Monitoring console and API.\nThe Monitoring Editor has read-write access to the Monitoring console and APIs and\ncan write monitoring data and configurations into the Workspace.\nAnd the Monitoring Admin has full access to, and control over, all monitoring\nresources.\nPast these big three roles, monitoring roles exist to provide and limit access to alert\npolicies, dashboards, notification channels, service monitoring, and uptime checks."
+                    },
+                    {
+                        "content": "Selected Answer: C\nC is the answer.\n\nhttps://cloud.google.com/monitoring/access-control#mon_roles_desc\nroles/monitoring.viewer\n- Monitoring Viewer Grants read-only access to Monitoring in the Google Cloud console and API.",
+                        "upvote_count": "1",
+                        "timestamp": "1666612380.0",
+                        "poster": "zellck",
+                        "comment_id": "702982"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "timestamp": "1660395540.0",
+                                "poster": "GCP72",
+                                "comment_id": "646332",
+                                "content": "there is no role called dashboard viewer .",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "timestamp": "1658632500.0",
+                        "poster": "GCP72",
+                        "comment_id": "635860",
+                        "content": "Selected Answer: C\nThe answer is C",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "comment_id": "600222",
+                        "upvote_count": "2",
+                        "timestamp": "1652288220.0",
+                        "content": "Selected Answer: C\nGoogle Cloud courses say: \"Monitoring dashboard viewer can view dashboard settings while monitoring viewer can view charts and dashboards\", so i think I need to see Dashboards and chart content, not settings only",
+                        "poster": "GoReplyGCPExam"
+                    },
+                    {
+                        "poster": "Ananda",
+                        "timestamp": "1652110380.0",
+                        "comment_id": "599108",
+                        "content": "Selected Answer: C\nI submit C in my exam",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "buldas",
+                        "content": "Selected Answer: C\nThere is no such role as Dashboard Viewer",
+                        "timestamp": "1644993540.0",
+                        "comment_id": "548343",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "comment_id": "559137",
+                                "poster": "walkwolf3",
+                                "content": "roles/monitoring.dashboardViewer gives you read-only access to dashboard configurations.\n\nroles/monitoring.viewer gives you read-only access to Monitoring in the Google Cloud Console and API.\n\nSo the answer is C instead of D.",
+                                "timestamp": "1646186760.0",
+                                "upvote_count": "2"
+                            }
+                        ],
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nD) Share Dashboard with URL to only the team required and shared IAM roles/monitoring.dashboardViewer, as described in reference below.\nhttps://cloud.google.com/monitoring/access-control",
+                        "poster": "PhilipKoku",
+                        "timestamp": "1644660720.0",
+                        "comment_id": "545744"
+                    },
+                    {
+                        "timestamp": "1641245760.0",
+                        "poster": "gcpz",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: C\nvoted c",
+                        "comment_id": "516071"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "timestamp": "1645365240.0",
+                                "comment_id": "551825",
+                                "poster": "zygomar",
+                                "content": "There is but description says it is for the configurations of the dashboard: \"roles/monitoring.dashboardViewer. - Monitoring Dashboard Configuration Viewer. Gives you read-only access to dashboard configurations.\"\nfrom https://cloud.google.com/monitoring/access-control#dashboard_roles_desc"
+                            }
+                        ],
+                        "content": "The answer is C...not D, do not confuse the 2 and there is no role called dashboard viewer",
+                        "poster": "TNT87",
+                        "timestamp": "1640590320.0",
+                        "comment_id": "510093",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Selected Answer: C\nits Ccccccccc",
+                        "timestamp": "1637865000.0",
+                        "comment_id": "486858",
+                        "upvote_count": "1",
+                        "poster": "azuretestingpoc"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "TNT87",
+                        "comment_id": "483928",
+                        "timestamp": "1637565420.0",
+                        "content": "https://cloud.google.com/monitoring/access-control#mon_roles_desc"
+                    },
+                    {
+                        "timestamp": "1635402480.0",
+                        "comment_id": "469034",
+                        "poster": "giammydell",
+                        "upvote_count": "1",
+                        "content": "the question is: If you share a URL link containing the chart the SRE team can see the chart without knowing the workspace and the project-ID associated to the workspace"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "468408",
+                        "timestamp": "1635316740.0",
+                        "content": "Ans A,you dnt share the link,but the ID...",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "comment_id": "456655",
+                        "timestamp": "1633275360.0",
+                        "content": "why not A?\nwe dont have an option for sharing the chart url by clicking on share chart by URL",
+                        "upvote_count": "1",
+                        "poster": "maddy94"
+                    },
+                    {
+                        "comment_id": "454380",
+                        "upvote_count": "1",
+                        "content": "monitoring viewer is correct. - C",
+                        "poster": "sticky",
+                        "timestamp": "1632939060.0"
+                    },
+                    {
+                        "timestamp": "1630912440.0",
+                        "poster": "MF2C",
+                        "upvote_count": "1",
+                        "comment_id": "440169",
+                        "content": "is there share chart provided by GCP dashboard? if not, A is correct"
+                    },
+                    {
+                        "comment_id": "437758",
+                        "timestamp": "1630574280.0",
+                        "upvote_count": "1",
+                        "content": "therenis no role called dasboard viewer.",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "poster": "pondai",
+                        "upvote_count": "2",
+                        "comment_id": "436093",
+                        "content": "I think answer is C . I try to give user dashboard viewer and share url, but user can't watch content .If I give user Monitor Viewer and share url can watch.So I pick C",
+                        "timestamp": "1630394040.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1626683040.0",
+                        "content": "I think it should be C\nhttps://cloud.google.com/monitoring/access-control\ndashboard viewer role is for dashboard configuration.\nmonitoring viewer for monitoring.",
+                        "poster": "skm4690",
+                        "comment_id": "409380"
+                    },
+                    {
+                        "comment_id": "393245",
+                        "content": "I have submitted D answer",
+                        "upvote_count": "6",
+                        "poster": "Charun",
+                        "timestamp": "1624915560.0",
+                        "comments": [
+                            {
+                                "timestamp": "1624971240.0",
+                                "content": "Have you done the exam?",
+                                "comment_id": "393791",
+                                "upvote_count": "1",
+                                "poster": "WakandaF",
+                                "comments": [
+                                    {
+                                        "content": "Yes mate on 28th, passed",
+                                        "upvote_count": "1",
+                                        "poster": "Charun",
+                                        "comment_id": "395817",
+                                        "timestamp": "1625135400.0"
+                                    }
+                                ]
+                            },
+                            {
+                                "poster": "TNT87",
+                                "upvote_count": "1",
+                                "timestamp": "1640590380.0",
+                                "comment_id": "510094",
+                                "content": "The answer is C...not D , there is no role called dashboard viwer."
+                            }
+                        ]
+                    },
+                    {
+                        "upvote_count": "5",
+                        "timestamp": "1624119300.0",
+                        "poster": "francisco_guerra",
+                        "comment_id": "385617",
+                        "content": "Ans: C\nthis question is kind of weird because the role is: roles/monitoring.dashboardViewer \"Monitoring Dashboard Configuration Viewer\" but monitoring viewer its too much access so I tested in console\n\nhttps://cloud.google.com/iam/docs/understanding-roles\n\nwith Dashboard Viewer I would´nt be allowed to see the chart URL\nwith monitoring works fine\n\nDashboard Viewer Provides read-only access to get and list information about all monitoring data and configurations."
+                    },
+                    {
+                        "content": "the rol Dashboard Viewer doesn't exist in the GCP, the real name is monitoring dashboard configuration viewer, so in this case I think is C or the anwser is not correct with the rol name",
+                        "poster": "JuanitoNN",
+                        "upvote_count": "2",
+                        "timestamp": "1623802080.0",
+                        "comment_id": "382980"
+                    },
+                    {
+                        "comment_id": "372741",
+                        "poster": "devopsbatch",
+                        "content": "yes right one seems to be D",
+                        "timestamp": "1622641800.0",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "content": "B least previlege can be dahsborad viewer",
+                        "upvote_count": "1",
+                        "timestamp": "1622578200.0",
+                        "poster": "devopsbatch",
+                        "comment_id": "372186"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "timestamp": "1622571060.0",
+                        "comment_id": "372113",
+                        "poster": "akg001",
+                        "content": "Correct answer should be D"
+                    }
+                ],
+                "choices": {
+                    "B": "Share the workspace Project ID with the SRE team. Assign the SRE team the Dashboard Viewer IAM role in the workspace project.",
+                    "A": "Share the workspace Project ID with the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project.",
+                    "D": "Click ג€Share chart by URLג€ and provide the URL to the SRE team. Assign the SRE team the Dashboard Viewer IAM role in the workspace project.",
+                    "C": "Click ג€Share chart by URLג€ and provide the URL to the SRE team. Assign the SRE team the Monitoring Viewer IAM role in the workspace project."
+                },
+                "exam_id": 5,
+                "question_images": [],
+                "answers_community": [
+                    "C (74%)",
+                    "A (21%)",
+                    "5%"
+                ],
+                "url": "https://www.examtopics.com/discussions/google/view/54120-exam-professional-cloud-devops-engineer-topic-1-question-2/",
+                "answer_description": "",
+                "topic": "1",
+                "answer_images": [],
+                "answer_ET": "A",
+                "question_id": 79
+            },
+            {
+                "id": "cQMeJoDCmq9MQZzukZD4",
+                "exam_id": 5,
+                "discussion": [
+                    {
+                        "comment_id": "386684",
+                        "timestamp": "1624239540.0",
+                        "comments": [
+                            {
+                                "poster": "Manh",
+                                "upvote_count": "3",
+                                "comment_id": "475174",
+                                "timestamp": "1636510800.0",
+                                "content": "Agree. Ans B"
+                            }
+                        ],
+                        "content": "Ans: B\nI don't find anything about ddos attacks and Cloud security Scanner & databases; its most used with App engine and compute so.\n\nI go with Stackdriver profiler",
+                        "upvote_count": "24",
+                        "poster": "francisco_guerra"
+                    },
+                    {
+                        "upvote_count": "10",
+                        "comment_id": "384134",
+                        "timestamp": "1623928800.0",
+                        "poster": "ralf_cc",
+                        "content": "B - getting to know the app perf"
+                    },
+                    {
+                        "content": "option C",
+                        "upvote_count": "2",
+                        "timestamp": "1701500700.0",
+                        "comment_id": "1085834",
+                        "poster": "jomonkp"
+                    },
+                    {
+                        "poster": "alve",
+                        "upvote_count": "1",
+                        "timestamp": "1677994500.0",
+                        "comment_id": "829650",
+                        "content": "Ans: B\nI don't find anything about ddos attacks and Cloud security Scanner & databases; its most used with App engine and compute so."
+                    },
+                    {
+                        "comment_id": "825788",
+                        "upvote_count": "1",
+                        "poster": "izekc",
+                        "timestamp": "1677672480.0",
+                        "content": "Selected Answer: C\nC would be correct"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "timestamp": "1677636120.0",
+                        "comment_id": "825473",
+                        "content": "Selected Answer: B\nI would go for B:\nAs it says, \"The **number** of concurrent active users remained stable.\"\nSince users report database timeout errors, the newly deployed version can only service a particular load and that load is **lower than** expected number.\nIt is likely that the new version has changes that lead to high CPU utilization or any other bottleneck, so we should use the profiler to locate the issue.",
+                        "poster": "07397"
+                    },
+                    {
+                        "content": "Selected Answer: B\nB. Use Stackdriver Profiler to visualize the resources utilization throughout the application\n\nThe most probable cause of the database timeout when the number of concurrent active users remained stable is a performance issue. Stackdriver Profiler can be used to identify and diagnose performance issues in the application. Profiler can help you to visualize the resources utilization throughout the application, including CPU and memory usage, and identify any parts of the application that might be causing high load. This can help you understand how the application is utilizing the resources and identify any bottlenecks in the code that might be causing the timeouts.\n\nOther possible solutions, while they can be useful in certain situations, are not as relevant in this scenario.\nOption A is not relevant as it is not related to the issue.\nOption C while it can be helpful in certain scenarios, in this case it's less likely to be the cause of the problem.\nOption D is a security tool that can detect vulnerabilities in the application, but it's not related to the database timeouts.",
+                        "comment_id": "772082",
+                        "poster": "JonathanSJ",
+                        "upvote_count": "3",
+                        "timestamp": "1673416080.0"
+                    },
+                    {
+                        "timestamp": "1673367300.0",
+                        "comment_id": "771605",
+                        "content": "I would go for C. \nC. Determine whether there is an increased number of connections to the Cloud SQL instance.\n1. Because users report the error message saying \"database timeout\". If the errors is from the application then it wouldn't be \"database timeout\", so rather than running Profiler in your application, go check whether there is an increased number of connections is more intuitive. 2. Other than that, the question mentions \"After an update to the application\" which imply that there could be a bug regarding to SQL so that's why if \"concurrent active users remained stable\", the database could still timeout because of bugs. Please be aware that \"concurrent active users remained stable\" doesn't mean qps (query-per-second) is still the same.",
+                        "upvote_count": "8",
+                        "poster": "Greg123123"
+                    },
+                    {
+                        "comment_id": "755471",
+                        "content": "Selected Answer: B\nAns: B\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/",
+                        "timestamp": "1671952800.0",
+                        "upvote_count": "2",
+                        "poster": "floppino"
+                    },
+                    {
+                        "timestamp": "1658649840.0",
+                        "upvote_count": "2",
+                        "comment_id": "635925",
+                        "content": "Selected Answer: B\nAns: B",
+                        "poster": "GCP72"
+                    },
+                    {
+                        "poster": "Ananda",
+                        "timestamp": "1652111160.0",
+                        "comment_id": "599123",
+                        "content": "Selected Answer: B\nSubmit B",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1650074520.0",
+                        "content": "Answer B: Use Stackdriver Profiler to visualize the resources utilization throughout the application.\n\nHigh CPU usage can most definitely cause dropped or ignored connections. The database engine and underlying OS are fighting for resources and aren't able to respond to the connection in time. \nFinding out why the query is eating so much CPU usage and optimizing it.\nhttps://stackoverflow.com/questions/69919454/high-cpu-usage-on-cloud-sql-causing-timeouts\n\n# Cloud Profiler is a statistical, low-overhead profiler that continuously gathers CPU usage and memory-allocation information (supported profile types: CPU time, Heap, Allocated heap, Contention, Threads, Wall time) from your production applications. It attributes that information to the source code that generated it, helping you identify the parts of your application that are consuming the most resources, and otherwise illuminating your applications performance characteristics.\nhttps://cloud.google.com/profiler/docs/about-profiler",
+                        "poster": "paul223344",
+                        "comment_id": "586547",
+                        "upvote_count": "5"
+                    },
+                    {
+                        "poster": "sankofa",
+                        "upvote_count": "3",
+                        "comment_id": "548297",
+                        "content": "C as app update could have introduced a bug where although app user concurrency remain stable, could have introduced more db connections",
+                        "timestamp": "1644988620.0"
+                    },
+                    {
+                        "content": "Ans C is more feasible. If the user not changed but the devs forgot to close the unneeded connection can increase the connection count and produce this error.",
+                        "comment_id": "547577",
+                        "poster": "alexweberlopes",
+                        "upvote_count": "2",
+                        "timestamp": "1644909480.0"
+                    },
+                    {
+                        "comment_id": "545772",
+                        "content": "Selected Answer: B\nB - Profiler allows you to see each specific process running in your application to find out bottle necks and resource intensive components",
+                        "poster": "PhilipKoku",
+                        "upvote_count": "2",
+                        "timestamp": "1644663600.0"
+                    },
+                    {
+                        "timestamp": "1643728980.0",
+                        "content": "Selected Answer: B\nCannot be A as it is Cloud SQL instance\nCannot be D as problem started after a deployment\nTo find out what is mentioned in C you will have to use Stack Driver, thus the answer should be B.",
+                        "poster": "rfd",
+                        "comment_id": "537955",
+                        "upvote_count": "4"
+                    },
+                    {
+                        "timestamp": "1641865920.0",
+                        "content": "I will go with C, because when developers did the code change (nothing else changed), may be they have introduced a bug due to which the connection to the DB is increasing (DB connections need to be closed after use). DB connection is also something that should have an upper limit, otherwise, DB Read/Write will be badly affected. See the documentation for any DaaS, it has a limit on parallel connection",
+                        "comment_id": "521218",
+                        "upvote_count": "3",
+                        "poster": "roastc"
+                    },
+                    {
+                        "content": "A\nhttps://cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console",
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "timestamp": "1643728800.0",
+                                "upvote_count": "2",
+                                "comment_id": "537950",
+                                "content": "How can it be A? serial port is for VMs (Compute engine). And from the question it is clear that database is running on Cloud SQL. You will not get access to underlying VM on cloud sql.",
+                                "poster": "rfd",
+                                "comments": [
+                                    {
+                                        "poster": "drpcc",
+                                        "content": "I believe that A is correct.\nThe VM should have a scope to connect to Cloud SQL through the service account hence, the logs of the VM should show whether the connection was successful or not.\nThat's what I think",
+                                        "timestamp": "1707570420.0",
+                                        "upvote_count": "1",
+                                        "comment_id": "1146323"
+                                    }
+                                ]
+                            },
+                            {
+                                "upvote_count": "2",
+                                "poster": "Manh",
+                                "content": "serial-port for SSH mate. A wrong",
+                                "timestamp": "1636510740.0",
+                                "comment_id": "475173",
+                                "comments": [
+                                    {
+                                        "comment_id": "478608",
+                                        "poster": "TNT87",
+                                        "content": "I do not copy answers from here https://quizlet.com/605380672/cloud-devops-flash-cards/ like you, i research, thats why i include links,im not fighting you but write your answer, dnt go arouund marking other people's answers and commenting negatively",
+                                        "upvote_count": "1",
+                                        "timestamp": "1636972560.0"
+                                    },
+                                    {
+                                        "timestamp": "1636971300.0",
+                                        "content": "No write your answer dnt argue with me cause i have proof for what i wrote ....",
+                                        "upvote_count": "1",
+                                        "poster": "TNT87",
+                                        "comment_id": "478595"
+                                    }
+                                ]
+                            }
+                        ],
+                        "comment_id": "438295",
+                        "timestamp": "1630647000.0",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "poster": "[Removed]",
+                        "comment_id": "418270",
+                        "content": "For me it is first C) then if number of connections is normal than B).\nWith the new version there is a bug performance that can for example not close connections to the base. So even if there is the same number of user of the application , in the base there can be lot of connections.\nIf you have app reports time out database the first things to do is to check the database if there are slow queries but there is not answer for that.",
+                        "timestamp": "1627824900.0",
+                        "upvote_count": "5",
+                        "comments": [
+                            {
+                                "poster": "danchoif2",
+                                "timestamp": "1630584420.0",
+                                "comment_id": "437850",
+                                "content": "Totally agree!",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "content": "Ans:B - not C as The number of concurrent active users remained stable",
+                        "timestamp": "1625916420.0",
+                        "comment_id": "403295",
+                        "poster": "MikeFR",
+                        "upvote_count": "4"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "poster": "TNT87",
+                                "comment_id": "508376",
+                                "timestamp": "1640331660.0",
+                                "upvote_count": "1",
+                                "content": "It cant be C, you just copied a wrong answer, logicically what does that C answer do to solve the problem?"
+                            }
+                        ],
+                        "content": "C 100%",
+                        "poster": "Charun",
+                        "timestamp": "1624916160.0",
+                        "comment_id": "393269",
+                        "upvote_count": "7"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "content": "B. Because timeout happened after app update, this is likely related to the app itself. Timeout could be due to no available resources in GCE.",
+                        "comment_id": "389986",
+                        "poster": "guruguru",
+                        "timestamp": "1624576860.0"
+                    },
+                    {
+                        "content": "Why not B?",
+                        "timestamp": "1623496740.0",
+                        "upvote_count": "3",
+                        "comment_id": "380410",
+                        "poster": "akg001"
+                    },
+                    {
+                        "content": "A or D not sure",
+                        "poster": "devopsbatch",
+                        "comment_id": "372841",
+                        "timestamp": "1622648520.0",
+                        "comments": [
+                            {
+                                "comment_id": "374120",
+                                "comments": [
+                                    {
+                                        "poster": "jagadeeshs",
+                                        "timestamp": "1643484480.0",
+                                        "comment_id": "535675",
+                                        "content": "It is numbers are calculated based on average. DDOS can be a single request/connection. Anyways, the answer likely should be B.",
+                                        "upvote_count": "1"
+                                    }
+                                ],
+                                "content": "Can not be D as \"The number of concurrent active users remained stable\" so should not be DDOS attack",
+                                "upvote_count": "1",
+                                "poster": "DucLee3110",
+                                "timestamp": "1622787300.0"
+                            }
+                        ],
+                        "upvote_count": "2"
+                    }
+                ],
+                "answer_images": [],
+                "question_images": [],
+                "topic": "1",
+                "isMC": true,
+                "answer_ET": "C",
+                "unix_timestamp": 1622648520,
+                "question_id": 80,
+                "answers_community": [
+                    "B (95%)",
+                    "5%"
+                ],
+                "choices": {
+                    "A": "Check the serial port logs of the Compute Engine instance.",
+                    "D": "Use Cloud Security Scanner to see whether your Cloud SQL is under a Distributed Denial of Service (DDoS) attack.",
+                    "C": "Determine whether there is an increased number of connections to the Cloud SQL instance.",
+                    "B": "Use Stackdriver Profiler to visualize the resources utilization throughout the application."
+                },
+                "url": "https://www.examtopics.com/discussions/google/view/54248-exam-professional-cloud-devops-engineer-topic-1-question-20/",
+                "timestamp": "2021-06-02 17:42:00",
+                "answer": "B",
+                "question_text": "You support an application deployed on Compute Engine. The application connects to a Cloud SQL instance to store and retrieve data. After an update to the application, users report errors showing database timeout messages. The number of concurrent active users remained stable. You need to find the most probable cause of the database timeout. What should you do?",
+                "answer_description": ""
+            }
+        ],
+        "exam": {
+            "id": 5,
+            "isMCOnly": true,
+            "provider": "Google",
+            "lastUpdated": "1 May 2024",
+            "numberOfQuestions": 166,
+            "isImplemented": true,
+            "name": "Professional Cloud DevOps Engineer",
+            "isBeta": false
+        },
+        "currentPage": 16
+    },
+    "__N_SSP": true
+}

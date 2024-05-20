@@ -1,1 +1,881 @@
-{"pageProps":{"questions":[{"id":"LZuRZmVLIa8b50aElO7F","unix_timestamp":1635267600,"question_text":"You are creating and assigning action items in a postmodern for an outage. The outage is over, but you need to address the root causes. You want to ensure that your team handles the action items quickly and efficiently. How should you assign owners and collaborators to action items?","discussion":[{"poster":"Trony","upvote_count":"13","comment_id":"472012","comments":[{"poster":"Manh","comment_id":"476618","timestamp":"1636682640.0","comments":[{"upvote_count":"3","content":"https://sre.google/sre-book/example-postmortem/","poster":"Manh","timestamp":"1636682820.0","comment_id":"476621"}],"content":"Agree with A","upvote_count":"5"}],"timestamp":"1635933480.0","content":"A is correct. Each action item should have one owner."},{"upvote_count":"1","poster":"jomonkp","comment_id":"1086219","timestamp":"1701524760.0","content":"Selected Answer: A\noption A"},{"content":"Selected Answer: A\nA. Assign one owner for each action item and any necessary collaborators.\nIt is important to have a clear ownership for each action item, so that there is no confusion about who is responsible for the task and it will be easier to track the progress and follow up if there is any delay. The owner should also be given the necessary authority and resources to carry out the task. The necessary collaborators should also be assigned to support the owner in completing the task efficiently.","timestamp":"1674549540.0","upvote_count":"2","comment_id":"786325","poster":"taqihurr"},{"timestamp":"1673811960.0","comment_id":"777010","upvote_count":"1","poster":"JonathanSJ","content":"Selected Answer: A\nA. Assign one owner for each action item and any necessary collaborators. This will ensure clear accountability and ownership for each action item, and the necessary collaborators can provide support and expertise to the owner in completing the action item. This approach allows for clear communication and delegation of responsibilities, which can help ensure that the action items are handled quickly and efficiently."},{"poster":"leandrojpg","upvote_count":"1","timestamp":"1670535660.0","content":"task list can indeed have a done, even if he is not the one to execute it, this does not place the blame on anyone.\nhttps://medium.com/thumbtack-engineering/blameless-incident-postmortems-at-thumbtack-c9a47e29efc4","comment_id":"739492"},{"content":"Selected Answer: A\nA is the answer.","upvote_count":"1","poster":"zellck","timestamp":"1666518660.0","comment_id":"702045"},{"timestamp":"1645460820.0","comment_id":"553012","upvote_count":"2","content":"Selected Answer: A\nTNT87 explains it well\n\"Actions items without clear owners are less likely to be resolved.\nIt’s better to have a single owner and multiple collaborators.\"","poster":"zygomar"},{"content":"A is correct","timestamp":"1642663020.0","comment_id":"528217","poster":"Sekierer","upvote_count":"2"},{"poster":"TNT87","timestamp":"1640598180.0","comment_id":"510199","upvote_count":"4","content":"The fact that the the question STRESSES that the outage is OVER ust give you a clue.\nCheck what google SRE book says\n\nMissing ownership\nDeclaring official ownership results in accountability, which leads to action. Our example postmortem contains several examples of missing ownership:\n\nThe postmortem lists four owners. Ideally, an owner is a single point of contact who is responsible for the postmortem, follow-up, and completion.\nThe Action Items section has little or no ownership for its entries. Actions items without clear owners are less likely to be resolved.\nIt’s better to have a single owner and multiple collaborators."},{"poster":"TNT87","content":"https://devops.com/when-it-disaster-strikes-part-3-conducting-a-blameless-post-mortem/\nthen its A","comment_id":"509093","upvote_count":"1","comments":[{"comment_id":"509097","poster":"TNT87","content":"Missing ownership\nDeclaring official ownership results in accountability, which leads to action. Our example postmortem contains several examples of missing ownership:\n\nThe postmortem lists four owners. Ideally, an owner is a single point of contact who is responsible for the postmortem, follow-up, and completion.\nThe Action Items section has little or no ownership for its entries. Actions items without clear owners are less likely to be resolved.\nIt’s better to have a single owner and multiple collaborators.","timestamp":"1640434200.0","upvote_count":"1"}],"timestamp":"1640433660.0"},{"comment_id":"495647","content":"Either A or C, \nFor answer C, the principles of postmortem culture it's blameless\nBlameless postmortems are a tenet of SRE culture. For a postmortem to be truly blameless, it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior. \nhttps://sre.google/sre-book/postmortem-culture/\n\nHowever looking at the postmortem example, each assignment has an owner\nhttps://sre.google/sre-book/example-postmortem/","timestamp":"1638855300.0","upvote_count":"1","poster":"Freemiums"},{"poster":"job_search83","comments":[{"content":"ans is A, mate","timestamp":"1636682760.0","comments":[{"comment_id":"494391","upvote_count":"1","poster":"TNT87","content":"the answer is C because this must be kept blameless...","timestamp":"1638712500.0"}],"upvote_count":"2","comment_id":"476620","poster":"Manh"}],"upvote_count":"4","comment_id":"468187","timestamp":"1635267600.0","content":"C, https://sre.google/sre-book/postmortem-culture/"}],"answer_ET":"A","exam_id":5,"isMC":true,"question_id":141,"choices":{"A":"Assign one owner for each action item and any necessary collaborators.","C":"Assign collaborators but no individual owners to the items to keep the postmortem blameless.","D":"Assign the team lead as the owner for all action items because they are in charge of the SRE team.","B":"Assign multiple owners for each item to guarantee that the team addresses items quickly."},"answer":"A","answer_description":"","question_images":[],"answer_images":[],"topic":"1","url":"https://www.examtopics.com/discussions/google/view/64837-exam-professional-cloud-devops-engineer-topic-1-question-76/","timestamp":"2021-10-26 19:00:00","answers_community":["A (100%)"]},{"id":"aEmdCHH3G8dFVrUBfX0q","question_images":[],"topic":"1","choices":{"C":"Announce deprecation of the old version of the API. Contact remaining users on the old API. Introduce the new version of the API. Deprecate the old version of the API. Provide best effort support to users of the old API. Turn down the old version of the API.","D":"Introduce the new version of the API. Contact remaining users of the old API. Announce deprecation of the old version of the API. Deprecate the old version of the API. Turn down the old version of the API. Provide best effort support to users of the old API.","B":"Announce deprecation of the old version of the API. Introduce the new version of the API. Contact remaining users on the old API. Deprecate the old version of the API. Turn down the old version of the API. Provide best effort support to users of the old API.","A":"Introduce the new version of the API. Announce deprecation of the old version of the API. Deprecate the old version of the API. Contact remaining users of the old API. Provide best effort support to users of the old API. Turn down the old version of the API."},"answer":"A","exam_id":5,"question_id":142,"isMC":true,"url":"https://www.examtopics.com/discussions/google/view/65247-exam-professional-cloud-devops-engineer-topic-1-question-77/","discussion":[{"timestamp":"1635767640.0","poster":"Dreamingjin","content":"A. Introduce new API ahead","upvote_count":"17","comments":[{"content":"no use contacting the users after the API is deprecated - they will come to know anyway when the API fails. Hence A is INCORRECT !!","timestamp":"1639523520.0","poster":"Biden","comment_id":"501716","upvote_count":"3","comments":[{"content":"It's not been turned off yet, so they will still be able to use it","timestamp":"1639757640.0","comment_id":"503780","upvote_count":"2","poster":"not_thanos"}]}],"comment_id":"471172"},{"upvote_count":"12","content":"Selected Answer: A\nLet's start with Eliminating, as I see a lot of you are confused here.\nYou cannot deprecate or announce depreciation before introducing the newer version. This easily eliminates B and C options.\nNow between A and D, A fully follows the pattern of API deprecation. Deprecate, but have not stopped yet, trying to provide support till it is totally closed. No support after that.\nGo with A. Hope this helps all.","timestamp":"1642339020.0","comment_id":"524957","poster":"KyubiBlaze","comments":[{"poster":"Jay_Krish","content":"Why not? All major software companies announce when their old software will be deprecated so this helps in planning for the users. I think it is B but I'm confused why so many have opted for A","comment_id":"728842","timestamp":"1669619760.0","upvote_count":"1"}]},{"poster":"Meyucho","upvote_count":"1","timestamp":"1702934880.0","comment_id":"1100051","content":"Selected Answer: D\nLess disruption means that you need to contact users of OLD API before deprecate it!!!! No way can be B. for me first you should announce the new version so is D"},{"comment_id":"1086227","timestamp":"1701525060.0","upvote_count":"1","poster":"jomonkp","content":"Selected Answer: A\nOption A"},{"upvote_count":"1","comment_id":"998230","timestamp":"1693804860.0","poster":"jacknguyen","content":"A. Introduce new API ahead, then Contact remaining users on the old API."},{"timestamp":"1691768220.0","upvote_count":"1","comment_id":"978768","poster":"juliansierra","content":"I think is A, because you deprecate the old version, but the old version will be functional yet. Deprecate is not turn down, so the API works with the old version until the moment it is turned off. In general, this occurs with a message indicated that your version in use is deprecated, but your API or application works correctly."},{"comments":[{"poster":"Feliphus","upvote_count":"1","timestamp":"1703181180.0","content":"In C option you contact remaining users on the old API previous introduce the new version of the API, that can not be possible, \"remaining users\", it should say only \"users\"","comment_id":"1102820"}],"comment_id":"777202","poster":"JonathanSJ","upvote_count":"1","content":"Selected Answer: C\nC. Announce deprecation of the old version of the API. Contact remaining users on the old API. Introduce the new version of the API. Deprecate the old version of the API. Provide best effort support to users of the old API. Turn down the old version of the API.\n\nIt is important to announce the deprecation of the old version of the API before implementing the new one, so that third-party developers can prepare for the change and avoid disruptions to their service. It is also important to contact remaining users of the old API to provide them with assistance and support during the transition to the new version.","timestamp":"1673828460.0"},{"timestamp":"1666518540.0","poster":"zellck","upvote_count":"1","content":"Selected Answer: A\nA is the answer.","comment_id":"702044"},{"upvote_count":"2","timestamp":"1655469900.0","poster":"eliC","content":"Selected Answer: A\nA is correct","comment_id":"617710"},{"content":"Selected Answer: A\nA is correct","comment_id":"576358","timestamp":"1648401900.0","poster":"maddy94","upvote_count":"2"},{"comment_id":"553017","poster":"zygomar","content":"Selected Answer: A\nagree with KyubiBlaze and Wwhite44 arguments. Introduce first. this eliminates B and C.\nthen is between A and D.","upvote_count":"1","timestamp":"1645461300.0"},{"timestamp":"1642663200.0","upvote_count":"1","comment_id":"528219","poster":"Sekierer","content":"Selected Answer: A\nA should be correct"},{"upvote_count":"1","poster":"TNT87","timestamp":"1640598480.0","content":"Selected Answer: B\nhttps://httptoolkit.tech/blog/how-to-turn-off-your-old-apis/\nC the second action doesnt make sense, you will be supporting remaining users of what?","comment_id":"510201"},{"content":"A. Is correct 100%","poster":"smoaz","comment_id":"507346","upvote_count":"1","comments":[{"upvote_count":"1","poster":"smoaz","comments":[{"poster":"TNT87","upvote_count":"1","comment_id":"509082","content":"B is correct","timestamp":"1640432580.0"}],"content":"after you depreciate the old version of the Api. you must provide the support to the remaining users","comment_id":"507352","timestamp":"1640203500.0"},{"timestamp":"1640203740.0","poster":"smoaz","upvote_count":"1","comment_id":"507354","content":"You can't contact the remaining users before you depreciate the old version of the API"}],"timestamp":"1640202840.0"},{"upvote_count":"2","comment_id":"501719","timestamp":"1639523880.0","content":"Sorry friends ignore my previous comments..upon re-reading \"A\" makes more sense. \"Deprecated\" = function still works but not supported or recommended. \nHence Introduction --> Announce Deprecation --> Deprecate --> Best effort support --> Turn OFF ...makes perfect sense","poster":"Biden"},{"timestamp":"1639433520.0","upvote_count":"3","poster":"Biden","content":"A - Incorrect - No use contacting the users of the old API after depreciating \n B - Correct - since users are contacted before depreciation\n C & D: Sequence doesnt make sense","comments":[{"poster":"TNT87","content":"B is correct","timestamp":"1640432640.0","upvote_count":"1","comment_id":"509083"}],"comment_id":"500925"},{"content":"Ans B\nhttps://httptoolkit.tech/blog/how-to-turn-off-your-old-apis/","upvote_count":"4","comment_id":"494399","timestamp":"1638712920.0","poster":"TNT87"},{"timestamp":"1637047080.0","content":"It is not possible announce deprecation without introduce a new version, so B and C are not good. After new version introduction you cannot contact remaining old version user, you must before announce deprecation, so D is not good. My opinion, A is good","poster":"Wwhite44","upvote_count":"4","comment_id":"479219"},{"upvote_count":"4","content":"https://cloud.google.com/migrate/compute-engine/support/lifecycle\nB is correct, announce must be first, best effort support to the last because after API sunset, no more patch to be released to support only based on best effort","poster":"MF2C","timestamp":"1636267320.0","comment_id":"473779"},{"poster":"MBA_1","comments":[{"timestamp":"1636092540.0","poster":"MBA_1","upvote_count":"4","comment_id":"472898","content":"Sorry, it should be A. First it should be introduced and then the old version should be depreciated"}],"upvote_count":"1","comment_id":"472896","content":"Answer is C - The correct sequence is provided.","timestamp":"1636092480.0"},{"comment_id":"470947","content":"C\n\nTurn down the old version of the API must be the last step\nContact users must be before deprecate the old version.","timestamp":"1635720900.0","upvote_count":"3","poster":"NXD"}],"answer_images":[],"answer_ET":"B","unix_timestamp":1635720900,"question_text":"Your development team has created a new version of their service's API. You need to deploy the new versions of the API with the least disruption to third-party developers and end users of third-party installed applications. What should you do?","answer_description":"","timestamp":"2021-10-31 23:55:00","answers_community":["A (87%)","4%"]},{"id":"Rwo8fgmhLGxeS3lJ7MvQ","isMC":true,"question_id":143,"answers_community":["A (81%)","B (19%)"],"choices":{"B":"Use the fluent-plugin-record-reformer Fluentd output plugin to remove the fields from the log entries in flight.","D":"Stage log entries to Cloud Storage, and then trigger a Cloud Function to remove the fields and write the entries to Stackdriver via the Stackdriver Logging API.","C":"Wait for the application developers to patch the application, and then verify that the log entries are no longer exposing PII.","A":"Use the filter-record-transformer Fluentd filter plugin to remove the fields from the log entries in flight."},"exam_id":5,"topic":"1","url":"https://www.examtopics.com/discussions/google/view/65112-exam-professional-cloud-devops-engineer-topic-1-question-78/","answer_ET":"B","answer_images":[],"question_text":"You are running an application on Compute Engine and collecting logs through Stackdriver. You discover that some personally identifiable information (PII) is leaking into certain log entry fields. You want to prevent these fields from being written in new log entries as quickly as possible. What should you do?","question_images":[],"unix_timestamp":1635582300,"answer":"A","discussion":[{"upvote_count":"11","comment_id":"473783","timestamp":"1636267500.0","content":"reformer is Fluentd plugin to add or replace fields of a event record, so ans is A","poster":"MF2C"},{"comments":[{"poster":"not_thanos","upvote_count":"1","timestamp":"1639758300.0","content":"https://cloud.google.com/logging/docs/agent/logging/configuration#modifying_log_records","comment_id":"503787"}],"upvote_count":"6","comment_id":"503786","poster":"not_thanos","timestamp":"1639758120.0","content":"Selected Answer: A\nSeems both A and B will work. \nHowever i will go with A, since it is included in the fluentd core and does not require installing a new plugin \n\n\"The filter_record_transformer filter plugin mutates/transforms incoming event streams in a versatile manner. If there is a need to add/delete/modify events, this plugin is the first filter to try.\nIt is included in the Fluentd's core.\"\n\nhttps://docs.fluentd.org/filter/record_transformer"},{"content":"Selected Answer: A\nOption A","timestamp":"1701525420.0","upvote_count":"1","comment_id":"1086234","poster":"jomonkp"},{"timestamp":"1673828820.0","comment_id":"777210","upvote_count":"1","content":"Selected Answer: A\nA. Use the filter-record-transformer Fluentd filter plugin to remove the fields from the log entries in flight.\n\nFluentd is a log collector and processor that is commonly used with Google Cloud Platform. The filter-record-transformer plugin for Fluentd can be used to modify log entries as they are being collected, allowing you to remove sensitive fields from the log entries in real-time before they are written to Stackdriver. This can be done quickly, as it doesn't require changes on the application code.","poster":"JonathanSJ"},{"content":"Ans A.\nSource - https://docs.fluentd.org/filter/record_transformer","comment_id":"736435","timestamp":"1670286900.0","poster":"DoodleDo","upvote_count":"1"},{"comment_id":"713796","timestamp":"1667907840.0","upvote_count":"3","content":"Selected Answer: B\nAppeared in 07/11/2022 exam\n\nkeys : Option-A has the filter name wrong. It should be filter_record_transformer not filter-record-transformer","poster":"mudot"},{"upvote_count":"2","timestamp":"1667737860.0","content":"Selected Answer: A\nfilter_record_transformer enables you to:\n\n - Add new fields to log entries\n - Update fields in log entries\n - Delete fields in log entries\n\nThe fluent-plugin-record-reformer output plugin provides functionality similar to the filter_record_transformer filter plugin, except that it also allows you to modify log tags. \n\nWe dont need to modify the filters here .. hence A","comments":[{"upvote_count":"1","timestamp":"1667738040.0","poster":"mudot","comment_id":"712294","content":"IF the answer 'A' is not a typo (- instead of _), then B is correct"}],"comment_id":"712291","poster":"mudot"},{"content":"Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/logging/docs/agent/logging/configuration#modifying_log_records\nFluentd provides built-in filter plugins that can be used to modify log entries.\nThe most commonly used filter plugin is filter_record_transformer. It enables you to:\n- Delete fields in log entries","timestamp":"1666518420.0","poster":"zellck","upvote_count":"1","comment_id":"702043"},{"timestamp":"1654853940.0","content":"Ans: B \nhttps://cloud.google.com/logging/docs/agent/logging/configuration According to this link \nA is wrong as correct plugin name is filter_record_transformer and not filter-record-transformer \nB is Correct as \"The fluent-plugin-record-reformer output plugin provides functionality similar to the filter_record_transformer filter plugin, except that it also allows you to modify log tags. More resource usage is expected with this plugin: each time a log tag is updated, it generates a new log entry with the new tag.\"","comment_id":"614440","upvote_count":"2","poster":"esandips"},{"comment_id":"576359","timestamp":"1648402020.0","poster":"maddy94","upvote_count":"1","content":"Selected Answer: A\nA is correct"},{"comments":[{"comment_id":"588391","content":"That is right , Both options does the job , however filter_record_transformer is the correct name. not filter-record-transformer","timestamp":"1650415740.0","upvote_count":"1","poster":"Sreedharveluru"}],"content":"It's B. \nhttps://cloud.google.com/logging/docs/agent/logging/configuration#cloud-fluentd-config: is filter_record_transformer not filter-record-transformer. fluent-plugin-record-reformer is the right name","upvote_count":"3","comment_id":"564166","timestamp":"1646844000.0","poster":"ric79"},{"timestamp":"1642663440.0","content":"Selected Answer: A\nA is correct","upvote_count":"1","poster":"Sekierer","comment_id":"528221"},{"content":"Yes, its A and not B as fluent-plugin-google-cloud from https://cloud.google.com/logging/docs/agent/logging/configuration#cloud-fluentd-config\n\n\nBesides the list of default logs that the Logging agent streams by default, you can customize the Logging agent to send additional logs to Logging or to adjust agent settings by adding input configurations.\n\nThe configuration definitions in these sections apply to the fluent-plugin-google-cloud output plugin only and specify how logs are transformed and ingested into Cloud Logging.","upvote_count":"3","timestamp":"1636092780.0","poster":"MBA_1","comment_id":"472902"},{"upvote_count":"3","comment_id":"470150","timestamp":"1635582300.0","poster":"giammydell","content":"I think A because The fluent-plugin-record-reformer output plugin provides functionality similar to the filter_record_transformer filter plugin, except that it also allows you to modify log tags"}],"answer_description":"Reference -\nhttps://cloud.google.com/logging/docs/agent/logging/configuration","timestamp":"2021-10-30 10:25:00"},{"id":"zjyqmAs7zo4V24QHjhxx","topic":"1","exam_id":5,"answer_ET":"B","answer_description":"","answer":"B","unix_timestamp":1635418680,"question_id":144,"answers_community":["B (100%)"],"discussion":[{"comment_id":"534951","content":"Will go with B","poster":"jagadeeshs","upvote_count":"7","timestamp":"1643402640.0"},{"comment_id":"1086237","content":"Selected Answer: B\nOption B","upvote_count":"2","poster":"jomonkp","timestamp":"1701525480.0"},{"poster":"JonathanSJ","upvote_count":"3","content":"Selected Answer: B\nB. Focus on identifying the contributing causes of the incident rather than the individual responsible for the cause.\n\nAccording to Site Reliability Engineering (SRE) practices, the goal of a post-mortem is to identify the underlying causes of the incident in order to take steps to prevent it from happening again in the future. This involves looking for patterns and issues in the system rather than looking for a specific person to blame. It's important to have a focus on learning and continuous improvement, rather than assigning blame.","timestamp":"1673828580.0","comment_id":"777205"},{"content":"Selected Answer: B\nB) Makes sense","timestamp":"1670408580.0","comment_id":"737729","upvote_count":"1","poster":"WhyIronMan"},{"content":"B is the correct answer.","upvote_count":"1","poster":"ssmb","timestamp":"1666552920.0","comment_id":"702423"},{"comment_id":"701980","content":"Selected Answer: B\nB is the answer.","timestamp":"1666509960.0","upvote_count":"1","poster":"zellck"},{"timestamp":"1660529580.0","poster":"dobby_elf","content":"Selected Answer: B\nB is correct BBB","upvote_count":"2","comment_id":"646984"},{"comment_id":"528265","content":"B is correct","poster":"Sekierer","upvote_count":"1","timestamp":"1642668180.0"},{"timestamp":"1637580120.0","content":"Ans: B","poster":"arunraveendran","comment_id":"484119","upvote_count":"4"},{"comment_id":"476811","poster":"sindra","content":"Agreed B","timestamp":"1636707420.0","upvote_count":"2"},{"poster":"Alaaelanwr","comment_id":"475755","upvote_count":"3","timestamp":"1636573020.0","content":"Ans: B"},{"poster":"sindra","comment_id":"470249","upvote_count":"2","content":"Confirm B","timestamp":"1635600480.0"},{"content":"Ans B, yes","upvote_count":"2","timestamp":"1635582840.0","comment_id":"470154","poster":"giammydell"},{"content":"Ans B,yes","poster":"TNT87","timestamp":"1635418680.0","comment_id":"469196","upvote_count":"3"}],"answer_images":[],"question_images":[],"isMC":true,"choices":{"B":"Focus on identifying the contributing causes of the incident rather than the individual responsible for the cause.","D":"Use the Git history to find the related code commit. Prevent the engineer who made that commit from working on production services.","C":"Plan individual meetings with all the engineers involved. Determine who approved and pushed the new release to production.","A":"Focus on developing new features rather than avoiding the outages from recurring."},"timestamp":"2021-10-28 12:58:00","url":"https://www.examtopics.com/discussions/google/view/65005-exam-professional-cloud-devops-engineer-topic-1-question-79/","question_text":"You support a service that recently had an outage. The outage was caused by a new release that exhausted the service memory resources. You rolled back the release successfully to mitigate the impact on users. You are now in charge of the post-mortem for the outage. You want to follow Site Reliability Engineering practices when developing the post-mortem. What should you do?"},{"id":"LC7ui28nfsTgYr7FaVtT","question_images":[],"unix_timestamp":1622645160,"topic":"1","answer_images":[],"answer":"C","url":"https://www.examtopics.com/discussions/google/view/54233-exam-professional-cloud-devops-engineer-topic-1-question-8/","choices":{"C":"Count the number of home page requests that load in under 100 ms, and then divide by the total number of home page requests.","D":"Count the number of home page request that load in under 100 ms, and then divide by the total number of all web application requests.","B":"Bucketize the request latencies into ranges, and then compute the median and 90th percentiles.","A":"Bucketize the request latencies into ranges, and then compute the percentile at 100 ms."},"question_text":"You support a high-traffic web application and want to ensure that the home page loads in a timely manner. As a first step, you decide to implement a Service\nLevel Indicator (SLI) to represent home page request latency with an acceptable page load time set to 100 ms. What is the Google-recommended way of calculating this SLI?","discussion":[{"timestamp":"1624915860.0","poster":"Charun","upvote_count":"17","comments":[{"timestamp":"1628390940.0","comments":[{"timestamp":"1666582200.0","upvote_count":"1","comment_id":"702666","poster":"AzureDP900","content":"C is right"}],"content":"https://sre.google/workbook/implementing-slos/\nIn the SRE principles book, it's recommended treating the SLI as the ratio of two numbers: the number of good events divided by the total number of events. For example:\nNumber of successful HTTP requests / total HTTP requests (success rate)","comment_id":"421452","upvote_count":"8","poster":"raf2121"}],"comment_id":"393254","content":"I have submitted C answer"},{"upvote_count":"9","poster":"danchoif2","content":"A, B and D: aren't specific to home page, so they are incorrect.\n\nC is correct.","comment_id":"434712","timestamp":"1630252440.0"},{"comment_id":"1102961","timestamp":"1703191920.0","content":"Selected Answer: C\nC is the way to go.","upvote_count":"1","poster":"Raz0r"},{"comment_id":"772028","content":"Selected Answer: C\nAnswer C","poster":"JonathanSJ","upvote_count":"1","timestamp":"1673412120.0"},{"timestamp":"1671865860.0","comment_id":"754745","upvote_count":"1","content":"Ans: C\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/","poster":"floppino"},{"content":"Selected Answer: C\nThe correct answer is 'C'","comment_id":"646567","upvote_count":"2","poster":"GCP72","timestamp":"1660453500.0"},{"poster":"Alpha121","comment_id":"613468","timestamp":"1654714140.0","content":"C is the answer","upvote_count":"1"},{"timestamp":"1638705540.0","upvote_count":"1","poster":"alaahakim","comment_id":"494295","content":"Ans: C"},{"content":"B or C?","upvote_count":"1","comment_id":"387987","timestamp":"1624367100.0","poster":"WakandaF"},{"poster":"TNT87","upvote_count":"6","timestamp":"1624352160.0","content":"Ans C\nhttps://sre.google/workbook/implementing-slos/","comment_id":"387770"},{"timestamp":"1624148580.0","comment_id":"385835","upvote_count":"4","content":"Ans is B\nAfter a lot of research i find out this:\n\nThe SLI for availability indicates whether the service is working. The SLI for availability is defined as follows:\nThe proportion of valid requests served successfully. (good request / total request)\n\nThe SLI for latency (sometimes called speed) indicates whether the service is fast enough. \nThe proportion of valid requests served faster than a threshold.\nLatency is commonly measured as a distribution. Given a distribution, you can measure various percentiles. For example, you might measure the number of requests that are slower than the historical 99th percentile. In this case, we consider good events to be events that are faster than this threshold, which was set by examining the historical distribution. You can also set this threshold based on product requirements. You can even set multiple latency SLOs, for example typical latency versus tail latency.","poster":"francisco_guerra","comments":[{"poster":"Dark_Lord","content":"Still not sure about B","comment_id":"408291","upvote_count":"1","timestamp":"1626504000.0"},{"comments":[{"comment_id":"532789","content":"The commands shared create a histogram that demonstrates the latency distribution for 90 and 99 % of the requests. Does not define how to measure the SLI.","upvote_count":"2","timestamp":"1643192880.0","poster":"pddddd"}],"upvote_count":"1","content":"and if this is not enough for you check how google calculate Availability and latency\n\nAvailability\n\nsum(rate(http_requests_total{host=\"api\", status!~\"5..\"}[7d]))\n/\nsum(rate(http_requests_total{host=\"api\"}[7d])\n\nLatency\nhistogram_quantile(0.9, rate(http_request_duration_seconds_bucket[7d]))\nhistogram_quantile(0.99, rate(http_request_duration_seconds_bucket[7d]))\n\nhttps://sre.google/workbook/implementing-slos/\nhttps://cloud.google.com/architecture/adopting-slos/","timestamp":"1624148640.0","comment_id":"385836","poster":"francisco_guerra"},{"content":"The correct answer is \"C\", you can confirm it here, https://sre.google/workbook/slo-document/\n\nLatency\n\nThe proportion of sufficiently fast requests, as measured from the load balancer metrics.\n\n“Sufficiently fast” is defined as < 400 ms, or < 850 ms.\n\ncount of \"api\" http_requests with\na duration less than or equal to\n\"0.4\" seconds\ndivided by\ncount of all \"api\" http_requests","comment_id":"408971","timestamp":"1626615360.0","upvote_count":"3","poster":"Dark_Lord"}]},{"content":"Answer -C\n\nSLI = good events/valid events X 100","upvote_count":"4","timestamp":"1623481740.0","poster":"akg001","comment_id":"380277"},{"poster":"akg001","content":"Answer -C\n\nSLI = good events/good events X 100","comment_id":"380276","upvote_count":"4","timestamp":"1623481680.0"},{"comment_id":"372794","timestamp":"1622645160.0","content":"answer C","upvote_count":"5","poster":"devopsbatch"}],"exam_id":5,"isMC":true,"answer_ET":"C","timestamp":"2021-06-02 16:46:00","answer_description":"Reference:\nhttps://sre.google/workbook/implementing-slos/","question_id":145,"answers_community":["C (100%)"]}],"exam":{"isImplemented":true,"numberOfQuestions":166,"lastUpdated":"1 May 2024","name":"Professional Cloud DevOps Engineer","isMCOnly":true,"id":5,"isBeta":false,"provider":"Google"},"currentPage":29},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "LZuRZmVLIa8b50aElO7F",
+                "unix_timestamp": 1635267600,
+                "question_text": "You are creating and assigning action items in a postmodern for an outage. The outage is over, but you need to address the root causes. You want to ensure that your team handles the action items quickly and efficiently. How should you assign owners and collaborators to action items?",
+                "discussion": [
+                    {
+                        "poster": "Trony",
+                        "upvote_count": "13",
+                        "comment_id": "472012",
+                        "comments": [
+                            {
+                                "poster": "Manh",
+                                "comment_id": "476618",
+                                "timestamp": "1636682640.0",
+                                "comments": [
+                                    {
+                                        "upvote_count": "3",
+                                        "content": "https://sre.google/sre-book/example-postmortem/",
+                                        "poster": "Manh",
+                                        "timestamp": "1636682820.0",
+                                        "comment_id": "476621"
+                                    }
+                                ],
+                                "content": "Agree with A",
+                                "upvote_count": "5"
+                            }
+                        ],
+                        "timestamp": "1635933480.0",
+                        "content": "A is correct. Each action item should have one owner."
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "jomonkp",
+                        "comment_id": "1086219",
+                        "timestamp": "1701524760.0",
+                        "content": "Selected Answer: A\noption A"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA. Assign one owner for each action item and any necessary collaborators.\nIt is important to have a clear ownership for each action item, so that there is no confusion about who is responsible for the task and it will be easier to track the progress and follow up if there is any delay. The owner should also be given the necessary authority and resources to carry out the task. The necessary collaborators should also be assigned to support the owner in completing the task efficiently.",
+                        "timestamp": "1674549540.0",
+                        "upvote_count": "2",
+                        "comment_id": "786325",
+                        "poster": "taqihurr"
+                    },
+                    {
+                        "timestamp": "1673811960.0",
+                        "comment_id": "777010",
+                        "upvote_count": "1",
+                        "poster": "JonathanSJ",
+                        "content": "Selected Answer: A\nA. Assign one owner for each action item and any necessary collaborators. This will ensure clear accountability and ownership for each action item, and the necessary collaborators can provide support and expertise to the owner in completing the action item. This approach allows for clear communication and delegation of responsibilities, which can help ensure that the action items are handled quickly and efficiently."
+                    },
+                    {
+                        "poster": "leandrojpg",
+                        "upvote_count": "1",
+                        "timestamp": "1670535660.0",
+                        "content": "task list can indeed have a done, even if he is not the one to execute it, this does not place the blame on anyone.\nhttps://medium.com/thumbtack-engineering/blameless-incident-postmortems-at-thumbtack-c9a47e29efc4",
+                        "comment_id": "739492"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA is the answer.",
+                        "upvote_count": "1",
+                        "poster": "zellck",
+                        "timestamp": "1666518660.0",
+                        "comment_id": "702045"
+                    },
+                    {
+                        "timestamp": "1645460820.0",
+                        "comment_id": "553012",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: A\nTNT87 explains it well\n\"Actions items without clear owners are less likely to be resolved.\nIt’s better to have a single owner and multiple collaborators.\"",
+                        "poster": "zygomar"
+                    },
+                    {
+                        "content": "A is correct",
+                        "timestamp": "1642663020.0",
+                        "comment_id": "528217",
+                        "poster": "Sekierer",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "timestamp": "1640598180.0",
+                        "comment_id": "510199",
+                        "upvote_count": "4",
+                        "content": "The fact that the the question STRESSES that the outage is OVER ust give you a clue.\nCheck what google SRE book says\n\nMissing ownership\nDeclaring official ownership results in accountability, which leads to action. Our example postmortem contains several examples of missing ownership:\n\nThe postmortem lists four owners. Ideally, an owner is a single point of contact who is responsible for the postmortem, follow-up, and completion.\nThe Action Items section has little or no ownership for its entries. Actions items without clear owners are less likely to be resolved.\nIt’s better to have a single owner and multiple collaborators."
+                    },
+                    {
+                        "poster": "TNT87",
+                        "content": "https://devops.com/when-it-disaster-strikes-part-3-conducting-a-blameless-post-mortem/\nthen its A",
+                        "comment_id": "509093",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "comment_id": "509097",
+                                "poster": "TNT87",
+                                "content": "Missing ownership\nDeclaring official ownership results in accountability, which leads to action. Our example postmortem contains several examples of missing ownership:\n\nThe postmortem lists four owners. Ideally, an owner is a single point of contact who is responsible for the postmortem, follow-up, and completion.\nThe Action Items section has little or no ownership for its entries. Actions items without clear owners are less likely to be resolved.\nIt’s better to have a single owner and multiple collaborators.",
+                                "timestamp": "1640434200.0",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "timestamp": "1640433660.0"
+                    },
+                    {
+                        "comment_id": "495647",
+                        "content": "Either A or C, \nFor answer C, the principles of postmortem culture it's blameless\nBlameless postmortems are a tenet of SRE culture. For a postmortem to be truly blameless, it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior. \nhttps://sre.google/sre-book/postmortem-culture/\n\nHowever looking at the postmortem example, each assignment has an owner\nhttps://sre.google/sre-book/example-postmortem/",
+                        "timestamp": "1638855300.0",
+                        "upvote_count": "1",
+                        "poster": "Freemiums"
+                    },
+                    {
+                        "poster": "job_search83",
+                        "comments": [
+                            {
+                                "content": "ans is A, mate",
+                                "timestamp": "1636682760.0",
+                                "comments": [
+                                    {
+                                        "comment_id": "494391",
+                                        "upvote_count": "1",
+                                        "poster": "TNT87",
+                                        "content": "the answer is C because this must be kept blameless...",
+                                        "timestamp": "1638712500.0"
+                                    }
+                                ],
+                                "upvote_count": "2",
+                                "comment_id": "476620",
+                                "poster": "Manh"
+                            }
+                        ],
+                        "upvote_count": "4",
+                        "comment_id": "468187",
+                        "timestamp": "1635267600.0",
+                        "content": "C, https://sre.google/sre-book/postmortem-culture/"
+                    }
+                ],
+                "answer_ET": "A",
+                "exam_id": 5,
+                "isMC": true,
+                "question_id": 141,
+                "choices": {
+                    "A": "Assign one owner for each action item and any necessary collaborators.",
+                    "C": "Assign collaborators but no individual owners to the items to keep the postmortem blameless.",
+                    "D": "Assign the team lead as the owner for all action items because they are in charge of the SRE team.",
+                    "B": "Assign multiple owners for each item to guarantee that the team addresses items quickly."
+                },
+                "answer": "A",
+                "answer_description": "",
+                "question_images": [],
+                "answer_images": [],
+                "topic": "1",
+                "url": "https://www.examtopics.com/discussions/google/view/64837-exam-professional-cloud-devops-engineer-topic-1-question-76/",
+                "timestamp": "2021-10-26 19:00:00",
+                "answers_community": [
+                    "A (100%)"
+                ]
+            },
+            {
+                "id": "aEmdCHH3G8dFVrUBfX0q",
+                "question_images": [],
+                "topic": "1",
+                "choices": {
+                    "C": "Announce deprecation of the old version of the API. Contact remaining users on the old API. Introduce the new version of the API. Deprecate the old version of the API. Provide best effort support to users of the old API. Turn down the old version of the API.",
+                    "D": "Introduce the new version of the API. Contact remaining users of the old API. Announce deprecation of the old version of the API. Deprecate the old version of the API. Turn down the old version of the API. Provide best effort support to users of the old API.",
+                    "B": "Announce deprecation of the old version of the API. Introduce the new version of the API. Contact remaining users on the old API. Deprecate the old version of the API. Turn down the old version of the API. Provide best effort support to users of the old API.",
+                    "A": "Introduce the new version of the API. Announce deprecation of the old version of the API. Deprecate the old version of the API. Contact remaining users of the old API. Provide best effort support to users of the old API. Turn down the old version of the API."
+                },
+                "answer": "A",
+                "exam_id": 5,
+                "question_id": 142,
+                "isMC": true,
+                "url": "https://www.examtopics.com/discussions/google/view/65247-exam-professional-cloud-devops-engineer-topic-1-question-77/",
+                "discussion": [
+                    {
+                        "timestamp": "1635767640.0",
+                        "poster": "Dreamingjin",
+                        "content": "A. Introduce new API ahead",
+                        "upvote_count": "17",
+                        "comments": [
+                            {
+                                "content": "no use contacting the users after the API is deprecated - they will come to know anyway when the API fails. Hence A is INCORRECT !!",
+                                "timestamp": "1639523520.0",
+                                "poster": "Biden",
+                                "comment_id": "501716",
+                                "upvote_count": "3",
+                                "comments": [
+                                    {
+                                        "content": "It's not been turned off yet, so they will still be able to use it",
+                                        "timestamp": "1639757640.0",
+                                        "comment_id": "503780",
+                                        "upvote_count": "2",
+                                        "poster": "not_thanos"
+                                    }
+                                ]
+                            }
+                        ],
+                        "comment_id": "471172"
+                    },
+                    {
+                        "upvote_count": "12",
+                        "content": "Selected Answer: A\nLet's start with Eliminating, as I see a lot of you are confused here.\nYou cannot deprecate or announce depreciation before introducing the newer version. This easily eliminates B and C options.\nNow between A and D, A fully follows the pattern of API deprecation. Deprecate, but have not stopped yet, trying to provide support till it is totally closed. No support after that.\nGo with A. Hope this helps all.",
+                        "timestamp": "1642339020.0",
+                        "comment_id": "524957",
+                        "poster": "KyubiBlaze",
+                        "comments": [
+                            {
+                                "poster": "Jay_Krish",
+                                "content": "Why not? All major software companies announce when their old software will be deprecated so this helps in planning for the users. I think it is B but I'm confused why so many have opted for A",
+                                "comment_id": "728842",
+                                "timestamp": "1669619760.0",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "poster": "Meyucho",
+                        "upvote_count": "1",
+                        "timestamp": "1702934880.0",
+                        "comment_id": "1100051",
+                        "content": "Selected Answer: D\nLess disruption means that you need to contact users of OLD API before deprecate it!!!! No way can be B. for me first you should announce the new version so is D"
+                    },
+                    {
+                        "comment_id": "1086227",
+                        "timestamp": "1701525060.0",
+                        "upvote_count": "1",
+                        "poster": "jomonkp",
+                        "content": "Selected Answer: A\nOption A"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "998230",
+                        "timestamp": "1693804860.0",
+                        "poster": "jacknguyen",
+                        "content": "A. Introduce new API ahead, then Contact remaining users on the old API."
+                    },
+                    {
+                        "timestamp": "1691768220.0",
+                        "upvote_count": "1",
+                        "comment_id": "978768",
+                        "poster": "juliansierra",
+                        "content": "I think is A, because you deprecate the old version, but the old version will be functional yet. Deprecate is not turn down, so the API works with the old version until the moment it is turned off. In general, this occurs with a message indicated that your version in use is deprecated, but your API or application works correctly."
+                    },
+                    {
+                        "comments": [
+                            {
+                                "poster": "Feliphus",
+                                "upvote_count": "1",
+                                "timestamp": "1703181180.0",
+                                "content": "In C option you contact remaining users on the old API previous introduce the new version of the API, that can not be possible, \"remaining users\", it should say only \"users\"",
+                                "comment_id": "1102820"
+                            }
+                        ],
+                        "comment_id": "777202",
+                        "poster": "JonathanSJ",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: C\nC. Announce deprecation of the old version of the API. Contact remaining users on the old API. Introduce the new version of the API. Deprecate the old version of the API. Provide best effort support to users of the old API. Turn down the old version of the API.\n\nIt is important to announce the deprecation of the old version of the API before implementing the new one, so that third-party developers can prepare for the change and avoid disruptions to their service. It is also important to contact remaining users of the old API to provide them with assistance and support during the transition to the new version.",
+                        "timestamp": "1673828460.0"
+                    },
+                    {
+                        "timestamp": "1666518540.0",
+                        "poster": "zellck",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nA is the answer.",
+                        "comment_id": "702044"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1655469900.0",
+                        "poster": "eliC",
+                        "content": "Selected Answer: A\nA is correct",
+                        "comment_id": "617710"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA is correct",
+                        "comment_id": "576358",
+                        "timestamp": "1648401900.0",
+                        "poster": "maddy94",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "comment_id": "553017",
+                        "poster": "zygomar",
+                        "content": "Selected Answer: A\nagree with KyubiBlaze and Wwhite44 arguments. Introduce first. this eliminates B and C.\nthen is between A and D.",
+                        "upvote_count": "1",
+                        "timestamp": "1645461300.0"
+                    },
+                    {
+                        "timestamp": "1642663200.0",
+                        "upvote_count": "1",
+                        "comment_id": "528219",
+                        "poster": "Sekierer",
+                        "content": "Selected Answer: A\nA should be correct"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "TNT87",
+                        "timestamp": "1640598480.0",
+                        "content": "Selected Answer: B\nhttps://httptoolkit.tech/blog/how-to-turn-off-your-old-apis/\nC the second action doesnt make sense, you will be supporting remaining users of what?",
+                        "comment_id": "510201"
+                    },
+                    {
+                        "content": "A. Is correct 100%",
+                        "poster": "smoaz",
+                        "comment_id": "507346",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "poster": "smoaz",
+                                "comments": [
+                                    {
+                                        "poster": "TNT87",
+                                        "upvote_count": "1",
+                                        "comment_id": "509082",
+                                        "content": "B is correct",
+                                        "timestamp": "1640432580.0"
+                                    }
+                                ],
+                                "content": "after you depreciate the old version of the Api. you must provide the support to the remaining users",
+                                "comment_id": "507352",
+                                "timestamp": "1640203500.0"
+                            },
+                            {
+                                "timestamp": "1640203740.0",
+                                "poster": "smoaz",
+                                "upvote_count": "1",
+                                "comment_id": "507354",
+                                "content": "You can't contact the remaining users before you depreciate the old version of the API"
+                            }
+                        ],
+                        "timestamp": "1640202840.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "501719",
+                        "timestamp": "1639523880.0",
+                        "content": "Sorry friends ignore my previous comments..upon re-reading \"A\" makes more sense. \"Deprecated\" = function still works but not supported or recommended. \nHence Introduction --> Announce Deprecation --> Deprecate --> Best effort support --> Turn OFF ...makes perfect sense",
+                        "poster": "Biden"
+                    },
+                    {
+                        "timestamp": "1639433520.0",
+                        "upvote_count": "3",
+                        "poster": "Biden",
+                        "content": "A - Incorrect - No use contacting the users of the old API after depreciating \n B - Correct - since users are contacted before depreciation\n C & D: Sequence doesnt make sense",
+                        "comments": [
+                            {
+                                "poster": "TNT87",
+                                "content": "B is correct",
+                                "timestamp": "1640432640.0",
+                                "upvote_count": "1",
+                                "comment_id": "509083"
+                            }
+                        ],
+                        "comment_id": "500925"
+                    },
+                    {
+                        "content": "Ans B\nhttps://httptoolkit.tech/blog/how-to-turn-off-your-old-apis/",
+                        "upvote_count": "4",
+                        "comment_id": "494399",
+                        "timestamp": "1638712920.0",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "timestamp": "1637047080.0",
+                        "content": "It is not possible announce deprecation without introduce a new version, so B and C are not good. After new version introduction you cannot contact remaining old version user, you must before announce deprecation, so D is not good. My opinion, A is good",
+                        "poster": "Wwhite44",
+                        "upvote_count": "4",
+                        "comment_id": "479219"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "content": "https://cloud.google.com/migrate/compute-engine/support/lifecycle\nB is correct, announce must be first, best effort support to the last because after API sunset, no more patch to be released to support only based on best effort",
+                        "poster": "MF2C",
+                        "timestamp": "1636267320.0",
+                        "comment_id": "473779"
+                    },
+                    {
+                        "poster": "MBA_1",
+                        "comments": [
+                            {
+                                "timestamp": "1636092540.0",
+                                "poster": "MBA_1",
+                                "upvote_count": "4",
+                                "comment_id": "472898",
+                                "content": "Sorry, it should be A. First it should be introduced and then the old version should be depreciated"
+                            }
+                        ],
+                        "upvote_count": "1",
+                        "comment_id": "472896",
+                        "content": "Answer is C - The correct sequence is provided.",
+                        "timestamp": "1636092480.0"
+                    },
+                    {
+                        "comment_id": "470947",
+                        "content": "C\n\nTurn down the old version of the API must be the last step\nContact users must be before deprecate the old version.",
+                        "timestamp": "1635720900.0",
+                        "upvote_count": "3",
+                        "poster": "NXD"
+                    }
+                ],
+                "answer_images": [],
+                "answer_ET": "B",
+                "unix_timestamp": 1635720900,
+                "question_text": "Your development team has created a new version of their service's API. You need to deploy the new versions of the API with the least disruption to third-party developers and end users of third-party installed applications. What should you do?",
+                "answer_description": "",
+                "timestamp": "2021-10-31 23:55:00",
+                "answers_community": [
+                    "A (87%)",
+                    "4%"
+                ]
+            },
+            {
+                "id": "Rwo8fgmhLGxeS3lJ7MvQ",
+                "isMC": true,
+                "question_id": 143,
+                "answers_community": [
+                    "A (81%)",
+                    "B (19%)"
+                ],
+                "choices": {
+                    "B": "Use the fluent-plugin-record-reformer Fluentd output plugin to remove the fields from the log entries in flight.",
+                    "D": "Stage log entries to Cloud Storage, and then trigger a Cloud Function to remove the fields and write the entries to Stackdriver via the Stackdriver Logging API.",
+                    "C": "Wait for the application developers to patch the application, and then verify that the log entries are no longer exposing PII.",
+                    "A": "Use the filter-record-transformer Fluentd filter plugin to remove the fields from the log entries in flight."
+                },
+                "exam_id": 5,
+                "topic": "1",
+                "url": "https://www.examtopics.com/discussions/google/view/65112-exam-professional-cloud-devops-engineer-topic-1-question-78/",
+                "answer_ET": "B",
+                "answer_images": [],
+                "question_text": "You are running an application on Compute Engine and collecting logs through Stackdriver. You discover that some personally identifiable information (PII) is leaking into certain log entry fields. You want to prevent these fields from being written in new log entries as quickly as possible. What should you do?",
+                "question_images": [],
+                "unix_timestamp": 1635582300,
+                "answer": "A",
+                "discussion": [
+                    {
+                        "upvote_count": "11",
+                        "comment_id": "473783",
+                        "timestamp": "1636267500.0",
+                        "content": "reformer is Fluentd plugin to add or replace fields of a event record, so ans is A",
+                        "poster": "MF2C"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "poster": "not_thanos",
+                                "upvote_count": "1",
+                                "timestamp": "1639758300.0",
+                                "content": "https://cloud.google.com/logging/docs/agent/logging/configuration#modifying_log_records",
+                                "comment_id": "503787"
+                            }
+                        ],
+                        "upvote_count": "6",
+                        "comment_id": "503786",
+                        "poster": "not_thanos",
+                        "timestamp": "1639758120.0",
+                        "content": "Selected Answer: A\nSeems both A and B will work. \nHowever i will go with A, since it is included in the fluentd core and does not require installing a new plugin \n\n\"The filter_record_transformer filter plugin mutates/transforms incoming event streams in a versatile manner. If there is a need to add/delete/modify events, this plugin is the first filter to try.\nIt is included in the Fluentd's core.\"\n\nhttps://docs.fluentd.org/filter/record_transformer"
+                    },
+                    {
+                        "content": "Selected Answer: A\nOption A",
+                        "timestamp": "1701525420.0",
+                        "upvote_count": "1",
+                        "comment_id": "1086234",
+                        "poster": "jomonkp"
+                    },
+                    {
+                        "timestamp": "1673828820.0",
+                        "comment_id": "777210",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nA. Use the filter-record-transformer Fluentd filter plugin to remove the fields from the log entries in flight.\n\nFluentd is a log collector and processor that is commonly used with Google Cloud Platform. The filter-record-transformer plugin for Fluentd can be used to modify log entries as they are being collected, allowing you to remove sensitive fields from the log entries in real-time before they are written to Stackdriver. This can be done quickly, as it doesn't require changes on the application code.",
+                        "poster": "JonathanSJ"
+                    },
+                    {
+                        "content": "Ans A.\nSource - https://docs.fluentd.org/filter/record_transformer",
+                        "comment_id": "736435",
+                        "timestamp": "1670286900.0",
+                        "poster": "DoodleDo",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "comment_id": "713796",
+                        "timestamp": "1667907840.0",
+                        "upvote_count": "3",
+                        "content": "Selected Answer: B\nAppeared in 07/11/2022 exam\n\nkeys : Option-A has the filter name wrong. It should be filter_record_transformer not filter-record-transformer",
+                        "poster": "mudot"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1667737860.0",
+                        "content": "Selected Answer: A\nfilter_record_transformer enables you to:\n\n - Add new fields to log entries\n - Update fields in log entries\n - Delete fields in log entries\n\nThe fluent-plugin-record-reformer output plugin provides functionality similar to the filter_record_transformer filter plugin, except that it also allows you to modify log tags. \n\nWe dont need to modify the filters here .. hence A",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "timestamp": "1667738040.0",
+                                "poster": "mudot",
+                                "comment_id": "712294",
+                                "content": "IF the answer 'A' is not a typo (- instead of _), then B is correct"
+                            }
+                        ],
+                        "comment_id": "712291",
+                        "poster": "mudot"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/logging/docs/agent/logging/configuration#modifying_log_records\nFluentd provides built-in filter plugins that can be used to modify log entries.\nThe most commonly used filter plugin is filter_record_transformer. It enables you to:\n- Delete fields in log entries",
+                        "timestamp": "1666518420.0",
+                        "poster": "zellck",
+                        "upvote_count": "1",
+                        "comment_id": "702043"
+                    },
+                    {
+                        "timestamp": "1654853940.0",
+                        "content": "Ans: B \nhttps://cloud.google.com/logging/docs/agent/logging/configuration According to this link \nA is wrong as correct plugin name is filter_record_transformer and not filter-record-transformer \nB is Correct as \"The fluent-plugin-record-reformer output plugin provides functionality similar to the filter_record_transformer filter plugin, except that it also allows you to modify log tags. More resource usage is expected with this plugin: each time a log tag is updated, it generates a new log entry with the new tag.\"",
+                        "comment_id": "614440",
+                        "upvote_count": "2",
+                        "poster": "esandips"
+                    },
+                    {
+                        "comment_id": "576359",
+                        "timestamp": "1648402020.0",
+                        "poster": "maddy94",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nA is correct"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "comment_id": "588391",
+                                "content": "That is right , Both options does the job , however filter_record_transformer is the correct name. not filter-record-transformer",
+                                "timestamp": "1650415740.0",
+                                "upvote_count": "1",
+                                "poster": "Sreedharveluru"
+                            }
+                        ],
+                        "content": "It's B. \nhttps://cloud.google.com/logging/docs/agent/logging/configuration#cloud-fluentd-config: is filter_record_transformer not filter-record-transformer. fluent-plugin-record-reformer is the right name",
+                        "upvote_count": "3",
+                        "comment_id": "564166",
+                        "timestamp": "1646844000.0",
+                        "poster": "ric79"
+                    },
+                    {
+                        "timestamp": "1642663440.0",
+                        "content": "Selected Answer: A\nA is correct",
+                        "upvote_count": "1",
+                        "poster": "Sekierer",
+                        "comment_id": "528221"
+                    },
+                    {
+                        "content": "Yes, its A and not B as fluent-plugin-google-cloud from https://cloud.google.com/logging/docs/agent/logging/configuration#cloud-fluentd-config\n\n\nBesides the list of default logs that the Logging agent streams by default, you can customize the Logging agent to send additional logs to Logging or to adjust agent settings by adding input configurations.\n\nThe configuration definitions in these sections apply to the fluent-plugin-google-cloud output plugin only and specify how logs are transformed and ingested into Cloud Logging.",
+                        "upvote_count": "3",
+                        "timestamp": "1636092780.0",
+                        "poster": "MBA_1",
+                        "comment_id": "472902"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "comment_id": "470150",
+                        "timestamp": "1635582300.0",
+                        "poster": "giammydell",
+                        "content": "I think A because The fluent-plugin-record-reformer output plugin provides functionality similar to the filter_record_transformer filter plugin, except that it also allows you to modify log tags"
+                    }
+                ],
+                "answer_description": "Reference -\nhttps://cloud.google.com/logging/docs/agent/logging/configuration",
+                "timestamp": "2021-10-30 10:25:00"
+            },
+            {
+                "id": "zjyqmAs7zo4V24QHjhxx",
+                "topic": "1",
+                "exam_id": 5,
+                "answer_ET": "B",
+                "answer_description": "",
+                "answer": "B",
+                "unix_timestamp": 1635418680,
+                "question_id": 144,
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "discussion": [
+                    {
+                        "comment_id": "534951",
+                        "content": "Will go with B",
+                        "poster": "jagadeeshs",
+                        "upvote_count": "7",
+                        "timestamp": "1643402640.0"
+                    },
+                    {
+                        "comment_id": "1086237",
+                        "content": "Selected Answer: B\nOption B",
+                        "upvote_count": "2",
+                        "poster": "jomonkp",
+                        "timestamp": "1701525480.0"
+                    },
+                    {
+                        "poster": "JonathanSJ",
+                        "upvote_count": "3",
+                        "content": "Selected Answer: B\nB. Focus on identifying the contributing causes of the incident rather than the individual responsible for the cause.\n\nAccording to Site Reliability Engineering (SRE) practices, the goal of a post-mortem is to identify the underlying causes of the incident in order to take steps to prevent it from happening again in the future. This involves looking for patterns and issues in the system rather than looking for a specific person to blame. It's important to have a focus on learning and continuous improvement, rather than assigning blame.",
+                        "timestamp": "1673828580.0",
+                        "comment_id": "777205"
+                    },
+                    {
+                        "content": "Selected Answer: B\nB) Makes sense",
+                        "timestamp": "1670408580.0",
+                        "comment_id": "737729",
+                        "upvote_count": "1",
+                        "poster": "WhyIronMan"
+                    },
+                    {
+                        "content": "B is the correct answer.",
+                        "upvote_count": "1",
+                        "poster": "ssmb",
+                        "timestamp": "1666552920.0",
+                        "comment_id": "702423"
+                    },
+                    {
+                        "comment_id": "701980",
+                        "content": "Selected Answer: B\nB is the answer.",
+                        "timestamp": "1666509960.0",
+                        "upvote_count": "1",
+                        "poster": "zellck"
+                    },
+                    {
+                        "timestamp": "1660529580.0",
+                        "poster": "dobby_elf",
+                        "content": "Selected Answer: B\nB is correct BBB",
+                        "upvote_count": "2",
+                        "comment_id": "646984"
+                    },
+                    {
+                        "comment_id": "528265",
+                        "content": "B is correct",
+                        "poster": "Sekierer",
+                        "upvote_count": "1",
+                        "timestamp": "1642668180.0"
+                    },
+                    {
+                        "timestamp": "1637580120.0",
+                        "content": "Ans: B",
+                        "poster": "arunraveendran",
+                        "comment_id": "484119",
+                        "upvote_count": "4"
+                    },
+                    {
+                        "comment_id": "476811",
+                        "poster": "sindra",
+                        "content": "Agreed B",
+                        "timestamp": "1636707420.0",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "poster": "Alaaelanwr",
+                        "comment_id": "475755",
+                        "upvote_count": "3",
+                        "timestamp": "1636573020.0",
+                        "content": "Ans: B"
+                    },
+                    {
+                        "poster": "sindra",
+                        "comment_id": "470249",
+                        "upvote_count": "2",
+                        "content": "Confirm B",
+                        "timestamp": "1635600480.0"
+                    },
+                    {
+                        "content": "Ans B, yes",
+                        "upvote_count": "2",
+                        "timestamp": "1635582840.0",
+                        "comment_id": "470154",
+                        "poster": "giammydell"
+                    },
+                    {
+                        "content": "Ans B,yes",
+                        "poster": "TNT87",
+                        "timestamp": "1635418680.0",
+                        "comment_id": "469196",
+                        "upvote_count": "3"
+                    }
+                ],
+                "answer_images": [],
+                "question_images": [],
+                "isMC": true,
+                "choices": {
+                    "B": "Focus on identifying the contributing causes of the incident rather than the individual responsible for the cause.",
+                    "D": "Use the Git history to find the related code commit. Prevent the engineer who made that commit from working on production services.",
+                    "C": "Plan individual meetings with all the engineers involved. Determine who approved and pushed the new release to production.",
+                    "A": "Focus on developing new features rather than avoiding the outages from recurring."
+                },
+                "timestamp": "2021-10-28 12:58:00",
+                "url": "https://www.examtopics.com/discussions/google/view/65005-exam-professional-cloud-devops-engineer-topic-1-question-79/",
+                "question_text": "You support a service that recently had an outage. The outage was caused by a new release that exhausted the service memory resources. You rolled back the release successfully to mitigate the impact on users. You are now in charge of the post-mortem for the outage. You want to follow Site Reliability Engineering practices when developing the post-mortem. What should you do?"
+            },
+            {
+                "id": "LC7ui28nfsTgYr7FaVtT",
+                "question_images": [],
+                "unix_timestamp": 1622645160,
+                "topic": "1",
+                "answer_images": [],
+                "answer": "C",
+                "url": "https://www.examtopics.com/discussions/google/view/54233-exam-professional-cloud-devops-engineer-topic-1-question-8/",
+                "choices": {
+                    "C": "Count the number of home page requests that load in under 100 ms, and then divide by the total number of home page requests.",
+                    "D": "Count the number of home page request that load in under 100 ms, and then divide by the total number of all web application requests.",
+                    "B": "Bucketize the request latencies into ranges, and then compute the median and 90th percentiles.",
+                    "A": "Bucketize the request latencies into ranges, and then compute the percentile at 100 ms."
+                },
+                "question_text": "You support a high-traffic web application and want to ensure that the home page loads in a timely manner. As a first step, you decide to implement a Service\nLevel Indicator (SLI) to represent home page request latency with an acceptable page load time set to 100 ms. What is the Google-recommended way of calculating this SLI?",
+                "discussion": [
+                    {
+                        "timestamp": "1624915860.0",
+                        "poster": "Charun",
+                        "upvote_count": "17",
+                        "comments": [
+                            {
+                                "timestamp": "1628390940.0",
+                                "comments": [
+                                    {
+                                        "timestamp": "1666582200.0",
+                                        "upvote_count": "1",
+                                        "comment_id": "702666",
+                                        "poster": "AzureDP900",
+                                        "content": "C is right"
+                                    }
+                                ],
+                                "content": "https://sre.google/workbook/implementing-slos/\nIn the SRE principles book, it's recommended treating the SLI as the ratio of two numbers: the number of good events divided by the total number of events. For example:\nNumber of successful HTTP requests / total HTTP requests (success rate)",
+                                "comment_id": "421452",
+                                "upvote_count": "8",
+                                "poster": "raf2121"
+                            }
+                        ],
+                        "comment_id": "393254",
+                        "content": "I have submitted C answer"
+                    },
+                    {
+                        "upvote_count": "9",
+                        "poster": "danchoif2",
+                        "content": "A, B and D: aren't specific to home page, so they are incorrect.\n\nC is correct.",
+                        "comment_id": "434712",
+                        "timestamp": "1630252440.0"
+                    },
+                    {
+                        "comment_id": "1102961",
+                        "timestamp": "1703191920.0",
+                        "content": "Selected Answer: C\nC is the way to go.",
+                        "upvote_count": "1",
+                        "poster": "Raz0r"
+                    },
+                    {
+                        "comment_id": "772028",
+                        "content": "Selected Answer: C\nAnswer C",
+                        "poster": "JonathanSJ",
+                        "upvote_count": "1",
+                        "timestamp": "1673412120.0"
+                    },
+                    {
+                        "timestamp": "1671865860.0",
+                        "comment_id": "754745",
+                        "upvote_count": "1",
+                        "content": "Ans: C\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/",
+                        "poster": "floppino"
+                    },
+                    {
+                        "content": "Selected Answer: C\nThe correct answer is 'C'",
+                        "comment_id": "646567",
+                        "upvote_count": "2",
+                        "poster": "GCP72",
+                        "timestamp": "1660453500.0"
+                    },
+                    {
+                        "poster": "Alpha121",
+                        "comment_id": "613468",
+                        "timestamp": "1654714140.0",
+                        "content": "C is the answer",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1638705540.0",
+                        "upvote_count": "1",
+                        "poster": "alaahakim",
+                        "comment_id": "494295",
+                        "content": "Ans: C"
+                    },
+                    {
+                        "content": "B or C?",
+                        "upvote_count": "1",
+                        "comment_id": "387987",
+                        "timestamp": "1624367100.0",
+                        "poster": "WakandaF"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "upvote_count": "6",
+                        "timestamp": "1624352160.0",
+                        "content": "Ans C\nhttps://sre.google/workbook/implementing-slos/",
+                        "comment_id": "387770"
+                    },
+                    {
+                        "timestamp": "1624148580.0",
+                        "comment_id": "385835",
+                        "upvote_count": "4",
+                        "content": "Ans is B\nAfter a lot of research i find out this:\n\nThe SLI for availability indicates whether the service is working. The SLI for availability is defined as follows:\nThe proportion of valid requests served successfully. (good request / total request)\n\nThe SLI for latency (sometimes called speed) indicates whether the service is fast enough. \nThe proportion of valid requests served faster than a threshold.\nLatency is commonly measured as a distribution. Given a distribution, you can measure various percentiles. For example, you might measure the number of requests that are slower than the historical 99th percentile. In this case, we consider good events to be events that are faster than this threshold, which was set by examining the historical distribution. You can also set this threshold based on product requirements. You can even set multiple latency SLOs, for example typical latency versus tail latency.",
+                        "poster": "francisco_guerra",
+                        "comments": [
+                            {
+                                "poster": "Dark_Lord",
+                                "content": "Still not sure about B",
+                                "comment_id": "408291",
+                                "upvote_count": "1",
+                                "timestamp": "1626504000.0"
+                            },
+                            {
+                                "comments": [
+                                    {
+                                        "comment_id": "532789",
+                                        "content": "The commands shared create a histogram that demonstrates the latency distribution for 90 and 99 % of the requests. Does not define how to measure the SLI.",
+                                        "upvote_count": "2",
+                                        "timestamp": "1643192880.0",
+                                        "poster": "pddddd"
+                                    }
+                                ],
+                                "upvote_count": "1",
+                                "content": "and if this is not enough for you check how google calculate Availability and latency\n\nAvailability\n\nsum(rate(http_requests_total{host=\"api\", status!~\"5..\"}[7d]))\n/\nsum(rate(http_requests_total{host=\"api\"}[7d])\n\nLatency\nhistogram_quantile(0.9, rate(http_request_duration_seconds_bucket[7d]))\nhistogram_quantile(0.99, rate(http_request_duration_seconds_bucket[7d]))\n\nhttps://sre.google/workbook/implementing-slos/\nhttps://cloud.google.com/architecture/adopting-slos/",
+                                "timestamp": "1624148640.0",
+                                "comment_id": "385836",
+                                "poster": "francisco_guerra"
+                            },
+                            {
+                                "content": "The correct answer is \"C\", you can confirm it here, https://sre.google/workbook/slo-document/\n\nLatency\n\nThe proportion of sufficiently fast requests, as measured from the load balancer metrics.\n\n“Sufficiently fast” is defined as < 400 ms, or < 850 ms.\n\ncount of \"api\" http_requests with\na duration less than or equal to\n\"0.4\" seconds\ndivided by\ncount of all \"api\" http_requests",
+                                "comment_id": "408971",
+                                "timestamp": "1626615360.0",
+                                "upvote_count": "3",
+                                "poster": "Dark_Lord"
+                            }
+                        ]
+                    },
+                    {
+                        "content": "Answer -C\n\nSLI = good events/valid events X 100",
+                        "upvote_count": "4",
+                        "timestamp": "1623481740.0",
+                        "poster": "akg001",
+                        "comment_id": "380277"
+                    },
+                    {
+                        "poster": "akg001",
+                        "content": "Answer -C\n\nSLI = good events/good events X 100",
+                        "comment_id": "380276",
+                        "upvote_count": "4",
+                        "timestamp": "1623481680.0"
+                    },
+                    {
+                        "comment_id": "372794",
+                        "timestamp": "1622645160.0",
+                        "content": "answer C",
+                        "upvote_count": "5",
+                        "poster": "devopsbatch"
+                    }
+                ],
+                "exam_id": 5,
+                "isMC": true,
+                "answer_ET": "C",
+                "timestamp": "2021-06-02 16:46:00",
+                "answer_description": "Reference:\nhttps://sre.google/workbook/implementing-slos/",
+                "question_id": 145,
+                "answers_community": [
+                    "C (100%)"
+                ]
+            }
+        ],
+        "exam": {
+            "isImplemented": true,
+            "numberOfQuestions": 166,
+            "lastUpdated": "1 May 2024",
+            "name": "Professional Cloud DevOps Engineer",
+            "isMCOnly": true,
+            "id": 5,
+            "isBeta": false,
+            "provider": "Google"
+        },
+        "currentPage": 29
+    },
+    "__N_SSP": true
+}

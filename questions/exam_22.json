@@ -1,1 +1,653 @@
-{"pageProps":{"questions":[{"id":"rDcDUY3hgN7VRyTObl5H","question_images":[],"timestamp":"2021-06-07 08:13:00","url":"https://www.examtopics.com/discussions/google/view/54766-exam-professional-cloud-devops-engineer-topic-1-question-44/","answers_community":["C (100%)"],"answer_description":"","answer_ET":"B","exam_id":5,"isMC":true,"question_id":106,"question_text":"Your team has recently deployed an NGINX-based application into Google Kubernetes Engine (GKE) and has exposed it to the public via an HTTP Google Cloud\nLoad Balancer (GCLB) ingress. You want to scale the deployment of the application's frontend using an appropriate Service Level Indicator (SLI). What should you do?","topic":"1","choices":{"D":"Expose the NGINX stats endpoint and configure the horizontal pod autoscaler to use the request metrics exposed by the NGINX deployment.","C":"Install the Stackdriver custom metrics adapter and configure a horizontal pod autoscaler to use the number of requests provided by the GCLB.","A":"Configure the horizontal pod autoscaler to use the average response time from the Liveness and Readiness probes.","B":"Configure the vertical pod autoscaler in GKE and enable the cluster autoscaler to scale the cluster as pods expand."},"answer_images":[],"discussion":[{"poster":"Charun","timestamp":"1624938840.0","comment_id":"393467","content":"Option C","upvote_count":"13"},{"content":"C is correct\n\nA. Configure the horizontal pod autoscaler to use the average response time from the Liveness and Readiness Probes.\n--> using health check as a trigger of scaling is weird. if the response time of the health check is delayed, it may be caused by resources issues such as CPU, memories, and so on. so you should use such values as SLIs.\n\nB. Configure the vertical pod autoscaler in GKE and enable the cluster autoscaler to scale the cluster as pods expand.\n--> it doesn't referred to pod autoscaling.\n\nD. Expose the NGINX stats endpoint and configure the horizontal pod autoscaler to use the request metrics exposed by the NGINX deployment.\n--> if you use request metrics as SLIs, you should use custom metrics as SLIs. it is a little bit redundant.","comment_id":"414704","upvote_count":"12","timestamp":"1627304820.0","poster":"kubosuke"},{"poster":"jomonkp","comment_id":"1086033","content":"Selected Answer: C\noption C","upvote_count":"1","timestamp":"1701511320.0"},{"content":"Selected Answer: C\nC. Install the Stackdriver custom metrics adapter and configure a horizontal pod autoscaler to use the number of requests provided by the GCLB.\n\nTo scale the deployment of the application's frontend using an appropriate Service Level Indicator (SLI), we need to monitor the traffic coming to the application. One way to do this is to install the Stackdriver custom metrics adapter, which provides visibility into GCLB metrics such as request counts, bytes sent and received, and active connections. We can then configure a horizontal pod autoscaler (HPA) to scale the number of pods based on the request count coming through the GCLB, which will help to ensure that our application is always available to handle the incoming traffic.","comment_id":"841991","timestamp":"1679058600.0","upvote_count":"3","poster":"Wael216"},{"timestamp":"1666621740.0","upvote_count":"1","poster":"zellck","comment_id":"703115","content":"Selected Answer: C\nC is the answer."},{"poster":"pradoUA","upvote_count":"1","content":"Selected Answer: C\nI will go with C","timestamp":"1666586280.0","comment_id":"702692"},{"content":"Selected Answer: C\nC is the correct answer as per Google documentation","timestamp":"1663726560.0","comment_id":"674702","upvote_count":"2","poster":"ramzez4815"},{"content":"C is correct","comment_id":"607492","timestamp":"1653545940.0","poster":"khushboo93s","upvote_count":"1"},{"content":"Selected Answer: C\nOption B is incorrect because there will be no benefit in vertically scaling the front end if the requests are very high. Because in that case the network is the bottleneck and not the instance resources. In my opinion the Answer is C.","poster":"Murty549","upvote_count":"2","comment_id":"525723","timestamp":"1642419360.0"},{"poster":"cloudbee","content":"c looks more feasible to me. but also B is in small favour. Horizontal pod autoscaler will scale based on the custom metrics such as requests per second(i.e. no. of requests). but vertical autoscaling is also useful feature for the frontend application. as it requires more resource needs if the traffic is high. Since vertical autoscaling will first delete the pod and adjust the cpu and memory to recreate the pod, It can cause downtime for that duration and not recommended. Hence, More inclined towards answer C. Still, reply my answer with your explanation please\n\n https://cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler#overview","upvote_count":"1","comment_id":"515454","timestamp":"1641195960.0"},{"upvote_count":"3","timestamp":"1639392540.0","content":"B is correct \nfront-end web applications Scale based on the number of incoming request. so need vertical scaling \nBack-end Batch Processing (Scale Horizontally)\nreference https://docs.rightscale.com/faq/What_is_auto-scaling.html","comment_id":"500539","poster":"Shasha1"},{"upvote_count":"2","timestamp":"1630653300.0","poster":"TNT87","content":"C\nhttps://cloud.google.com/kubernetes-engine/docs/tutorials/autoscaling-metrics","comment_id":"438373"},{"poster":"IamSuren","comment_id":"416527","comments":[{"comment_id":"443028","content":"It is why the C answer say number of requests not CPU utilization.","poster":"[Removed]","timestamp":"1631372940.0","upvote_count":"5"}],"timestamp":"1627516260.0","content":"According to Google \nhttps://cloud.google.com/kubernetes-engine/docs/tutorials/autoscaling-metrics#cpu_1\nHorizontal Pod Autoscalers can scale based on CPU utilization natively, so the Custom Metrics Adapter is not needed, therefor C doesn't fit .","upvote_count":"2"},{"poster":"ralf_cc","content":"C - https://cloud.google.com/kubernetes-engine/docs/tutorials/autoscaling-metrics\nYou want to scale horizontally","comment_id":"385200","upvote_count":"4","timestamp":"1624075560.0"},{"content":"Option B","poster":"rinkeshgala1","upvote_count":"1","timestamp":"1623046380.0","comment_id":"376550"}],"answer":"C","unix_timestamp":1623046380},{"id":"Ui09TRYR2ajuR5SKuCv5","url":"https://www.examtopics.com/discussions/google/view/54891-exam-professional-cloud-devops-engineer-topic-1-question-45/","answer_images":[],"unix_timestamp":1623158640,"answer_description":"","isMC":true,"choices":{"E":"External Customer Communications Lead","A":"Operations Lead","B":"Engineering Lead","D":"Customer Impact Assessor","C":"Communications Lead"},"answers_community":["AC (100%)"],"answer_ET":"AE","question_text":"Your company follows Site Reliability Engineering practices. You are the Incident Commander for a new, customer-impacting incident. You need to immediately assign two incident management roles to assist you in an effective incident response. What roles should you assign? (Choose two.)","discussion":[{"comment_id":"377548","content":"AC\n\nhttps://sre.google/workbook/incident-response/\n\"The main roles in incident response are the Incident Commander (IC), Communications Lead (CL), and Operations or Ops Lead (OL).\"","timestamp":"1623158640.0","upvote_count":"33","poster":"syslog","comments":[{"upvote_count":"2","poster":"akg001","comment_id":"381525","content":"could be. A and C.\n\nwhy not E? this is customer impacting incident so should be an external customer comm lead as well.","timestamp":"1623643860.0"}]},{"comment_id":"393468","upvote_count":"13","poster":"Charun","timestamp":"1624938840.0","content":"AC for sure"},{"poster":"jomonkp","timestamp":"1701511440.0","comment_id":"1086037","upvote_count":"1","content":"Selected Answer: AC\noption A and C"},{"upvote_count":"1","timestamp":"1699887780.0","content":"Selected Answer: AC\nAC\nMain Roles in Incident Response","comment_id":"1069406","poster":"maxdanny"},{"comment_id":"702953","content":"A,C is right\nThe main roles in incident response are the Incident Commander (IC), Communications Lead (CL), and Operations or Ops Lead (OL). IMAG organizes these roles into a hierarchy: the IC leads the incident response, and the CL and OL report to the IC.","timestamp":"1666610760.0","upvote_count":"1","poster":"AzureDP900"},{"upvote_count":"1","poster":"ramzez4815","content":"Selected Answer: AC\nAC, been there many times in real situations","timestamp":"1663726620.0","comment_id":"674704"},{"comment_id":"546323","poster":"PhilipKoku","timestamp":"1644741540.0","upvote_count":"2","content":"Selected Answer: AC\nA - Operations lead: fixes the issue\nC - Communications lead: keeps stakeholders informed"},{"content":"Selected Answer: AC\nAnswer A & C as per Google SRE","timestamp":"1643474580.0","poster":"vijaigcp","upvote_count":"1","comment_id":"535588"},{"poster":"cloudbee","upvote_count":"1","comment_id":"515455","content":"Selected Answer: AC\nIt's mentioned in sre book by Google.","timestamp":"1641196080.0"},{"timestamp":"1636896360.0","upvote_count":"2","poster":"Biden","comment_id":"478138","content":"Who gave AE as the correct answer ? why not this tool display/reveal the correct answer from the \"Highly Voted\" from the discussion thread for each Q?"},{"poster":"Luvero","content":"A, C - other roles are appropriate ..","timestamp":"1635067260.0","upvote_count":"3","comment_id":"466892"}],"answer":"AC","question_id":107,"timestamp":"2021-06-08 15:24:00","exam_id":5,"topic":"1","question_images":[]},{"id":"nK86Id2wT1jlxD2rwRIs","isMC":true,"url":"https://www.examtopics.com/discussions/google/view/54447-exam-professional-cloud-devops-engineer-topic-1-question-46/","unix_timestamp":1622748900,"topic":"1","answers_community":["C (76%)","D (24%)"],"question_id":108,"answer_images":[],"question_images":[],"answer":"C","exam_id":5,"discussion":[{"poster":"kubosuke","comment_id":"415441","content":"C\n\nhttps://cloud.google.com/monitoring/support/notification-options#creating_channels\nTo configure SMS notifications, do the following:\n\nIn the SMS section, click Add new and follow the instructions.\nClick Save.\nWhen you set up your alerting policy, select the SMS notification type and choose a verified phone number from the list.","timestamp":"1627387680.0","upvote_count":"17"},{"content":"I think C","comment_id":"373845","timestamp":"1622748900.0","upvote_count":"11","comments":[{"content":"Agree. C looks more close from other given answer.","upvote_count":"7","comment_id":"381540","timestamp":"1623645600.0","poster":"akg001"}],"poster":"[Removed]"},{"comment_id":"1139230","upvote_count":"1","content":"Selected Answer: C\nStackdriver (now Operations Suite) natively supports SMS notification channel, so going through external tool route or slack route is not cloud native approach. \nhttps://cloud.google.com/monitoring/support/notification-options#sms","poster":"alpha_canary","timestamp":"1706963940.0"},{"comment_id":"1086040","content":"Selected Answer: C\noption C","timestamp":"1701511500.0","poster":"jomonkp","upvote_count":"1"},{"comment_id":"909702","content":"Selected Answer: D\nOption C suggests ensuring that team members set their SMS/phone numbers in their Stackdriver Profile. This approach is the simplest and most straightforward of the options presented. It requires no additional integration or configuration, and team members can easily manage their contact information in their Stackdriver profile. However, it does require team members to have access to and familiarity with Stackdriver, which may not be the case for all members of the team.","comments":[{"timestamp":"1709828160.0","content":"Same argument goes for Slack integration as well. Team members needs to setup Slack access, channel, etc. And it seems redundant also. Final goal is to send alert message using SMS, which Google Cloud has in-build support.","poster":"jinaldesailive","upvote_count":"1","comment_id":"1168158"}],"upvote_count":"2","timestamp":"1685392560.0","poster":"jeffersonkozak"},{"content":"Selected Answer: C\nHad this question on exam 25.10.2022 and originally it says:\nC. Ensure that your team members set their SMS/phone numbers in their Cloud Monitoring. Select the SMS notification option for each alerting policy and then select the appropriate SMS/phone numbers from the list.\n\nHence definitely C is the answer","upvote_count":"3","poster":"pradoUA","timestamp":"1666760340.0","comment_id":"704396"},{"content":"Selected Answer: C\nSubmit C","timestamp":"1652112000.0","upvote_count":"2","comment_id":"599136","poster":"Ananda"},{"poster":"PhilipKoku","comment_id":"546325","content":"Selected Answer: C\nC - Google Cloud Monitoring (previously known as Stackdriver) supports SMS notifications","upvote_count":"3","timestamp":"1644741720.0"},{"timestamp":"1643429340.0","comment_id":"535167","content":"Selected Answer: D\nI dont know if there is something called - Stackdriver Profile .\nThe SMS can be configured in notification channel. But I dont see that in the options, hence the correct answer should be D","upvote_count":"2","comments":[{"content":"Yes, I also don't think there is anything such as stackdriver profile.","upvote_count":"2","comment_id":"596775","timestamp":"1651665900.0","poster":"Aiffone"}],"poster":"cyrus86"},{"content":"Selected Answer: C\nAlthough stackdriver profile is not an named option in gcp. It looks like that to add phone no in stackdriver. so pretty straigtforward right answer is C","timestamp":"1641196380.0","poster":"cloudbee","comment_id":"515458","upvote_count":"1"},{"poster":"Shasha1","content":"i think answer is D\nThere is no Stackdriver Profile exists to add their phone number. only possible to add the phone number in the notification channel under sms category","timestamp":"1639395240.0","comment_id":"500559","upvote_count":"3"},{"upvote_count":"2","timestamp":"1638275340.0","content":"Selected Answer: C\nis option C","comment_id":"490666","poster":"utwo"},{"timestamp":"1630653540.0","comment_id":"438378","upvote_count":"6","poster":"TNT87","content":"C\nhttps://cloud.google.com/monitoring/support/notification-options"},{"poster":"Charun","timestamp":"1624938840.0","comment_id":"393469","content":"C option","upvote_count":"7"}],"answer_description":"","choices":{"A":"Download and configure a third-party integration between Stackdriver Monitoring and an SMS gateway. Ensure that your team members add their SMS/phone numbers to the external tool.","D":"Configure a Slack notification for each alerting policy. Set up a Slack-to-SMS integration to send SMS messages when Slack messages are received. Ensure that your team members add their SMS/phone numbers to the external integration.","B":"Select the Webhook notifications option for each alerting policy, and configure it to use a third-party integration tool. Ensure that your team members add their SMS/phone numbers to the external tool.","C":"Ensure that your team members set their SMS/phone numbers in their Stackdriver Profile. Select the SMS notification option for each alerting policy and then select the appropriate SMS/phone numbers from the list."},"question_text":"You support an application running on GCP and want to configure SMS notifications to your team for the most critical alerts in Stackdriver Monitoring. You have already identified the alerting policies you want to configure this for. What should you do?","answer_ET":"D","timestamp":"2021-06-03 21:35:00"},{"id":"QjvoTIwaQ4VILvRUFkQH","answer_ET":"A","unix_timestamp":1622748960,"answer":"C","answer_description":"","answers_community":["C (89%)","11%"],"url":"https://www.examtopics.com/discussions/google/view/54448-exam-professional-cloud-devops-engineer-topic-1-question-47/","question_images":[],"question_text":"You are managing an application that exposes an HTTP endpoint without using a load balancer. The latency of the HTTP responses is important for the user experience. You want to understand what HTTP latencies all of your users are experiencing. You use Stackdriver Monitoring. What should you do?","choices":{"A":"ג€¢ In your application, create a metric with a metricKind set to DELTA and a valueType set to DOUBLE. ג€¢ In Stackdriver's Metrics Explorer, use a Stacked Bar graph to visualize the metric.","D":"ג€¢ In your application, create a metric with a metricKind set to METRIC_KIND_UNSPECIFIED and a valueType set to INT64. ג€¢ In Stackdriver's Metrics Explorer, use a Stacked Area graph to visualize the metric.","C":"ג€¢ In your application, create a metric with a metricKind set to GAUGE and a valueType set to DISTRIBUTION. ג€¢ In Stackdriver's Metrics Explorer, use a Heatmap graph to visualize the metric.","B":"ג€¢ In your application, create a metric with a metricKind set to CUMULATIVE and a valueType set to DOUBLE. ג€¢ In Stackdriver's Metrics Explorer, use a Line graph to visualize the metric."},"discussion":[{"upvote_count":"23","timestamp":"1628555760.0","comment_id":"422366","content":"Answer C\nReference : https://cloud.google.com/monitoring/api/v3/kinds-and-types?hl=en\nGAUGE Metric : In which value measures a specific instant in time\nDELTA Metric : In which the value measures the change since it was last recorded\nCUMULATIVE metric : In which the value constantly increases over time\n\nQuestion asks, \"Latency of HTTP responses\" - This needs to be specific instant in time , which is GAUGE, hence C","poster":"raf2121"},{"content":"C is correct","poster":"Charun","comment_id":"393470","upvote_count":"11","timestamp":"1624938840.0"},{"content":"Selected Answer: C\nGAUGE metrics record a value at a particular point in time and DISTRIBUTION captures distribution statistics. A Heatmap is a good way to visualize latencies across all users.\nhttps://cloud.google.com/monitoring/api/v3/kinds-and-types?hl=en#metric-kinds","poster":"alpha_canary","upvote_count":"1","comment_id":"1139231","timestamp":"1706964240.0"},{"content":"Selected Answer: C\noption c","comment_id":"1086043","timestamp":"1701511740.0","poster":"jomonkp","upvote_count":"1"},{"timestamp":"1685393280.0","content":"Selected Answer: A\nC is partially correct, GAUGE with DISTRIBUTUION, but \"use a Heatmap graph to visualize the metric\" will not help to visualiaze the Latencies of all users, will help to identify regions, but it;s not a question","comment_id":"909713","poster":"jeffersonkozak","upvote_count":"1"},{"timestamp":"1666611540.0","upvote_count":"1","comment_id":"702970","poster":"AzureDP900","content":"C is right as per GCP documentation.\nA gauge metric, in which the value measures a specific instant in time. For example, metrics measuring CPU utilization are gauge metrics; each point records the CPU utilization at the time of measurement. Another example of a gauge metric is the current temperature."},{"upvote_count":"2","poster":"Ananda","comment_id":"599137","timestamp":"1652112000.0","content":"Selected Answer: C\nSubmitted C"},{"upvote_count":"2","poster":"PhilipKoku","content":"Selected Answer: C\nC - Gauge to see latency distribution","timestamp":"1644741900.0","comment_id":"546328"},{"content":"Selected Answer: C\nIt's guage metric as it is asking latency of http responses.","comment_id":"515461","upvote_count":"2","poster":"cloudbee","timestamp":"1641196680.0"},{"comment_id":"390615","timestamp":"1624636560.0","poster":"francisco_guerra","content":"Ans C:\n\nA: Incorrect: Stacked bar could be but latency its used with distributions\nB: Incorrect: If we used a cumulative the latency would be increasing in the graph.\nC: Correct: Latency is commonly measured as a distribution. \nD: Incorrect: METRIC_KIND_UNSPECIFIED is not the answer that gcp wanted.\n\nLatency is commonly measured as a distribution. Given a distribution, you can measure various percentiles. For example, you might measure the number of requests that are slower than the historical 99th percentile.\n\nLatency\nhistogram_quantile(0.9, rate(http_request_duration_seconds_bucket[7d])\nhistogram_quantile(0.99, rate(http_request_duration_seconds_bucket[7d]))\n\nhttps://sre.google/workbook/implementing-slos/\nhttps://cloud.google.com/architecture/adopting-slos/","upvote_count":"9"},{"upvote_count":"1","comment_id":"385214","comments":[{"upvote_count":"5","comment_id":"388546","timestamp":"1624429320.0","content":"Absolutely not. Cumulative means a growing graph, whose latency values add up to the previous ones, and it doesn't make sense. It's C for sure.","poster":"syslog"}],"content":"Option B","timestamp":"1624076700.0","poster":"ralf_cc"},{"timestamp":"1623046440.0","poster":"rinkeshgala1","content":"Option C","upvote_count":"5","comment_id":"376552"},{"timestamp":"1622748960.0","comment_id":"373846","poster":"[Removed]","upvote_count":"3","content":"I think C"}],"topic":"1","question_id":109,"exam_id":5,"isMC":true,"answer_images":[],"timestamp":"2021-06-03 21:36:00"},{"id":"LLVT4B8jlhAIdEorpjnM","choices":{"B":"Import the Stackdriver Debugger package, and configure the application to emit debug messages with timing information.","A":"Import the Stackdriver Profiler package, and configure it to relay function timing data to Stackdriver for further analysis.","D":"Install an Application Performance Monitoring (APM) tool in both locations, and configure an export to a central data storage location for analysis.","C":"Instrument the code using a timing library, and publish the metrics via a health check endpoint that is scraped by Stackdriver."},"answers_community":["A (100%)"],"exam_id":5,"timestamp":"2021-06-07 08:15:00","unix_timestamp":1623046500,"isMC":true,"question_id":110,"answer_images":[],"answer_description":"","answer_ET":"B","answer":"A","discussion":[{"poster":"Charun","comment_id":"393471","content":"Answer A","upvote_count":"23","timestamp":"1624938900.0"},{"upvote_count":"8","content":"may be A, as profiler works both inside and outside of GCP.","comment_id":"376554","timestamp":"1623046500.0","comments":[{"content":"I agree. A is the right answer.","timestamp":"1623063720.0","comment_id":"376710","poster":"akg001","upvote_count":"3"}],"poster":"rinkeshgala1"},{"upvote_count":"1","timestamp":"1706964480.0","content":"Selected Answer: A\nhttps://cloud.google.com/profiler/docs/profiling-external","poster":"alpha_canary","comment_id":"1139236"},{"upvote_count":"1","timestamp":"1701511860.0","content":"Selected Answer: A\noption A","poster":"jomonkp","comment_id":"1086045"},{"upvote_count":"3","content":"Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/profiler/docs/about-profiler\nCloud Profiler is a statistical, low-overhead profiler that continuously gathers CPU usage and memory-allocation information from your production applications.","timestamp":"1666535640.0","comment_id":"702259","poster":"zellck"},{"timestamp":"1644742140.0","upvote_count":"2","content":"Selected Answer: A\nA - Profiler for resource utilisation.","poster":"PhilipKoku","comment_id":"546333"},{"timestamp":"1643430240.0","content":"Selected Answer: A\nAnswer should be A","comment_id":"535176","upvote_count":"2","poster":"cyrus86"},{"content":"Selected Answer: A\nProfiler can be used outside GCP also it is used to measure cpu utilization by the application.","timestamp":"1641196800.0","comment_id":"515464","poster":"cloudbee","upvote_count":"3"},{"comment_id":"385216","content":"It is A","upvote_count":"4","timestamp":"1624076760.0","poster":"ralf_cc"}],"question_text":"Your team is designing a new application for deployment both inside and outside Google Cloud Platform (GCP). You need to collect detailed metrics such as system resource utilization. You want to use centralized GCP services while minimizing the amount of work required to set up this collection system. What should you do?","topic":"1","url":"https://www.examtopics.com/discussions/google/view/54769-exam-professional-cloud-devops-engineer-topic-1-question-48/","question_images":[]}],"exam":{"name":"Professional Cloud DevOps Engineer","lastUpdated":"1 May 2024","id":5,"provider":"Google","isMCOnly":true,"isBeta":false,"numberOfQuestions":166,"isImplemented":true},"currentPage":22},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "rDcDUY3hgN7VRyTObl5H",
+                "question_images": [],
+                "timestamp": "2021-06-07 08:13:00",
+                "url": "https://www.examtopics.com/discussions/google/view/54766-exam-professional-cloud-devops-engineer-topic-1-question-44/",
+                "answers_community": [
+                    "C (100%)"
+                ],
+                "answer_description": "",
+                "answer_ET": "B",
+                "exam_id": 5,
+                "isMC": true,
+                "question_id": 106,
+                "question_text": "Your team has recently deployed an NGINX-based application into Google Kubernetes Engine (GKE) and has exposed it to the public via an HTTP Google Cloud\nLoad Balancer (GCLB) ingress. You want to scale the deployment of the application's frontend using an appropriate Service Level Indicator (SLI). What should you do?",
+                "topic": "1",
+                "choices": {
+                    "D": "Expose the NGINX stats endpoint and configure the horizontal pod autoscaler to use the request metrics exposed by the NGINX deployment.",
+                    "C": "Install the Stackdriver custom metrics adapter and configure a horizontal pod autoscaler to use the number of requests provided by the GCLB.",
+                    "A": "Configure the horizontal pod autoscaler to use the average response time from the Liveness and Readiness probes.",
+                    "B": "Configure the vertical pod autoscaler in GKE and enable the cluster autoscaler to scale the cluster as pods expand."
+                },
+                "answer_images": [],
+                "discussion": [
+                    {
+                        "poster": "Charun",
+                        "timestamp": "1624938840.0",
+                        "comment_id": "393467",
+                        "content": "Option C",
+                        "upvote_count": "13"
+                    },
+                    {
+                        "content": "C is correct\n\nA. Configure the horizontal pod autoscaler to use the average response time from the Liveness and Readiness Probes.\n--> using health check as a trigger of scaling is weird. if the response time of the health check is delayed, it may be caused by resources issues such as CPU, memories, and so on. so you should use such values as SLIs.\n\nB. Configure the vertical pod autoscaler in GKE and enable the cluster autoscaler to scale the cluster as pods expand.\n--> it doesn't referred to pod autoscaling.\n\nD. Expose the NGINX stats endpoint and configure the horizontal pod autoscaler to use the request metrics exposed by the NGINX deployment.\n--> if you use request metrics as SLIs, you should use custom metrics as SLIs. it is a little bit redundant.",
+                        "comment_id": "414704",
+                        "upvote_count": "12",
+                        "timestamp": "1627304820.0",
+                        "poster": "kubosuke"
+                    },
+                    {
+                        "poster": "jomonkp",
+                        "comment_id": "1086033",
+                        "content": "Selected Answer: C\noption C",
+                        "upvote_count": "1",
+                        "timestamp": "1701511320.0"
+                    },
+                    {
+                        "content": "Selected Answer: C\nC. Install the Stackdriver custom metrics adapter and configure a horizontal pod autoscaler to use the number of requests provided by the GCLB.\n\nTo scale the deployment of the application's frontend using an appropriate Service Level Indicator (SLI), we need to monitor the traffic coming to the application. One way to do this is to install the Stackdriver custom metrics adapter, which provides visibility into GCLB metrics such as request counts, bytes sent and received, and active connections. We can then configure a horizontal pod autoscaler (HPA) to scale the number of pods based on the request count coming through the GCLB, which will help to ensure that our application is always available to handle the incoming traffic.",
+                        "comment_id": "841991",
+                        "timestamp": "1679058600.0",
+                        "upvote_count": "3",
+                        "poster": "Wael216"
+                    },
+                    {
+                        "timestamp": "1666621740.0",
+                        "upvote_count": "1",
+                        "poster": "zellck",
+                        "comment_id": "703115",
+                        "content": "Selected Answer: C\nC is the answer."
+                    },
+                    {
+                        "poster": "pradoUA",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: C\nI will go with C",
+                        "timestamp": "1666586280.0",
+                        "comment_id": "702692"
+                    },
+                    {
+                        "content": "Selected Answer: C\nC is the correct answer as per Google documentation",
+                        "timestamp": "1663726560.0",
+                        "comment_id": "674702",
+                        "upvote_count": "2",
+                        "poster": "ramzez4815"
+                    },
+                    {
+                        "content": "C is correct",
+                        "comment_id": "607492",
+                        "timestamp": "1653545940.0",
+                        "poster": "khushboo93s",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: C\nOption B is incorrect because there will be no benefit in vertically scaling the front end if the requests are very high. Because in that case the network is the bottleneck and not the instance resources. In my opinion the Answer is C.",
+                        "poster": "Murty549",
+                        "upvote_count": "2",
+                        "comment_id": "525723",
+                        "timestamp": "1642419360.0"
+                    },
+                    {
+                        "poster": "cloudbee",
+                        "content": "c looks more feasible to me. but also B is in small favour. Horizontal pod autoscaler will scale based on the custom metrics such as requests per second(i.e. no. of requests). but vertical autoscaling is also useful feature for the frontend application. as it requires more resource needs if the traffic is high. Since vertical autoscaling will first delete the pod and adjust the cpu and memory to recreate the pod, It can cause downtime for that duration and not recommended. Hence, More inclined towards answer C. Still, reply my answer with your explanation please\n\n https://cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler#overview",
+                        "upvote_count": "1",
+                        "comment_id": "515454",
+                        "timestamp": "1641195960.0"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "timestamp": "1639392540.0",
+                        "content": "B is correct \nfront-end web applications Scale based on the number of incoming request. so need vertical scaling \nBack-end Batch Processing (Scale Horizontally)\nreference https://docs.rightscale.com/faq/What_is_auto-scaling.html",
+                        "comment_id": "500539",
+                        "poster": "Shasha1"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1630653300.0",
+                        "poster": "TNT87",
+                        "content": "C\nhttps://cloud.google.com/kubernetes-engine/docs/tutorials/autoscaling-metrics",
+                        "comment_id": "438373"
+                    },
+                    {
+                        "poster": "IamSuren",
+                        "comment_id": "416527",
+                        "comments": [
+                            {
+                                "comment_id": "443028",
+                                "content": "It is why the C answer say number of requests not CPU utilization.",
+                                "poster": "[Removed]",
+                                "timestamp": "1631372940.0",
+                                "upvote_count": "5"
+                            }
+                        ],
+                        "timestamp": "1627516260.0",
+                        "content": "According to Google \nhttps://cloud.google.com/kubernetes-engine/docs/tutorials/autoscaling-metrics#cpu_1\nHorizontal Pod Autoscalers can scale based on CPU utilization natively, so the Custom Metrics Adapter is not needed, therefor C doesn't fit .",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "poster": "ralf_cc",
+                        "content": "C - https://cloud.google.com/kubernetes-engine/docs/tutorials/autoscaling-metrics\nYou want to scale horizontally",
+                        "comment_id": "385200",
+                        "upvote_count": "4",
+                        "timestamp": "1624075560.0"
+                    },
+                    {
+                        "content": "Option B",
+                        "poster": "rinkeshgala1",
+                        "upvote_count": "1",
+                        "timestamp": "1623046380.0",
+                        "comment_id": "376550"
+                    }
+                ],
+                "answer": "C",
+                "unix_timestamp": 1623046380
+            },
+            {
+                "id": "Ui09TRYR2ajuR5SKuCv5",
+                "url": "https://www.examtopics.com/discussions/google/view/54891-exam-professional-cloud-devops-engineer-topic-1-question-45/",
+                "answer_images": [],
+                "unix_timestamp": 1623158640,
+                "answer_description": "",
+                "isMC": true,
+                "choices": {
+                    "E": "External Customer Communications Lead",
+                    "A": "Operations Lead",
+                    "B": "Engineering Lead",
+                    "D": "Customer Impact Assessor",
+                    "C": "Communications Lead"
+                },
+                "answers_community": [
+                    "AC (100%)"
+                ],
+                "answer_ET": "AE",
+                "question_text": "Your company follows Site Reliability Engineering practices. You are the Incident Commander for a new, customer-impacting incident. You need to immediately assign two incident management roles to assist you in an effective incident response. What roles should you assign? (Choose two.)",
+                "discussion": [
+                    {
+                        "comment_id": "377548",
+                        "content": "AC\n\nhttps://sre.google/workbook/incident-response/\n\"The main roles in incident response are the Incident Commander (IC), Communications Lead (CL), and Operations or Ops Lead (OL).\"",
+                        "timestamp": "1623158640.0",
+                        "upvote_count": "33",
+                        "poster": "syslog",
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "poster": "akg001",
+                                "comment_id": "381525",
+                                "content": "could be. A and C.\n\nwhy not E? this is customer impacting incident so should be an external customer comm lead as well.",
+                                "timestamp": "1623643860.0"
+                            }
+                        ]
+                    },
+                    {
+                        "comment_id": "393468",
+                        "upvote_count": "13",
+                        "poster": "Charun",
+                        "timestamp": "1624938840.0",
+                        "content": "AC for sure"
+                    },
+                    {
+                        "poster": "jomonkp",
+                        "timestamp": "1701511440.0",
+                        "comment_id": "1086037",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: AC\noption A and C"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1699887780.0",
+                        "content": "Selected Answer: AC\nAC\nMain Roles in Incident Response",
+                        "comment_id": "1069406",
+                        "poster": "maxdanny"
+                    },
+                    {
+                        "comment_id": "702953",
+                        "content": "A,C is right\nThe main roles in incident response are the Incident Commander (IC), Communications Lead (CL), and Operations or Ops Lead (OL). IMAG organizes these roles into a hierarchy: the IC leads the incident response, and the CL and OL report to the IC.",
+                        "timestamp": "1666610760.0",
+                        "upvote_count": "1",
+                        "poster": "AzureDP900"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "ramzez4815",
+                        "content": "Selected Answer: AC\nAC, been there many times in real situations",
+                        "timestamp": "1663726620.0",
+                        "comment_id": "674704"
+                    },
+                    {
+                        "comment_id": "546323",
+                        "poster": "PhilipKoku",
+                        "timestamp": "1644741540.0",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: AC\nA - Operations lead: fixes the issue\nC - Communications lead: keeps stakeholders informed"
+                    },
+                    {
+                        "content": "Selected Answer: AC\nAnswer A & C as per Google SRE",
+                        "timestamp": "1643474580.0",
+                        "poster": "vijaigcp",
+                        "upvote_count": "1",
+                        "comment_id": "535588"
+                    },
+                    {
+                        "poster": "cloudbee",
+                        "upvote_count": "1",
+                        "comment_id": "515455",
+                        "content": "Selected Answer: AC\nIt's mentioned in sre book by Google.",
+                        "timestamp": "1641196080.0"
+                    },
+                    {
+                        "timestamp": "1636896360.0",
+                        "upvote_count": "2",
+                        "poster": "Biden",
+                        "comment_id": "478138",
+                        "content": "Who gave AE as the correct answer ? why not this tool display/reveal the correct answer from the \"Highly Voted\" from the discussion thread for each Q?"
+                    },
+                    {
+                        "poster": "Luvero",
+                        "content": "A, C - other roles are appropriate ..",
+                        "timestamp": "1635067260.0",
+                        "upvote_count": "3",
+                        "comment_id": "466892"
+                    }
+                ],
+                "answer": "AC",
+                "question_id": 107,
+                "timestamp": "2021-06-08 15:24:00",
+                "exam_id": 5,
+                "topic": "1",
+                "question_images": []
+            },
+            {
+                "id": "nK86Id2wT1jlxD2rwRIs",
+                "isMC": true,
+                "url": "https://www.examtopics.com/discussions/google/view/54447-exam-professional-cloud-devops-engineer-topic-1-question-46/",
+                "unix_timestamp": 1622748900,
+                "topic": "1",
+                "answers_community": [
+                    "C (76%)",
+                    "D (24%)"
+                ],
+                "question_id": 108,
+                "answer_images": [],
+                "question_images": [],
+                "answer": "C",
+                "exam_id": 5,
+                "discussion": [
+                    {
+                        "poster": "kubosuke",
+                        "comment_id": "415441",
+                        "content": "C\n\nhttps://cloud.google.com/monitoring/support/notification-options#creating_channels\nTo configure SMS notifications, do the following:\n\nIn the SMS section, click Add new and follow the instructions.\nClick Save.\nWhen you set up your alerting policy, select the SMS notification type and choose a verified phone number from the list.",
+                        "timestamp": "1627387680.0",
+                        "upvote_count": "17"
+                    },
+                    {
+                        "content": "I think C",
+                        "comment_id": "373845",
+                        "timestamp": "1622748900.0",
+                        "upvote_count": "11",
+                        "comments": [
+                            {
+                                "content": "Agree. C looks more close from other given answer.",
+                                "upvote_count": "7",
+                                "comment_id": "381540",
+                                "timestamp": "1623645600.0",
+                                "poster": "akg001"
+                            }
+                        ],
+                        "poster": "[Removed]"
+                    },
+                    {
+                        "comment_id": "1139230",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: C\nStackdriver (now Operations Suite) natively supports SMS notification channel, so going through external tool route or slack route is not cloud native approach. \nhttps://cloud.google.com/monitoring/support/notification-options#sms",
+                        "poster": "alpha_canary",
+                        "timestamp": "1706963940.0"
+                    },
+                    {
+                        "comment_id": "1086040",
+                        "content": "Selected Answer: C\noption C",
+                        "timestamp": "1701511500.0",
+                        "poster": "jomonkp",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "comment_id": "909702",
+                        "content": "Selected Answer: D\nOption C suggests ensuring that team members set their SMS/phone numbers in their Stackdriver Profile. This approach is the simplest and most straightforward of the options presented. It requires no additional integration or configuration, and team members can easily manage their contact information in their Stackdriver profile. However, it does require team members to have access to and familiarity with Stackdriver, which may not be the case for all members of the team.",
+                        "comments": [
+                            {
+                                "timestamp": "1709828160.0",
+                                "content": "Same argument goes for Slack integration as well. Team members needs to setup Slack access, channel, etc. And it seems redundant also. Final goal is to send alert message using SMS, which Google Cloud has in-build support.",
+                                "poster": "jinaldesailive",
+                                "upvote_count": "1",
+                                "comment_id": "1168158"
+                            }
+                        ],
+                        "upvote_count": "2",
+                        "timestamp": "1685392560.0",
+                        "poster": "jeffersonkozak"
+                    },
+                    {
+                        "content": "Selected Answer: C\nHad this question on exam 25.10.2022 and originally it says:\nC. Ensure that your team members set their SMS/phone numbers in their Cloud Monitoring. Select the SMS notification option for each alerting policy and then select the appropriate SMS/phone numbers from the list.\n\nHence definitely C is the answer",
+                        "upvote_count": "3",
+                        "poster": "pradoUA",
+                        "timestamp": "1666760340.0",
+                        "comment_id": "704396"
+                    },
+                    {
+                        "content": "Selected Answer: C\nSubmit C",
+                        "timestamp": "1652112000.0",
+                        "upvote_count": "2",
+                        "comment_id": "599136",
+                        "poster": "Ananda"
+                    },
+                    {
+                        "poster": "PhilipKoku",
+                        "comment_id": "546325",
+                        "content": "Selected Answer: C\nC - Google Cloud Monitoring (previously known as Stackdriver) supports SMS notifications",
+                        "upvote_count": "3",
+                        "timestamp": "1644741720.0"
+                    },
+                    {
+                        "timestamp": "1643429340.0",
+                        "comment_id": "535167",
+                        "content": "Selected Answer: D\nI dont know if there is something called - Stackdriver Profile .\nThe SMS can be configured in notification channel. But I dont see that in the options, hence the correct answer should be D",
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "content": "Yes, I also don't think there is anything such as stackdriver profile.",
+                                "upvote_count": "2",
+                                "comment_id": "596775",
+                                "timestamp": "1651665900.0",
+                                "poster": "Aiffone"
+                            }
+                        ],
+                        "poster": "cyrus86"
+                    },
+                    {
+                        "content": "Selected Answer: C\nAlthough stackdriver profile is not an named option in gcp. It looks like that to add phone no in stackdriver. so pretty straigtforward right answer is C",
+                        "timestamp": "1641196380.0",
+                        "poster": "cloudbee",
+                        "comment_id": "515458",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "Shasha1",
+                        "content": "i think answer is D\nThere is no Stackdriver Profile exists to add their phone number. only possible to add the phone number in the notification channel under sms category",
+                        "timestamp": "1639395240.0",
+                        "comment_id": "500559",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1638275340.0",
+                        "content": "Selected Answer: C\nis option C",
+                        "comment_id": "490666",
+                        "poster": "utwo"
+                    },
+                    {
+                        "timestamp": "1630653540.0",
+                        "comment_id": "438378",
+                        "upvote_count": "6",
+                        "poster": "TNT87",
+                        "content": "C\nhttps://cloud.google.com/monitoring/support/notification-options"
+                    },
+                    {
+                        "poster": "Charun",
+                        "timestamp": "1624938840.0",
+                        "comment_id": "393469",
+                        "content": "C option",
+                        "upvote_count": "7"
+                    }
+                ],
+                "answer_description": "",
+                "choices": {
+                    "A": "Download and configure a third-party integration between Stackdriver Monitoring and an SMS gateway. Ensure that your team members add their SMS/phone numbers to the external tool.",
+                    "D": "Configure a Slack notification for each alerting policy. Set up a Slack-to-SMS integration to send SMS messages when Slack messages are received. Ensure that your team members add their SMS/phone numbers to the external integration.",
+                    "B": "Select the Webhook notifications option for each alerting policy, and configure it to use a third-party integration tool. Ensure that your team members add their SMS/phone numbers to the external tool.",
+                    "C": "Ensure that your team members set their SMS/phone numbers in their Stackdriver Profile. Select the SMS notification option for each alerting policy and then select the appropriate SMS/phone numbers from the list."
+                },
+                "question_text": "You support an application running on GCP and want to configure SMS notifications to your team for the most critical alerts in Stackdriver Monitoring. You have already identified the alerting policies you want to configure this for. What should you do?",
+                "answer_ET": "D",
+                "timestamp": "2021-06-03 21:35:00"
+            },
+            {
+                "id": "QjvoTIwaQ4VILvRUFkQH",
+                "answer_ET": "A",
+                "unix_timestamp": 1622748960,
+                "answer": "C",
+                "answer_description": "",
+                "answers_community": [
+                    "C (89%)",
+                    "11%"
+                ],
+                "url": "https://www.examtopics.com/discussions/google/view/54448-exam-professional-cloud-devops-engineer-topic-1-question-47/",
+                "question_images": [],
+                "question_text": "You are managing an application that exposes an HTTP endpoint without using a load balancer. The latency of the HTTP responses is important for the user experience. You want to understand what HTTP latencies all of your users are experiencing. You use Stackdriver Monitoring. What should you do?",
+                "choices": {
+                    "A": "ג€¢ In your application, create a metric with a metricKind set to DELTA and a valueType set to DOUBLE. ג€¢ In Stackdriver's Metrics Explorer, use a Stacked Bar graph to visualize the metric.",
+                    "D": "ג€¢ In your application, create a metric with a metricKind set to METRIC_KIND_UNSPECIFIED and a valueType set to INT64. ג€¢ In Stackdriver's Metrics Explorer, use a Stacked Area graph to visualize the metric.",
+                    "C": "ג€¢ In your application, create a metric with a metricKind set to GAUGE and a valueType set to DISTRIBUTION. ג€¢ In Stackdriver's Metrics Explorer, use a Heatmap graph to visualize the metric.",
+                    "B": "ג€¢ In your application, create a metric with a metricKind set to CUMULATIVE and a valueType set to DOUBLE. ג€¢ In Stackdriver's Metrics Explorer, use a Line graph to visualize the metric."
+                },
+                "discussion": [
+                    {
+                        "upvote_count": "23",
+                        "timestamp": "1628555760.0",
+                        "comment_id": "422366",
+                        "content": "Answer C\nReference : https://cloud.google.com/monitoring/api/v3/kinds-and-types?hl=en\nGAUGE Metric : In which value measures a specific instant in time\nDELTA Metric : In which the value measures the change since it was last recorded\nCUMULATIVE metric : In which the value constantly increases over time\n\nQuestion asks, \"Latency of HTTP responses\" - This needs to be specific instant in time , which is GAUGE, hence C",
+                        "poster": "raf2121"
+                    },
+                    {
+                        "content": "C is correct",
+                        "poster": "Charun",
+                        "comment_id": "393470",
+                        "upvote_count": "11",
+                        "timestamp": "1624938840.0"
+                    },
+                    {
+                        "content": "Selected Answer: C\nGAUGE metrics record a value at a particular point in time and DISTRIBUTION captures distribution statistics. A Heatmap is a good way to visualize latencies across all users.\nhttps://cloud.google.com/monitoring/api/v3/kinds-and-types?hl=en#metric-kinds",
+                        "poster": "alpha_canary",
+                        "upvote_count": "1",
+                        "comment_id": "1139231",
+                        "timestamp": "1706964240.0"
+                    },
+                    {
+                        "content": "Selected Answer: C\noption c",
+                        "comment_id": "1086043",
+                        "timestamp": "1701511740.0",
+                        "poster": "jomonkp",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1685393280.0",
+                        "content": "Selected Answer: A\nC is partially correct, GAUGE with DISTRIBUTUION, but \"use a Heatmap graph to visualize the metric\" will not help to visualiaze the Latencies of all users, will help to identify regions, but it;s not a question",
+                        "comment_id": "909713",
+                        "poster": "jeffersonkozak",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1666611540.0",
+                        "upvote_count": "1",
+                        "comment_id": "702970",
+                        "poster": "AzureDP900",
+                        "content": "C is right as per GCP documentation.\nA gauge metric, in which the value measures a specific instant in time. For example, metrics measuring CPU utilization are gauge metrics; each point records the CPU utilization at the time of measurement. Another example of a gauge metric is the current temperature."
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "Ananda",
+                        "comment_id": "599137",
+                        "timestamp": "1652112000.0",
+                        "content": "Selected Answer: C\nSubmitted C"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "PhilipKoku",
+                        "content": "Selected Answer: C\nC - Gauge to see latency distribution",
+                        "timestamp": "1644741900.0",
+                        "comment_id": "546328"
+                    },
+                    {
+                        "content": "Selected Answer: C\nIt's guage metric as it is asking latency of http responses.",
+                        "comment_id": "515461",
+                        "upvote_count": "2",
+                        "poster": "cloudbee",
+                        "timestamp": "1641196680.0"
+                    },
+                    {
+                        "comment_id": "390615",
+                        "timestamp": "1624636560.0",
+                        "poster": "francisco_guerra",
+                        "content": "Ans C:\n\nA: Incorrect: Stacked bar could be but latency its used with distributions\nB: Incorrect: If we used a cumulative the latency would be increasing in the graph.\nC: Correct: Latency is commonly measured as a distribution. \nD: Incorrect: METRIC_KIND_UNSPECIFIED is not the answer that gcp wanted.\n\nLatency is commonly measured as a distribution. Given a distribution, you can measure various percentiles. For example, you might measure the number of requests that are slower than the historical 99th percentile.\n\nLatency\nhistogram_quantile(0.9, rate(http_request_duration_seconds_bucket[7d])\nhistogram_quantile(0.99, rate(http_request_duration_seconds_bucket[7d]))\n\nhttps://sre.google/workbook/implementing-slos/\nhttps://cloud.google.com/architecture/adopting-slos/",
+                        "upvote_count": "9"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "385214",
+                        "comments": [
+                            {
+                                "upvote_count": "5",
+                                "comment_id": "388546",
+                                "timestamp": "1624429320.0",
+                                "content": "Absolutely not. Cumulative means a growing graph, whose latency values add up to the previous ones, and it doesn't make sense. It's C for sure.",
+                                "poster": "syslog"
+                            }
+                        ],
+                        "content": "Option B",
+                        "timestamp": "1624076700.0",
+                        "poster": "ralf_cc"
+                    },
+                    {
+                        "timestamp": "1623046440.0",
+                        "poster": "rinkeshgala1",
+                        "content": "Option C",
+                        "upvote_count": "5",
+                        "comment_id": "376552"
+                    },
+                    {
+                        "timestamp": "1622748960.0",
+                        "comment_id": "373846",
+                        "poster": "[Removed]",
+                        "upvote_count": "3",
+                        "content": "I think C"
+                    }
+                ],
+                "topic": "1",
+                "question_id": 109,
+                "exam_id": 5,
+                "isMC": true,
+                "answer_images": [],
+                "timestamp": "2021-06-03 21:36:00"
+            },
+            {
+                "id": "LLVT4B8jlhAIdEorpjnM",
+                "choices": {
+                    "B": "Import the Stackdriver Debugger package, and configure the application to emit debug messages with timing information.",
+                    "A": "Import the Stackdriver Profiler package, and configure it to relay function timing data to Stackdriver for further analysis.",
+                    "D": "Install an Application Performance Monitoring (APM) tool in both locations, and configure an export to a central data storage location for analysis.",
+                    "C": "Instrument the code using a timing library, and publish the metrics via a health check endpoint that is scraped by Stackdriver."
+                },
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "exam_id": 5,
+                "timestamp": "2021-06-07 08:15:00",
+                "unix_timestamp": 1623046500,
+                "isMC": true,
+                "question_id": 110,
+                "answer_images": [],
+                "answer_description": "",
+                "answer_ET": "B",
+                "answer": "A",
+                "discussion": [
+                    {
+                        "poster": "Charun",
+                        "comment_id": "393471",
+                        "content": "Answer A",
+                        "upvote_count": "23",
+                        "timestamp": "1624938900.0"
+                    },
+                    {
+                        "upvote_count": "8",
+                        "content": "may be A, as profiler works both inside and outside of GCP.",
+                        "comment_id": "376554",
+                        "timestamp": "1623046500.0",
+                        "comments": [
+                            {
+                                "content": "I agree. A is the right answer.",
+                                "timestamp": "1623063720.0",
+                                "comment_id": "376710",
+                                "poster": "akg001",
+                                "upvote_count": "3"
+                            }
+                        ],
+                        "poster": "rinkeshgala1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1706964480.0",
+                        "content": "Selected Answer: A\nhttps://cloud.google.com/profiler/docs/profiling-external",
+                        "poster": "alpha_canary",
+                        "comment_id": "1139236"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1701511860.0",
+                        "content": "Selected Answer: A\noption A",
+                        "poster": "jomonkp",
+                        "comment_id": "1086045"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "content": "Selected Answer: A\nA is the answer.\n\nhttps://cloud.google.com/profiler/docs/about-profiler\nCloud Profiler is a statistical, low-overhead profiler that continuously gathers CPU usage and memory-allocation information from your production applications.",
+                        "timestamp": "1666535640.0",
+                        "comment_id": "702259",
+                        "poster": "zellck"
+                    },
+                    {
+                        "timestamp": "1644742140.0",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: A\nA - Profiler for resource utilisation.",
+                        "poster": "PhilipKoku",
+                        "comment_id": "546333"
+                    },
+                    {
+                        "timestamp": "1643430240.0",
+                        "content": "Selected Answer: A\nAnswer should be A",
+                        "comment_id": "535176",
+                        "upvote_count": "2",
+                        "poster": "cyrus86"
+                    },
+                    {
+                        "content": "Selected Answer: A\nProfiler can be used outside GCP also it is used to measure cpu utilization by the application.",
+                        "timestamp": "1641196800.0",
+                        "comment_id": "515464",
+                        "poster": "cloudbee",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "comment_id": "385216",
+                        "content": "It is A",
+                        "upvote_count": "4",
+                        "timestamp": "1624076760.0",
+                        "poster": "ralf_cc"
+                    }
+                ],
+                "question_text": "Your team is designing a new application for deployment both inside and outside Google Cloud Platform (GCP). You need to collect detailed metrics such as system resource utilization. You want to use centralized GCP services while minimizing the amount of work required to set up this collection system. What should you do?",
+                "topic": "1",
+                "url": "https://www.examtopics.com/discussions/google/view/54769-exam-professional-cloud-devops-engineer-topic-1-question-48/",
+                "question_images": []
+            }
+        ],
+        "exam": {
+            "name": "Professional Cloud DevOps Engineer",
+            "lastUpdated": "1 May 2024",
+            "id": 5,
+            "provider": "Google",
+            "isMCOnly": true,
+            "isBeta": false,
+            "numberOfQuestions": 166,
+            "isImplemented": true
+        },
+        "currentPage": 22
+    },
+    "__N_SSP": true
+}

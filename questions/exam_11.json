@@ -1,1 +1,461 @@
-{"pageProps":{"questions":[{"id":"JVLMyI67fnLxzCq5dlLj","unix_timestamp":1698371940,"url":"https://www.examtopics.com/discussions/google/view/124688-exam-professional-cloud-devops-engineer-topic-1-question-144/","answer":"BD","answer_ET":"CD","question_images":[],"answers_community":["BD (53%)","AE (20%)","B (20%)","7%"],"topic":"1","question_id":51,"timestamp":"2023-10-27 03:59:00","question_text":"","exam_id":5,"isMC":true,"choices":{"B":"Deploy a new Cloud Run revision with a tag and use the --no-traffic option.","D":"Deploy the new application version and use the --no-traffic option. Route production traffic to the revision’s URL.","C":"Deploy a new Cloud Run revision without a tag and use the --no-traffic option.","E":"Deploy the new application version, and split traffic to the new version.","A":"Deploy the application as a new Cloud Run service."},"discussion":[{"upvote_count":"5","timestamp":"1698895800.0","poster":"activist","comments":[{"timestamp":"1703414700.0","poster":"Feliphus","upvote_count":"1","content":"A-> You don't need a new service, you need a new version of the service. I think ans A is a wrong option\nB & D for me the correct","comment_id":"1104550"}],"comment_id":"1060215","content":"A&E seem correct for using live production traffic. The question states \"You want to use live production traffic to test a new version of the application,\""},{"upvote_count":"1","timestamp":"1708081500.0","content":"Selected Answer: BD\nB: https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#deploy-with-tags\n\nD: https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#console_1:~:text=In%20the%20form%3A-,Set%20it%20to%20the%20desired%20percentage%2C%20for%20example%2C%205.%20Note%20that%20the%20currently%20serving%20version%27s%20percentage%20is%20automatically%20reduced%20by%20that%20same%20amount.,-Click%20Save.","poster":"alpha_canary","comment_id":"1151927"},{"content":"Selected Answer: BD\nLooks like just only (option B) is the most reasonable.\n\nBut after thinking harder on this question, maybe choosing (option B & D) its okey to involves deploying the new version of the application on Cloud Run by creating a new revision with a tag and using the --no-traffic option. This approach allows the isolation of the new revision from live production traffic initially. \n\nOnce the deployment is complete, extensive testing can be conducted without affecting users. Subsequently, when confident in the new version's stability, production traffic can be gradually directed to it using the Cloud Run services update-traffic command.\n\nThis combination ensures a controlled and risk-mitigated approach to deploying and testing new versions, with the ability to roll back if any issues arise during the testing phase.","poster":"xhilmi","timestamp":"1702012740.0","comment_id":"1090781","upvote_count":"3"},{"poster":"nqthien041292","comment_id":"1086092","upvote_count":"1","content":"Selected Answer: BD\nVote BD","timestamp":"1701515100.0"},{"content":"Selected Answer: BD\nI would go for BD\nOption E does not right as it talks about split the live traffic","poster":"bhunias","upvote_count":"1","comment_id":"1080989","timestamp":"1701027000.0"},{"timestamp":"1700820300.0","comment_id":"1079168","poster":"Andrei_Z","content":"Selected Answer: BD\nI would go for BD","upvote_count":"2"},{"content":"Selected Answer: AE\nkeyword: You want to use live production traffic","timestamp":"1700049660.0","comment_id":"1071401","poster":"Angel_O","upvote_count":"3"},{"upvote_count":"3","content":"Selected Answer: B\nhttps://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#tags\nB is correct which targets to utilise the cloud run tag feature without serving traffic first, the idea is once tested adequately, then migrate traffic to the tagged revision. But not sure what is another answer given it is multi-choice, none of them apart from B looks reasonable.","comment_id":"1060193","poster":"lelele2023","timestamp":"1698891180.0"},{"content":"Selected Answer: C\nC should definitely be one of the options\nhttps://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration","poster":"ABZ10","upvote_count":"1","comment_id":"1055049","timestamp":"1698371940.0","comments":[{"comment_id":"1055050","content":"disregard this. I meant B\nhttps://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration","comments":[{"comment_id":"1059810","content":"But idk, it says that he wants to serve live traffic to this new version..why --no-traffic?","timestamp":"1698849720.0","comments":[],"poster":"GoReplyGCPExam","upvote_count":"1"}],"timestamp":"1698371940.0","poster":"ABZ10","upvote_count":"1"}]}],"answer_description":"","answer_images":[]},{"id":"nVFdDduiAIifcOnZVJQ3","answer":"B","choices":{"A":"Notify the team about the lack of error budget and ensure that all their tests are successful so the launch will not further risk the error budget","D":"Look through other metrics related to the product and find SLOs with remaining error budget. Reallocate the error budgets and allow the feature launch.","B":"Notify the team that their error budget is used up. Negotiate with the team for a launch freeze or tolerate a slightly worse user experience.","C":"Escalate the situation and request additional error budget."},"discussion":[{"timestamp":"1708081680.0","comment_id":"1151929","comments":[{"content":"https://sre.google/workbook/error-budget-policy/#:~:text=If%20the%20service%20has,exceed%20the%20error%20budget.","upvote_count":"1","comment_id":"1151930","poster":"alpha_canary","timestamp":"1708081740.0"}],"content":"Selected Answer: B\nIf the service has exceeded its error budget for the preceding four-week window, we will halt all changes and releases other than P01 issues or security fixes until the service is back within its SLO.\nhttps://sre.google/workbook/error-budget-policy/#:~:text=If%20the%20service%20has,exceed%20the%20error%20budget..","poster":"alpha_canary","upvote_count":"1"},{"upvote_count":"1","content":"Selected Answer: B\nChoosing (option B) aligns with Site Reliability Engineering (SRE) principles, emphasizing the importance of maintaining system reliability and availability.\n\nBy notifying the team that the error budget has been exhausted, the SRE team is proactively communicating the potential risks associated with launching the new feature during a period of heightened error rates.\n\nThe suggestion to negotiate for a launch freeze or tolerate a slightly degraded user experience demonstrates a commitment to preserving the system's reliability and ensuring that user impact is minimized.\n\nThis approach fosters a collaborative effort between the SRE team and the product team, allowing for informed decision-making that prioritizes reliability over feature deployment when necessary, adhering to the core tenets of SRE practices.","poster":"xhilmi","comment_id":"1090783","timestamp":"1702013520.0"},{"timestamp":"1701515340.0","poster":"nqthien041292","upvote_count":"1","content":"Selected Answer: B\nVote B","comment_id":"1086097"},{"content":"Selected Answer: B\nThis is SRE-friendly approach.","timestamp":"1699173660.0","poster":"mshafa","upvote_count":"2","comment_id":"1062721"},{"timestamp":"1698892320.0","poster":"lelele2023","upvote_count":"3","comment_id":"1060202","content":"Selected Answer: B\nOnly B seems to make a bit sense although I don't like the idea to tolerate a worse user experience."},{"poster":"koo_kai","upvote_count":"2","timestamp":"1698516240.0","comment_id":"1056370","content":"Selected Answer: B\nNegotiate with the team for a launch freeze or tolerate a slightly worse user experience."},{"content":"Answer C seems to be correct per Google docs:\nhttps://sre.google/workbook/error-budget-policy/","timestamp":"1697908740.0","comments":[{"poster":"Jason_Cloud_at","timestamp":"1698394200.0","comment_id":"1055229","content":"The link you have shared also tells about pausing the workload and nowhere says ask for error budget. I will go with B","upvote_count":"4"},{"timestamp":"1703415180.0","upvote_count":"1","content":"If you look on link https://cloud.google.com/blog/products/management-tools/sre-error-budgets-and-maintenance-windowsfor silver bullets, there is an option to deploy when you have burnt the error budget. But it has to be scalated to ownerships. Then I think ans C is correct. You get extra error budget with the silver bullets. In B, you assume you can andthe Developer team negotiate a worse experience user, but it has to be negotiate to ownerships no between the developer team","poster":"Feliphus","comment_id":"1104552"}],"comment_id":"1049695","upvote_count":"2","poster":"activist"}],"answer_description":"","answers_community":["B (100%)"],"answer_images":[],"topic":"1","question_text":"","question_images":[],"isMC":true,"answer_ET":"D","exam_id":5,"unix_timestamp":1697908740,"url":"https://www.examtopics.com/discussions/google/view/124244-exam-professional-cloud-devops-engineer-topic-1-question-145/","timestamp":"2023-10-21 19:19:00","question_id":52},{"id":"BVn0X0Uqso2vOwhjqdyX","answer":"CD","exam_id":5,"answer_images":[],"answer_description":"","timestamp":"2023-10-21 19:23:00","url":"https://www.examtopics.com/discussions/google/view/124245-exam-professional-cloud-devops-engineer-topic-1-question-146/","question_id":53,"topic":"1","answer_ET":"B C","question_text":"","discussion":[{"timestamp":"1708082580.0","comment_id":"1151939","upvote_count":"2","content":"Selected Answer: CD\nhttps://sre.google/sre-book/postmortem-culture/#:~:text=Make%20sure%20that,value%20of%20postmortems!","poster":"alpha_canary"},{"comment_id":"1090797","poster":"xhilmi","upvote_count":"1","content":"Selected Answer: CD\nChoosing options C and D is a strategic approach to introducing and fostering a positive postmortem culture within an organization.\n\n- In option C, encouraging senior leadership to acknowledge and participate in postmortems sets a precedent for the importance of the process throughout the organization. It signals that the postmortem process is not solely about assigning blame but is a collaborative effort to learn and improve.\n\n- In option D, rewarding and celebrating the practice of writing effective postmortems further reinforces a positive culture around the process. Recognition for those who contribute to the postmortem process encourages transparency, learning, and continuous improvement, fostering an environment where individuals feel empowered to share insights and experiences without fear of punitive measures.","timestamp":"1702015260.0"},{"timestamp":"1701515520.0","content":"Selected Answer: CD\nVote CD","comment_id":"1086100","poster":"nqthien041292","upvote_count":"1"},{"timestamp":"1699173060.0","comment_id":"1062718","poster":"mshafa","content":"Selected Answer: CD\nShould be C & D.","upvote_count":"2","comments":[{"upvote_count":"1","poster":"TereRolon","timestamp":"1700018280.0","content":"I think is CD \nhttps://sre.google/sre-book/postmortem-culture/","comment_id":"1071036"}]},{"comment_id":"1056195","timestamp":"1698496740.0","content":"C & D are the answer.\nhttps://cloud.google.com/blog/products/devops-sre/how-lowes-improved-incident-response-processes-with-sre","poster":"khoukha","upvote_count":"3"},{"poster":"activist","content":"Answers C, D seem correct.\nhttps://sre.google/sre-book/postmortem-culture/","timestamp":"1697908980.0","comment_id":"1049699","upvote_count":"2"}],"unix_timestamp":1697908980,"isMC":true,"question_images":[],"answers_community":["CD (100%)"],"choices":{"E":"Provide your organization with a forum to critique previous postmortems.","B":"Create a designated team that is responsible for conducting all postmortems.","C":"Encourage your senior leadership to acknowledge and participate in postmortems.","A":"Encourage new employees to conduct postmortems to team through practice.","D":"Ensure that writing effective postmortems is a rewarded and celebrated practice."}},{"id":"6HRnnyzYGpDgCSsi0KtD","question_images":[],"answer_description":"","timestamp":"2023-10-21 19:28:00","answers_community":["C (100%)"],"question_text":"","exam_id":5,"answer_images":[],"url":"https://www.examtopics.com/discussions/google/view/124246-exam-professional-cloud-devops-engineer-topic-1-question-147/","topic":"1","discussion":[{"content":"Selected Answer: C\nChoosing option C\n\nConfiguring Anthos Config Management with the GitHub repository, is the recommended approach for enforcing constraint templates across Google Kubernetes Engine (GKE) clusters.\n\nAnthos Config Management allows you to declaratively manage configurations using Kubernetes-style manifests, making it well-suited for policy enforcement in a Kubernetes environment. By configuring Anthos Config Management with the GitHub repository, any changes made to the policy parameters, stored in the repository, can be automatically applied to the GKE clusters.\n\nThis ensures consistency and compliance across clusters and streamlines the process of managing and enforcing policy changes in a Kubernetes environment. The integration with GitHub provides version control and auditability for the changes made to the policy parameters.","comment_id":"1090805","upvote_count":"1","poster":"xhilmi","timestamp":"1702016160.0"},{"poster":"nqthien041292","upvote_count":"1","comment_id":"1086110","content":"Selected Answer: C\nVote C","timestamp":"1701515940.0"},{"comment_id":"1062717","content":"Selected Answer: C\nAnthos for consistently enforce security and compliance policies across your fleet.","upvote_count":"1","timestamp":"1699173000.0","poster":"mshafa"},{"poster":"lelele2023","timestamp":"1698892740.0","content":"Selected Answer: C\nC is the answe: using policy-controller to govern the policies.\nhttps://cloud.google.com/anthos-config-management/docs/concepts/policy-controller","comment_id":"1060203","upvote_count":"2"},{"content":"Answer C seems to be correct.\nhttps://medium.com/@kasiarun/introduction-to-anthos-config-management-1a43917c26ae","comment_id":"1049701","upvote_count":"2","timestamp":"1697909280.0","poster":"activist"}],"answer_ET":"C","question_id":54,"choices":{"C":"Configure Anthos Config Management with the GitHub repository. When there is a change in the repository, use Anthos Config Management to apply the change.","A":"Set up a GitHub action to trigger Cloud Build when there is a parameter change. In Cloud Build, run a gcloud CLI command to apply the change.","D":"Configure Config Connector with the GitHub repository. When there is a change in the repository, use Config Connector to apply the change.","B":"When there is a change in GitHub. use a web hook to send a request to Anthos Service Mesh, and apply the change."},"unix_timestamp":1697909280,"isMC":true,"answer":"C"},{"id":"LgmWodxPkkj0UlbVlOzw","isMC":true,"answer":"A","url":"https://www.examtopics.com/discussions/google/view/124377-exam-professional-cloud-devops-engineer-topic-1-question-148/","topic":"1","answer_images":[],"answers_community":["A (78%)","D (22%)"],"unix_timestamp":1698001920,"question_id":55,"answer_description":"","question_images":[],"question_text":"","answer_ET":"A","discussion":[{"upvote_count":"6","timestamp":"1698001920.0","comment_id":"1050993","content":"Answer A seems to be correct.","poster":"activist"},{"upvote_count":"1","poster":"heftjustice","timestamp":"1707339720.0","comment_id":"1143818","content":"C Ref: https://sre.google/sre-book/effective-troubleshooting/"},{"comment_id":"1090815","timestamp":"1702016820.0","upvote_count":"1","poster":"xhilmi","content":"Selected Answer: A\nChoosing option A.\n\nFirst, communicating your intent to the incident team ensures transparency and collaboration. Performing a load analysis is crucial to determine if the remaining nodes can handle the increased traffic after offloading from the unhealthy node. Scaling appropriately is essential to maintain the overall capacity. Once new nodes report as healthy, draining traffic from the unhealthy node ensures a gradual transition without disrupting user experience. Removing the unhealthy node from service comes after ensuring that the other nodes can handle the load effectively.\n\nThis step-by-step approach, coupled with communication and load analysis, aligns with Google-recommended practices for incident response and minimizes the impact on users during the investigation and resolution process."},{"upvote_count":"2","timestamp":"1701516120.0","content":"Selected Answer: A\nVote A","comment_id":"1086116","poster":"nqthien041292"},{"poster":"mshafa","content":"Selected Answer: D\nOption A and option B do not add a new node to the pool to handle the increased load, which may leave the remaining nodes overburdened and unable to handle the traffic adequately.\n\nOption C starts with draining traffic from the unhealthy node, which is a good step, but it doesn't immediately add a new node to the pool to handle the load. It also lacks the step of explicitly communicating the actions to the incident team.","upvote_count":"2","comment_id":"1068143","comments":[{"poster":"pharao89","content":"The second point in answer A is about scaling. A is correct. You can easily eliminate C and D because information to the incident team should be the first thing to do.\n\"2. Perform a load analysis to determine if the remaining nodes can handle the increase in traffic offloaded from the removed node, and scale appropriately.\"","upvote_count":"3","timestamp":"1700082600.0","comment_id":"1071891"}],"timestamp":"1699738500.0"},{"poster":"lelele2023","upvote_count":"4","comment_id":"1060205","timestamp":"1698893040.0","content":"Selected Answer: A\nThe service usually run 70% of the capacity, hence even one node is out of order you'd always want to see if the rest of the computing resource are enough to support the stress before arbitrarily adding any new nodes."}],"choices":{"D":"1. Drain traffic from the unhealthy node and remove the old node from service.\n2. Add a new node to the pool, wait for the new node to report as healthy, and then serve traffic to the new node.\n3. Monitor traffic to ensure that the pool is healthy and is handling traffic appropriately.\n4. Communicate your actions to the incident team.","B":"1. Communicate your intent to the incident team.\n2. Add a new node to the pool, and wait for the new node to report as healthy.\n3. When traffic is being served on the new node, drain traffic from the unhealthy node, and remove the old node from service.","C":"1. Drain traffic from the unhealthy node and remove the node from service.\n2. Monitor traffic to ensure that the error is resolved and that the other nodes in the pool are handling the traffic appropriately.\n3. Scale the pool as necessary to handle the new load.\n4. Communicate your actions to the incident team.","A":"1. Communicate your intent to the incident team.\n2. Perform a load analysis to determine if the remaining nodes can handle the increase in traffic offloaded from the removed node, and scale appropriately.\n3. When any new nodes report healthy, drain traffic from the unhealthy node, and remove the unhealthy node from service."},"exam_id":5,"timestamp":"2023-10-22 21:12:00"}],"exam":{"lastUpdated":"1 May 2024","isMCOnly":true,"id":5,"numberOfQuestions":166,"isBeta":false,"name":"Professional Cloud DevOps Engineer","provider":"Google","isImplemented":true},"currentPage":11},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "JVLMyI67fnLxzCq5dlLj",
+                "unix_timestamp": 1698371940,
+                "url": "https://www.examtopics.com/discussions/google/view/124688-exam-professional-cloud-devops-engineer-topic-1-question-144/",
+                "answer": "BD",
+                "answer_ET": "CD",
+                "question_images": [],
+                "answers_community": [
+                    "BD (53%)",
+                    "AE (20%)",
+                    "B (20%)",
+                    "7%"
+                ],
+                "topic": "1",
+                "question_id": 51,
+                "timestamp": "2023-10-27 03:59:00",
+                "question_text": "",
+                "exam_id": 5,
+                "isMC": true,
+                "choices": {
+                    "B": "Deploy a new Cloud Run revision with a tag and use the --no-traffic option.",
+                    "D": "Deploy the new application version and use the --no-traffic option. Route production traffic to the revision’s URL.",
+                    "C": "Deploy a new Cloud Run revision without a tag and use the --no-traffic option.",
+                    "E": "Deploy the new application version, and split traffic to the new version.",
+                    "A": "Deploy the application as a new Cloud Run service."
+                },
+                "discussion": [
+                    {
+                        "upvote_count": "5",
+                        "timestamp": "1698895800.0",
+                        "poster": "activist",
+                        "comments": [
+                            {
+                                "timestamp": "1703414700.0",
+                                "poster": "Feliphus",
+                                "upvote_count": "1",
+                                "content": "A-> You don't need a new service, you need a new version of the service. I think ans A is a wrong option\nB & D for me the correct",
+                                "comment_id": "1104550"
+                            }
+                        ],
+                        "comment_id": "1060215",
+                        "content": "A&E seem correct for using live production traffic. The question states \"You want to use live production traffic to test a new version of the application,\""
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1708081500.0",
+                        "content": "Selected Answer: BD\nB: https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#deploy-with-tags\n\nD: https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#console_1:~:text=In%20the%20form%3A-,Set%20it%20to%20the%20desired%20percentage%2C%20for%20example%2C%205.%20Note%20that%20the%20currently%20serving%20version%27s%20percentage%20is%20automatically%20reduced%20by%20that%20same%20amount.,-Click%20Save.",
+                        "poster": "alpha_canary",
+                        "comment_id": "1151927"
+                    },
+                    {
+                        "content": "Selected Answer: BD\nLooks like just only (option B) is the most reasonable.\n\nBut after thinking harder on this question, maybe choosing (option B & D) its okey to involves deploying the new version of the application on Cloud Run by creating a new revision with a tag and using the --no-traffic option. This approach allows the isolation of the new revision from live production traffic initially. \n\nOnce the deployment is complete, extensive testing can be conducted without affecting users. Subsequently, when confident in the new version's stability, production traffic can be gradually directed to it using the Cloud Run services update-traffic command.\n\nThis combination ensures a controlled and risk-mitigated approach to deploying and testing new versions, with the ability to roll back if any issues arise during the testing phase.",
+                        "poster": "xhilmi",
+                        "timestamp": "1702012740.0",
+                        "comment_id": "1090781",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "poster": "nqthien041292",
+                        "comment_id": "1086092",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: BD\nVote BD",
+                        "timestamp": "1701515100.0"
+                    },
+                    {
+                        "content": "Selected Answer: BD\nI would go for BD\nOption E does not right as it talks about split the live traffic",
+                        "poster": "bhunias",
+                        "upvote_count": "1",
+                        "comment_id": "1080989",
+                        "timestamp": "1701027000.0"
+                    },
+                    {
+                        "timestamp": "1700820300.0",
+                        "comment_id": "1079168",
+                        "poster": "Andrei_Z",
+                        "content": "Selected Answer: BD\nI would go for BD",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Selected Answer: AE\nkeyword: You want to use live production traffic",
+                        "timestamp": "1700049660.0",
+                        "comment_id": "1071401",
+                        "poster": "Angel_O",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "content": "Selected Answer: B\nhttps://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#tags\nB is correct which targets to utilise the cloud run tag feature without serving traffic first, the idea is once tested adequately, then migrate traffic to the tagged revision. But not sure what is another answer given it is multi-choice, none of them apart from B looks reasonable.",
+                        "comment_id": "1060193",
+                        "poster": "lelele2023",
+                        "timestamp": "1698891180.0"
+                    },
+                    {
+                        "content": "Selected Answer: C\nC should definitely be one of the options\nhttps://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration",
+                        "poster": "ABZ10",
+                        "upvote_count": "1",
+                        "comment_id": "1055049",
+                        "timestamp": "1698371940.0",
+                        "comments": [
+                            {
+                                "comment_id": "1055050",
+                                "content": "disregard this. I meant B\nhttps://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration",
+                                "comments": [
+                                    {
+                                        "comment_id": "1059810",
+                                        "content": "But idk, it says that he wants to serve live traffic to this new version..why --no-traffic?",
+                                        "timestamp": "1698849720.0",
+                                        "comments": [],
+                                        "poster": "GoReplyGCPExam",
+                                        "upvote_count": "1"
+                                    }
+                                ],
+                                "timestamp": "1698371940.0",
+                                "poster": "ABZ10",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    }
+                ],
+                "answer_description": "",
+                "answer_images": []
+            },
+            {
+                "id": "nVFdDduiAIifcOnZVJQ3",
+                "answer": "B",
+                "choices": {
+                    "A": "Notify the team about the lack of error budget and ensure that all their tests are successful so the launch will not further risk the error budget",
+                    "D": "Look through other metrics related to the product and find SLOs with remaining error budget. Reallocate the error budgets and allow the feature launch.",
+                    "B": "Notify the team that their error budget is used up. Negotiate with the team for a launch freeze or tolerate a slightly worse user experience.",
+                    "C": "Escalate the situation and request additional error budget."
+                },
+                "discussion": [
+                    {
+                        "timestamp": "1708081680.0",
+                        "comment_id": "1151929",
+                        "comments": [
+                            {
+                                "content": "https://sre.google/workbook/error-budget-policy/#:~:text=If%20the%20service%20has,exceed%20the%20error%20budget.",
+                                "upvote_count": "1",
+                                "comment_id": "1151930",
+                                "poster": "alpha_canary",
+                                "timestamp": "1708081740.0"
+                            }
+                        ],
+                        "content": "Selected Answer: B\nIf the service has exceeded its error budget for the preceding four-week window, we will halt all changes and releases other than P01 issues or security fixes until the service is back within its SLO.\nhttps://sre.google/workbook/error-budget-policy/#:~:text=If%20the%20service%20has,exceed%20the%20error%20budget..",
+                        "poster": "alpha_canary",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nChoosing (option B) aligns with Site Reliability Engineering (SRE) principles, emphasizing the importance of maintaining system reliability and availability.\n\nBy notifying the team that the error budget has been exhausted, the SRE team is proactively communicating the potential risks associated with launching the new feature during a period of heightened error rates.\n\nThe suggestion to negotiate for a launch freeze or tolerate a slightly degraded user experience demonstrates a commitment to preserving the system's reliability and ensuring that user impact is minimized.\n\nThis approach fosters a collaborative effort between the SRE team and the product team, allowing for informed decision-making that prioritizes reliability over feature deployment when necessary, adhering to the core tenets of SRE practices.",
+                        "poster": "xhilmi",
+                        "comment_id": "1090783",
+                        "timestamp": "1702013520.0"
+                    },
+                    {
+                        "timestamp": "1701515340.0",
+                        "poster": "nqthien041292",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nVote B",
+                        "comment_id": "1086097"
+                    },
+                    {
+                        "content": "Selected Answer: B\nThis is SRE-friendly approach.",
+                        "timestamp": "1699173660.0",
+                        "poster": "mshafa",
+                        "upvote_count": "2",
+                        "comment_id": "1062721"
+                    },
+                    {
+                        "timestamp": "1698892320.0",
+                        "poster": "lelele2023",
+                        "upvote_count": "3",
+                        "comment_id": "1060202",
+                        "content": "Selected Answer: B\nOnly B seems to make a bit sense although I don't like the idea to tolerate a worse user experience."
+                    },
+                    {
+                        "poster": "koo_kai",
+                        "upvote_count": "2",
+                        "timestamp": "1698516240.0",
+                        "comment_id": "1056370",
+                        "content": "Selected Answer: B\nNegotiate with the team for a launch freeze or tolerate a slightly worse user experience."
+                    },
+                    {
+                        "content": "Answer C seems to be correct per Google docs:\nhttps://sre.google/workbook/error-budget-policy/",
+                        "timestamp": "1697908740.0",
+                        "comments": [
+                            {
+                                "poster": "Jason_Cloud_at",
+                                "timestamp": "1698394200.0",
+                                "comment_id": "1055229",
+                                "content": "The link you have shared also tells about pausing the workload and nowhere says ask for error budget. I will go with B",
+                                "upvote_count": "4"
+                            },
+                            {
+                                "timestamp": "1703415180.0",
+                                "upvote_count": "1",
+                                "content": "If you look on link https://cloud.google.com/blog/products/management-tools/sre-error-budgets-and-maintenance-windowsfor silver bullets, there is an option to deploy when you have burnt the error budget. But it has to be scalated to ownerships. Then I think ans C is correct. You get extra error budget with the silver bullets. In B, you assume you can andthe Developer team negotiate a worse experience user, but it has to be negotiate to ownerships no between the developer team",
+                                "poster": "Feliphus",
+                                "comment_id": "1104552"
+                            }
+                        ],
+                        "comment_id": "1049695",
+                        "upvote_count": "2",
+                        "poster": "activist"
+                    }
+                ],
+                "answer_description": "",
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "answer_images": [],
+                "topic": "1",
+                "question_text": "",
+                "question_images": [],
+                "isMC": true,
+                "answer_ET": "D",
+                "exam_id": 5,
+                "unix_timestamp": 1697908740,
+                "url": "https://www.examtopics.com/discussions/google/view/124244-exam-professional-cloud-devops-engineer-topic-1-question-145/",
+                "timestamp": "2023-10-21 19:19:00",
+                "question_id": 52
+            },
+            {
+                "id": "BVn0X0Uqso2vOwhjqdyX",
+                "answer": "CD",
+                "exam_id": 5,
+                "answer_images": [],
+                "answer_description": "",
+                "timestamp": "2023-10-21 19:23:00",
+                "url": "https://www.examtopics.com/discussions/google/view/124245-exam-professional-cloud-devops-engineer-topic-1-question-146/",
+                "question_id": 53,
+                "topic": "1",
+                "answer_ET": "B C",
+                "question_text": "",
+                "discussion": [
+                    {
+                        "timestamp": "1708082580.0",
+                        "comment_id": "1151939",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: CD\nhttps://sre.google/sre-book/postmortem-culture/#:~:text=Make%20sure%20that,value%20of%20postmortems!",
+                        "poster": "alpha_canary"
+                    },
+                    {
+                        "comment_id": "1090797",
+                        "poster": "xhilmi",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: CD\nChoosing options C and D is a strategic approach to introducing and fostering a positive postmortem culture within an organization.\n\n- In option C, encouraging senior leadership to acknowledge and participate in postmortems sets a precedent for the importance of the process throughout the organization. It signals that the postmortem process is not solely about assigning blame but is a collaborative effort to learn and improve.\n\n- In option D, rewarding and celebrating the practice of writing effective postmortems further reinforces a positive culture around the process. Recognition for those who contribute to the postmortem process encourages transparency, learning, and continuous improvement, fostering an environment where individuals feel empowered to share insights and experiences without fear of punitive measures.",
+                        "timestamp": "1702015260.0"
+                    },
+                    {
+                        "timestamp": "1701515520.0",
+                        "content": "Selected Answer: CD\nVote CD",
+                        "comment_id": "1086100",
+                        "poster": "nqthien041292",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1699173060.0",
+                        "comment_id": "1062718",
+                        "poster": "mshafa",
+                        "content": "Selected Answer: CD\nShould be C & D.",
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "poster": "TereRolon",
+                                "timestamp": "1700018280.0",
+                                "content": "I think is CD \nhttps://sre.google/sre-book/postmortem-culture/",
+                                "comment_id": "1071036"
+                            }
+                        ]
+                    },
+                    {
+                        "comment_id": "1056195",
+                        "timestamp": "1698496740.0",
+                        "content": "C & D are the answer.\nhttps://cloud.google.com/blog/products/devops-sre/how-lowes-improved-incident-response-processes-with-sre",
+                        "poster": "khoukha",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "poster": "activist",
+                        "content": "Answers C, D seem correct.\nhttps://sre.google/sre-book/postmortem-culture/",
+                        "timestamp": "1697908980.0",
+                        "comment_id": "1049699",
+                        "upvote_count": "2"
+                    }
+                ],
+                "unix_timestamp": 1697908980,
+                "isMC": true,
+                "question_images": [],
+                "answers_community": [
+                    "CD (100%)"
+                ],
+                "choices": {
+                    "E": "Provide your organization with a forum to critique previous postmortems.",
+                    "B": "Create a designated team that is responsible for conducting all postmortems.",
+                    "C": "Encourage your senior leadership to acknowledge and participate in postmortems.",
+                    "A": "Encourage new employees to conduct postmortems to team through practice.",
+                    "D": "Ensure that writing effective postmortems is a rewarded and celebrated practice."
+                }
+            },
+            {
+                "id": "6HRnnyzYGpDgCSsi0KtD",
+                "question_images": [],
+                "answer_description": "",
+                "timestamp": "2023-10-21 19:28:00",
+                "answers_community": [
+                    "C (100%)"
+                ],
+                "question_text": "",
+                "exam_id": 5,
+                "answer_images": [],
+                "url": "https://www.examtopics.com/discussions/google/view/124246-exam-professional-cloud-devops-engineer-topic-1-question-147/",
+                "topic": "1",
+                "discussion": [
+                    {
+                        "content": "Selected Answer: C\nChoosing option C\n\nConfiguring Anthos Config Management with the GitHub repository, is the recommended approach for enforcing constraint templates across Google Kubernetes Engine (GKE) clusters.\n\nAnthos Config Management allows you to declaratively manage configurations using Kubernetes-style manifests, making it well-suited for policy enforcement in a Kubernetes environment. By configuring Anthos Config Management with the GitHub repository, any changes made to the policy parameters, stored in the repository, can be automatically applied to the GKE clusters.\n\nThis ensures consistency and compliance across clusters and streamlines the process of managing and enforcing policy changes in a Kubernetes environment. The integration with GitHub provides version control and auditability for the changes made to the policy parameters.",
+                        "comment_id": "1090805",
+                        "upvote_count": "1",
+                        "poster": "xhilmi",
+                        "timestamp": "1702016160.0"
+                    },
+                    {
+                        "poster": "nqthien041292",
+                        "upvote_count": "1",
+                        "comment_id": "1086110",
+                        "content": "Selected Answer: C\nVote C",
+                        "timestamp": "1701515940.0"
+                    },
+                    {
+                        "comment_id": "1062717",
+                        "content": "Selected Answer: C\nAnthos for consistently enforce security and compliance policies across your fleet.",
+                        "upvote_count": "1",
+                        "timestamp": "1699173000.0",
+                        "poster": "mshafa"
+                    },
+                    {
+                        "poster": "lelele2023",
+                        "timestamp": "1698892740.0",
+                        "content": "Selected Answer: C\nC is the answe: using policy-controller to govern the policies.\nhttps://cloud.google.com/anthos-config-management/docs/concepts/policy-controller",
+                        "comment_id": "1060203",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Answer C seems to be correct.\nhttps://medium.com/@kasiarun/introduction-to-anthos-config-management-1a43917c26ae",
+                        "comment_id": "1049701",
+                        "upvote_count": "2",
+                        "timestamp": "1697909280.0",
+                        "poster": "activist"
+                    }
+                ],
+                "answer_ET": "C",
+                "question_id": 54,
+                "choices": {
+                    "C": "Configure Anthos Config Management with the GitHub repository. When there is a change in the repository, use Anthos Config Management to apply the change.",
+                    "A": "Set up a GitHub action to trigger Cloud Build when there is a parameter change. In Cloud Build, run a gcloud CLI command to apply the change.",
+                    "D": "Configure Config Connector with the GitHub repository. When there is a change in the repository, use Config Connector to apply the change.",
+                    "B": "When there is a change in GitHub. use a web hook to send a request to Anthos Service Mesh, and apply the change."
+                },
+                "unix_timestamp": 1697909280,
+                "isMC": true,
+                "answer": "C"
+            },
+            {
+                "id": "LgmWodxPkkj0UlbVlOzw",
+                "isMC": true,
+                "answer": "A",
+                "url": "https://www.examtopics.com/discussions/google/view/124377-exam-professional-cloud-devops-engineer-topic-1-question-148/",
+                "topic": "1",
+                "answer_images": [],
+                "answers_community": [
+                    "A (78%)",
+                    "D (22%)"
+                ],
+                "unix_timestamp": 1698001920,
+                "question_id": 55,
+                "answer_description": "",
+                "question_images": [],
+                "question_text": "",
+                "answer_ET": "A",
+                "discussion": [
+                    {
+                        "upvote_count": "6",
+                        "timestamp": "1698001920.0",
+                        "comment_id": "1050993",
+                        "content": "Answer A seems to be correct.",
+                        "poster": "activist"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "heftjustice",
+                        "timestamp": "1707339720.0",
+                        "comment_id": "1143818",
+                        "content": "C Ref: https://sre.google/sre-book/effective-troubleshooting/"
+                    },
+                    {
+                        "comment_id": "1090815",
+                        "timestamp": "1702016820.0",
+                        "upvote_count": "1",
+                        "poster": "xhilmi",
+                        "content": "Selected Answer: A\nChoosing option A.\n\nFirst, communicating your intent to the incident team ensures transparency and collaboration. Performing a load analysis is crucial to determine if the remaining nodes can handle the increased traffic after offloading from the unhealthy node. Scaling appropriately is essential to maintain the overall capacity. Once new nodes report as healthy, draining traffic from the unhealthy node ensures a gradual transition without disrupting user experience. Removing the unhealthy node from service comes after ensuring that the other nodes can handle the load effectively.\n\nThis step-by-step approach, coupled with communication and load analysis, aligns with Google-recommended practices for incident response and minimizes the impact on users during the investigation and resolution process."
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1701516120.0",
+                        "content": "Selected Answer: A\nVote A",
+                        "comment_id": "1086116",
+                        "poster": "nqthien041292"
+                    },
+                    {
+                        "poster": "mshafa",
+                        "content": "Selected Answer: D\nOption A and option B do not add a new node to the pool to handle the increased load, which may leave the remaining nodes overburdened and unable to handle the traffic adequately.\n\nOption C starts with draining traffic from the unhealthy node, which is a good step, but it doesn't immediately add a new node to the pool to handle the load. It also lacks the step of explicitly communicating the actions to the incident team.",
+                        "upvote_count": "2",
+                        "comment_id": "1068143",
+                        "comments": [
+                            {
+                                "poster": "pharao89",
+                                "content": "The second point in answer A is about scaling. A is correct. You can easily eliminate C and D because information to the incident team should be the first thing to do.\n\"2. Perform a load analysis to determine if the remaining nodes can handle the increase in traffic offloaded from the removed node, and scale appropriately.\"",
+                                "upvote_count": "3",
+                                "timestamp": "1700082600.0",
+                                "comment_id": "1071891"
+                            }
+                        ],
+                        "timestamp": "1699738500.0"
+                    },
+                    {
+                        "poster": "lelele2023",
+                        "upvote_count": "4",
+                        "comment_id": "1060205",
+                        "timestamp": "1698893040.0",
+                        "content": "Selected Answer: A\nThe service usually run 70% of the capacity, hence even one node is out of order you'd always want to see if the rest of the computing resource are enough to support the stress before arbitrarily adding any new nodes."
+                    }
+                ],
+                "choices": {
+                    "D": "1. Drain traffic from the unhealthy node and remove the old node from service.\n2. Add a new node to the pool, wait for the new node to report as healthy, and then serve traffic to the new node.\n3. Monitor traffic to ensure that the pool is healthy and is handling traffic appropriately.\n4. Communicate your actions to the incident team.",
+                    "B": "1. Communicate your intent to the incident team.\n2. Add a new node to the pool, and wait for the new node to report as healthy.\n3. When traffic is being served on the new node, drain traffic from the unhealthy node, and remove the old node from service.",
+                    "C": "1. Drain traffic from the unhealthy node and remove the node from service.\n2. Monitor traffic to ensure that the error is resolved and that the other nodes in the pool are handling the traffic appropriately.\n3. Scale the pool as necessary to handle the new load.\n4. Communicate your actions to the incident team.",
+                    "A": "1. Communicate your intent to the incident team.\n2. Perform a load analysis to determine if the remaining nodes can handle the increase in traffic offloaded from the removed node, and scale appropriately.\n3. When any new nodes report healthy, drain traffic from the unhealthy node, and remove the unhealthy node from service."
+                },
+                "exam_id": 5,
+                "timestamp": "2023-10-22 21:12:00"
+            }
+        ],
+        "exam": {
+            "lastUpdated": "1 May 2024",
+            "isMCOnly": true,
+            "id": 5,
+            "numberOfQuestions": 166,
+            "isBeta": false,
+            "name": "Professional Cloud DevOps Engineer",
+            "provider": "Google",
+            "isImplemented": true
+        },
+        "currentPage": 11
+    },
+    "__N_SSP": true
+}

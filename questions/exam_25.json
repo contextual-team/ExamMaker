@@ -1,1 +1,788 @@
-{"pageProps":{"questions":[{"id":"Pe6dIPtVcEknffVxjaBq","question_id":121,"question_images":[],"answer_images":[],"question_text":"You are deploying an application that needs to access sensitive information. You need to ensure that this information is encrypted and the risk of exposure is minimal if a breach occurs. What should you do?","url":"https://www.examtopics.com/discussions/google/view/64852-exam-professional-cloud-devops-engineer-topic-1-question-58/","discussion":[{"timestamp":"1635520680.0","comment_id":"469827","poster":"giammydell","upvote_count":"11","content":"Ans: A"},{"comment_id":"1086118","poster":"jomonkp","timestamp":"1701516240.0","content":"Selected Answer: A\nOption A","upvote_count":"1"},{"content":"Selected Answer: A\nA. Store the encryption keys in Cloud Key Management Service (KMS) and rotate the keys frequently. This ensures that the sensitive information is encrypted at rest and in transit, and that the encryption keys are regularly rotated to minimize the risk of exposure in the event of a breach.","poster":"JonathanSJ","comment_id":"776032","upvote_count":"1","timestamp":"1673739480.0"},{"upvote_count":"1","content":"Selected Answer: A\nA) should be the correct answer.","timestamp":"1670347380.0","poster":"WhyIronMan","comment_id":"737038"},{"upvote_count":"2","poster":"ssmb","content":"A should be the correct answer.","comment_id":"700591","timestamp":"1666335600.0"},{"poster":"ramzez4815","upvote_count":"1","comment_id":"679339","content":"Selected Answer: A\nThe clear answer is A","timestamp":"1664159100.0"},{"upvote_count":"1","poster":"emdee202","timestamp":"1650640440.0","content":"Selected Answer: A\nAns: A","comment_id":"590079"},{"content":"A is correct","timestamp":"1642660200.0","comment_id":"528188","upvote_count":"1","poster":"Sekierer"},{"comment_id":"469092","content":"https://cloud.google.com/security-key-management","upvote_count":"1","poster":"TNT87","timestamp":"1635408900.0"},{"content":"Ans is A.","poster":"TNT87","timestamp":"1635408840.0","upvote_count":"2","comment_id":"469091"},{"upvote_count":"3","comment_id":"468249","poster":"Alaaelanwr","timestamp":"1635278940.0","content":"Ans: A"}],"exam_id":5,"choices":{"B":"Inject the secret at the time of instance creation via an encrypted configuration management system.","A":"Store the encryption keys in Cloud Key Management Service (KMS) and rotate the keys frequently","D":"Leverage a continuous build pipeline that produces multiple versions of the secret for each instance of the application.","C":"Integrate the application with a Single sign-on (SSO) system and do not expose secrets to the application."},"topic":"1","answers_community":["A (100%)"],"isMC":true,"timestamp":"2021-10-26 22:09:00","answer_ET":"A","answer":"A","unix_timestamp":1635278940,"answer_description":""},{"id":"0h8n43Q5i6nIFP5Vrwl9","isMC":true,"answers_community":["A (100%)"],"discussion":[{"content":"I reckon its A, the reason is because it seems like the problem is automatically fixed with an restart of the service after a minute, therefore engineers don't really need to be woken up about these problems. If it failed multiple times or if the restart failed, then the engineer should be woken up","comments":[{"timestamp":"1636263720.0","content":"A or C","upvote_count":"1","comment_id":"473755","poster":"MF2C"}],"upvote_count":"14","poster":"AL12","timestamp":"1635796920.0","comment_id":"471392"},{"comment_id":"776049","upvote_count":"2","poster":"JonathanSJ","timestamp":"1673741400.0","content":"Selected Answer: A\nI agree with A."},{"poster":"Greg123123","content":"Selected Answer: A\nIt should be A rather than D.\nTo follow SRE practice, we should eliminate unactionable alert which is pointless and to increase precision. While D also looks valid, the question never say that the application is being affected (e.g. has downtime), and never says any actions are needed. As a result, there is no need to redefine SLI and since they didn't spend time to resolve it no error budget is spent.","upvote_count":"2","comment_id":"762633","timestamp":"1672489560.0"},{"comment_id":"700596","poster":"ssmb","upvote_count":"2","content":"Between A and C, B and D answers are not good.\nI lean more towards A because those alerts seem unactionable a the moment alert is received, ie: machine restarted automatically already.\nThis would be best imidiate action as per the question. Of course the source of alerts should be looked at and fixed separately from addressing the issue in question.","timestamp":"1666335960.0"},{"timestamp":"1656316560.0","upvote_count":"1","content":"I agree with A.\n\nEliminate bad monitoring : Unactionable alerts (i.e., spam)\n\nhttps://cloud.google.com/blog/products/management-tools/meeting-reliability-challenges-with-sre-principles","comment_id":"623138","poster":"[Removed]"},{"content":"Selected Answer: A\nagree with kyubiblaze about having to remove unactionable items aka spam: \"good monitoring alerts on actionable problems\" @ https://cloud.google.com/blog/products/management-tools/meeting-reliability-challenges-with-sre-principles","poster":"zygomar","upvote_count":"4","comment_id":"552974","timestamp":"1645458660.0"},{"content":"A is correct","comment_id":"528189","poster":"Sekierer","timestamp":"1642660200.0","upvote_count":"1"},{"poster":"KyubiBlaze","comment_id":"524699","content":"A - You have to remove \"unactionable\" alerts, these alerts are useless if you can't take any action.\nSimple reason, C might be following SRE practice, but it is distributing the problem, not solving it.\nB and D, totally No.","timestamp":"1642316760.0","upvote_count":"3"},{"poster":"gcpz","upvote_count":"1","content":"answer is c. it follows google SRE and prevents staff burnout. https://sre.google/workbook/team-lifecycles/","comment_id":"513363","timestamp":"1640868420.0"},{"poster":"ESP_SAP","comment_id":"494616","upvote_count":"3","comments":[{"upvote_count":"2","poster":"ESP_SAP","timestamp":"1638734460.0","comment_id":"494617","content":"Correct Answer is (D):"}],"content":"The team may continue to work on non-reliability features if:\n\nThe outage was caused by a company-wide networking problem.\nThe outage was caused by a service maintained by another team, who have themselves frozen releases to address their reliability issues.\nThe error budget was consumed by users out of scope for the SLO (e.g., load tests or penetration testers).\nMiscategorized errors consume budget even though no users were impacted.\n\nhttps://sre.google/workbook/error-budget-policy/","timestamp":"1638734400.0"},{"content":"Answer D","upvote_count":"1","comment_id":"476048","poster":"Manh","timestamp":"1636616220.0"},{"content":"C follows the SRE.","comments":[{"comment_id":"1102323","timestamp":"1703151480.0","poster":"Feliphus","content":"The statemene says: you encounter a large number of outages in the production systems you support, then eliminating the alerts doesn't seem to be a good idea. If there is another support team in another time zone. What's happen if the server doesn't reboot or the services don't start fine?. There is not a correct answer between options, what it would be to resolve the reboot problem. I don't know which is better if A or C, I suppose we have losed some information in the statement or in the answers. But in this situation I agree @NXD and choose C","upvote_count":"1","comments":[{"upvote_count":"1","comment_id":"1105495","poster":"Feliphus","content":"Sorry, but I change to ans A. I have noticed this question is repeated as Q133 but without the text: You receive alerts for all the outages that wake you up at night","timestamp":"1703531580.0"}]}],"comment_id":"470919","poster":"NXD","upvote_count":"3","timestamp":"1635715620.0"},{"poster":"TNT87","timestamp":"1635409260.0","comment_id":"469095","upvote_count":"4","content":"Ans D\nhttps://www.atlassian.com/incident-management/kpis/error-budget","comments":[{"timestamp":"1640511540.0","comment_id":"509530","comments":[{"content":"NO!D is correct","upvote_count":"1","timestamp":"1640513640.0","comment_id":"509547","poster":"TNT87"}],"content":"Ans A...point of correction","poster":"TNT87","upvote_count":"1"}]},{"comment_id":"469042","content":"Should be A","upvote_count":"3","timestamp":"1635403620.0","poster":"neutrino9"},{"upvote_count":"1","content":"D redefine SLI","comment_id":"468162","poster":"job_search83","timestamp":"1635265980.0"}],"answer_ET":"A","answer_images":[],"exam_id":5,"url":"https://www.examtopics.com/discussions/google/view/64824-exam-professional-cloud-devops-engineer-topic-1-question-59/","topic":"1","choices":{"D":"Redefine the related Service Level Objective so that the error budget is not exhausted.","A":"Eliminate unactionable alerts.","C":"Distribute the alerts to engineers in different time zones.","B":"Create an incident report for each of the alerts."},"question_id":122,"answer":"A","answer_description":"","question_text":"You encounter a large number of outages in the production systems you support. You receive alerts for all the outages that wake you up at night. The alerts are due to unhealthy systems that are automatically restarted within a minute. You want to set up a process that would prevent staff burnout while following Site\nReliability Engineering practices. What should you do?","timestamp":"2021-10-26 18:33:00","question_images":[],"unix_timestamp":1635265980},{"id":"QBisMBJYEC1PNP4G6arJ","timestamp":"2021-06-02 16:35:00","exam_id":5,"answer_ET":"D","answers_community":["D (100%)"],"answer":"D","topic":"1","question_images":[],"isMC":true,"answer_images":[],"unix_timestamp":1622644500,"answer_description":"","choices":{"A":"Add logic to each Cloud Build step to HTTP POST the build information to a webhook.","D":"Create a Cloud Pub/Sub push subscription to the Cloud Build cloud-builds PubSub topic to HTTP POST the build information to a webhook.","B":"Add a new step at the end of the pipeline in Cloud Build to HTTP POST the build information to a webhook.","C":"Use Stackdriver Logging to create a logs-based metric from the Cloud Build logs. Create an Alert with a Webhook notification type."},"discussion":[{"upvote_count":"17","timestamp":"1624915680.0","poster":"Charun","content":"I have submitted D answer","comment_id":"393250"},{"poster":"francisco_guerra","content":"Ans: D \nPub/Sub\n\nA: No becauseThere is not Structure attribute to create a http request in the steps and remember you want minimize the development effort.\nB: The same A\nC: minimize the development effort\nD: Its OK\n\nTo receive messages from push subscriptions, use a webhook and process the POST requests that Pub/Sub sends to the push endpoint. For more information about processing these POST requests in App Engine, see Writing and responding to Pub/Sub messages.\n\nhttps://cloud.google.com/pubsub/docs/push\nhttps://cloud.google.com/build/docs/subscribe-build-notifications","upvote_count":"17","timestamp":"1624138680.0","comment_id":"385798"},{"upvote_count":"1","comment_id":"772017","poster":"JonathanSJ","timestamp":"1673411640.0","content":"Selected Answer: D\nAnswer D"},{"upvote_count":"1","comment_id":"754743","comments":[{"poster":"[Removed]","comment_id":"758298","timestamp":"1672132140.0","upvote_count":"1","content":"exam taken on 26/12/2022, 50/50 from this dump, without buying the full access, thanks for your help floppino"}],"content":"Selected Answer: D\nAns: D\n\nExam pased and taken on 19/12/2022, 50/50 from this dump without buying the full access.","timestamp":"1671865800.0","poster":"floppino"},{"poster":"zellck","upvote_count":"6","content":"Selected Answer: D\nD is the answer.\n\nhttps://cloud.google.com/build/docs/subscribe-build-notifications\nCloud Build publishes messages on a Google Pub/Sub topic when your build's state changes, such as when your build is created, when your build transitions to a working state, and when your build completes.\n\nThe Pub/Sub topic to which Cloud Build publishes these build update messages is called cloud-builds. Each message contains a base64 JSON string representation of your Build resource in the message.data attribute. The build's unique ID and the build's status can be found in the message.attributes field.\n\nYou can use a push or pull model for your Pub/Sub subscriptions.\n\nhttps://cloud.google.com/build/docs/subscribe-build-notifications#push\nPush subscriptions deliver messages to an HTTP endpoint that you define. Messages are delivered as soon as they are published to the topic.","comment_id":"702999","timestamp":"1666613820.0","comments":[{"comment_id":"707448","timestamp":"1667073540.0","poster":"AzureDP900","content":"Yes, D is right based on given scenario","upvote_count":"1"}]},{"comment_id":"635880","poster":"GCP72","content":"Selected Answer: D\nAns: D","timestamp":"1658639040.0","upvote_count":"1"},{"content":"Selected Answer: D\nSubmitted D in exam.","comment_id":"599115","timestamp":"1652110800.0","poster":"Ananda","upvote_count":"1"},{"content":"Selected Answer: D\nCloud Build -> Pubsub -> HTTP Builder.........SO ans is D","comment_id":"596569","timestamp":"1651648140.0","upvote_count":"2","poster":"akshay_jadhav"},{"comment_id":"532777","upvote_count":"2","timestamp":"1643192040.0","content":"https://medium.com/google-cloud/cloud-build-notifications-with-cloud-run-and-c-a23294e2e959","poster":"pddddd"},{"timestamp":"1643191860.0","poster":"pddddd","upvote_count":"3","comment_id":"532774","content":"Not sure on D. Pub/Sub posts into specific format and the actual payload in is message.data.\nThird party system API (where you post status) will have its own POST format. \nI feel B is better - you add a step in CLoud Build to do the POST."},{"poster":"alaahakim","comment_id":"494291","upvote_count":"1","timestamp":"1638705360.0","content":"Ans : D"},{"content":"Its D. Cloud Build -> Pubsub -> HTTP Builder","comment_id":"486977","poster":"muk5658","timestamp":"1637882460.0","upvote_count":"1"},{"poster":"rinkeshgala1","timestamp":"1623025920.0","comment_id":"376400","content":"D is correct answer \nhttps://cloud.google.com/build/docs/subscribe-build-notifications","upvote_count":"2","comments":[{"timestamp":"1623480660.0","content":"Agree D looks correct to me.","poster":"akg001","upvote_count":"2","comment_id":"380273"}]},{"poster":"devopsbatch","comment_id":"372785","upvote_count":"1","timestamp":"1622644500.0","content":"no idea on this"}],"question_id":123,"url":"https://www.examtopics.com/discussions/google/view/54228-exam-professional-cloud-devops-engineer-topic-1-question-6/","question_text":"You use a multiple step Cloud Build pipeline to build and deploy your application to Google Kubernetes Engine (GKE). You want to integrate with a third-party monitoring platform by performing a HTTP POST of the build information to a webhook. You want to minimize the development effort. What should you do?"},{"id":"da2UVWLB8mXgZcDeMRXd","question_images":[],"choices":{"B":"Enable AutoScaling on the production clusters, in case there is growth.","A":"Load teat the application to profile its performance for scaling.","D":"Create a runbook on inflating the disaster recovery (DR) environment if there is growth.","C":"Pre-provision double the compute power used last season, expecting growth."},"url":"https://www.examtopics.com/discussions/google/view/64985-exam-professional-cloud-devops-engineer-topic-1-question-60/","answer":"A","answer_images":[],"isMC":true,"answers_community":["A (91%)","9%"],"discussion":[{"comments":[{"timestamp":"1637653740.0","content":"Changing the architecture for scale and reliability\nLoad testing and failure testing, along with architecture reviews, encourage limited-scope architectural changes that can enhance the scale and reliability of the system. However, introducing changes adds risk, so limit the changes to a conservative range of time.https://cloud.google.com/architecture/black-friday-production-readiness#changing_the_architecture_for_scale_and_reliability","poster":"TNT87","upvote_count":"1","comment_id":"484811"}],"timestamp":"1635716040.0","comment_id":"470922","content":"https://cloud.google.com/architecture/black-friday-production-readiness#preparation_stage\n\nThe objective of the preparation stage is to test the system's ability to scale for peak user traffic and to document the results. Completing the preparation stage results in architecture refinement to handle peak traffic more efficiently and increase system reliability. This stage also yields procedures for operations and support that help streamline processes for handling the peak event and any issues that might occur. Consider this stage as practice for the peak event from a system and operations perspective.\n\nA is exactly what mentioned above.\nB is the step after the preparation stage.","poster":"NXD","upvote_count":"18"},{"content":"Selected Answer: A\nCome on, no brainer.\nA is the answer.\nYou load test to understand how your application perform under heavy load. \"Prepare for busy season\"\nB - No, Option A will give you insight in how your applications works under load, and how do you scale, if it cannot scale, autoscaling in meaningless.\nSo first you test your application in controlled environment. Not wait for the busy time to come and then realise autoscaling is also unable to meet demand. Or Maybe you even reach your quotas.","timestamp":"1642317060.0","poster":"KyubiBlaze","upvote_count":"5","comments":[{"content":"Good analysis, before moving any new features first thing to do performance test to understand how system behaves under load, Auto scaling is later step... A is 100% correct","poster":"AzureDP900","comment_id":"703498","upvote_count":"1","timestamp":"1666664580.0"}],"comment_id":"524702"},{"comment_id":"1086121","content":"Selected Answer: A\nOption A","upvote_count":"1","timestamp":"1701516360.0","poster":"jomonkp"},{"comment_id":"850746","content":"Selected Answer: A\nWould go with A because you need to know the performance of your application if it scales to serve larger customers. Scaling decisions of the application comes after.","timestamp":"1679808540.0","upvote_count":"1","poster":"raghu09"},{"content":"Selected Answer: A\nA. Load test the application to profile its performance for scaling. This will help to identify any potential bottlenecks or issues with the application, and allow you to make the necessary adjustments or scaling decisions before the busy season begins.","comment_id":"776054","upvote_count":"1","poster":"JonathanSJ","timestamp":"1673741640.0"},{"comment_id":"701114","timestamp":"1666379100.0","poster":"ssmb","upvote_count":"1","content":"After moving the application onto GCP, some amount of testing should be carried out before deciding what to do next."},{"timestamp":"1642660260.0","poster":"Sekierer","comment_id":"528190","content":"A is correct","upvote_count":"2"},{"content":"Selected Answer: A\nSet up load and performance testing\nLoad testing is the process of deploying a test version of the system and creating requests to simulate high use of the system. Load testing normally focuses on testing for sustainable user-perceived behavior at some percentile below the absolute peak. Testing for peak requires hitting that top percentile with consistent good performance.","comment_id":"511074","timestamp":"1640694060.0","poster":"TNT87","upvote_count":"2"},{"timestamp":"1640651580.0","comments":[{"poster":"csrazdan","comment_id":"681315","upvote_count":"1","timestamp":"1664324400.0","content":"For Auto Scaling you need to provide parameters which will not be know if load test is not done. Otherwise you will be using arbitrary values which may not be consistent with actual load."}],"upvote_count":"1","comment_id":"510692","content":"Selected Answer: B\nB is the answer","poster":"TNT87"},{"content":"https://cloud.google.com/blog/topics/retail/preparing-for-peak-holiday-season-while-wfh\nAns A makes sense according to this doc","upvote_count":"1","comment_id":"494279","timestamp":"1638704520.0","poster":"TNT87"},{"content":"Passed exam a couple of days ago. Chose A","timestamp":"1636729800.0","poster":"tee_dee26","upvote_count":"4","comment_id":"477018"},{"content":"Should be A , To check how application performs with load","comments":[{"upvote_count":"1","content":"Agree with A","poster":"Manh","timestamp":"1636616640.0","comment_id":"476052"}],"comment_id":"472887","poster":"MBA_1","upvote_count":"4","timestamp":"1636090440.0"},{"timestamp":"1635529980.0","content":"Ans : B","poster":"Alaaelanwr","comment_id":"469915","upvote_count":"2"},{"upvote_count":"2","comment_id":"469836","timestamp":"1635521640.0","poster":"giammydell","content":"Ans: B"},{"upvote_count":"2","content":"Ans B\nhttps://cloud.google.com/architecture/black-friday-production-readiness","poster":"TNT87","timestamp":"1635409560.0","comment_id":"469097"}],"exam_id":5,"question_id":124,"answer_ET":"B","answer_description":"","unix_timestamp":1635409560,"question_text":"You have migrated an e-commerce application to Google Cloud Platform (GCP). You want to prepare the application for the upcoming busy season. What should you do first to prepare for the busy season?","topic":"1","timestamp":"2021-10-28 10:26:00"},{"id":"xWJcQptVCAcEsavx27ET","answer":"D","timestamp":"2021-10-27 20:55:00","choices":{"B":"Enable high availability on the CloudSQL instances.","A":"Upgrade the GCS buckets to Multi-Regional.","C":"Move the application from App Engine to Compute Engine.","D":"Modify the App Engine configuration to have additional idle instances."},"answer_images":[],"exam_id":5,"discussion":[{"comment_id":"493332","timestamp":"1638560400.0","content":"Correct Answer is D:\n\nScaling App Engine scales the number of instances automatically in response to processing volume. This scaling factors in the automatic_scaling settings that are provided on a per-version basis in the configuration file. A service with basic scaling is configured by setting the maximum number of instances in the max_instances parameter of the basic_scaling setting. The number of live instances scales with the processing volume. You configure the number of instances of each version in that service's configuration file. The number of instances usually corresponds to the size of a dataset being held in memory or the desired throughput for offline work. You can adjust the number of instances of a manually-scaled version very quickly, without stopping instances that are currently running, using the Modules API set_num_instances function.\n\nhttps://cloud.google.com/appengine/docs/standard/python/how-instances-are-managed","upvote_count":"10","poster":"ESP_SAP"},{"comments":[{"timestamp":"1636642440.0","upvote_count":"1","content":"Agree with D","poster":"Manh","comment_id":"476307"}],"poster":"MBA_1","upvote_count":"5","comment_id":"472888","timestamp":"1636091100.0","content":"D is correct - https://cloud.google.com/appengine/docs/standard/python/config/appref\nmax_idle_instances\nOptional. The maximum number of idle instances that App Engine should maintain for this version. Specify a value from 1 to 1000. If not specified, the default value is automatic, which means App Engine will manage the number of idle instances. Keep the following in mind:\n\nA high maximum reduces the number of idle instances more gradually when load levels return to normal after a spike. This helps your application maintain steady performance through fluctuations in request load, but also raises the number of idle instances (and consequent running costs) during such periods of heavy load."},{"poster":"alpha_canary","timestamp":"1707018540.0","upvote_count":"1","content":"Selected Answer: D\nhttps://cloud.google.com/appengine/docs/legacy/standard/python/config/appref#scaling_elements:~:text=traffic%20or%20not.-,max_idle_instances,-Optional.%20The%20maximum","comment_id":"1139755"},{"content":"Selected Answer: D\nOption D","poster":"jomonkp","comment_id":"1086129","timestamp":"1701517020.0","upvote_count":"1"},{"comment_id":"776056","timestamp":"1673741760.0","poster":"JonathanSJ","content":"Selected Answer: D\nD. Modify the App Engine configuration to have additional idle instances. This will ensure that there are enough resources available to handle the spike in traffic, reducing the likelihood of latency for users. Additionally, you may also consider enabling high availability on the CloudSQL instances and upgrading the GCS buckets to Multi-Regional for more resiliency.","upvote_count":"1"},{"upvote_count":"1","comment_id":"762636","poster":"Greg123123","comments":[{"timestamp":"1672489980.0","poster":"Greg123123","upvote_count":"1","comment_id":"762637","content":"A. then how about CloudSQL?\nB. then how about cloud storage?\nC. the same could also happen and even worse if it isn't MIG"}],"timestamp":"1672489860.0","content":"Selected Answer: D\nD, no brainer. A B and C don't even make sense."},{"poster":"ramzez4815","comment_id":"681356","timestamp":"1664332920.0","content":"Selected Answer: D\nVote for D","upvote_count":"2"},{"content":"Selected Answer: D\nD is correct","timestamp":"1642660260.0","upvote_count":"4","comment_id":"528191","poster":"Sekierer"},{"poster":"TNT87","timestamp":"1640651700.0","content":"D is the answer","comment_id":"510695","upvote_count":"2"},{"comment_id":"510694","timestamp":"1640651640.0","poster":"TNT87","upvote_count":"1","content":"Selected Answer: D\nD is the answer"},{"upvote_count":"1","comment_id":"479017","poster":"Biden","content":"D looks like the nearest correct solution though this will not address with high latency with CloudSQL & storage instances","timestamp":"1637012700.0"},{"timestamp":"1635717900.0","comment_id":"470929","poster":"NXD","content":"D is correct to me.\n\nA: wrong – because increase in latency for all user requests, not for specific region. So \nB: wrong – problem affects both database and GCS\nC: wrong\n\nincrease in CPU use, and the number of processes running the application => problem is that CPU is not enough to run application processes.","upvote_count":"3"},{"content":"B could be useful but does not solve latency problem on Cloud Storage side","timestamp":"1635410040.0","comment_id":"469105","upvote_count":"3","poster":"giammydell"},{"upvote_count":"2","timestamp":"1635409860.0","content":"Ans B\nhttps://cloud.google.com/sql/docs/mysql/high-availability","poster":"TNT87","comments":[{"poster":"TNT87","comment_id":"484770","upvote_count":"1","content":"Ans D,B has latency issues","timestamp":"1637646360.0"}],"comment_id":"469100"},{"upvote_count":"2","comment_id":"468825","timestamp":"1635360900.0","poster":"Nik22","content":"A. Upgrade the GCS buckets to Multi-Regional.\nB. Enable high availability on the CloudSQL instances.\nC. Move the application from App Engine to Compute Engine.\nD. Modify the App Engine configuration to have additional idle instances.\n\nThere is nothing in the question that talks about region. If I assume that bucket is created in the region where the app is deployed\nB - Gives redundancy. I don't see how this can improve the latency\nC - Does not make any sense\nD - Additional instance, would reduce the CPU Time & memory.\n\nI would go with D. But not too sure."}],"url":"https://www.examtopics.com/discussions/google/view/64943-exam-professional-cloud-devops-engineer-topic-1-question-61/","isMC":true,"answer_description":"","unix_timestamp":1635360900,"question_id":125,"answer_ET":"B","answers_community":["D (100%)"],"question_text":"You support a web application that runs on App Engine and uses CloudSQL and Cloud Storage for data storage. After a short spike in website traffic, you notice a big increase in latency for all user requests, increase in CPU use, and the number of processes running the application. Initial troubleshooting reveals:\n✑ After the initial spike in traffic, load levels returned to normal but users still experience high latency.\n✑ Requests for content from the CloudSQL database and images from Cloud Storage show the same high latency.\n✑ No changes were made to the website around the time the latency increased.\n✑ There is no increase in the number of errors to the users.\nYou expect another spike in website traffic in the coming days and want to make sure users don't experience latency. What should you do?","question_images":[],"topic":"1"}],"exam":{"lastUpdated":"1 May 2024","isMCOnly":true,"isImplemented":true,"provider":"Google","id":5,"isBeta":false,"name":"Professional Cloud DevOps Engineer","numberOfQuestions":166},"currentPage":25},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "Pe6dIPtVcEknffVxjaBq",
+                "question_id": 121,
+                "question_images": [],
+                "answer_images": [],
+                "question_text": "You are deploying an application that needs to access sensitive information. You need to ensure that this information is encrypted and the risk of exposure is minimal if a breach occurs. What should you do?",
+                "url": "https://www.examtopics.com/discussions/google/view/64852-exam-professional-cloud-devops-engineer-topic-1-question-58/",
+                "discussion": [
+                    {
+                        "timestamp": "1635520680.0",
+                        "comment_id": "469827",
+                        "poster": "giammydell",
+                        "upvote_count": "11",
+                        "content": "Ans: A"
+                    },
+                    {
+                        "comment_id": "1086118",
+                        "poster": "jomonkp",
+                        "timestamp": "1701516240.0",
+                        "content": "Selected Answer: A\nOption A",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA. Store the encryption keys in Cloud Key Management Service (KMS) and rotate the keys frequently. This ensures that the sensitive information is encrypted at rest and in transit, and that the encryption keys are regularly rotated to minimize the risk of exposure in the event of a breach.",
+                        "poster": "JonathanSJ",
+                        "comment_id": "776032",
+                        "upvote_count": "1",
+                        "timestamp": "1673739480.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nA) should be the correct answer.",
+                        "timestamp": "1670347380.0",
+                        "poster": "WhyIronMan",
+                        "comment_id": "737038"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "ssmb",
+                        "content": "A should be the correct answer.",
+                        "comment_id": "700591",
+                        "timestamp": "1666335600.0"
+                    },
+                    {
+                        "poster": "ramzez4815",
+                        "upvote_count": "1",
+                        "comment_id": "679339",
+                        "content": "Selected Answer: A\nThe clear answer is A",
+                        "timestamp": "1664159100.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "emdee202",
+                        "timestamp": "1650640440.0",
+                        "content": "Selected Answer: A\nAns: A",
+                        "comment_id": "590079"
+                    },
+                    {
+                        "content": "A is correct",
+                        "timestamp": "1642660200.0",
+                        "comment_id": "528188",
+                        "upvote_count": "1",
+                        "poster": "Sekierer"
+                    },
+                    {
+                        "comment_id": "469092",
+                        "content": "https://cloud.google.com/security-key-management",
+                        "upvote_count": "1",
+                        "poster": "TNT87",
+                        "timestamp": "1635408900.0"
+                    },
+                    {
+                        "content": "Ans is A.",
+                        "poster": "TNT87",
+                        "timestamp": "1635408840.0",
+                        "upvote_count": "2",
+                        "comment_id": "469091"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "comment_id": "468249",
+                        "poster": "Alaaelanwr",
+                        "timestamp": "1635278940.0",
+                        "content": "Ans: A"
+                    }
+                ],
+                "exam_id": 5,
+                "choices": {
+                    "B": "Inject the secret at the time of instance creation via an encrypted configuration management system.",
+                    "A": "Store the encryption keys in Cloud Key Management Service (KMS) and rotate the keys frequently",
+                    "D": "Leverage a continuous build pipeline that produces multiple versions of the secret for each instance of the application.",
+                    "C": "Integrate the application with a Single sign-on (SSO) system and do not expose secrets to the application."
+                },
+                "topic": "1",
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "isMC": true,
+                "timestamp": "2021-10-26 22:09:00",
+                "answer_ET": "A",
+                "answer": "A",
+                "unix_timestamp": 1635278940,
+                "answer_description": ""
+            },
+            {
+                "id": "0h8n43Q5i6nIFP5Vrwl9",
+                "isMC": true,
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "discussion": [
+                    {
+                        "content": "I reckon its A, the reason is because it seems like the problem is automatically fixed with an restart of the service after a minute, therefore engineers don't really need to be woken up about these problems. If it failed multiple times or if the restart failed, then the engineer should be woken up",
+                        "comments": [
+                            {
+                                "timestamp": "1636263720.0",
+                                "content": "A or C",
+                                "upvote_count": "1",
+                                "comment_id": "473755",
+                                "poster": "MF2C"
+                            }
+                        ],
+                        "upvote_count": "14",
+                        "poster": "AL12",
+                        "timestamp": "1635796920.0",
+                        "comment_id": "471392"
+                    },
+                    {
+                        "comment_id": "776049",
+                        "upvote_count": "2",
+                        "poster": "JonathanSJ",
+                        "timestamp": "1673741400.0",
+                        "content": "Selected Answer: A\nI agree with A."
+                    },
+                    {
+                        "poster": "Greg123123",
+                        "content": "Selected Answer: A\nIt should be A rather than D.\nTo follow SRE practice, we should eliminate unactionable alert which is pointless and to increase precision. While D also looks valid, the question never say that the application is being affected (e.g. has downtime), and never says any actions are needed. As a result, there is no need to redefine SLI and since they didn't spend time to resolve it no error budget is spent.",
+                        "upvote_count": "2",
+                        "comment_id": "762633",
+                        "timestamp": "1672489560.0"
+                    },
+                    {
+                        "comment_id": "700596",
+                        "poster": "ssmb",
+                        "upvote_count": "2",
+                        "content": "Between A and C, B and D answers are not good.\nI lean more towards A because those alerts seem unactionable a the moment alert is received, ie: machine restarted automatically already.\nThis would be best imidiate action as per the question. Of course the source of alerts should be looked at and fixed separately from addressing the issue in question.",
+                        "timestamp": "1666335960.0"
+                    },
+                    {
+                        "timestamp": "1656316560.0",
+                        "upvote_count": "1",
+                        "content": "I agree with A.\n\nEliminate bad monitoring : Unactionable alerts (i.e., spam)\n\nhttps://cloud.google.com/blog/products/management-tools/meeting-reliability-challenges-with-sre-principles",
+                        "comment_id": "623138",
+                        "poster": "[Removed]"
+                    },
+                    {
+                        "content": "Selected Answer: A\nagree with kyubiblaze about having to remove unactionable items aka spam: \"good monitoring alerts on actionable problems\" @ https://cloud.google.com/blog/products/management-tools/meeting-reliability-challenges-with-sre-principles",
+                        "poster": "zygomar",
+                        "upvote_count": "4",
+                        "comment_id": "552974",
+                        "timestamp": "1645458660.0"
+                    },
+                    {
+                        "content": "A is correct",
+                        "comment_id": "528189",
+                        "poster": "Sekierer",
+                        "timestamp": "1642660200.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "KyubiBlaze",
+                        "comment_id": "524699",
+                        "content": "A - You have to remove \"unactionable\" alerts, these alerts are useless if you can't take any action.\nSimple reason, C might be following SRE practice, but it is distributing the problem, not solving it.\nB and D, totally No.",
+                        "timestamp": "1642316760.0",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "poster": "gcpz",
+                        "upvote_count": "1",
+                        "content": "answer is c. it follows google SRE and prevents staff burnout. https://sre.google/workbook/team-lifecycles/",
+                        "comment_id": "513363",
+                        "timestamp": "1640868420.0"
+                    },
+                    {
+                        "poster": "ESP_SAP",
+                        "comment_id": "494616",
+                        "upvote_count": "3",
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "poster": "ESP_SAP",
+                                "timestamp": "1638734460.0",
+                                "comment_id": "494617",
+                                "content": "Correct Answer is (D):"
+                            }
+                        ],
+                        "content": "The team may continue to work on non-reliability features if:\n\nThe outage was caused by a company-wide networking problem.\nThe outage was caused by a service maintained by another team, who have themselves frozen releases to address their reliability issues.\nThe error budget was consumed by users out of scope for the SLO (e.g., load tests or penetration testers).\nMiscategorized errors consume budget even though no users were impacted.\n\nhttps://sre.google/workbook/error-budget-policy/",
+                        "timestamp": "1638734400.0"
+                    },
+                    {
+                        "content": "Answer D",
+                        "upvote_count": "1",
+                        "comment_id": "476048",
+                        "poster": "Manh",
+                        "timestamp": "1636616220.0"
+                    },
+                    {
+                        "content": "C follows the SRE.",
+                        "comments": [
+                            {
+                                "comment_id": "1102323",
+                                "timestamp": "1703151480.0",
+                                "poster": "Feliphus",
+                                "content": "The statemene says: you encounter a large number of outages in the production systems you support, then eliminating the alerts doesn't seem to be a good idea. If there is another support team in another time zone. What's happen if the server doesn't reboot or the services don't start fine?. There is not a correct answer between options, what it would be to resolve the reboot problem. I don't know which is better if A or C, I suppose we have losed some information in the statement or in the answers. But in this situation I agree @NXD and choose C",
+                                "upvote_count": "1",
+                                "comments": [
+                                    {
+                                        "upvote_count": "1",
+                                        "comment_id": "1105495",
+                                        "poster": "Feliphus",
+                                        "content": "Sorry, but I change to ans A. I have noticed this question is repeated as Q133 but without the text: You receive alerts for all the outages that wake you up at night",
+                                        "timestamp": "1703531580.0"
+                                    }
+                                ]
+                            }
+                        ],
+                        "comment_id": "470919",
+                        "poster": "NXD",
+                        "upvote_count": "3",
+                        "timestamp": "1635715620.0"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "timestamp": "1635409260.0",
+                        "comment_id": "469095",
+                        "upvote_count": "4",
+                        "content": "Ans D\nhttps://www.atlassian.com/incident-management/kpis/error-budget",
+                        "comments": [
+                            {
+                                "timestamp": "1640511540.0",
+                                "comment_id": "509530",
+                                "comments": [
+                                    {
+                                        "content": "NO!D is correct",
+                                        "upvote_count": "1",
+                                        "timestamp": "1640513640.0",
+                                        "comment_id": "509547",
+                                        "poster": "TNT87"
+                                    }
+                                ],
+                                "content": "Ans A...point of correction",
+                                "poster": "TNT87",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "comment_id": "469042",
+                        "content": "Should be A",
+                        "upvote_count": "3",
+                        "timestamp": "1635403620.0",
+                        "poster": "neutrino9"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "D redefine SLI",
+                        "comment_id": "468162",
+                        "poster": "job_search83",
+                        "timestamp": "1635265980.0"
+                    }
+                ],
+                "answer_ET": "A",
+                "answer_images": [],
+                "exam_id": 5,
+                "url": "https://www.examtopics.com/discussions/google/view/64824-exam-professional-cloud-devops-engineer-topic-1-question-59/",
+                "topic": "1",
+                "choices": {
+                    "D": "Redefine the related Service Level Objective so that the error budget is not exhausted.",
+                    "A": "Eliminate unactionable alerts.",
+                    "C": "Distribute the alerts to engineers in different time zones.",
+                    "B": "Create an incident report for each of the alerts."
+                },
+                "question_id": 122,
+                "answer": "A",
+                "answer_description": "",
+                "question_text": "You encounter a large number of outages in the production systems you support. You receive alerts for all the outages that wake you up at night. The alerts are due to unhealthy systems that are automatically restarted within a minute. You want to set up a process that would prevent staff burnout while following Site\nReliability Engineering practices. What should you do?",
+                "timestamp": "2021-10-26 18:33:00",
+                "question_images": [],
+                "unix_timestamp": 1635265980
+            },
+            {
+                "id": "QBisMBJYEC1PNP4G6arJ",
+                "timestamp": "2021-06-02 16:35:00",
+                "exam_id": 5,
+                "answer_ET": "D",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "answer": "D",
+                "topic": "1",
+                "question_images": [],
+                "isMC": true,
+                "answer_images": [],
+                "unix_timestamp": 1622644500,
+                "answer_description": "",
+                "choices": {
+                    "A": "Add logic to each Cloud Build step to HTTP POST the build information to a webhook.",
+                    "D": "Create a Cloud Pub/Sub push subscription to the Cloud Build cloud-builds PubSub topic to HTTP POST the build information to a webhook.",
+                    "B": "Add a new step at the end of the pipeline in Cloud Build to HTTP POST the build information to a webhook.",
+                    "C": "Use Stackdriver Logging to create a logs-based metric from the Cloud Build logs. Create an Alert with a Webhook notification type."
+                },
+                "discussion": [
+                    {
+                        "upvote_count": "17",
+                        "timestamp": "1624915680.0",
+                        "poster": "Charun",
+                        "content": "I have submitted D answer",
+                        "comment_id": "393250"
+                    },
+                    {
+                        "poster": "francisco_guerra",
+                        "content": "Ans: D \nPub/Sub\n\nA: No becauseThere is not Structure attribute to create a http request in the steps and remember you want minimize the development effort.\nB: The same A\nC: minimize the development effort\nD: Its OK\n\nTo receive messages from push subscriptions, use a webhook and process the POST requests that Pub/Sub sends to the push endpoint. For more information about processing these POST requests in App Engine, see Writing and responding to Pub/Sub messages.\n\nhttps://cloud.google.com/pubsub/docs/push\nhttps://cloud.google.com/build/docs/subscribe-build-notifications",
+                        "upvote_count": "17",
+                        "timestamp": "1624138680.0",
+                        "comment_id": "385798"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "772017",
+                        "poster": "JonathanSJ",
+                        "timestamp": "1673411640.0",
+                        "content": "Selected Answer: D\nAnswer D"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "754743",
+                        "comments": [
+                            {
+                                "poster": "[Removed]",
+                                "comment_id": "758298",
+                                "timestamp": "1672132140.0",
+                                "upvote_count": "1",
+                                "content": "exam taken on 26/12/2022, 50/50 from this dump, without buying the full access, thanks for your help floppino"
+                            }
+                        ],
+                        "content": "Selected Answer: D\nAns: D\n\nExam pased and taken on 19/12/2022, 50/50 from this dump without buying the full access.",
+                        "timestamp": "1671865800.0",
+                        "poster": "floppino"
+                    },
+                    {
+                        "poster": "zellck",
+                        "upvote_count": "6",
+                        "content": "Selected Answer: D\nD is the answer.\n\nhttps://cloud.google.com/build/docs/subscribe-build-notifications\nCloud Build publishes messages on a Google Pub/Sub topic when your build's state changes, such as when your build is created, when your build transitions to a working state, and when your build completes.\n\nThe Pub/Sub topic to which Cloud Build publishes these build update messages is called cloud-builds. Each message contains a base64 JSON string representation of your Build resource in the message.data attribute. The build's unique ID and the build's status can be found in the message.attributes field.\n\nYou can use a push or pull model for your Pub/Sub subscriptions.\n\nhttps://cloud.google.com/build/docs/subscribe-build-notifications#push\nPush subscriptions deliver messages to an HTTP endpoint that you define. Messages are delivered as soon as they are published to the topic.",
+                        "comment_id": "702999",
+                        "timestamp": "1666613820.0",
+                        "comments": [
+                            {
+                                "comment_id": "707448",
+                                "timestamp": "1667073540.0",
+                                "poster": "AzureDP900",
+                                "content": "Yes, D is right based on given scenario",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "comment_id": "635880",
+                        "poster": "GCP72",
+                        "content": "Selected Answer: D\nAns: D",
+                        "timestamp": "1658639040.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: D\nSubmitted D in exam.",
+                        "comment_id": "599115",
+                        "timestamp": "1652110800.0",
+                        "poster": "Ananda",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: D\nCloud Build -> Pubsub -> HTTP Builder.........SO ans is D",
+                        "comment_id": "596569",
+                        "timestamp": "1651648140.0",
+                        "upvote_count": "2",
+                        "poster": "akshay_jadhav"
+                    },
+                    {
+                        "comment_id": "532777",
+                        "upvote_count": "2",
+                        "timestamp": "1643192040.0",
+                        "content": "https://medium.com/google-cloud/cloud-build-notifications-with-cloud-run-and-c-a23294e2e959",
+                        "poster": "pddddd"
+                    },
+                    {
+                        "timestamp": "1643191860.0",
+                        "poster": "pddddd",
+                        "upvote_count": "3",
+                        "comment_id": "532774",
+                        "content": "Not sure on D. Pub/Sub posts into specific format and the actual payload in is message.data.\nThird party system API (where you post status) will have its own POST format. \nI feel B is better - you add a step in CLoud Build to do the POST."
+                    },
+                    {
+                        "poster": "alaahakim",
+                        "comment_id": "494291",
+                        "upvote_count": "1",
+                        "timestamp": "1638705360.0",
+                        "content": "Ans : D"
+                    },
+                    {
+                        "content": "Its D. Cloud Build -> Pubsub -> HTTP Builder",
+                        "comment_id": "486977",
+                        "poster": "muk5658",
+                        "timestamp": "1637882460.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "rinkeshgala1",
+                        "timestamp": "1623025920.0",
+                        "comment_id": "376400",
+                        "content": "D is correct answer \nhttps://cloud.google.com/build/docs/subscribe-build-notifications",
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "timestamp": "1623480660.0",
+                                "content": "Agree D looks correct to me.",
+                                "poster": "akg001",
+                                "upvote_count": "2",
+                                "comment_id": "380273"
+                            }
+                        ]
+                    },
+                    {
+                        "poster": "devopsbatch",
+                        "comment_id": "372785",
+                        "upvote_count": "1",
+                        "timestamp": "1622644500.0",
+                        "content": "no idea on this"
+                    }
+                ],
+                "question_id": 123,
+                "url": "https://www.examtopics.com/discussions/google/view/54228-exam-professional-cloud-devops-engineer-topic-1-question-6/",
+                "question_text": "You use a multiple step Cloud Build pipeline to build and deploy your application to Google Kubernetes Engine (GKE). You want to integrate with a third-party monitoring platform by performing a HTTP POST of the build information to a webhook. You want to minimize the development effort. What should you do?"
+            },
+            {
+                "id": "da2UVWLB8mXgZcDeMRXd",
+                "question_images": [],
+                "choices": {
+                    "B": "Enable AutoScaling on the production clusters, in case there is growth.",
+                    "A": "Load teat the application to profile its performance for scaling.",
+                    "D": "Create a runbook on inflating the disaster recovery (DR) environment if there is growth.",
+                    "C": "Pre-provision double the compute power used last season, expecting growth."
+                },
+                "url": "https://www.examtopics.com/discussions/google/view/64985-exam-professional-cloud-devops-engineer-topic-1-question-60/",
+                "answer": "A",
+                "answer_images": [],
+                "isMC": true,
+                "answers_community": [
+                    "A (91%)",
+                    "9%"
+                ],
+                "discussion": [
+                    {
+                        "comments": [
+                            {
+                                "timestamp": "1637653740.0",
+                                "content": "Changing the architecture for scale and reliability\nLoad testing and failure testing, along with architecture reviews, encourage limited-scope architectural changes that can enhance the scale and reliability of the system. However, introducing changes adds risk, so limit the changes to a conservative range of time.https://cloud.google.com/architecture/black-friday-production-readiness#changing_the_architecture_for_scale_and_reliability",
+                                "poster": "TNT87",
+                                "upvote_count": "1",
+                                "comment_id": "484811"
+                            }
+                        ],
+                        "timestamp": "1635716040.0",
+                        "comment_id": "470922",
+                        "content": "https://cloud.google.com/architecture/black-friday-production-readiness#preparation_stage\n\nThe objective of the preparation stage is to test the system's ability to scale for peak user traffic and to document the results. Completing the preparation stage results in architecture refinement to handle peak traffic more efficiently and increase system reliability. This stage also yields procedures for operations and support that help streamline processes for handling the peak event and any issues that might occur. Consider this stage as practice for the peak event from a system and operations perspective.\n\nA is exactly what mentioned above.\nB is the step after the preparation stage.",
+                        "poster": "NXD",
+                        "upvote_count": "18"
+                    },
+                    {
+                        "content": "Selected Answer: A\nCome on, no brainer.\nA is the answer.\nYou load test to understand how your application perform under heavy load. \"Prepare for busy season\"\nB - No, Option A will give you insight in how your applications works under load, and how do you scale, if it cannot scale, autoscaling in meaningless.\nSo first you test your application in controlled environment. Not wait for the busy time to come and then realise autoscaling is also unable to meet demand. Or Maybe you even reach your quotas.",
+                        "timestamp": "1642317060.0",
+                        "poster": "KyubiBlaze",
+                        "upvote_count": "5",
+                        "comments": [
+                            {
+                                "content": "Good analysis, before moving any new features first thing to do performance test to understand how system behaves under load, Auto scaling is later step... A is 100% correct",
+                                "poster": "AzureDP900",
+                                "comment_id": "703498",
+                                "upvote_count": "1",
+                                "timestamp": "1666664580.0"
+                            }
+                        ],
+                        "comment_id": "524702"
+                    },
+                    {
+                        "comment_id": "1086121",
+                        "content": "Selected Answer: A\nOption A",
+                        "upvote_count": "1",
+                        "timestamp": "1701516360.0",
+                        "poster": "jomonkp"
+                    },
+                    {
+                        "comment_id": "850746",
+                        "content": "Selected Answer: A\nWould go with A because you need to know the performance of your application if it scales to serve larger customers. Scaling decisions of the application comes after.",
+                        "timestamp": "1679808540.0",
+                        "upvote_count": "1",
+                        "poster": "raghu09"
+                    },
+                    {
+                        "content": "Selected Answer: A\nA. Load test the application to profile its performance for scaling. This will help to identify any potential bottlenecks or issues with the application, and allow you to make the necessary adjustments or scaling decisions before the busy season begins.",
+                        "comment_id": "776054",
+                        "upvote_count": "1",
+                        "poster": "JonathanSJ",
+                        "timestamp": "1673741640.0"
+                    },
+                    {
+                        "comment_id": "701114",
+                        "timestamp": "1666379100.0",
+                        "poster": "ssmb",
+                        "upvote_count": "1",
+                        "content": "After moving the application onto GCP, some amount of testing should be carried out before deciding what to do next."
+                    },
+                    {
+                        "timestamp": "1642660260.0",
+                        "poster": "Sekierer",
+                        "comment_id": "528190",
+                        "content": "A is correct",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Selected Answer: A\nSet up load and performance testing\nLoad testing is the process of deploying a test version of the system and creating requests to simulate high use of the system. Load testing normally focuses on testing for sustainable user-perceived behavior at some percentile below the absolute peak. Testing for peak requires hitting that top percentile with consistent good performance.",
+                        "comment_id": "511074",
+                        "timestamp": "1640694060.0",
+                        "poster": "TNT87",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1640651580.0",
+                        "comments": [
+                            {
+                                "poster": "csrazdan",
+                                "comment_id": "681315",
+                                "upvote_count": "1",
+                                "timestamp": "1664324400.0",
+                                "content": "For Auto Scaling you need to provide parameters which will not be know if load test is not done. Otherwise you will be using arbitrary values which may not be consistent with actual load."
+                            }
+                        ],
+                        "upvote_count": "1",
+                        "comment_id": "510692",
+                        "content": "Selected Answer: B\nB is the answer",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "content": "https://cloud.google.com/blog/topics/retail/preparing-for-peak-holiday-season-while-wfh\nAns A makes sense according to this doc",
+                        "upvote_count": "1",
+                        "comment_id": "494279",
+                        "timestamp": "1638704520.0",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "content": "Passed exam a couple of days ago. Chose A",
+                        "timestamp": "1636729800.0",
+                        "poster": "tee_dee26",
+                        "upvote_count": "4",
+                        "comment_id": "477018"
+                    },
+                    {
+                        "content": "Should be A , To check how application performs with load",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "content": "Agree with A",
+                                "poster": "Manh",
+                                "timestamp": "1636616640.0",
+                                "comment_id": "476052"
+                            }
+                        ],
+                        "comment_id": "472887",
+                        "poster": "MBA_1",
+                        "upvote_count": "4",
+                        "timestamp": "1636090440.0"
+                    },
+                    {
+                        "timestamp": "1635529980.0",
+                        "content": "Ans : B",
+                        "poster": "Alaaelanwr",
+                        "comment_id": "469915",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "469836",
+                        "timestamp": "1635521640.0",
+                        "poster": "giammydell",
+                        "content": "Ans: B"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "Ans B\nhttps://cloud.google.com/architecture/black-friday-production-readiness",
+                        "poster": "TNT87",
+                        "timestamp": "1635409560.0",
+                        "comment_id": "469097"
+                    }
+                ],
+                "exam_id": 5,
+                "question_id": 124,
+                "answer_ET": "B",
+                "answer_description": "",
+                "unix_timestamp": 1635409560,
+                "question_text": "You have migrated an e-commerce application to Google Cloud Platform (GCP). You want to prepare the application for the upcoming busy season. What should you do first to prepare for the busy season?",
+                "topic": "1",
+                "timestamp": "2021-10-28 10:26:00"
+            },
+            {
+                "id": "xWJcQptVCAcEsavx27ET",
+                "answer": "D",
+                "timestamp": "2021-10-27 20:55:00",
+                "choices": {
+                    "B": "Enable high availability on the CloudSQL instances.",
+                    "A": "Upgrade the GCS buckets to Multi-Regional.",
+                    "C": "Move the application from App Engine to Compute Engine.",
+                    "D": "Modify the App Engine configuration to have additional idle instances."
+                },
+                "answer_images": [],
+                "exam_id": 5,
+                "discussion": [
+                    {
+                        "comment_id": "493332",
+                        "timestamp": "1638560400.0",
+                        "content": "Correct Answer is D:\n\nScaling App Engine scales the number of instances automatically in response to processing volume. This scaling factors in the automatic_scaling settings that are provided on a per-version basis in the configuration file. A service with basic scaling is configured by setting the maximum number of instances in the max_instances parameter of the basic_scaling setting. The number of live instances scales with the processing volume. You configure the number of instances of each version in that service's configuration file. The number of instances usually corresponds to the size of a dataset being held in memory or the desired throughput for offline work. You can adjust the number of instances of a manually-scaled version very quickly, without stopping instances that are currently running, using the Modules API set_num_instances function.\n\nhttps://cloud.google.com/appengine/docs/standard/python/how-instances-are-managed",
+                        "upvote_count": "10",
+                        "poster": "ESP_SAP"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "timestamp": "1636642440.0",
+                                "upvote_count": "1",
+                                "content": "Agree with D",
+                                "poster": "Manh",
+                                "comment_id": "476307"
+                            }
+                        ],
+                        "poster": "MBA_1",
+                        "upvote_count": "5",
+                        "comment_id": "472888",
+                        "timestamp": "1636091100.0",
+                        "content": "D is correct - https://cloud.google.com/appengine/docs/standard/python/config/appref\nmax_idle_instances\nOptional. The maximum number of idle instances that App Engine should maintain for this version. Specify a value from 1 to 1000. If not specified, the default value is automatic, which means App Engine will manage the number of idle instances. Keep the following in mind:\n\nA high maximum reduces the number of idle instances more gradually when load levels return to normal after a spike. This helps your application maintain steady performance through fluctuations in request load, but also raises the number of idle instances (and consequent running costs) during such periods of heavy load."
+                    },
+                    {
+                        "poster": "alpha_canary",
+                        "timestamp": "1707018540.0",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nhttps://cloud.google.com/appengine/docs/legacy/standard/python/config/appref#scaling_elements:~:text=traffic%20or%20not.-,max_idle_instances,-Optional.%20The%20maximum",
+                        "comment_id": "1139755"
+                    },
+                    {
+                        "content": "Selected Answer: D\nOption D",
+                        "poster": "jomonkp",
+                        "comment_id": "1086129",
+                        "timestamp": "1701517020.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "comment_id": "776056",
+                        "timestamp": "1673741760.0",
+                        "poster": "JonathanSJ",
+                        "content": "Selected Answer: D\nD. Modify the App Engine configuration to have additional idle instances. This will ensure that there are enough resources available to handle the spike in traffic, reducing the likelihood of latency for users. Additionally, you may also consider enabling high availability on the CloudSQL instances and upgrading the GCS buckets to Multi-Regional for more resiliency.",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "762636",
+                        "poster": "Greg123123",
+                        "comments": [
+                            {
+                                "timestamp": "1672489980.0",
+                                "poster": "Greg123123",
+                                "upvote_count": "1",
+                                "comment_id": "762637",
+                                "content": "A. then how about CloudSQL?\nB. then how about cloud storage?\nC. the same could also happen and even worse if it isn't MIG"
+                            }
+                        ],
+                        "timestamp": "1672489860.0",
+                        "content": "Selected Answer: D\nD, no brainer. A B and C don't even make sense."
+                    },
+                    {
+                        "poster": "ramzez4815",
+                        "comment_id": "681356",
+                        "timestamp": "1664332920.0",
+                        "content": "Selected Answer: D\nVote for D",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Selected Answer: D\nD is correct",
+                        "timestamp": "1642660260.0",
+                        "upvote_count": "4",
+                        "comment_id": "528191",
+                        "poster": "Sekierer"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "timestamp": "1640651700.0",
+                        "content": "D is the answer",
+                        "comment_id": "510695",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "comment_id": "510694",
+                        "timestamp": "1640651640.0",
+                        "poster": "TNT87",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nD is the answer"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "479017",
+                        "poster": "Biden",
+                        "content": "D looks like the nearest correct solution though this will not address with high latency with CloudSQL & storage instances",
+                        "timestamp": "1637012700.0"
+                    },
+                    {
+                        "timestamp": "1635717900.0",
+                        "comment_id": "470929",
+                        "poster": "NXD",
+                        "content": "D is correct to me.\n\nA: wrong – because increase in latency for all user requests, not for specific region. So \nB: wrong – problem affects both database and GCS\nC: wrong\n\nincrease in CPU use, and the number of processes running the application => problem is that CPU is not enough to run application processes.",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "content": "B could be useful but does not solve latency problem on Cloud Storage side",
+                        "timestamp": "1635410040.0",
+                        "comment_id": "469105",
+                        "upvote_count": "3",
+                        "poster": "giammydell"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1635409860.0",
+                        "content": "Ans B\nhttps://cloud.google.com/sql/docs/mysql/high-availability",
+                        "poster": "TNT87",
+                        "comments": [
+                            {
+                                "poster": "TNT87",
+                                "comment_id": "484770",
+                                "upvote_count": "1",
+                                "content": "Ans D,B has latency issues",
+                                "timestamp": "1637646360.0"
+                            }
+                        ],
+                        "comment_id": "469100"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "468825",
+                        "timestamp": "1635360900.0",
+                        "poster": "Nik22",
+                        "content": "A. Upgrade the GCS buckets to Multi-Regional.\nB. Enable high availability on the CloudSQL instances.\nC. Move the application from App Engine to Compute Engine.\nD. Modify the App Engine configuration to have additional idle instances.\n\nThere is nothing in the question that talks about region. If I assume that bucket is created in the region where the app is deployed\nB - Gives redundancy. I don't see how this can improve the latency\nC - Does not make any sense\nD - Additional instance, would reduce the CPU Time & memory.\n\nI would go with D. But not too sure."
+                    }
+                ],
+                "url": "https://www.examtopics.com/discussions/google/view/64943-exam-professional-cloud-devops-engineer-topic-1-question-61/",
+                "isMC": true,
+                "answer_description": "",
+                "unix_timestamp": 1635360900,
+                "question_id": 125,
+                "answer_ET": "B",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "question_text": "You support a web application that runs on App Engine and uses CloudSQL and Cloud Storage for data storage. After a short spike in website traffic, you notice a big increase in latency for all user requests, increase in CPU use, and the number of processes running the application. Initial troubleshooting reveals:\n✑ After the initial spike in traffic, load levels returned to normal but users still experience high latency.\n✑ Requests for content from the CloudSQL database and images from Cloud Storage show the same high latency.\n✑ No changes were made to the website around the time the latency increased.\n✑ There is no increase in the number of errors to the users.\nYou expect another spike in website traffic in the coming days and want to make sure users don't experience latency. What should you do?",
+                "question_images": [],
+                "topic": "1"
+            }
+        ],
+        "exam": {
+            "lastUpdated": "1 May 2024",
+            "isMCOnly": true,
+            "isImplemented": true,
+            "provider": "Google",
+            "id": 5,
+            "isBeta": false,
+            "name": "Professional Cloud DevOps Engineer",
+            "numberOfQuestions": 166
+        },
+        "currentPage": 25
+    },
+    "__N_SSP": true
+}

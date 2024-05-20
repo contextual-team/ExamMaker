@@ -1,1 +1,726 @@
-{"pageProps":{"questions":[{"id":"ADq4WwcMNNcNUOz459ie","answer":"CD","answer_images":[],"discussion":[{"content":"CD is the correct answer ,This will ensure that the image build is only triggered when a push is made to the main branch, and that the push is approved by the change control team.\n\nExplanation:\n\nOption C: Setting the repository event setting to ‘Push to a branch’ will trigger the Cloud Build job whenever a push is made to any branch in the repository. This is necessary because you want the image build to be triggered when a push is made to the main branch.\nOption D: Configuring a branch protection rule for the main branch on the repository will require that all pushes to the main branch be approved by the change control team. This is necessary to ensure that only approved changes are made to the main branch, which will then trigger the image build.","comment_id":"1022296","timestamp":"1696167720.0","poster":"ManishKS","upvote_count":"5","comments":[{"timestamp":"1698295920.0","upvote_count":"2","poster":"Jason_Cloud_at","comment_id":"1054283","content":"in the question it says \"Automated\" doesn't option E works as well ?"}]},{"content":"Selected Answer: CD\nC) Triggers Only when pushing or merging into a branch in our case would be main branch\nD) Configuring branch protection, gives you the control over the branch and who can push to it, so any changes would need to be done over a pull request, and will need to be approved before merging.","poster":"edd004","upvote_count":"3","comment_id":"1096618","timestamp":"1702569540.0"},{"comment_id":"1089059","content":"Selected Answer: CD\nTo ensure that production image builds are run only against the main branch and require approval from the change control team, the recommended actions are to configure a trigger on the Cloud Build job with the repository event setting set to 'Push to a branch' (Option C) and to configure a branch protection rule for the main branch on the repository (Option D). \n\nConfiguring the trigger for 'Push to a branch' ensures that Cloud Build is triggered specifically when changes are pushed to the main branch. Additionally, setting up a branch protection rule for the main branch adds an extra layer of control by enforcing policies such as requiring code reviews and approval from designated individuals or teams before changes are merged into the main branch.\n\nTogether, these measures automate the image build process while adhering to the specified requirements and maintaining a robust change control workflow.","upvote_count":"2","poster":"xhilmi","timestamp":"1701848820.0"},{"upvote_count":"2","content":"Selected Answer: CD\nA push event to branches(including main) can then trigger an automated image build.\nEnabling branch protection will enforce a pull request, and it then involve ppl to review.","timestamp":"1698923700.0","poster":"lelele2023","comment_id":"1060501"},{"timestamp":"1698296040.0","upvote_count":"1","comment_id":"1054284","poster":"Jason_Cloud_at","content":"C is definetly the anaswer, I have slight confusion on D and E , Most probably will go with E since the questions says automated."},{"poster":"nhiguchi","content":"Selected Answer: CD\nAnswer should be CD.","upvote_count":"1","comment_id":"1050218","timestamp":"1697952420.0"}],"isMC":true,"question_text":"","answer_description":"","unix_timestamp":1696167720,"question_id":11,"answer_ET":"AB","url":"https://www.examtopics.com/discussions/google/view/122037-exam-professional-cloud-devops-engineer-topic-1-question-108/","question_images":[],"timestamp":"2023-10-01 15:42:00","topic":"1","exam_id":5,"choices":{"C":"Create a trigger on the Cloud Build job. Set the repository event setting to ‘Push to a branch’","A":"Create a trigger on the Cloud Build job. Set the repository event setting to ‘Pull request’.","E":"Enable the Approval option on the trigger.","D":"Configure a branch protection rule for the main branch on the repository.","B":"Add the OWNERS file to the Included files filter on the trigger."},"answers_community":["CD (100%)"]},{"id":"w4WBdhdsy5ZXuIUiud46","url":"https://www.examtopics.com/discussions/google/view/123227-exam-professional-cloud-devops-engineer-topic-1-question-109/","answer_description":"","question_text":"","discussion":[{"upvote_count":"6","comment_id":"1063311","content":"Selected Answer: C\nCloud Run integrates automatically with Cloud Monitoring and requires no setup or configuration.\nhttps://cloud.google.com/run/docs/monitoring?hl=ja","poster":"YushiSato","timestamp":"1699220160.0"},{"poster":"Jason_Cloud_at","comment_id":"1054288","upvote_count":"5","timestamp":"1698296760.0","content":"Selected Answer: C\nSuits best for the question."},{"comment_id":"1089061","poster":"xhilmi","upvote_count":"2","content":"Selected Answer: C\nFor identifying the resource utilization of a serverless application deployed on Cloud Run for cost optimization, the recommended approach is to use Cloud Monitoring, as indicated by (Option C).\n\nCloud Monitoring provides comprehensive monitoring capabilities, allowing you to track container CPU and memory utilization effectively. Specifically tailored for containerized environments like Cloud Run, Cloud Monitoring provides insights into key metrics, enabling you to analyze resource consumption, identify potential bottlenecks, and optimize costs based on observed utilization patterns.\n\nBy monitoring container CPU and memory metrics, you gain valuable data for making informed decisions about resource allocation, ensuring efficient usage, and ultimately optimizing the cost of running the serverless application in your production environment.","timestamp":"1701849060.0"},{"upvote_count":"4","poster":"devops_man","content":"As per documentation cloud profiler not supported for cloud run environment \nhttps://cloud.google.com/profiler/docs/about-profiler\nwill go with C","comment_id":"1084246","timestamp":"1701340560.0"},{"content":"Selected Answer: B\nI would say B. If you deploy with cloud run you would deploy a container and the only way of improving the cost of the solution would be by looking at the app with cloud profiler. If you just look at cloud monitoring, how would you know what part of your app is the issue?","poster":"Andrei_Z","timestamp":"1700489280.0","comment_id":"1075454","upvote_count":"1"},{"comment_id":"1060648","upvote_count":"5","timestamp":"1698939120.0","poster":"khoukha","content":"Selected Answer: B\nCloud Profiler provides continuous profiling of resource consumption in your production applications, helping you identify and eliminate potential performance issues.\nhttps://cloud.google.com/products/operations#all-features \nsection:Performance and cost management"},{"comment_id":"1050219","upvote_count":"4","poster":"nhiguchi","content":"Selected Answer: C\nAnswer should be C.","timestamp":"1697952480.0"},{"timestamp":"1696998540.0","comment_id":"1040196","upvote_count":"3","poster":"PrayasMohanty","content":"Selected Answer: B\nCloud Profiler is a statistical, low-overhead profiler that continuously gathers CPU usage and memory-allocation information from your production applications. It attributes that information to the application's source code, helping you identify the parts of the application consuming the most resources, and otherwise illuminating the performance characteristics of the code.","comments":[]}],"answer_images":[],"answers_community":["C (65%)","B (35%)"],"timestamp":"2023-10-11 06:29:00","topic":"1","question_images":[],"answer":"C","isMC":true,"choices":{"A":"Use Cloud Trace with distributed tracing to monitor the resource utilization of the application.","C":"Use Cloud Monitoring to monitor the container CPU and memory utilization of the application.","B":"Use Cloud Profiler with Ops Agent to monitor the CPU and memory utilization of the application.","D":"Use Cloud Ops to create logs-based metrics to monitor the resource utilization of the application."},"question_id":12,"exam_id":5,"answer_ET":"D","unix_timestamp":1696998540},{"id":"zbYD4uRBtQYUEWkqV379","answer_images":[],"topic":"1","choices":{"C":"Configure your Kubernetes cluster as a Private Cluster.","D":"Configure a Google Cloud HTTP Load Balancer as Ingress.","B":"Configure your network services on the Standard Tier.","A":"Configure the VPC as a Shared VPC Host project."},"discussion":[{"comments":[{"timestamp":"1624339140.0","poster":"syslog","comment_id":"387612","upvote_count":"12","content":"Who says that we aren't use the load balancer?\nI think it's B anyway, because you have to choose standard tier when \"Cost is your main consideration, and you’re willing to trade-off some network performance\"\nhttps://cloud.google.com/network-tiers"},{"comment_id":"702663","poster":"AzureDP900","content":"D is right","upvote_count":"1","timestamp":"1666581780.0"},{"upvote_count":"2","poster":"Meyucho","content":"The doc didn't says that Container-native load balancing will decrees the spend in network costs. It's only refers to performance. Switching to Standard tier will be the most cost-specific answer","comment_id":"911320","timestamp":"1685539380.0"},{"upvote_count":"8","content":"It is B because premium tier is by default everywhere. Standard tier is cheaper.\nWhy not D? This is single HTTP application. You don't know how many HTTP endpoints this app expose to Internet. If it is a single endpoint it does not matter if you create Service type Loadbalancer or Cluster IP-> Ingress. You still have one CLB in GCP, so cost is the same","comment_id":"614356","timestamp":"1654841460.0","poster":"lxs"}],"poster":"francisco_guerra","content":"Ans is D\n\nA: No, Doest make sense\nB: Who says that we are using a premium tier?\nC: This does not help with the network cost?\nD: Ok :)\nCosts associated with a load balancer are charged to the project containing the load balancer components. \nBecause of these benefits, container-native load balancing is the recommended solution for load balancing through Ingress. When NEGs are used with GKE Ingress, the Ingress controller facilitates the creation of all aspects of the L7 load balancer. This includes creating the virtual IP address, forwarding rules, health checks, firewall rules, and more.\n\nhttps://cloud.google.com/architecture/best-practices-for-running-cost-effective-kubernetes-applications-on-gke","timestamp":"1624205040.0","comment_id":"386386","upvote_count":"26"},{"timestamp":"1624915980.0","poster":"Charun","upvote_count":"9","comment_id":"393257","content":"D 100%"},{"content":"Selected Answer: D\nI'll go with D. AS HTTP LB will help to reduce the costs. In question it is not mentioned that premium tier is used, so we can't assume that premium tier is used (eventhough it is default network tier) and go with B. So D is the correct answer.","poster":"jinaldesailive","timestamp":"1709814960.0","upvote_count":"1","comment_id":"1167979"},{"comment_id":"1095570","poster":"vladik820","content":"Selected Answer: B\nAnswer B","timestamp":"1702479720.0","upvote_count":"2"},{"timestamp":"1702453680.0","poster":"vladik820","comment_id":"1095231","upvote_count":"3","content":"Selected Answer: B\nAnswer B"},{"upvote_count":"2","timestamp":"1702304100.0","poster":"theseawillclaim","content":"Selected Answer: B\nI go for B, as \"Premium\" is the default tier. \nD could be nice, but totally relies on the architecture of the application. \nIf the application needs to be global or re-route lots of requests, a LB makes no miracles.","comment_id":"1093563"},{"comment_id":"1085734","upvote_count":"2","poster":"jomonkp","content":"D -configuring the load balancer as ingress","timestamp":"1701496980.0"},{"poster":"bhunias","upvote_count":"1","content":"Selected Answer: B\nI am confused between B and D. Default network is Premium which is costly, so changing to Standard also make sense. D is also correct when you'll have multiple endpoints and Google also suggested to LB. But, I'll go with (B) as it'll reduce some cost.","timestamp":"1701022440.0","comment_id":"1080941"},{"content":"Selected Answer: D\nTo reduce network costs for the mobile phone game running on a Google Kubernetes Engine (GKE) cluster, the recommended approach is to use a Google Cloud HTTP Load Balancer as Ingress. This option is the best as it provides several advantages such as scalability, cost-effectiveness, and security.","comment_id":"919662","poster":"Cassim","upvote_count":"1","timestamp":"1686350340.0"},{"upvote_count":"1","timestamp":"1678300080.0","comment_id":"833265","content":"Selected Answer: D\nA Google Cloud HTTP Load Balancer can help reduce network costs by efficiently routing traffic to the backend services running on the GKE cluster. By configuring the load balancer as ingress, it will receive all incoming traffic and then route it to the appropriate backend service. This eliminates the need for each service to have its own external IP address, which can be costly in terms of network usage.\n\nOption A, Configure the VPC as a Shared VPC Host project, is not relevant to reducing network costs for a mobile phone game running on a GKE cluster.\n\nOption B, Configure your network services on the Standard Tier, is also not relevant to reducing network costs. The Standard Tier is a premium network service that offers better performance but is more expensive than the other tiers.\n\nOption C, Configure your Kubernetes cluster as a Private Cluster, is not directly relevant to reducing network costs. A private cluster restricts access to the Kubernetes API server to a private IP address range, which can improve security but does not necessarily reduce network costs.","poster":"gertenbol"},{"content":"Selected Answer: B\nAns is B - Stanard Tier","comment_id":"779038","timestamp":"1673967720.0","upvote_count":"2","poster":"boras"},{"timestamp":"1673413320.0","upvote_count":"1","poster":"JonathanSJ","content":"Selected Answer: D\nOption C would only be applicable if the Kubernetes cluster had not yet been created, and the private cluster feature was enabled at cluster creation time.\nAlso the application is serving HTTP requests from users and it could be bad if stop it.\n\nThe option D on the other hand, configuring a Google Cloud HTTP Load Balancer as Ingress, would not have a direct impact on reducing network costs. It would instead provide a more efficient way of managing and distributing incoming traffic to the Kubernetes cluster, which may indirectly help reduce costs, but not as much as the option C.","comment_id":"772040"},{"content":"i think it is C. private cluster has no public IP addresses, internal IP addresses are no charged, external traffic via CND with a public IP addresses is no charged","upvote_count":"1","poster":"hanweiCN","timestamp":"1669087080.0","comment_id":"724070","comments":[{"timestamp":"1669087500.0","content":"sorry, external traffic via NAT , not CND .","poster":"hanweiCN","comment_id":"724073","upvote_count":"1"}]},{"comment_id":"703011","timestamp":"1666614960.0","poster":"zellck","upvote_count":"3","content":"Selected Answer: D\nD is the answer.\n\nhttps://cloud.google.com/architecture/best-practices-for-running-cost-effective-kubernetes-applications-on-gke#use_container-native_load_balancing_through_ingress\nContainer-native load balancing lets load balancers target Kubernetes Pods directly and to evenly distribute traffic to Pods by using a data model called network endpoint groups (NEGs). This approach improves network performance, increases visibility, enables advanced load-balancing features, and enables the use of Traffic Director, Google Cloud's fully managed traffic control plane for service mesh.\n\nBecause of these benefits, container-native load balancing is the recommended solution for load balancing through Ingress."},{"comment_id":"697478","timestamp":"1666017900.0","poster":"Prithivi274","upvote_count":"1","content":"Cant be B\n\nStandard tier is regional and can't serve request from global users.\nk8s requires LBs to direct traffic, standard tier do not support that.\n\ncorrect me if i'm wrong but I would go with D"},{"content":"Selected Answer: C\nPrivate cluster uses the internal IP instead of public that reduce the cost\nhttps://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#private_clusters","comment_id":"684798","poster":"Vlad_dryha","timestamp":"1664712840.0","upvote_count":"1"},{"upvote_count":"2","content":"I think it is B - https://cloud.google.com/network-tiers/docs/overview#configuring_standard_tier_for_load_balancing","timestamp":"1662367500.0","poster":"jits1984","comment_id":"659944"},{"upvote_count":"1","comment_id":"646571","timestamp":"1660453980.0","content":"Selected Answer: D\nThe correct answer is \"D\"","poster":"GCP72"},{"upvote_count":"3","content":"Selected Answer: B\nThe answer is B and here is why:\nThe question asks: You need to implement a solution that will reduce the network cost. What should you do?\nThe standard tier saves you money on EGRESS fees while sacrificing performance (Using Global internet instead of GCP private fiber) reduces the SKU cost per GB.\nYou need to implement a solution that will reduce the network cost. What should you do?","timestamp":"1660218120.0","poster":"kapara","comments":[{"poster":"kapara","content":"GLB increases your network costs while improving performance for two reasons:\n1) You pay for interregional traffic if the request was made from a different region since HGLB serves the customer from EDGE GCP device TO your regional GKE.\n2) GCP HTTP LB costs more if you have several namespaces since its creates 1 LB per namespace, while a 3rd party NGiNX ingress can save you money server several namespaces with only one TCP LB.\n\nSo GCP HTTPS LB costs you more while the Standard network tier can only cost less.\nGCP HTTPS LB is recommended since it improves performance - NOT COST!","upvote_count":"3","timestamp":"1660218120.0","comment_id":"645430"}],"comment_id":"645428"},{"comment_id":"585500","timestamp":"1649903040.0","content":"D for sure.","poster":"haitruonghp","upvote_count":"2"},{"comment_id":"552964","upvote_count":"3","poster":"rfd","timestamp":"1645458000.0","content":"Selected Answer: B\nHow can it be D when the whole question is about reducing costs."},{"comment_id":"548373","content":"Selected Answer: D\nhttps://cloud.google.com/architecture/best-practices-for-running-cost-effective-kubernetes-applications-on-gke#use_container-native_load_balancing_through_ingress\n\n\"container-native load balancing is the recommended solution for load balancing through Ingress. \"","upvote_count":"1","timestamp":"1644996600.0","poster":"buldas"},{"comment_id":"522568","content":"B or C \nthe only issue with B is no one talked about premium tier \nand C you gonna save the network cost of your public IPs for nodes","timestamp":"1642038240.0","poster":"helg","upvote_count":"2"},{"timestamp":"1641785580.0","upvote_count":"1","content":"I will go with C. Because question is to reduce Network Cost and surely https://cloud.google.com/vpc/network-pricing#ipaddress","comment_id":"520610","poster":"roastc"},{"timestamp":"1639751280.0","content":"Selected Answer: B\nStandard Tier for sure, B","upvote_count":"2","comment_id":"503730","poster":"Wwhite44"},{"poster":"not_thanos","timestamp":"1639688460.0","content":"Selected Answer: D\nhttps://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#configuring_your_services_in_kubernetes_to_receive_internet_traffic\n\nAns is D","comment_id":"503196","upvote_count":"2"},{"upvote_count":"4","comment_id":"492807","content":"Correct Answer is D:\nhttps://cloud.google.com/vpc/network-pricing\n\nIngress pricing\nTraffic type Price\nIngress \nNo charge for ingress traffic. However there may be a charge for resource that processes ingress traffic. Services that process ingress traffic are as follows:\n\nLoad balancers\nCloud NAT\nProtocol forwarding\nResponses to requests count as egress are charged.","timestamp":"1638480540.0","poster":"ESP_SAP"},{"timestamp":"1638263160.0","upvote_count":"4","content":"Selected Answer: D\nhttps://cloud.google.com/vpc/network-pricing","poster":"Omni_Omnom","comment_id":"490535"},{"upvote_count":"2","poster":"Tire","timestamp":"1637918520.0","content":"GKE setting Private cluster is immutable. This setting can only be set during the GKE cluster provisioning. So based on the fact that we already are using it, C is not an option.","comment_id":"487213"},{"comment_id":"484019","upvote_count":"1","content":"https://cloud.google.com/vpc/network-pricing\nAns D","poster":"TNT87","timestamp":"1637572320.0"},{"poster":"Manh","content":"I think should be B\nStandard tier reduce cost than premium tier\n\nA no way\nC private cluster need additional resource for ingress and egress like NAT\nD configure HTTP LB, it's make more cost\n\nhttps://cloud.netapp.com/blog/gcp-cvo-blg-gcp-network-pricing-how-to-beat-the-hidden-fees","timestamp":"1636469040.0","comment_id":"474858","upvote_count":"4"},{"content":"Can someone confirm B or d?","upvote_count":"1","comments":[{"content":"See the explaination of syslog.","upvote_count":"2","comment_id":"470732","poster":"danchoif2","timestamp":"1635694080.0"}],"comment_id":"461479","timestamp":"1634119920.0","poster":"Debarati1"},{"content":"Standard Tier offers a lower-cost alternative for the following use cases:\n\nYou have applications that are not latency or performance sensitive.\n\nMobile gaming cannot choose B","timestamp":"1631012460.0","upvote_count":"6","poster":"MF2C","comment_id":"440866"},{"timestamp":"1626971700.0","comment_id":"411801","comments":[{"content":"C is not right \nPrivate clusters use nodes that do not have external IP addresses. This means that clients on the internet cannot connect to the IP addresses of the nodes.\n\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept#architecture","poster":"[Removed]","timestamp":"1656304320.0","upvote_count":"1","comment_id":"623048"}],"poster":"exploregcp","content":"Ans is C.\nPrivate cluster has only private IP assigned to nodes. As this is backend service public IPs are not required. Public IPs are are chargable. \nhttps://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#private_clusters\nD is not correct. Ingress traffic is not charged. Hence will not help in network cost saving.","upvote_count":"6"},{"poster":"[Removed]","timestamp":"1622767260.0","upvote_count":"4","comment_id":"373984","content":"I think B"},{"comment_id":"372803","poster":"devopsbatch","comments":[{"content":"but how is it related to reduce network cost?","upvote_count":"3","timestamp":"1622785320.0","poster":"DucLee3110","comments":[{"comments":[{"content":"B - looks good.","upvote_count":"3","poster":"akg001","timestamp":"1623488700.0","comment_id":"380336"}],"comment_id":"376419","poster":"rinkeshgala1","upvote_count":"5","content":"Correct answer should be option B","timestamp":"1623030000.0"}],"comment_id":"374099"}],"upvote_count":"4","timestamp":"1622645880.0","content":"D ingress is an internal LB and it can handle http request based on path rules"}],"answer_ET":"C","url":"https://www.examtopics.com/discussions/google/view/54236-exam-professional-cloud-devops-engineer-topic-1-question-11/","unix_timestamp":1622645880,"answer":"B","timestamp":"2021-06-02 16:58:00","question_id":13,"answer_description":"Reference:\nhttps://cloud.google.com/solutions/prep-kubernetes-engine-for-prod","question_images":[],"answers_community":["B (54%)","D (43%)","3%"],"question_text":"You support the backend of a mobile phone game that runs on a Google Kubernetes Engine (GKE) cluster. The application is serving HTTP requests from users.\nYou need to implement a solution that will reduce the network cost. What should you do?","exam_id":5,"isMC":true},{"id":"MuiwJbbnjUmXJdHagZ1T","topic":"1","isMC":true,"url":"https://www.examtopics.com/discussions/google/view/122999-exam-professional-cloud-devops-engineer-topic-1-question-110/","discussion":[{"content":"Selected Answer: A\nA, as it is possible to accept a tagged revision as explained here: https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#deploy-with-tags","poster":"florian_cartron","upvote_count":"7","timestamp":"1696860720.0","comment_id":"1038730"},{"content":"Selected Answer: A\nTo enable developers to test the latest revisions of a Cloud Run-hosted service before exposing it to customers, the recommended approach is to use the --no-traffic flag during deployment, as outlined in (Option A).\n\nBy running the command gcloud run deploy booking-engine --no-traffic --tag dev, you deploy the service with no traffic routed to it initially. Subsequently, developers can test the latest revisions using the URL https://dev--booking-engine-abcdef.a.run.app. This allows for a controlled and private testing environment where developers can validate the service's functionality and behavior before making it publicly accessible. Utilizing a dedicated URL with the --tag option ensures that developers can interact with the specific version intended for testing, facilitating a smooth and secure testing process.","poster":"xhilmi","upvote_count":"3","comment_id":"1089073","timestamp":"1701850020.0"},{"content":"Answer is A.\nWith option B: 100% of traffic will be route to the latest revision.","timestamp":"1698907680.0","upvote_count":"1","comment_id":"1060321","poster":"mshafa"},{"comment_id":"1040208","comments":[{"comment_id":"1054325","timestamp":"1698300780.0","content":"Agreed","poster":"Jason_Cloud_at","upvote_count":"1"}],"upvote_count":"4","timestamp":"1697000400.0","content":"Selected Answer: A\nIt create a new deployment(revision) with no traffic to https://booking-engine-abcdef.a.run.app but the revision can be tested by developer at https://dev--booking-engine-abcdef.a.run.app as dev tag is associated with the deploymnet.\n\nReference: https://cloud.google.com/sdk/gcloud/reference/run/deploy","poster":"PrayasMohanty"}],"choices":{"A":"Run the gcloud run deploy booking-engine --no-traffic --tag dev command. Use the https://dev--booking-engine-abcdef.a.run.app URL for testing.","B":"Run the gcloud run services update-traffic booking-engine --to-revisions LATEST=1 command. Use the https://booking-engine-abcdef.a.run.app URL for testing.","D":"Grant the roles/run.invoker role to the developers testing the booking-engine service. Use the https://booking-engine-abcdef.private.run.app URL for testing.","C":"Pass the curl –H “Authorization:Bearer $(gcloud auth print-identity-token)” auth token. Use the https://booking-engine-abcdef.a.run.app URL to test privately."},"timestamp":"2023-10-09 16:12:00","question_id":14,"unix_timestamp":1696860720,"answer_ET":"B","answer_description":"","question_images":[],"exam_id":5,"answers_community":["A (100%)"],"question_text":"","answer":"A","answer_images":[]},{"id":"Wvvr8ddqFKPZswH4duqk","answers_community":["B (95%)","5%"],"isMC":true,"unix_timestamp":1697017440,"answer_description":"","answer_ET":"D","question_id":15,"question_images":[],"question_text":"","timestamp":"2023-10-11 11:44:00","answer":"B","answer_images":[],"url":"https://www.examtopics.com/discussions/google/view/123269-exam-professional-cloud-devops-engineer-topic-1-question-111/","discussion":[{"comment_id":"1054329","upvote_count":"9","poster":"Jason_Cloud_at","timestamp":"1698301080.0","content":"Selected Answer: B\nI will got with B just to identify what happend in the network level"},{"comment_id":"1057182","timestamp":"1698621180.0","content":"Selected Answer: B\nI suspect that there is a mistake in the issue and that the Network Intelligence Center is correct, not the Network Connectivity Center.\nhttps://cloud.google.com/network-intelligence-center/docs/connectivity-tests/concepts/overview","poster":"YushiSato","upvote_count":"6"},{"poster":"xhilmi","upvote_count":"2","content":"Selected Answer: B\nTo identify and troubleshoot the network connectivity issue between Google Kubernetes Engine (GKE) clusters in different VPCs where nodes in Cluster A cannot access nodes in Cluster B, the recommended action is to use Network Connectivity Center, as stated in (Option B).\n\nBy performing a Connectivity Test from Cluster A to Cluster B using Network Connectivity Center, you can assess the network path and identify potential issues affecting the connectivity. This diagnostic tool helps pinpoint where the connectivity breaks down, enabling you to analyze the network configuration and resolve any misconfigurations or obstacles that might be hindering communication between the clusters. This approach provides a focused and efficient way to troubleshoot the specific network layer where the connectivity issue occurs without requiring execute access to workloads and nodes in the clusters.","comment_id":"1089077","timestamp":"1701850380.0"},{"content":"Selected Answer: B\nNetwork Connectivity Center is not the greatest tool but in this case we don't really have any options with the restrictions in the question so B","poster":"Andrei_Z","timestamp":"1700559900.0","upvote_count":"2","comment_id":"1076164","comments":[{"upvote_count":"1","comment_id":"1104152","content":"Is it not easier the ans D, both VPC seems to be in the same GCP project ? It's only to allow the ingress rule in both VPC firewall rules\nIf I read https://cloud.google.com/network-connectivity-center#simplified-data-transfer-over-google%E2%80%99s-network they talk to enable the communication between network outside the GCP scope\nBut I realized I am the only who thinks in ans D","timestamp":"1703352600.0","poster":"Feliphus"}]},{"content":"B as the Q says but do not have execute access to workloads and nodes… so can’t run toolbox","upvote_count":"4","comment_id":"1041945","timestamp":"1697130420.0","comments":[{"timestamp":"1697359260.0","content":"May not have execute access to workload and node, but may have access to project and create a new toolbox pod for testing the route to Cluster B","comment_id":"1043966","comments":[{"content":"When you don't have execute access in this case even after creating a new pod also you will not be able to exec inside the pod as we don't have access.","comment_id":"1046568","poster":"gouravjoshi05","upvote_count":"1","timestamp":"1697604960.0"}],"upvote_count":"1","poster":"PrayasMohanty"}],"poster":"ReachTango73"},{"upvote_count":"1","comments":[{"poster":"Jason_Cloud_at","timestamp":"1698301140.0","comment_id":"1054330","upvote_count":"1","content":"It says you dont have access to execute in workloads and node level, how can you install toolbox in the node ?\nI will go with B"}],"poster":"PrayasMohanty","content":"Selected Answer: A\nVote for A \nReference: https://cloud.google.com/container-optimized-os/docs/how-to/toolbox","timestamp":"1697017440.0","comment_id":"1040454"}],"exam_id":5,"choices":{"C":"Use a debug container to run the traceroute command from Cluster A to Cluster B and from Cluster B to Cluster A. Identify the common failure point.","D":"Enable VPC Flow Logs in both VPCs, and monitor packet drops.","A":"Install a toolbox container on the node in Cluster Confirm that the routes to Cluster B are configured appropriately.","B":"Use Network Connectivity Center to perform a Connectivity Test from Cluster A to Cluster B."},"topic":"1"}],"exam":{"id":5,"provider":"Google","isImplemented":true,"numberOfQuestions":166,"lastUpdated":"1 May 2024","isBeta":false,"isMCOnly":true,"name":"Professional Cloud DevOps Engineer"},"currentPage":3},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "ADq4WwcMNNcNUOz459ie",
+                "answer": "CD",
+                "answer_images": [],
+                "discussion": [
+                    {
+                        "content": "CD is the correct answer ,This will ensure that the image build is only triggered when a push is made to the main branch, and that the push is approved by the change control team.\n\nExplanation:\n\nOption C: Setting the repository event setting to ‘Push to a branch’ will trigger the Cloud Build job whenever a push is made to any branch in the repository. This is necessary because you want the image build to be triggered when a push is made to the main branch.\nOption D: Configuring a branch protection rule for the main branch on the repository will require that all pushes to the main branch be approved by the change control team. This is necessary to ensure that only approved changes are made to the main branch, which will then trigger the image build.",
+                        "comment_id": "1022296",
+                        "timestamp": "1696167720.0",
+                        "poster": "ManishKS",
+                        "upvote_count": "5",
+                        "comments": [
+                            {
+                                "timestamp": "1698295920.0",
+                                "upvote_count": "2",
+                                "poster": "Jason_Cloud_at",
+                                "comment_id": "1054283",
+                                "content": "in the question it says \"Automated\" doesn't option E works as well ?"
+                            }
+                        ]
+                    },
+                    {
+                        "content": "Selected Answer: CD\nC) Triggers Only when pushing or merging into a branch in our case would be main branch\nD) Configuring branch protection, gives you the control over the branch and who can push to it, so any changes would need to be done over a pull request, and will need to be approved before merging.",
+                        "poster": "edd004",
+                        "upvote_count": "3",
+                        "comment_id": "1096618",
+                        "timestamp": "1702569540.0"
+                    },
+                    {
+                        "comment_id": "1089059",
+                        "content": "Selected Answer: CD\nTo ensure that production image builds are run only against the main branch and require approval from the change control team, the recommended actions are to configure a trigger on the Cloud Build job with the repository event setting set to 'Push to a branch' (Option C) and to configure a branch protection rule for the main branch on the repository (Option D). \n\nConfiguring the trigger for 'Push to a branch' ensures that Cloud Build is triggered specifically when changes are pushed to the main branch. Additionally, setting up a branch protection rule for the main branch adds an extra layer of control by enforcing policies such as requiring code reviews and approval from designated individuals or teams before changes are merged into the main branch.\n\nTogether, these measures automate the image build process while adhering to the specified requirements and maintaining a robust change control workflow.",
+                        "upvote_count": "2",
+                        "poster": "xhilmi",
+                        "timestamp": "1701848820.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "Selected Answer: CD\nA push event to branches(including main) can then trigger an automated image build.\nEnabling branch protection will enforce a pull request, and it then involve ppl to review.",
+                        "timestamp": "1698923700.0",
+                        "poster": "lelele2023",
+                        "comment_id": "1060501"
+                    },
+                    {
+                        "timestamp": "1698296040.0",
+                        "upvote_count": "1",
+                        "comment_id": "1054284",
+                        "poster": "Jason_Cloud_at",
+                        "content": "C is definetly the anaswer, I have slight confusion on D and E , Most probably will go with E since the questions says automated."
+                    },
+                    {
+                        "poster": "nhiguchi",
+                        "content": "Selected Answer: CD\nAnswer should be CD.",
+                        "upvote_count": "1",
+                        "comment_id": "1050218",
+                        "timestamp": "1697952420.0"
+                    }
+                ],
+                "isMC": true,
+                "question_text": "",
+                "answer_description": "",
+                "unix_timestamp": 1696167720,
+                "question_id": 11,
+                "answer_ET": "AB",
+                "url": "https://www.examtopics.com/discussions/google/view/122037-exam-professional-cloud-devops-engineer-topic-1-question-108/",
+                "question_images": [],
+                "timestamp": "2023-10-01 15:42:00",
+                "topic": "1",
+                "exam_id": 5,
+                "choices": {
+                    "C": "Create a trigger on the Cloud Build job. Set the repository event setting to ‘Push to a branch’",
+                    "A": "Create a trigger on the Cloud Build job. Set the repository event setting to ‘Pull request’.",
+                    "E": "Enable the Approval option on the trigger.",
+                    "D": "Configure a branch protection rule for the main branch on the repository.",
+                    "B": "Add the OWNERS file to the Included files filter on the trigger."
+                },
+                "answers_community": [
+                    "CD (100%)"
+                ]
+            },
+            {
+                "id": "w4WBdhdsy5ZXuIUiud46",
+                "url": "https://www.examtopics.com/discussions/google/view/123227-exam-professional-cloud-devops-engineer-topic-1-question-109/",
+                "answer_description": "",
+                "question_text": "",
+                "discussion": [
+                    {
+                        "upvote_count": "6",
+                        "comment_id": "1063311",
+                        "content": "Selected Answer: C\nCloud Run integrates automatically with Cloud Monitoring and requires no setup or configuration.\nhttps://cloud.google.com/run/docs/monitoring?hl=ja",
+                        "poster": "YushiSato",
+                        "timestamp": "1699220160.0"
+                    },
+                    {
+                        "poster": "Jason_Cloud_at",
+                        "comment_id": "1054288",
+                        "upvote_count": "5",
+                        "timestamp": "1698296760.0",
+                        "content": "Selected Answer: C\nSuits best for the question."
+                    },
+                    {
+                        "comment_id": "1089061",
+                        "poster": "xhilmi",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: C\nFor identifying the resource utilization of a serverless application deployed on Cloud Run for cost optimization, the recommended approach is to use Cloud Monitoring, as indicated by (Option C).\n\nCloud Monitoring provides comprehensive monitoring capabilities, allowing you to track container CPU and memory utilization effectively. Specifically tailored for containerized environments like Cloud Run, Cloud Monitoring provides insights into key metrics, enabling you to analyze resource consumption, identify potential bottlenecks, and optimize costs based on observed utilization patterns.\n\nBy monitoring container CPU and memory metrics, you gain valuable data for making informed decisions about resource allocation, ensuring efficient usage, and ultimately optimizing the cost of running the serverless application in your production environment.",
+                        "timestamp": "1701849060.0"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "poster": "devops_man",
+                        "content": "As per documentation cloud profiler not supported for cloud run environment \nhttps://cloud.google.com/profiler/docs/about-profiler\nwill go with C",
+                        "comment_id": "1084246",
+                        "timestamp": "1701340560.0"
+                    },
+                    {
+                        "content": "Selected Answer: B\nI would say B. If you deploy with cloud run you would deploy a container and the only way of improving the cost of the solution would be by looking at the app with cloud profiler. If you just look at cloud monitoring, how would you know what part of your app is the issue?",
+                        "poster": "Andrei_Z",
+                        "timestamp": "1700489280.0",
+                        "comment_id": "1075454",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "comment_id": "1060648",
+                        "upvote_count": "5",
+                        "timestamp": "1698939120.0",
+                        "poster": "khoukha",
+                        "content": "Selected Answer: B\nCloud Profiler provides continuous profiling of resource consumption in your production applications, helping you identify and eliminate potential performance issues.\nhttps://cloud.google.com/products/operations#all-features \nsection:Performance and cost management"
+                    },
+                    {
+                        "comment_id": "1050219",
+                        "upvote_count": "4",
+                        "poster": "nhiguchi",
+                        "content": "Selected Answer: C\nAnswer should be C.",
+                        "timestamp": "1697952480.0"
+                    },
+                    {
+                        "timestamp": "1696998540.0",
+                        "comment_id": "1040196",
+                        "upvote_count": "3",
+                        "poster": "PrayasMohanty",
+                        "content": "Selected Answer: B\nCloud Profiler is a statistical, low-overhead profiler that continuously gathers CPU usage and memory-allocation information from your production applications. It attributes that information to the application's source code, helping you identify the parts of the application consuming the most resources, and otherwise illuminating the performance characteristics of the code.",
+                        "comments": []
+                    }
+                ],
+                "answer_images": [],
+                "answers_community": [
+                    "C (65%)",
+                    "B (35%)"
+                ],
+                "timestamp": "2023-10-11 06:29:00",
+                "topic": "1",
+                "question_images": [],
+                "answer": "C",
+                "isMC": true,
+                "choices": {
+                    "A": "Use Cloud Trace with distributed tracing to monitor the resource utilization of the application.",
+                    "C": "Use Cloud Monitoring to monitor the container CPU and memory utilization of the application.",
+                    "B": "Use Cloud Profiler with Ops Agent to monitor the CPU and memory utilization of the application.",
+                    "D": "Use Cloud Ops to create logs-based metrics to monitor the resource utilization of the application."
+                },
+                "question_id": 12,
+                "exam_id": 5,
+                "answer_ET": "D",
+                "unix_timestamp": 1696998540
+            },
+            {
+                "id": "zbYD4uRBtQYUEWkqV379",
+                "answer_images": [],
+                "topic": "1",
+                "choices": {
+                    "C": "Configure your Kubernetes cluster as a Private Cluster.",
+                    "D": "Configure a Google Cloud HTTP Load Balancer as Ingress.",
+                    "B": "Configure your network services on the Standard Tier.",
+                    "A": "Configure the VPC as a Shared VPC Host project."
+                },
+                "discussion": [
+                    {
+                        "comments": [
+                            {
+                                "timestamp": "1624339140.0",
+                                "poster": "syslog",
+                                "comment_id": "387612",
+                                "upvote_count": "12",
+                                "content": "Who says that we aren't use the load balancer?\nI think it's B anyway, because you have to choose standard tier when \"Cost is your main consideration, and you’re willing to trade-off some network performance\"\nhttps://cloud.google.com/network-tiers"
+                            },
+                            {
+                                "comment_id": "702663",
+                                "poster": "AzureDP900",
+                                "content": "D is right",
+                                "upvote_count": "1",
+                                "timestamp": "1666581780.0"
+                            },
+                            {
+                                "upvote_count": "2",
+                                "poster": "Meyucho",
+                                "content": "The doc didn't says that Container-native load balancing will decrees the spend in network costs. It's only refers to performance. Switching to Standard tier will be the most cost-specific answer",
+                                "comment_id": "911320",
+                                "timestamp": "1685539380.0"
+                            },
+                            {
+                                "upvote_count": "8",
+                                "content": "It is B because premium tier is by default everywhere. Standard tier is cheaper.\nWhy not D? This is single HTTP application. You don't know how many HTTP endpoints this app expose to Internet. If it is a single endpoint it does not matter if you create Service type Loadbalancer or Cluster IP-> Ingress. You still have one CLB in GCP, so cost is the same",
+                                "comment_id": "614356",
+                                "timestamp": "1654841460.0",
+                                "poster": "lxs"
+                            }
+                        ],
+                        "poster": "francisco_guerra",
+                        "content": "Ans is D\n\nA: No, Doest make sense\nB: Who says that we are using a premium tier?\nC: This does not help with the network cost?\nD: Ok :)\nCosts associated with a load balancer are charged to the project containing the load balancer components. \nBecause of these benefits, container-native load balancing is the recommended solution for load balancing through Ingress. When NEGs are used with GKE Ingress, the Ingress controller facilitates the creation of all aspects of the L7 load balancer. This includes creating the virtual IP address, forwarding rules, health checks, firewall rules, and more.\n\nhttps://cloud.google.com/architecture/best-practices-for-running-cost-effective-kubernetes-applications-on-gke",
+                        "timestamp": "1624205040.0",
+                        "comment_id": "386386",
+                        "upvote_count": "26"
+                    },
+                    {
+                        "timestamp": "1624915980.0",
+                        "poster": "Charun",
+                        "upvote_count": "9",
+                        "comment_id": "393257",
+                        "content": "D 100%"
+                    },
+                    {
+                        "content": "Selected Answer: D\nI'll go with D. AS HTTP LB will help to reduce the costs. In question it is not mentioned that premium tier is used, so we can't assume that premium tier is used (eventhough it is default network tier) and go with B. So D is the correct answer.",
+                        "poster": "jinaldesailive",
+                        "timestamp": "1709814960.0",
+                        "upvote_count": "1",
+                        "comment_id": "1167979"
+                    },
+                    {
+                        "comment_id": "1095570",
+                        "poster": "vladik820",
+                        "content": "Selected Answer: B\nAnswer B",
+                        "timestamp": "1702479720.0",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1702453680.0",
+                        "poster": "vladik820",
+                        "comment_id": "1095231",
+                        "upvote_count": "3",
+                        "content": "Selected Answer: B\nAnswer B"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1702304100.0",
+                        "poster": "theseawillclaim",
+                        "content": "Selected Answer: B\nI go for B, as \"Premium\" is the default tier. \nD could be nice, but totally relies on the architecture of the application. \nIf the application needs to be global or re-route lots of requests, a LB makes no miracles.",
+                        "comment_id": "1093563"
+                    },
+                    {
+                        "comment_id": "1085734",
+                        "upvote_count": "2",
+                        "poster": "jomonkp",
+                        "content": "D -configuring the load balancer as ingress",
+                        "timestamp": "1701496980.0"
+                    },
+                    {
+                        "poster": "bhunias",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nI am confused between B and D. Default network is Premium which is costly, so changing to Standard also make sense. D is also correct when you'll have multiple endpoints and Google also suggested to LB. But, I'll go with (B) as it'll reduce some cost.",
+                        "timestamp": "1701022440.0",
+                        "comment_id": "1080941"
+                    },
+                    {
+                        "content": "Selected Answer: D\nTo reduce network costs for the mobile phone game running on a Google Kubernetes Engine (GKE) cluster, the recommended approach is to use a Google Cloud HTTP Load Balancer as Ingress. This option is the best as it provides several advantages such as scalability, cost-effectiveness, and security.",
+                        "comment_id": "919662",
+                        "poster": "Cassim",
+                        "upvote_count": "1",
+                        "timestamp": "1686350340.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1678300080.0",
+                        "comment_id": "833265",
+                        "content": "Selected Answer: D\nA Google Cloud HTTP Load Balancer can help reduce network costs by efficiently routing traffic to the backend services running on the GKE cluster. By configuring the load balancer as ingress, it will receive all incoming traffic and then route it to the appropriate backend service. This eliminates the need for each service to have its own external IP address, which can be costly in terms of network usage.\n\nOption A, Configure the VPC as a Shared VPC Host project, is not relevant to reducing network costs for a mobile phone game running on a GKE cluster.\n\nOption B, Configure your network services on the Standard Tier, is also not relevant to reducing network costs. The Standard Tier is a premium network service that offers better performance but is more expensive than the other tiers.\n\nOption C, Configure your Kubernetes cluster as a Private Cluster, is not directly relevant to reducing network costs. A private cluster restricts access to the Kubernetes API server to a private IP address range, which can improve security but does not necessarily reduce network costs.",
+                        "poster": "gertenbol"
+                    },
+                    {
+                        "content": "Selected Answer: B\nAns is B - Stanard Tier",
+                        "comment_id": "779038",
+                        "timestamp": "1673967720.0",
+                        "upvote_count": "2",
+                        "poster": "boras"
+                    },
+                    {
+                        "timestamp": "1673413320.0",
+                        "upvote_count": "1",
+                        "poster": "JonathanSJ",
+                        "content": "Selected Answer: D\nOption C would only be applicable if the Kubernetes cluster had not yet been created, and the private cluster feature was enabled at cluster creation time.\nAlso the application is serving HTTP requests from users and it could be bad if stop it.\n\nThe option D on the other hand, configuring a Google Cloud HTTP Load Balancer as Ingress, would not have a direct impact on reducing network costs. It would instead provide a more efficient way of managing and distributing incoming traffic to the Kubernetes cluster, which may indirectly help reduce costs, but not as much as the option C.",
+                        "comment_id": "772040"
+                    },
+                    {
+                        "content": "i think it is C. private cluster has no public IP addresses, internal IP addresses are no charged, external traffic via CND with a public IP addresses is no charged",
+                        "upvote_count": "1",
+                        "poster": "hanweiCN",
+                        "timestamp": "1669087080.0",
+                        "comment_id": "724070",
+                        "comments": [
+                            {
+                                "timestamp": "1669087500.0",
+                                "content": "sorry, external traffic via NAT , not CND .",
+                                "poster": "hanweiCN",
+                                "comment_id": "724073",
+                                "upvote_count": "1"
+                            }
+                        ]
+                    },
+                    {
+                        "comment_id": "703011",
+                        "timestamp": "1666614960.0",
+                        "poster": "zellck",
+                        "upvote_count": "3",
+                        "content": "Selected Answer: D\nD is the answer.\n\nhttps://cloud.google.com/architecture/best-practices-for-running-cost-effective-kubernetes-applications-on-gke#use_container-native_load_balancing_through_ingress\nContainer-native load balancing lets load balancers target Kubernetes Pods directly and to evenly distribute traffic to Pods by using a data model called network endpoint groups (NEGs). This approach improves network performance, increases visibility, enables advanced load-balancing features, and enables the use of Traffic Director, Google Cloud's fully managed traffic control plane for service mesh.\n\nBecause of these benefits, container-native load balancing is the recommended solution for load balancing through Ingress."
+                    },
+                    {
+                        "comment_id": "697478",
+                        "timestamp": "1666017900.0",
+                        "poster": "Prithivi274",
+                        "upvote_count": "1",
+                        "content": "Cant be B\n\nStandard tier is regional and can't serve request from global users.\nk8s requires LBs to direct traffic, standard tier do not support that.\n\ncorrect me if i'm wrong but I would go with D"
+                    },
+                    {
+                        "content": "Selected Answer: C\nPrivate cluster uses the internal IP instead of public that reduce the cost\nhttps://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#private_clusters",
+                        "comment_id": "684798",
+                        "poster": "Vlad_dryha",
+                        "timestamp": "1664712840.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "I think it is B - https://cloud.google.com/network-tiers/docs/overview#configuring_standard_tier_for_load_balancing",
+                        "timestamp": "1662367500.0",
+                        "poster": "jits1984",
+                        "comment_id": "659944"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "646571",
+                        "timestamp": "1660453980.0",
+                        "content": "Selected Answer: D\nThe correct answer is \"D\"",
+                        "poster": "GCP72"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "content": "Selected Answer: B\nThe answer is B and here is why:\nThe question asks: You need to implement a solution that will reduce the network cost. What should you do?\nThe standard tier saves you money on EGRESS fees while sacrificing performance (Using Global internet instead of GCP private fiber) reduces the SKU cost per GB.\nYou need to implement a solution that will reduce the network cost. What should you do?",
+                        "timestamp": "1660218120.0",
+                        "poster": "kapara",
+                        "comments": [
+                            {
+                                "poster": "kapara",
+                                "content": "GLB increases your network costs while improving performance for two reasons:\n1) You pay for interregional traffic if the request was made from a different region since HGLB serves the customer from EDGE GCP device TO your regional GKE.\n2) GCP HTTP LB costs more if you have several namespaces since its creates 1 LB per namespace, while a 3rd party NGiNX ingress can save you money server several namespaces with only one TCP LB.\n\nSo GCP HTTPS LB costs you more while the Standard network tier can only cost less.\nGCP HTTPS LB is recommended since it improves performance - NOT COST!",
+                                "upvote_count": "3",
+                                "timestamp": "1660218120.0",
+                                "comment_id": "645430"
+                            }
+                        ],
+                        "comment_id": "645428"
+                    },
+                    {
+                        "comment_id": "585500",
+                        "timestamp": "1649903040.0",
+                        "content": "D for sure.",
+                        "poster": "haitruonghp",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "comment_id": "552964",
+                        "upvote_count": "3",
+                        "poster": "rfd",
+                        "timestamp": "1645458000.0",
+                        "content": "Selected Answer: B\nHow can it be D when the whole question is about reducing costs."
+                    },
+                    {
+                        "comment_id": "548373",
+                        "content": "Selected Answer: D\nhttps://cloud.google.com/architecture/best-practices-for-running-cost-effective-kubernetes-applications-on-gke#use_container-native_load_balancing_through_ingress\n\n\"container-native load balancing is the recommended solution for load balancing through Ingress. \"",
+                        "upvote_count": "1",
+                        "timestamp": "1644996600.0",
+                        "poster": "buldas"
+                    },
+                    {
+                        "comment_id": "522568",
+                        "content": "B or C \nthe only issue with B is no one talked about premium tier \nand C you gonna save the network cost of your public IPs for nodes",
+                        "timestamp": "1642038240.0",
+                        "poster": "helg",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1641785580.0",
+                        "upvote_count": "1",
+                        "content": "I will go with C. Because question is to reduce Network Cost and surely https://cloud.google.com/vpc/network-pricing#ipaddress",
+                        "comment_id": "520610",
+                        "poster": "roastc"
+                    },
+                    {
+                        "timestamp": "1639751280.0",
+                        "content": "Selected Answer: B\nStandard Tier for sure, B",
+                        "upvote_count": "2",
+                        "comment_id": "503730",
+                        "poster": "Wwhite44"
+                    },
+                    {
+                        "poster": "not_thanos",
+                        "timestamp": "1639688460.0",
+                        "content": "Selected Answer: D\nhttps://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#configuring_your_services_in_kubernetes_to_receive_internet_traffic\n\nAns is D",
+                        "comment_id": "503196",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "comment_id": "492807",
+                        "content": "Correct Answer is D:\nhttps://cloud.google.com/vpc/network-pricing\n\nIngress pricing\nTraffic type Price\nIngress \nNo charge for ingress traffic. However there may be a charge for resource that processes ingress traffic. Services that process ingress traffic are as follows:\n\nLoad balancers\nCloud NAT\nProtocol forwarding\nResponses to requests count as egress are charged.",
+                        "timestamp": "1638480540.0",
+                        "poster": "ESP_SAP"
+                    },
+                    {
+                        "timestamp": "1638263160.0",
+                        "upvote_count": "4",
+                        "content": "Selected Answer: D\nhttps://cloud.google.com/vpc/network-pricing",
+                        "poster": "Omni_Omnom",
+                        "comment_id": "490535"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "Tire",
+                        "timestamp": "1637918520.0",
+                        "content": "GKE setting Private cluster is immutable. This setting can only be set during the GKE cluster provisioning. So based on the fact that we already are using it, C is not an option.",
+                        "comment_id": "487213"
+                    },
+                    {
+                        "comment_id": "484019",
+                        "upvote_count": "1",
+                        "content": "https://cloud.google.com/vpc/network-pricing\nAns D",
+                        "poster": "TNT87",
+                        "timestamp": "1637572320.0"
+                    },
+                    {
+                        "poster": "Manh",
+                        "content": "I think should be B\nStandard tier reduce cost than premium tier\n\nA no way\nC private cluster need additional resource for ingress and egress like NAT\nD configure HTTP LB, it's make more cost\n\nhttps://cloud.netapp.com/blog/gcp-cvo-blg-gcp-network-pricing-how-to-beat-the-hidden-fees",
+                        "timestamp": "1636469040.0",
+                        "comment_id": "474858",
+                        "upvote_count": "4"
+                    },
+                    {
+                        "content": "Can someone confirm B or d?",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "content": "See the explaination of syslog.",
+                                "upvote_count": "2",
+                                "comment_id": "470732",
+                                "poster": "danchoif2",
+                                "timestamp": "1635694080.0"
+                            }
+                        ],
+                        "comment_id": "461479",
+                        "timestamp": "1634119920.0",
+                        "poster": "Debarati1"
+                    },
+                    {
+                        "content": "Standard Tier offers a lower-cost alternative for the following use cases:\n\nYou have applications that are not latency or performance sensitive.\n\nMobile gaming cannot choose B",
+                        "timestamp": "1631012460.0",
+                        "upvote_count": "6",
+                        "poster": "MF2C",
+                        "comment_id": "440866"
+                    },
+                    {
+                        "timestamp": "1626971700.0",
+                        "comment_id": "411801",
+                        "comments": [
+                            {
+                                "content": "C is not right \nPrivate clusters use nodes that do not have external IP addresses. This means that clients on the internet cannot connect to the IP addresses of the nodes.\n\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept#architecture",
+                                "poster": "[Removed]",
+                                "timestamp": "1656304320.0",
+                                "upvote_count": "1",
+                                "comment_id": "623048"
+                            }
+                        ],
+                        "poster": "exploregcp",
+                        "content": "Ans is C.\nPrivate cluster has only private IP assigned to nodes. As this is backend service public IPs are not required. Public IPs are are chargable. \nhttps://cloud.google.com/architecture/prep-kubernetes-engine-for-prod#private_clusters\nD is not correct. Ingress traffic is not charged. Hence will not help in network cost saving.",
+                        "upvote_count": "6"
+                    },
+                    {
+                        "poster": "[Removed]",
+                        "timestamp": "1622767260.0",
+                        "upvote_count": "4",
+                        "comment_id": "373984",
+                        "content": "I think B"
+                    },
+                    {
+                        "comment_id": "372803",
+                        "poster": "devopsbatch",
+                        "comments": [
+                            {
+                                "content": "but how is it related to reduce network cost?",
+                                "upvote_count": "3",
+                                "timestamp": "1622785320.0",
+                                "poster": "DucLee3110",
+                                "comments": [
+                                    {
+                                        "comments": [
+                                            {
+                                                "content": "B - looks good.",
+                                                "upvote_count": "3",
+                                                "poster": "akg001",
+                                                "timestamp": "1623488700.0",
+                                                "comment_id": "380336"
+                                            }
+                                        ],
+                                        "comment_id": "376419",
+                                        "poster": "rinkeshgala1",
+                                        "upvote_count": "5",
+                                        "content": "Correct answer should be option B",
+                                        "timestamp": "1623030000.0"
+                                    }
+                                ],
+                                "comment_id": "374099"
+                            }
+                        ],
+                        "upvote_count": "4",
+                        "timestamp": "1622645880.0",
+                        "content": "D ingress is an internal LB and it can handle http request based on path rules"
+                    }
+                ],
+                "answer_ET": "C",
+                "url": "https://www.examtopics.com/discussions/google/view/54236-exam-professional-cloud-devops-engineer-topic-1-question-11/",
+                "unix_timestamp": 1622645880,
+                "answer": "D",
+                "timestamp": "2021-06-02 16:58:00",
+                "question_id": 13,
+                "answer_description": "Reference:\nhttps://cloud.google.com/solutions/prep-kubernetes-engine-for-prod",
+                "question_images": [],
+                "answers_community": [
+                    "B (54%)",
+                    "D (43%)",
+                    "3%"
+                ],
+                "question_text": "You support the backend of a mobile phone game that runs on a Google Kubernetes Engine (GKE) cluster. The application is serving HTTP requests from users.\nYou need to implement a solution that will reduce the network cost. What should you do?",
+                "exam_id": 5,
+                "isMC": true
+            },
+            {
+                "id": "MuiwJbbnjUmXJdHagZ1T",
+                "topic": "1",
+                "isMC": true,
+                "url": "https://www.examtopics.com/discussions/google/view/122999-exam-professional-cloud-devops-engineer-topic-1-question-110/",
+                "discussion": [
+                    {
+                        "content": "Selected Answer: A\nA, as it is possible to accept a tagged revision as explained here: https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration#deploy-with-tags",
+                        "poster": "florian_cartron",
+                        "upvote_count": "7",
+                        "timestamp": "1696860720.0",
+                        "comment_id": "1038730"
+                    },
+                    {
+                        "content": "Selected Answer: A\nTo enable developers to test the latest revisions of a Cloud Run-hosted service before exposing it to customers, the recommended approach is to use the --no-traffic flag during deployment, as outlined in (Option A).\n\nBy running the command gcloud run deploy booking-engine --no-traffic --tag dev, you deploy the service with no traffic routed to it initially. Subsequently, developers can test the latest revisions using the URL https://dev--booking-engine-abcdef.a.run.app. This allows for a controlled and private testing environment where developers can validate the service's functionality and behavior before making it publicly accessible. Utilizing a dedicated URL with the --tag option ensures that developers can interact with the specific version intended for testing, facilitating a smooth and secure testing process.",
+                        "poster": "xhilmi",
+                        "upvote_count": "3",
+                        "comment_id": "1089073",
+                        "timestamp": "1701850020.0"
+                    },
+                    {
+                        "content": "Answer is A.\nWith option B: 100% of traffic will be route to the latest revision.",
+                        "timestamp": "1698907680.0",
+                        "upvote_count": "1",
+                        "comment_id": "1060321",
+                        "poster": "mshafa"
+                    },
+                    {
+                        "comment_id": "1040208",
+                        "comments": [
+                            {
+                                "comment_id": "1054325",
+                                "timestamp": "1698300780.0",
+                                "content": "Agreed",
+                                "poster": "Jason_Cloud_at",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "upvote_count": "4",
+                        "timestamp": "1697000400.0",
+                        "content": "Selected Answer: A\nIt create a new deployment(revision) with no traffic to https://booking-engine-abcdef.a.run.app but the revision can be tested by developer at https://dev--booking-engine-abcdef.a.run.app as dev tag is associated with the deploymnet.\n\nReference: https://cloud.google.com/sdk/gcloud/reference/run/deploy",
+                        "poster": "PrayasMohanty"
+                    }
+                ],
+                "choices": {
+                    "A": "Run the gcloud run deploy booking-engine --no-traffic --tag dev command. Use the https://dev--booking-engine-abcdef.a.run.app URL for testing.",
+                    "B": "Run the gcloud run services update-traffic booking-engine --to-revisions LATEST=1 command. Use the https://booking-engine-abcdef.a.run.app URL for testing.",
+                    "D": "Grant the roles/run.invoker role to the developers testing the booking-engine service. Use the https://booking-engine-abcdef.private.run.app URL for testing.",
+                    "C": "Pass the curl –H “Authorization:Bearer $(gcloud auth print-identity-token)” auth token. Use the https://booking-engine-abcdef.a.run.app URL to test privately."
+                },
+                "timestamp": "2023-10-09 16:12:00",
+                "question_id": 14,
+                "unix_timestamp": 1696860720,
+                "answer_ET": "B",
+                "answer_description": "",
+                "question_images": [],
+                "exam_id": 5,
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "question_text": "",
+                "answer": "A",
+                "answer_images": []
+            },
+            {
+                "id": "Wvvr8ddqFKPZswH4duqk",
+                "answers_community": [
+                    "B (95%)",
+                    "5%"
+                ],
+                "isMC": true,
+                "unix_timestamp": 1697017440,
+                "answer_description": "",
+                "answer_ET": "D",
+                "question_id": 15,
+                "question_images": [],
+                "question_text": "",
+                "timestamp": "2023-10-11 11:44:00",
+                "answer": "B",
+                "answer_images": [],
+                "url": "https://www.examtopics.com/discussions/google/view/123269-exam-professional-cloud-devops-engineer-topic-1-question-111/",
+                "discussion": [
+                    {
+                        "comment_id": "1054329",
+                        "upvote_count": "9",
+                        "poster": "Jason_Cloud_at",
+                        "timestamp": "1698301080.0",
+                        "content": "Selected Answer: B\nI will got with B just to identify what happend in the network level"
+                    },
+                    {
+                        "comment_id": "1057182",
+                        "timestamp": "1698621180.0",
+                        "content": "Selected Answer: B\nI suspect that there is a mistake in the issue and that the Network Intelligence Center is correct, not the Network Connectivity Center.\nhttps://cloud.google.com/network-intelligence-center/docs/connectivity-tests/concepts/overview",
+                        "poster": "YushiSato",
+                        "upvote_count": "6"
+                    },
+                    {
+                        "poster": "xhilmi",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: B\nTo identify and troubleshoot the network connectivity issue between Google Kubernetes Engine (GKE) clusters in different VPCs where nodes in Cluster A cannot access nodes in Cluster B, the recommended action is to use Network Connectivity Center, as stated in (Option B).\n\nBy performing a Connectivity Test from Cluster A to Cluster B using Network Connectivity Center, you can assess the network path and identify potential issues affecting the connectivity. This diagnostic tool helps pinpoint where the connectivity breaks down, enabling you to analyze the network configuration and resolve any misconfigurations or obstacles that might be hindering communication between the clusters. This approach provides a focused and efficient way to troubleshoot the specific network layer where the connectivity issue occurs without requiring execute access to workloads and nodes in the clusters.",
+                        "comment_id": "1089077",
+                        "timestamp": "1701850380.0"
+                    },
+                    {
+                        "content": "Selected Answer: B\nNetwork Connectivity Center is not the greatest tool but in this case we don't really have any options with the restrictions in the question so B",
+                        "poster": "Andrei_Z",
+                        "timestamp": "1700559900.0",
+                        "upvote_count": "2",
+                        "comment_id": "1076164",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "comment_id": "1104152",
+                                "content": "Is it not easier the ans D, both VPC seems to be in the same GCP project ? It's only to allow the ingress rule in both VPC firewall rules\nIf I read https://cloud.google.com/network-connectivity-center#simplified-data-transfer-over-google%E2%80%99s-network they talk to enable the communication between network outside the GCP scope\nBut I realized I am the only who thinks in ans D",
+                                "timestamp": "1703352600.0",
+                                "poster": "Feliphus"
+                            }
+                        ]
+                    },
+                    {
+                        "content": "B as the Q says but do not have execute access to workloads and nodes… so can’t run toolbox",
+                        "upvote_count": "4",
+                        "comment_id": "1041945",
+                        "timestamp": "1697130420.0",
+                        "comments": [
+                            {
+                                "timestamp": "1697359260.0",
+                                "content": "May not have execute access to workload and node, but may have access to project and create a new toolbox pod for testing the route to Cluster B",
+                                "comment_id": "1043966",
+                                "comments": [
+                                    {
+                                        "content": "When you don't have execute access in this case even after creating a new pod also you will not be able to exec inside the pod as we don't have access.",
+                                        "comment_id": "1046568",
+                                        "poster": "gouravjoshi05",
+                                        "upvote_count": "1",
+                                        "timestamp": "1697604960.0"
+                                    }
+                                ],
+                                "upvote_count": "1",
+                                "poster": "PrayasMohanty"
+                            }
+                        ],
+                        "poster": "ReachTango73"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "poster": "Jason_Cloud_at",
+                                "timestamp": "1698301140.0",
+                                "comment_id": "1054330",
+                                "upvote_count": "1",
+                                "content": "It says you dont have access to execute in workloads and node level, how can you install toolbox in the node ?\nI will go with B"
+                            }
+                        ],
+                        "poster": "PrayasMohanty",
+                        "content": "Selected Answer: A\nVote for A \nReference: https://cloud.google.com/container-optimized-os/docs/how-to/toolbox",
+                        "timestamp": "1697017440.0",
+                        "comment_id": "1040454"
+                    }
+                ],
+                "exam_id": 5,
+                "choices": {
+                    "C": "Use a debug container to run the traceroute command from Cluster A to Cluster B and from Cluster B to Cluster A. Identify the common failure point.",
+                    "D": "Enable VPC Flow Logs in both VPCs, and monitor packet drops.",
+                    "A": "Install a toolbox container on the node in Cluster Confirm that the routes to Cluster B are configured appropriately.",
+                    "B": "Use Network Connectivity Center to perform a Connectivity Test from Cluster A to Cluster B."
+                },
+                "topic": "1"
+            }
+        ],
+        "exam": {
+            "id": 5,
+            "provider": "Google",
+            "isImplemented": true,
+            "numberOfQuestions": 166,
+            "lastUpdated": "1 May 2024",
+            "isBeta": false,
+            "isMCOnly": true,
+            "name": "Professional Cloud DevOps Engineer"
+        },
+        "currentPage": 3
+    },
+    "__N_SSP": true
+}

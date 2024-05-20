@@ -1,1 +1,405 @@
-{"pageProps":{"questions":[{"id":"WO97dMDjSL8xnJ3R41Hc","answer_images":[],"unix_timestamp":1696397220,"answer_ET":"C","topic":"1","answer_description":"","discussion":[{"comment_id":"1089528","upvote_count":"3","poster":"xhilmi","content":"Selected Answer: A\nThe recommended solution is (Option A).\n\nProvide the partner team with the dashboard URL to enable them to create a copy of the dashboard. By sharing the dashboard URL, the partner team can access and duplicate the specific Cloud Monitoring custom dashboard easily.\n\nThis method allows for a straightforward and efficient way to share the dashboard configuration without the need for additional manual steps or exporting/importing files. It ensures a seamless transfer of the custom dashboard to the partner team, enabling them to leverage the same monitoring setup for their needs.","timestamp":"1701879360.0"},{"upvote_count":"3","content":"Selected Answer: A\nIn A they see your data and with D they their own data but using the same layout as in the dashboard you shared. So maybe A but the scope is not clear in the question...","timestamp":"1700821920.0","comment_id":"1079182","poster":"Andrei_Z"},{"poster":"lelele2023","content":"Selected Answer: A\nShould be A it looks like:\nhttps://cloud.google.com/monitoring/charts/share-dashboards#owner-rolesowner\n\n\"We recommend that you use Monitoring to send the URL of a dashboard to your recipients when you have that option. Monitoring identifies those recipients who might not have permission to view the dashboard and provides an option for you to grant the required permissions.\"","comment_id":"1065427","upvote_count":"2","timestamp":"1699432260.0"},{"content":"D is answer.","comment_id":"1060900","poster":"mshafa","upvote_count":"2","timestamp":"1698958920.0"},{"content":"Selected Answer: D\nI will go with D , I have omitted B and C , Option A is fine but atlast it says copy the dashboard, we cant copy the dashboard when shared.","comment_id":"1054455","poster":"Jason_Cloud_at","upvote_count":"2","timestamp":"1698315780.0"},{"poster":"ABZ10","content":"Selected Answer: A\nAnswer should be A according to this link:\nhttps://cloud.google.com/monitoring/charts/share-dashboards","timestamp":"1698007980.0","upvote_count":"1","comment_id":"1051095"},{"comments":[{"comment_id":"1054443","poster":"Jason_Cloud_at","comments":[{"content":"Sorry , my bad !! it actually works, I will go with D.","poster":"Jason_Cloud_at","upvote_count":"2","comment_id":"1054454","timestamp":"1698315600.0"}],"upvote_count":"1","content":"Bruh, Do you even know how JSON file looks like ?? What partners will do with just JSON file?","timestamp":"1698314700.0"}],"upvote_count":"2","content":"Answer should be D","timestamp":"1696397220.0","poster":"ManishKS","comment_id":"1024469"}],"question_text":"","isMC":true,"url":"https://www.examtopics.com/discussions/google/view/122340-exam-professional-cloud-devops-engineer-topic-1-question-121/","choices":{"A":"Provide the partner team with the dashboard URL to enable the partner team to create a copy of the dashboard.","C":"Copy the Monitoring Query Language (MQL) query from the dashboard, and send the ML query to the partner team.","B":"Export the metrics to BigQuery. Use Looker Studio to create a dashboard, and share the dashboard with the partner team.","D":"Download the JSON definition of the dashboard, and send the JSON file to the partner team."},"question_images":[],"answers_community":["A (82%)","D (18%)"],"exam_id":5,"question_id":26,"answer":"A","timestamp":"2023-10-04 07:27:00"},{"id":"CB9sHXxuTQPVOH4Iorlw","exam_id":5,"question_images":[],"topic":"1","discussion":[{"upvote_count":"1","poster":"alpha_canary","timestamp":"1707999240.0","comment_id":"1150972","content":"Selected Answer: A\nhttps://cloud.google.com/run/docs/configuring/services/secrets#access-secrets:~:text=Pass%20a%20secret%20using%20environment%20variables.%20Environment%20variables%20are%20resolved%20at%20instance%20startup%20time%2C%20so%20if%20you%20use%20this%20method%2C%20Google%20recommends%20that%20you%20pin%20the%20secret%20to%20a%20particular%20version%20rather%20than%20using%20latest."},{"upvote_count":"3","timestamp":"1701911220.0","comment_id":"1089883","poster":"xhilmi","content":"Selected Answer: A\nThe recommended solution is (option A)\n\nSave the API key in Secret Manager as a secret and reference the secret as an environment variable in the Cloud Run application. This approach aligns with Google-recommended practices for securely managing sensitive information.\n\nSecret Manager provides a centralized and secure storage for secrets, allowing you to store and retrieve the API key. Referencing the secret as an environment variable in the Cloud Run application ensures that the key remains confidential and is easily accessible without exposing it directly in the code. It enhances security by separating sensitive information from the application logic and adheres to best practices for secure credential management in a cloud environment."},{"comment_id":"1065436","poster":"lelele2023","content":"Selected Answer: A\nA is answer. B is wrong because: Cloud Run does not allow you to mount secrets at /dev, /proc and /sys, or on their subdirectories.","timestamp":"1699432620.0","upvote_count":"3"},{"content":"A is answer.","comment_id":"1060902","poster":"mshafa","timestamp":"1698958980.0","upvote_count":"1"},{"timestamp":"1698316020.0","content":"Selected Answer: A\nIt should be A","comment_id":"1054457","poster":"Jason_Cloud_at","upvote_count":"2"},{"timestamp":"1697955420.0","poster":"nhiguchi","content":"Selected Answer: A\nAnswer should be A","upvote_count":"1","comment_id":"1050254"},{"content":"A is the right answer as per my openion","poster":"PrayasMohanty","upvote_count":"1","comment_id":"1025429","timestamp":"1696494600.0"}],"url":"https://www.examtopics.com/discussions/google/view/122490-exam-professional-cloud-devops-engineer-topic-1-question-122/","unix_timestamp":1696494600,"answer":"A","answers_community":["A (100%)"],"answer_ET":"D","answer_images":[],"question_id":27,"choices":{"C":"Save the API key in Cloud Key Management Service (Cloud KMS) as a key. Reference the key as an environment variable in the Cloud Run application.","D":"Encrypt the API key by using Cloud Key Management Service (Cloud KMS), and pass the key to Cloud Run as an environment variable. Decrypt and use the key in Cloud Run.","A":"Save the API key in Secret Manager as a secret. Reference the secret as an environment variable in the Cloud Run application.","B":"Save the API key in Secret Manager as a secret key. Mount the secret key under the /sys/api_key directory, and decrypt the key in the Cloud Run application."},"isMC":true,"question_text":"","answer_description":"","timestamp":"2023-10-05 10:30:00"},{"id":"AWp8tMX2iCXjTUOiHHGq","answer_images":[],"exam_id":5,"question_text":"You are currently planning how to display Cloud Monitoring metrics for your organization’s Google Cloud projects. Your organization has three folders and six projects:\n\n//IMG//\n\n","discussion":[{"upvote_count":"7","comment_id":"1038764","timestamp":"1696863060.0","content":"Selected Answer: B\nBest practice is to use a new or empty project for scoping, so B rather than D: https://cloud.google.com/monitoring/settings#create-multi","poster":"florian_cartron"},{"upvote_count":"1","comment_id":"1150976","poster":"alpha_canary","timestamp":"1707999540.0","content":"Selected Answer: B\nhttps://cloud.google.com/monitoring/settings#create-multi"},{"comment_id":"1089945","upvote_count":"2","content":"Selected Answer: B\nThe recommended solution is (option B)\n\nCreate new scoping projects for each folder. Google Cloud Monitoring dashboards allow you to scope metrics based on projects, and by creating separate scoping projects for each folder, you can effectively isolate and display metrics only from the projects within that specific folder.\n\nThis approach aligns with Google-recommended practices by providing a structured and organized way to manage and visualize metrics. Using dedicated scoping projects for each folder ensures a clean separation of monitoring data, allowing you to customize dashboards according to the specific projects within a given folder while excluding metrics from projects in other folders.","poster":"xhilmi","timestamp":"1701923400.0"},{"content":"I thing is A\n\"Example of scoping projects and monitored projects\nAssume that your Staging and Production projects contain Compute Engine virtual machine (VM) instances. To view the metrics for all of your VMs in a single view, you create another project, AllEnvironments, and then add the Staging and Production projects as monitored projects.\"\nhttps://cloud.google.com/monitoring/settings#create-multi","timestamp":"1699995960.0","comment_id":"1070849","poster":"TereRolon","upvote_count":"1"},{"content":"B is best choose.","poster":"mshafa","timestamp":"1698959040.0","upvote_count":"1","comment_id":"1060903"},{"upvote_count":"3","comment_id":"1054469","timestamp":"1698316800.0","content":"B and D seems good answer , i would porbably go with B if the choice make me a millionaire.","poster":"Jason_Cloud_at"},{"poster":"PrayasMohanty","content":"For me the answer should be B \nreffer : https://cloud.google.com/monitoring/settings/multiple-projects","comment_id":"1025482","timestamp":"1696495800.0","upvote_count":"1"},{"poster":"ManishKS","comment_id":"1024476","content":"Answer should be D","upvote_count":"1","timestamp":"1696397460.0"}],"isMC":true,"choices":{"A":"Create a single new scoping project.","D":"Use the current app-one-dev, app-one-staging, and app-one-prod projects as the scoping project for each folder.","C":"Use the current app-one-prod project as the scoping project.","B":"Create new scoping projects for each folder."},"topic":"1","timestamp":"2023-10-04 07:31:00","answer":"B","answers_community":["B (100%)"],"answer_description":"","answer_ET":"C","question_images":["https://img.examtopics.com/professional-cloud-devops-engineer/image4.png"],"question_id":28,"unix_timestamp":1696397460,"url":"https://www.examtopics.com/discussions/google/view/122342-exam-professional-cloud-devops-engineer-topic-1-question-123/"},{"id":"CSeTlXmG0XsOVw0Cql1f","choices":{"C":"Assign the roles/logging.privateLogViewer role to each member of the security team.","D":"Assign the roles/logging.privateLogViewer role to a group with all the security team members.","A":"Assign the roles/logging.viewer role to each member of the security team.","B":"Assign the roles/logging.viewer role to a group with all the security team members."},"unix_timestamp":1696397520,"url":"https://www.examtopics.com/discussions/google/view/122343-exam-professional-cloud-devops-engineer-topic-1-question-124/","answer":"D","answer_images":[],"isMC":true,"question_text":"","answer_ET":"B","answers_community":["D (100%)"],"exam_id":5,"discussion":[{"timestamp":"1707999780.0","comment_id":"1150979","upvote_count":"2","poster":"alpha_canary","content":"Selected Answer: D\nhttps://cloud.google.com/iam/docs/job-functions/auditing#:~:text=Admin%20Activity%20logs.-,logging.privateLogViewer,privateLogViewer%20role%20gives%20the%20ability%20to%20view%20the%20Data%20Access%20logs.,-Once%20log%20entries"},{"content":"the question is wrong, the _Required log bucket is exclusively for Admin Activity logs and is not configurable for other types of logs.\nso B would be good, there is no good answer here.","timestamp":"1706353200.0","poster":"ogerber","upvote_count":"1","comment_id":"1133259"},{"upvote_count":"1","content":"Selected Answer: D\nThe right one","comment_id":"1102212","timestamp":"1703139060.0","poster":"LaxmanTiwari"},{"timestamp":"1701923760.0","comment_id":"1089948","poster":"xhilmi","upvote_count":"2","content":"Selected Answer: D\nThe recommended solution is (option D)\n\nAssign the roles/logging.privateLogViewer role to a group with all the security team members. This approach follows the principle of least privilege by granting the specific role needed for read-only access to Data Access audit logs. The roles/logging.privateLogViewer role is more restrictive than roles/logging.viewer, providing access only to private logs, such as Data Access audit logs, and aligns with Google-recommended practices for securing sensitive data.\n\nBy assigning this role to a group with all security team members, you can efficiently manage and update permissions for the entire team, maintaining a centralized and organized approach to access control for the designated logs in the _Required bucket."},{"content":"Selected Answer: D\nD, no brainer, give access to private logs (so also access logs) to the team. Option C is partially correct, you should rather give access to a group than to individual members just to be future-proof.","upvote_count":"1","comment_id":"1071751","poster":"pharao89","timestamp":"1700070960.0"},{"poster":"nhiguchi","content":"Selected Answer: D\nAnswer should be D","comment_id":"1050255","upvote_count":"1","timestamp":"1697955660.0"},{"poster":"activist","timestamp":"1697157240.0","content":"https://cloud.google.com/iam/docs/job-functions/auditing\nThe logging.privateLogViewer role gives the ability to view the Data Access logs.\n{\n \"role\": \"roles/logging.privateLogViewer\",\n \"members\": [\n \"group:security-team@example.com\"\n ]\nAnswer D seems correct.","comment_id":"1042143","upvote_count":"2"},{"content":"Answer should be D","comment_id":"1024479","timestamp":"1696397520.0","upvote_count":"1","poster":"ManishKS"}],"answer_description":"","timestamp":"2023-10-04 07:32:00","topic":"1","question_images":[],"question_id":29},{"id":"omWJ9nggE0Lok5D9iOCl","question_images":[],"choices":{"B":"Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nUse a standard Google Kubernetes Engine (GKE) cluster and maintain two services: one that processes the batches of data, and one that monitors Cloud Storage for new batches of data.\nStop the processing service when there are no batches of data to process.","C":"Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nCreate a Cloud Function with a google.storage.object.finalize Cloud Storage trigger. Write code so that the function can scale up a Compute Engine autoscaling managed instance group.\nUse an image pre-loaded with the data processing software that terminates the instances when processing completes.","D":"Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nUse Cloud Monitoring to detect new batches of data in the bucket and trigger a Cloud Function that processes the data.\nSet a Cloud Function to use the largest CPU possible to minimize the runtime of the processing.","A":"Provide a secure file transfer protocol (SFTP) server on a Compute Engine instance so that third parties can upload batches of data, and provide appropriate credentials to the server.\nCreate a Cloud Function with a google.storage.object.finalize Cloud Storage trigger. Write code so that the function can scale up a Compute Engine autoscaling managed instance group\nUse an image pre-loaded with the data processing software that terminates the instances when processing completes."},"isMC":true,"question_text":"","answer_ET":"D","question_id":30,"answer_images":[],"url":"https://www.examtopics.com/discussions/google/view/124659-exam-professional-cloud-devops-engineer-topic-1-question-125/","topic":"1","answers_community":["C (100%)"],"exam_id":5,"answer_description":"","unix_timestamp":1698317340,"answer":"C","timestamp":"2023-10-26 12:49:00","discussion":[{"poster":"xhilmi","content":"Selected Answer: C\nThe recommended solution is (option C)\n\nProvide a Cloud Storage bucket for third parties to upload batches of data, and utilize a Cloud Function with a google.storage.object.finalize trigger to scale up a Compute Engine autoscaling managed instance group. This approach ensures secure data uploads to a Cloud Storage bucket with proper IAM access controls.\n\nThe Cloud Function, triggered upon new object finalization in the bucket, scales up a managed instance group with pre-loaded data processing software, optimizing for compute-heavy tasks. The instances terminate upon completion, minimizing costs.\n\nThis design efficiently leverages serverless and autoscaling capabilities, ensuring quick and cost-effective processing of data batches arriving at varying times from multiple sources.","comment_id":"1089952","timestamp":"1701924900.0","upvote_count":"2"},{"content":"Selected Answer: C\nI would say C. GCS is not that expensive and you can set rules to archive old data. GCE is optimal for compute heavy batch jobs compared to cloud functions.","poster":"Andrei_Z","timestamp":"1700571300.0","comment_id":"1076297","upvote_count":"2"},{"poster":"Jason_Cloud_at","timestamp":"1698317340.0","upvote_count":"3","comment_id":"1054474","content":"Selected Answer: C\nI would go with C , using GCS is cost effective and secure compared to other options.\nD. Cloud function with large CPU results in high cost."}]}],"exam":{"isBeta":false,"numberOfQuestions":166,"id":5,"isImplemented":true,"isMCOnly":true,"lastUpdated":"1 May 2024","provider":"Google","name":"Professional Cloud DevOps Engineer"},"currentPage":6},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "WO97dMDjSL8xnJ3R41Hc",
+                "answer_images": [],
+                "unix_timestamp": 1696397220,
+                "answer_ET": "C",
+                "topic": "1",
+                "answer_description": "",
+                "discussion": [
+                    {
+                        "comment_id": "1089528",
+                        "upvote_count": "3",
+                        "poster": "xhilmi",
+                        "content": "Selected Answer: A\nThe recommended solution is (Option A).\n\nProvide the partner team with the dashboard URL to enable them to create a copy of the dashboard. By sharing the dashboard URL, the partner team can access and duplicate the specific Cloud Monitoring custom dashboard easily.\n\nThis method allows for a straightforward and efficient way to share the dashboard configuration without the need for additional manual steps or exporting/importing files. It ensures a seamless transfer of the custom dashboard to the partner team, enabling them to leverage the same monitoring setup for their needs.",
+                        "timestamp": "1701879360.0"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "content": "Selected Answer: A\nIn A they see your data and with D they their own data but using the same layout as in the dashboard you shared. So maybe A but the scope is not clear in the question...",
+                        "timestamp": "1700821920.0",
+                        "comment_id": "1079182",
+                        "poster": "Andrei_Z"
+                    },
+                    {
+                        "poster": "lelele2023",
+                        "content": "Selected Answer: A\nShould be A it looks like:\nhttps://cloud.google.com/monitoring/charts/share-dashboards#owner-rolesowner\n\n\"We recommend that you use Monitoring to send the URL of a dashboard to your recipients when you have that option. Monitoring identifies those recipients who might not have permission to view the dashboard and provides an option for you to grant the required permissions.\"",
+                        "comment_id": "1065427",
+                        "upvote_count": "2",
+                        "timestamp": "1699432260.0"
+                    },
+                    {
+                        "content": "D is answer.",
+                        "comment_id": "1060900",
+                        "poster": "mshafa",
+                        "upvote_count": "2",
+                        "timestamp": "1698958920.0"
+                    },
+                    {
+                        "content": "Selected Answer: D\nI will go with D , I have omitted B and C , Option A is fine but atlast it says copy the dashboard, we cant copy the dashboard when shared.",
+                        "comment_id": "1054455",
+                        "poster": "Jason_Cloud_at",
+                        "upvote_count": "2",
+                        "timestamp": "1698315780.0"
+                    },
+                    {
+                        "poster": "ABZ10",
+                        "content": "Selected Answer: A\nAnswer should be A according to this link:\nhttps://cloud.google.com/monitoring/charts/share-dashboards",
+                        "timestamp": "1698007980.0",
+                        "upvote_count": "1",
+                        "comment_id": "1051095"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "comment_id": "1054443",
+                                "poster": "Jason_Cloud_at",
+                                "comments": [
+                                    {
+                                        "content": "Sorry , my bad !! it actually works, I will go with D.",
+                                        "poster": "Jason_Cloud_at",
+                                        "upvote_count": "2",
+                                        "comment_id": "1054454",
+                                        "timestamp": "1698315600.0"
+                                    }
+                                ],
+                                "upvote_count": "1",
+                                "content": "Bruh, Do you even know how JSON file looks like ?? What partners will do with just JSON file?",
+                                "timestamp": "1698314700.0"
+                            }
+                        ],
+                        "upvote_count": "2",
+                        "content": "Answer should be D",
+                        "timestamp": "1696397220.0",
+                        "poster": "ManishKS",
+                        "comment_id": "1024469"
+                    }
+                ],
+                "question_text": "",
+                "isMC": true,
+                "url": "https://www.examtopics.com/discussions/google/view/122340-exam-professional-cloud-devops-engineer-topic-1-question-121/",
+                "choices": {
+                    "A": "Provide the partner team with the dashboard URL to enable the partner team to create a copy of the dashboard.",
+                    "C": "Copy the Monitoring Query Language (MQL) query from the dashboard, and send the ML query to the partner team.",
+                    "B": "Export the metrics to BigQuery. Use Looker Studio to create a dashboard, and share the dashboard with the partner team.",
+                    "D": "Download the JSON definition of the dashboard, and send the JSON file to the partner team."
+                },
+                "question_images": [],
+                "answers_community": [
+                    "A (82%)",
+                    "D (18%)"
+                ],
+                "exam_id": 5,
+                "question_id": 26,
+                "answer": "A",
+                "timestamp": "2023-10-04 07:27:00"
+            },
+            {
+                "id": "CB9sHXxuTQPVOH4Iorlw",
+                "exam_id": 5,
+                "question_images": [],
+                "topic": "1",
+                "discussion": [
+                    {
+                        "upvote_count": "1",
+                        "poster": "alpha_canary",
+                        "timestamp": "1707999240.0",
+                        "comment_id": "1150972",
+                        "content": "Selected Answer: A\nhttps://cloud.google.com/run/docs/configuring/services/secrets#access-secrets:~:text=Pass%20a%20secret%20using%20environment%20variables.%20Environment%20variables%20are%20resolved%20at%20instance%20startup%20time%2C%20so%20if%20you%20use%20this%20method%2C%20Google%20recommends%20that%20you%20pin%20the%20secret%20to%20a%20particular%20version%20rather%20than%20using%20latest."
+                    },
+                    {
+                        "upvote_count": "3",
+                        "timestamp": "1701911220.0",
+                        "comment_id": "1089883",
+                        "poster": "xhilmi",
+                        "content": "Selected Answer: A\nThe recommended solution is (option A)\n\nSave the API key in Secret Manager as a secret and reference the secret as an environment variable in the Cloud Run application. This approach aligns with Google-recommended practices for securely managing sensitive information.\n\nSecret Manager provides a centralized and secure storage for secrets, allowing you to store and retrieve the API key. Referencing the secret as an environment variable in the Cloud Run application ensures that the key remains confidential and is easily accessible without exposing it directly in the code. It enhances security by separating sensitive information from the application logic and adheres to best practices for secure credential management in a cloud environment."
+                    },
+                    {
+                        "comment_id": "1065436",
+                        "poster": "lelele2023",
+                        "content": "Selected Answer: A\nA is answer. B is wrong because: Cloud Run does not allow you to mount secrets at /dev, /proc and /sys, or on their subdirectories.",
+                        "timestamp": "1699432620.0",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "content": "A is answer.",
+                        "comment_id": "1060902",
+                        "poster": "mshafa",
+                        "timestamp": "1698958980.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1698316020.0",
+                        "content": "Selected Answer: A\nIt should be A",
+                        "comment_id": "1054457",
+                        "poster": "Jason_Cloud_at",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1697955420.0",
+                        "poster": "nhiguchi",
+                        "content": "Selected Answer: A\nAnswer should be A",
+                        "upvote_count": "1",
+                        "comment_id": "1050254"
+                    },
+                    {
+                        "content": "A is the right answer as per my openion",
+                        "poster": "PrayasMohanty",
+                        "upvote_count": "1",
+                        "comment_id": "1025429",
+                        "timestamp": "1696494600.0"
+                    }
+                ],
+                "url": "https://www.examtopics.com/discussions/google/view/122490-exam-professional-cloud-devops-engineer-topic-1-question-122/",
+                "unix_timestamp": 1696494600,
+                "answer": "A",
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "answer_ET": "D",
+                "answer_images": [],
+                "question_id": 27,
+                "choices": {
+                    "C": "Save the API key in Cloud Key Management Service (Cloud KMS) as a key. Reference the key as an environment variable in the Cloud Run application.",
+                    "D": "Encrypt the API key by using Cloud Key Management Service (Cloud KMS), and pass the key to Cloud Run as an environment variable. Decrypt and use the key in Cloud Run.",
+                    "A": "Save the API key in Secret Manager as a secret. Reference the secret as an environment variable in the Cloud Run application.",
+                    "B": "Save the API key in Secret Manager as a secret key. Mount the secret key under the /sys/api_key directory, and decrypt the key in the Cloud Run application."
+                },
+                "isMC": true,
+                "question_text": "",
+                "answer_description": "",
+                "timestamp": "2023-10-05 10:30:00"
+            },
+            {
+                "id": "AWp8tMX2iCXjTUOiHHGq",
+                "answer_images": [],
+                "exam_id": 5,
+                "question_text": "You are currently planning how to display Cloud Monitoring metrics for your organization’s Google Cloud projects. Your organization has three folders and six projects:\n\n//IMG//\n\n",
+                "discussion": [
+                    {
+                        "upvote_count": "7",
+                        "comment_id": "1038764",
+                        "timestamp": "1696863060.0",
+                        "content": "Selected Answer: B\nBest practice is to use a new or empty project for scoping, so B rather than D: https://cloud.google.com/monitoring/settings#create-multi",
+                        "poster": "florian_cartron"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "1150976",
+                        "poster": "alpha_canary",
+                        "timestamp": "1707999540.0",
+                        "content": "Selected Answer: B\nhttps://cloud.google.com/monitoring/settings#create-multi"
+                    },
+                    {
+                        "comment_id": "1089945",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: B\nThe recommended solution is (option B)\n\nCreate new scoping projects for each folder. Google Cloud Monitoring dashboards allow you to scope metrics based on projects, and by creating separate scoping projects for each folder, you can effectively isolate and display metrics only from the projects within that specific folder.\n\nThis approach aligns with Google-recommended practices by providing a structured and organized way to manage and visualize metrics. Using dedicated scoping projects for each folder ensures a clean separation of monitoring data, allowing you to customize dashboards according to the specific projects within a given folder while excluding metrics from projects in other folders.",
+                        "poster": "xhilmi",
+                        "timestamp": "1701923400.0"
+                    },
+                    {
+                        "content": "I thing is A\n\"Example of scoping projects and monitored projects\nAssume that your Staging and Production projects contain Compute Engine virtual machine (VM) instances. To view the metrics for all of your VMs in a single view, you create another project, AllEnvironments, and then add the Staging and Production projects as monitored projects.\"\nhttps://cloud.google.com/monitoring/settings#create-multi",
+                        "timestamp": "1699995960.0",
+                        "comment_id": "1070849",
+                        "poster": "TereRolon",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "B is best choose.",
+                        "poster": "mshafa",
+                        "timestamp": "1698959040.0",
+                        "upvote_count": "1",
+                        "comment_id": "1060903"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "comment_id": "1054469",
+                        "timestamp": "1698316800.0",
+                        "content": "B and D seems good answer , i would porbably go with B if the choice make me a millionaire.",
+                        "poster": "Jason_Cloud_at"
+                    },
+                    {
+                        "poster": "PrayasMohanty",
+                        "content": "For me the answer should be B \nreffer : https://cloud.google.com/monitoring/settings/multiple-projects",
+                        "comment_id": "1025482",
+                        "timestamp": "1696495800.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "ManishKS",
+                        "comment_id": "1024476",
+                        "content": "Answer should be D",
+                        "upvote_count": "1",
+                        "timestamp": "1696397460.0"
+                    }
+                ],
+                "isMC": true,
+                "choices": {
+                    "A": "Create a single new scoping project.",
+                    "D": "Use the current app-one-dev, app-one-staging, and app-one-prod projects as the scoping project for each folder.",
+                    "C": "Use the current app-one-prod project as the scoping project.",
+                    "B": "Create new scoping projects for each folder."
+                },
+                "topic": "1",
+                "timestamp": "2023-10-04 07:31:00",
+                "answer": "B",
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "answer_description": "",
+                "answer_ET": "C",
+                "question_images": [
+                    "https://img.examtopics.com/professional-cloud-devops-engineer/image4.png"
+                ],
+                "question_id": 28,
+                "unix_timestamp": 1696397460,
+                "url": "https://www.examtopics.com/discussions/google/view/122342-exam-professional-cloud-devops-engineer-topic-1-question-123/"
+            },
+            {
+                "id": "CSeTlXmG0XsOVw0Cql1f",
+                "choices": {
+                    "C": "Assign the roles/logging.privateLogViewer role to each member of the security team.",
+                    "D": "Assign the roles/logging.privateLogViewer role to a group with all the security team members.",
+                    "A": "Assign the roles/logging.viewer role to each member of the security team.",
+                    "B": "Assign the roles/logging.viewer role to a group with all the security team members."
+                },
+                "unix_timestamp": 1696397520,
+                "url": "https://www.examtopics.com/discussions/google/view/122343-exam-professional-cloud-devops-engineer-topic-1-question-124/",
+                "answer": "D",
+                "answer_images": [],
+                "isMC": true,
+                "question_text": "",
+                "answer_ET": "B",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "exam_id": 5,
+                "discussion": [
+                    {
+                        "timestamp": "1707999780.0",
+                        "comment_id": "1150979",
+                        "upvote_count": "2",
+                        "poster": "alpha_canary",
+                        "content": "Selected Answer: D\nhttps://cloud.google.com/iam/docs/job-functions/auditing#:~:text=Admin%20Activity%20logs.-,logging.privateLogViewer,privateLogViewer%20role%20gives%20the%20ability%20to%20view%20the%20Data%20Access%20logs.,-Once%20log%20entries"
+                    },
+                    {
+                        "content": "the question is wrong, the _Required log bucket is exclusively for Admin Activity logs and is not configurable for other types of logs.\nso B would be good, there is no good answer here.",
+                        "timestamp": "1706353200.0",
+                        "poster": "ogerber",
+                        "upvote_count": "1",
+                        "comment_id": "1133259"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nThe right one",
+                        "comment_id": "1102212",
+                        "timestamp": "1703139060.0",
+                        "poster": "LaxmanTiwari"
+                    },
+                    {
+                        "timestamp": "1701923760.0",
+                        "comment_id": "1089948",
+                        "poster": "xhilmi",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: D\nThe recommended solution is (option D)\n\nAssign the roles/logging.privateLogViewer role to a group with all the security team members. This approach follows the principle of least privilege by granting the specific role needed for read-only access to Data Access audit logs. The roles/logging.privateLogViewer role is more restrictive than roles/logging.viewer, providing access only to private logs, such as Data Access audit logs, and aligns with Google-recommended practices for securing sensitive data.\n\nBy assigning this role to a group with all security team members, you can efficiently manage and update permissions for the entire team, maintaining a centralized and organized approach to access control for the designated logs in the _Required bucket."
+                    },
+                    {
+                        "content": "Selected Answer: D\nD, no brainer, give access to private logs (so also access logs) to the team. Option C is partially correct, you should rather give access to a group than to individual members just to be future-proof.",
+                        "upvote_count": "1",
+                        "comment_id": "1071751",
+                        "poster": "pharao89",
+                        "timestamp": "1700070960.0"
+                    },
+                    {
+                        "poster": "nhiguchi",
+                        "content": "Selected Answer: D\nAnswer should be D",
+                        "comment_id": "1050255",
+                        "upvote_count": "1",
+                        "timestamp": "1697955660.0"
+                    },
+                    {
+                        "poster": "activist",
+                        "timestamp": "1697157240.0",
+                        "content": "https://cloud.google.com/iam/docs/job-functions/auditing\nThe logging.privateLogViewer role gives the ability to view the Data Access logs.\n{\n \"role\": \"roles/logging.privateLogViewer\",\n \"members\": [\n \"group:security-team@example.com\"\n ]\nAnswer D seems correct.",
+                        "comment_id": "1042143",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Answer should be D",
+                        "comment_id": "1024479",
+                        "timestamp": "1696397520.0",
+                        "upvote_count": "1",
+                        "poster": "ManishKS"
+                    }
+                ],
+                "answer_description": "",
+                "timestamp": "2023-10-04 07:32:00",
+                "topic": "1",
+                "question_images": [],
+                "question_id": 29
+            },
+            {
+                "id": "omWJ9nggE0Lok5D9iOCl",
+                "question_images": [],
+                "choices": {
+                    "B": "Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nUse a standard Google Kubernetes Engine (GKE) cluster and maintain two services: one that processes the batches of data, and one that monitors Cloud Storage for new batches of data.\nStop the processing service when there are no batches of data to process.",
+                    "C": "Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nCreate a Cloud Function with a google.storage.object.finalize Cloud Storage trigger. Write code so that the function can scale up a Compute Engine autoscaling managed instance group.\nUse an image pre-loaded with the data processing software that terminates the instances when processing completes.",
+                    "D": "Provide a Cloud Storage bucket so that third parties can upload batches of data, and provide appropriate Identity and Access Management (IAM) access to the bucket.\nUse Cloud Monitoring to detect new batches of data in the bucket and trigger a Cloud Function that processes the data.\nSet a Cloud Function to use the largest CPU possible to minimize the runtime of the processing.",
+                    "A": "Provide a secure file transfer protocol (SFTP) server on a Compute Engine instance so that third parties can upload batches of data, and provide appropriate credentials to the server.\nCreate a Cloud Function with a google.storage.object.finalize Cloud Storage trigger. Write code so that the function can scale up a Compute Engine autoscaling managed instance group\nUse an image pre-loaded with the data processing software that terminates the instances when processing completes."
+                },
+                "isMC": true,
+                "question_text": "",
+                "answer_ET": "D",
+                "question_id": 30,
+                "answer_images": [],
+                "url": "https://www.examtopics.com/discussions/google/view/124659-exam-professional-cloud-devops-engineer-topic-1-question-125/",
+                "topic": "1",
+                "answers_community": [
+                    "C (100%)"
+                ],
+                "exam_id": 5,
+                "answer_description": "",
+                "unix_timestamp": 1698317340,
+                "answer": "C",
+                "timestamp": "2023-10-26 12:49:00",
+                "discussion": [
+                    {
+                        "poster": "xhilmi",
+                        "content": "Selected Answer: C\nThe recommended solution is (option C)\n\nProvide a Cloud Storage bucket for third parties to upload batches of data, and utilize a Cloud Function with a google.storage.object.finalize trigger to scale up a Compute Engine autoscaling managed instance group. This approach ensures secure data uploads to a Cloud Storage bucket with proper IAM access controls.\n\nThe Cloud Function, triggered upon new object finalization in the bucket, scales up a managed instance group with pre-loaded data processing software, optimizing for compute-heavy tasks. The instances terminate upon completion, minimizing costs.\n\nThis design efficiently leverages serverless and autoscaling capabilities, ensuring quick and cost-effective processing of data batches arriving at varying times from multiple sources.",
+                        "comment_id": "1089952",
+                        "timestamp": "1701924900.0",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Selected Answer: C\nI would say C. GCS is not that expensive and you can set rules to archive old data. GCE is optimal for compute heavy batch jobs compared to cloud functions.",
+                        "poster": "Andrei_Z",
+                        "timestamp": "1700571300.0",
+                        "comment_id": "1076297",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "poster": "Jason_Cloud_at",
+                        "timestamp": "1698317340.0",
+                        "upvote_count": "3",
+                        "comment_id": "1054474",
+                        "content": "Selected Answer: C\nI would go with C , using GCS is cost effective and secure compared to other options.\nD. Cloud function with large CPU results in high cost."
+                    }
+                ]
+            }
+        ],
+        "exam": {
+            "isBeta": false,
+            "numberOfQuestions": 166,
+            "id": 5,
+            "isImplemented": true,
+            "isMCOnly": true,
+            "lastUpdated": "1 May 2024",
+            "provider": "Google",
+            "name": "Professional Cloud DevOps Engineer"
+        },
+        "currentPage": 6
+    },
+    "__N_SSP": true
+}

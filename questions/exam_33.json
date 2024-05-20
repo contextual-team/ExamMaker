@@ -1,1 +1,419 @@
-{"pageProps":{"questions":[{"id":"SwqSKTYHiobazixbDGYx","exam_id":5,"unix_timestamp":1697505900,"isMC":true,"answer_description":"","timestamp":"2023-10-17 03:25:00","question_images":["https://img.examtopics.com/professional-cloud-devops-engineer/image1.png"],"answer_images":[],"topic":"1","discussion":[{"timestamp":"1697505900.0","poster":"activist","comment_id":"1045433","upvote_count":"6","comments":[{"poster":"ABZ10","comment_id":"1046413","content":"How does increasing the pod replica help? The pod memory and cpu have barely gone up. Shouldn't it be B?","upvote_count":"1","comments":[{"upvote_count":"3","content":"The increase in the number of undelivered messages indicates that the microservice is not fully processing the messages.\nIt is believed that the number of messages that can be processed can be increased by increasing the number of pods.","timestamp":"1698528060.0","poster":"YushiSato","comment_id":"1056460"}],"timestamp":"1697583840.0"}],"content":"Selected Answer: C\nAgree with C as answer."},{"poster":"piyu1515","content":"Given the scenario where a sales event has caused an increase in orders and the stock information is not being updated quickly enough, leading to a large number of orders being accepted for out-of-stock products, the most appropriate action to ensure that the warehouse system accurately reflects product inventory at the time of order placement and minimize the impact on customers would be:\n\nC. Increase the number of Pod replicas.\n\nIncreasing the number of Pod replicas can help scale out the microservice to handle the increased load efficiently. This will allow the microservice to process the order messages and update the stock information in the warehousing system more quickly, reducing the likelihood of accepting orders for out-of-stock products. This approach addresses the issue at its root by ensuring that there are enough resources available to handle the increased workload effectively.","timestamp":"1707271800.0","comment_id":"1142892","upvote_count":"1"},{"poster":"xhilmi","timestamp":"1701825480.0","upvote_count":"1","content":"Selected Answer: C\nIncreasing the number of Pod replicas (Option C) is a suitable solution as it allows the microservice deployed in the Google Kubernetes Engine (GKE) Autopilot cluster to efficiently handle a surge in orders during a sales event.\n\nBy scaling horizontally, additional instances of the microservice are created, enabling parallel processing of order messages and reducing the backlog. This approach leverages the flexibility and automation of GKE Autopilot, ensuring that the infrastructure dynamically adapts to the increased load, providing a more responsive and scalable solution to minimize the impact on customers and maintain accurate stock information in the warehousing system.","comment_id":"1088923"},{"comment_id":"1087925","upvote_count":"1","poster":"filipemotta","timestamp":"1701719700.0","content":"Selected Answer: C\nAnswer C. This action would help accommodate the increased load by parallelizing the work and should be implemented first to mitigate the issue. If after scaling the number of replicas the CPU or memory usage approaches the limits, then considering scaling up the resources (CPU and memory limits) for each Pod might be the next step."},{"upvote_count":"1","comment_id":"1080196","poster":"Andrei_Z","content":"Selected Answer: C\nThe average acknowledgement latency from Pub/Sub has not significantly increased, which suggests that Pub/Sub is still able to handle the message load effectively. However, the significant increase in the oldest unacknowledged message age and the number of undelivered messages indicates that the pods are not processing the messages quickly enough.\n\nIncreasing the number of Pod replicas would allow your microservice to process more messages concurrently, reducing the backlog and ensuring that stock information is updated more quickly.","timestamp":"1700933220.0"},{"upvote_count":"1","timestamp":"1698083460.0","poster":"PGontijo","comments":[{"poster":"Raz0r","timestamp":"1703184240.0","content":"It would work but degrade the user experience and therefore not suitable.","upvote_count":"1","comment_id":"1102875"}],"comment_id":"1052134","content":"B for sure."}],"url":"https://www.examtopics.com/discussions/google/view/123804-exam-professional-cloud-devops-engineer-topic-1-question-94/","question_text":"You are the on-call Site Reliability Engineer for a microservice that is deployed to a Google Kubernetes Engine (GKE) Autopilot cluster. Your company runs an online store that publishes order messages to Pub/Sub, and a microservice receives these messages and updates stock information in the warehousing system. A sales event caused an increase in orders, and the stock information is not being updated quickly enough. This is causing a large number of orders to be accepted for products that are out of stock. You check the metrics for the microservice and compare them to typical levels:\n\n//IMG//\n\n","answer_ET":"C","question_id":161,"answer":"C","choices":{"A":"Decrease the acknowledgment deadline on the subscription.","B":"Add a virtual queue to the online store that allows typical traffic levels.","C":"Increase the number of Pod replicas.","D":"Increase the Pod CPU and memory limits."},"answers_community":["C (100%)"]},{"id":"QAhvdY9L7ORHav4OHrI3","isMC":true,"discussion":[{"timestamp":"1696150140.0","content":"Option C is not as effective as Option D because it does not enforce the network policies and DaemonSet configurations. This means that unauthorized changes could still be made to the configurations.\n\nConfig Sync is a tool that can be used to synchronize Kubernetes configurations across multiple clusters. However, it does not prevent unauthorized changes from being made to the configurations.\n\nPolicy Controller is a tool that can be used to enforce Kubernetes configurations. It does this by monitoring the Kubernetes API for changes to the configurations and automatically reverting unauthorized changes.\n\nTherefore, Option D is a more secure and reliable option for ensuring that the network policies and DaemonSet are enforced and installed consistently across the three environments.","upvote_count":"8","comment_id":"1022133","poster":"ManishKS"},{"content":"Selected Answer: D\nPolicy Controller can enforce the configurations specified in the repositories, ensuring consistency across the environments and enforcing compliance with defined policies.","timestamp":"1708044780.0","comment_id":"1151658","poster":"Xoxoo","upvote_count":"1"},{"upvote_count":"3","poster":"medox89","timestamp":"1707049020.0","content":"Option C is the right one.\"\nCloud Build:\n\nIdeal for building and deploying software artifacts based on your GitHub repositories, your chosen source of truth.\nRenders your network policies and DaemonSet configurations, ensuring consistency before deployment.\nConfig Sync:\n\nDesigned for configuration management across GKE clusters.\nContinuously synchronizes your rendered configurations (network policies and DaemonSet) from GitHub to all three environments (development, staging, production).\nProvides automated drift detection and remediation, ensuring consistency remains enforced.","comment_id":"1140070"},{"upvote_count":"1","timestamp":"1701825720.0","poster":"xhilmi","comment_id":"1088927","content":"Selected Answer: D\nOption D is the recommended approach for ensuring consistency across the three Google Kubernetes Engine (GKE) environments—development, staging, and production—while adhering to Google-recommended practices.\n\nBy using Cloud Build to render and deploy network policies and a DaemonSet, and implementing Policy Controller, you can enforce configurations uniformly across environments.\n\nPolicy Controller ensures that the deployed configurations align with your desired state, providing a consistent and policy-driven approach. This method leverages the declarative nature of Kubernetes configurations, facilitating configuration management.\n\nOverall, Option D combines infrastructure-as-code principles with policy enforcement to maintain consistency and enhance manageability across GKE clusters in different environments."},{"comment_id":"1075599","poster":"Andrei_Z","content":"Selected Answer: D\nI would go for D as well","timestamp":"1700497800.0","upvote_count":"1"},{"poster":"lelele2023","upvote_count":"1","content":"Selected Answer: D\n\"Policy Controller can catch and enforce policy violations on those resources before they are deployed. \"\n\nhttps://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview","timestamp":"1699090080.0","comment_id":"1061985"}],"answers_community":["D (100%)"],"choices":{"C":"Use Cloud Build to render and deploy the network policies and the DaemonSet. Set up Config Sync to sync the configurations for the three environments.","B":"Use Google Cloud Deploy to deploy the DaemonSet and use Policy Controller to configure the network policies. Use Cloud Monitoring to detect drifts from the source in the repository and Cloud Functions to correct the drifts.","D":"Use Cloud Build to render and deploy the network policies and the DaemonSet. Set up a Policy Controller to enforce the configurations for the three environments.","A":"Use Google Cloud Deploy to deploy the network policies and the DaemonSet. Use Cloud Monitoring to trigger an alert if the network policies and DaemonSet drift from your source in the repository."},"answer_description":"","answer_ET":"C","url":"https://www.examtopics.com/discussions/google/view/122018-exam-professional-cloud-devops-engineer-topic-1-question-95/","exam_id":5,"unix_timestamp":1696150140,"question_id":162,"question_images":[],"answer":"D","question_text":"","timestamp":"2023-10-01 10:49:00","topic":"1","answer_images":[]},{"id":"MbJ8QH9XPBG2GWv3QfAG","question_text":"","question_images":[],"timestamp":"2023-10-06 05:16:00","answer":"B","unix_timestamp":1696562160,"question_id":163,"choices":{"A":"Create a new pipeline to delete old infrastructure stacks when they are no longer needed.","B":"Confirm that the pipeline is storing and retrieving the terraform.tfstate file from Cloud Storage with the Terraform gcs backend.","D":"Update the pipeline to remove any existing infrastructure before you apply the latest configuration.","C":"Verify that the pipeline is storing and retrieving the terraform.tfstate file from a source control."},"url":"https://www.examtopics.com/discussions/google/view/122634-exam-professional-cloud-devops-engineer-topic-1-question-96/","answers_community":["B (100%)"],"exam_id":5,"topic":"1","answer_description":"","discussion":[{"upvote_count":"1","comment_id":"1151659","poster":"Xoxoo","timestamp":"1708044900.0","content":"Selected Answer: B\nThe Terraform tfstate file contains the state of the infrastructure managed by Terraform. Storing this file in Cloud Storage with the Terraform Google Cloud Storage (GCS) backend ensures that it is shared across executions of the pipeline."},{"timestamp":"1707401040.0","comment_id":"1144529","upvote_count":"1","poster":"alpha_canary","content":"Selected Answer: B\nhttps://cloud.google.com/docs/terraform/resource-management/managing-infrastructure-as-code#configuring_terraform_to_store_state_in_a_cloud_storage_bucket"},{"poster":"kish18","content":"B is correct, storing the state file to the gcs bucket maintains the state correctly","timestamp":"1703603880.0","upvote_count":"1","comment_id":"1106128"},{"upvote_count":"1","timestamp":"1701826080.0","content":"Selected Answer: B\nOption B is the recommended approach to optimize cloud spending and ensure a single instance of your infrastructure stack exists at a time when using Terraform within a CI/CD pipeline.\n\nBy storing and retrieving the terraform.tfstate file from Cloud Storage with the Terraform Google Cloud Storage (GCS) backend, you centralize the state management. This ensures that Terraform has a single source of truth for the infrastructure state, preventing the creation of redundant instances.\n\nThe GCS backend enables state locking, consistency, and collaboration across the CI/CD pipeline, allowing for proper tracking and management of infrastructure changes. This practice helps avoid unnecessary duplication of resources and promotes efficient cloud spend management.","comment_id":"1088928","poster":"xhilmi"},{"content":"Selected Answer: B\nB is correct.","comment_id":"1063508","poster":"mshafa","upvote_count":"1","timestamp":"1699246020.0"},{"poster":"nhiguchi","comment_id":"1050206","upvote_count":"3","timestamp":"1697949060.0","content":"Selected Answer: B\nB is correct."},{"comment_id":"1026194","timestamp":"1696562160.0","content":"B appears correct to me.","poster":"PrayasMohanty","upvote_count":"3"}],"answer_images":[],"isMC":true,"answer_ET":"D"},{"id":"xalb2rkUcLZfbFNZFhMV","answers_community":["D (100%)"],"question_images":[],"url":"https://www.examtopics.com/discussions/google/view/122020-exam-professional-cloud-devops-engineer-topic-1-question-97/","choices":{"B":"Create a log sink in each project.","A":"Create a single aggregated log sink at the organization level.","D":"Create an aggregated log sink in the Dev and Prod folders.","C":"Create two aggregated log sinks at the organization level, and filter by project ID."},"answer":"D","answer_description":"","unix_timestamp":1696152060,"topic":"1","discussion":[{"content":"I vote for D","upvote_count":"6","poster":"PrayasMohanty","timestamp":"1696564560.0","comment_id":"1026220"},{"timestamp":"1701826260.0","poster":"xhilmi","upvote_count":"2","content":"Selected Answer: D\nTo minimize the number of log sinks and ensure that the log sink configurations are applied to future projects, the optimal choice is Option D.\n\nBy creating an aggregated log sink at the folder level for both the Dev and Prod folders, you can enforce consistent export configurations for all existing and forthcoming projects within each folder.\n\nThis approach facilitates centralized management, eliminating the need for creating individual sinks for each project. It reduces complexity and ensures that any new projects added to the Dev or Prod folders will automatically adopt the log sink configuration, streamlining the process and fostering uniformity throughout the organization.","comment_id":"1088930"},{"comment_id":"1070358","timestamp":"1699964520.0","upvote_count":"1","content":"Selected Answer: D\nneed to create two sinks at folder level. if there is new projects inside each folder, the rule will be applied to them too","poster":"khoukha"},{"comment_id":"1052138","timestamp":"1698083760.0","upvote_count":"3","poster":"PGontijo","content":"D for sure."},{"poster":"ManishKS","comments":[{"content":"I vote for D. If you use project ID, you can't scale. Your explanation also suggests D, because if you configure the sink at folder level, all projects into folder (present and future) inherit the sink.","upvote_count":"2","poster":"syslog","timestamp":"1696330740.0","comment_id":"1023857"},{"content":"but doesn't apply for future projects hence D is a better option","timestamp":"1699552020.0","comment_id":"1066578","upvote_count":"3","poster":"elskander"}],"upvote_count":"2","content":"C. Create two aggregated log sinks at the organization level, and filter by project ID.\n\nBy creating two aggregated log sinks at the organization level and applying filters based on project ID, you can achieve the desired log entry routing for both development and production projects. This approach allows for scalability and ensures that future projects in the respective folders will inherit the log sink configurations.","comment_id":"1022145","timestamp":"1696152060.0"}],"exam_id":5,"isMC":true,"question_id":164,"answer_images":[],"timestamp":"2023-10-01 11:21:00","answer_ET":"A","question_text":""},{"id":"Awk5kFscl5R6bHwrW4kZ","question_id":165,"topic":"1","answer_images":[],"url":"https://www.examtopics.com/discussions/google/view/122383-exam-professional-cloud-devops-engineer-topic-1-question-98/","exam_id":5,"timestamp":"2023-10-04 14:35:00","choices":{"B":"Configure workload metrics within Cloud Operations for GKE.","D":"Configure Google Cloud Managed Service for Prometheus.","C":"Configure Prometheus hierarchical federation for centralized data access.","A":"Configure Prometheus cross-service federation for centralized data access."},"answer_description":"","answers_community":["D (100%)"],"question_text":"","discussion":[{"poster":"Skadian","content":"D options is looking more sutaible.\nhttps://cloud.google.com/stackdriver/docs/managed-prometheus","upvote_count":"7","timestamp":"1697543400.0","comment_id":"1045941"},{"content":"Selected Answer: D\nThe most effective solution for achieving scalable global Prometheus querying while minimizing management complexity is Option D, \"Configure Google Cloud Managed Service for Prometheus.\"\n\nThis approach involves leveraging the fully managed service offered by Google Cloud for Prometheus, which streamlines the collection, querying, and alerting on metrics. With this service, you can effortlessly centralize metrics from various globally distributed GKE clusters, eliminating the need for intricate configurations or federation mechanisms.\n\nBy opting for the Google Cloud Managed Service for Prometheus, you simplify operational tasks, reduce administrative overhead, and gain a unified and straightforward method for monitoring and analyzing metrics on a global scale across all clusters within the Google Cloud environment.","comment_id":"1088936","upvote_count":"1","timestamp":"1701826500.0","poster":"xhilmi"},{"timestamp":"1698509580.0","content":"Selected Answer: D\nhttps://cloud.google.com/stackdriver/docs/managed-prometheus","poster":"koo_kai","upvote_count":"2","comment_id":"1056322"},{"poster":"activist","comment_id":"1052417","timestamp":"1698112320.0","content":"Answer D is the best.","upvote_count":"1"},{"poster":"PrayasMohanty","comments":[{"upvote_count":"1","comment_id":"1026174","timestamp":"1696560360.0","content":"@PrayasMohanty : Could you please review the questions set all the way to the end","comments":[{"upvote_count":"2","poster":"PrayasMohanty","comment_id":"1040098","content":"Google Cloud Managed Service for Prometheus is Google Cloud's fully managed, multi-cloud, cross-project solution for Prometheus metrics. It lets you globally monitor and alert on your workloads, using Prometheus, without having to manually manage and operate Prometheus at scale.\n\nManaged Service for Prometheus collects metrics from Prometheus exporters and lets you query the data globally using PromQL, meaning that you can keep using any existing Grafana dashboards, PromQL-based alerts, and workflows. It is hybrid- and multi-cloud compatible, can monitor both Kubernetes and VM workloads, retains data for 24 months, and maintains portability by staying compatible with upstream Prometheus.\n\nReference: https://cloud.google.com/stackdriver/docs/managed-prometheus","timestamp":"1696991100.0"}],"poster":"Trueeye"}],"upvote_count":"4","content":"Appear D is right","timestamp":"1696422900.0","comment_id":"1024749"}],"answer":"D","unix_timestamp":1696422900,"isMC":true,"question_images":[],"answer_ET":"A"}],"exam":{"isImplemented":true,"lastUpdated":"1 May 2024","id":5,"provider":"Google","name":"Professional Cloud DevOps Engineer","numberOfQuestions":166,"isBeta":false,"isMCOnly":true},"currentPage":33},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "SwqSKTYHiobazixbDGYx",
+                "exam_id": 5,
+                "unix_timestamp": 1697505900,
+                "isMC": true,
+                "answer_description": "",
+                "timestamp": "2023-10-17 03:25:00",
+                "question_images": [
+                    "https://img.examtopics.com/professional-cloud-devops-engineer/image1.png"
+                ],
+                "answer_images": [],
+                "topic": "1",
+                "discussion": [
+                    {
+                        "timestamp": "1697505900.0",
+                        "poster": "activist",
+                        "comment_id": "1045433",
+                        "upvote_count": "6",
+                        "comments": [
+                            {
+                                "poster": "ABZ10",
+                                "comment_id": "1046413",
+                                "content": "How does increasing the pod replica help? The pod memory and cpu have barely gone up. Shouldn't it be B?",
+                                "upvote_count": "1",
+                                "comments": [
+                                    {
+                                        "upvote_count": "3",
+                                        "content": "The increase in the number of undelivered messages indicates that the microservice is not fully processing the messages.\nIt is believed that the number of messages that can be processed can be increased by increasing the number of pods.",
+                                        "timestamp": "1698528060.0",
+                                        "poster": "YushiSato",
+                                        "comment_id": "1056460"
+                                    }
+                                ],
+                                "timestamp": "1697583840.0"
+                            }
+                        ],
+                        "content": "Selected Answer: C\nAgree with C as answer."
+                    },
+                    {
+                        "poster": "piyu1515",
+                        "content": "Given the scenario where a sales event has caused an increase in orders and the stock information is not being updated quickly enough, leading to a large number of orders being accepted for out-of-stock products, the most appropriate action to ensure that the warehouse system accurately reflects product inventory at the time of order placement and minimize the impact on customers would be:\n\nC. Increase the number of Pod replicas.\n\nIncreasing the number of Pod replicas can help scale out the microservice to handle the increased load efficiently. This will allow the microservice to process the order messages and update the stock information in the warehousing system more quickly, reducing the likelihood of accepting orders for out-of-stock products. This approach addresses the issue at its root by ensuring that there are enough resources available to handle the increased workload effectively.",
+                        "timestamp": "1707271800.0",
+                        "comment_id": "1142892",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "xhilmi",
+                        "timestamp": "1701825480.0",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: C\nIncreasing the number of Pod replicas (Option C) is a suitable solution as it allows the microservice deployed in the Google Kubernetes Engine (GKE) Autopilot cluster to efficiently handle a surge in orders during a sales event.\n\nBy scaling horizontally, additional instances of the microservice are created, enabling parallel processing of order messages and reducing the backlog. This approach leverages the flexibility and automation of GKE Autopilot, ensuring that the infrastructure dynamically adapts to the increased load, providing a more responsive and scalable solution to minimize the impact on customers and maintain accurate stock information in the warehousing system.",
+                        "comment_id": "1088923"
+                    },
+                    {
+                        "comment_id": "1087925",
+                        "upvote_count": "1",
+                        "poster": "filipemotta",
+                        "timestamp": "1701719700.0",
+                        "content": "Selected Answer: C\nAnswer C. This action would help accommodate the increased load by parallelizing the work and should be implemented first to mitigate the issue. If after scaling the number of replicas the CPU or memory usage approaches the limits, then considering scaling up the resources (CPU and memory limits) for each Pod might be the next step."
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "1080196",
+                        "poster": "Andrei_Z",
+                        "content": "Selected Answer: C\nThe average acknowledgement latency from Pub/Sub has not significantly increased, which suggests that Pub/Sub is still able to handle the message load effectively. However, the significant increase in the oldest unacknowledged message age and the number of undelivered messages indicates that the pods are not processing the messages quickly enough.\n\nIncreasing the number of Pod replicas would allow your microservice to process more messages concurrently, reducing the backlog and ensuring that stock information is updated more quickly.",
+                        "timestamp": "1700933220.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1698083460.0",
+                        "poster": "PGontijo",
+                        "comments": [
+                            {
+                                "poster": "Raz0r",
+                                "timestamp": "1703184240.0",
+                                "content": "It would work but degrade the user experience and therefore not suitable.",
+                                "upvote_count": "1",
+                                "comment_id": "1102875"
+                            }
+                        ],
+                        "comment_id": "1052134",
+                        "content": "B for sure."
+                    }
+                ],
+                "url": "https://www.examtopics.com/discussions/google/view/123804-exam-professional-cloud-devops-engineer-topic-1-question-94/",
+                "question_text": "You are the on-call Site Reliability Engineer for a microservice that is deployed to a Google Kubernetes Engine (GKE) Autopilot cluster. Your company runs an online store that publishes order messages to Pub/Sub, and a microservice receives these messages and updates stock information in the warehousing system. A sales event caused an increase in orders, and the stock information is not being updated quickly enough. This is causing a large number of orders to be accepted for products that are out of stock. You check the metrics for the microservice and compare them to typical levels:\n\n//IMG//\n\n",
+                "answer_ET": "C",
+                "question_id": 161,
+                "answer": "C",
+                "choices": {
+                    "A": "Decrease the acknowledgment deadline on the subscription.",
+                    "B": "Add a virtual queue to the online store that allows typical traffic levels.",
+                    "C": "Increase the number of Pod replicas.",
+                    "D": "Increase the Pod CPU and memory limits."
+                },
+                "answers_community": [
+                    "C (100%)"
+                ]
+            },
+            {
+                "id": "QAhvdY9L7ORHav4OHrI3",
+                "isMC": true,
+                "discussion": [
+                    {
+                        "timestamp": "1696150140.0",
+                        "content": "Option C is not as effective as Option D because it does not enforce the network policies and DaemonSet configurations. This means that unauthorized changes could still be made to the configurations.\n\nConfig Sync is a tool that can be used to synchronize Kubernetes configurations across multiple clusters. However, it does not prevent unauthorized changes from being made to the configurations.\n\nPolicy Controller is a tool that can be used to enforce Kubernetes configurations. It does this by monitoring the Kubernetes API for changes to the configurations and automatically reverting unauthorized changes.\n\nTherefore, Option D is a more secure and reliable option for ensuring that the network policies and DaemonSet are enforced and installed consistently across the three environments.",
+                        "upvote_count": "8",
+                        "comment_id": "1022133",
+                        "poster": "ManishKS"
+                    },
+                    {
+                        "content": "Selected Answer: D\nPolicy Controller can enforce the configurations specified in the repositories, ensuring consistency across the environments and enforcing compliance with defined policies.",
+                        "timestamp": "1708044780.0",
+                        "comment_id": "1151658",
+                        "poster": "Xoxoo",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "poster": "medox89",
+                        "timestamp": "1707049020.0",
+                        "content": "Option C is the right one.\"\nCloud Build:\n\nIdeal for building and deploying software artifacts based on your GitHub repositories, your chosen source of truth.\nRenders your network policies and DaemonSet configurations, ensuring consistency before deployment.\nConfig Sync:\n\nDesigned for configuration management across GKE clusters.\nContinuously synchronizes your rendered configurations (network policies and DaemonSet) from GitHub to all three environments (development, staging, production).\nProvides automated drift detection and remediation, ensuring consistency remains enforced.",
+                        "comment_id": "1140070"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1701825720.0",
+                        "poster": "xhilmi",
+                        "comment_id": "1088927",
+                        "content": "Selected Answer: D\nOption D is the recommended approach for ensuring consistency across the three Google Kubernetes Engine (GKE) environments—development, staging, and production—while adhering to Google-recommended practices.\n\nBy using Cloud Build to render and deploy network policies and a DaemonSet, and implementing Policy Controller, you can enforce configurations uniformly across environments.\n\nPolicy Controller ensures that the deployed configurations align with your desired state, providing a consistent and policy-driven approach. This method leverages the declarative nature of Kubernetes configurations, facilitating configuration management.\n\nOverall, Option D combines infrastructure-as-code principles with policy enforcement to maintain consistency and enhance manageability across GKE clusters in different environments."
+                    },
+                    {
+                        "comment_id": "1075599",
+                        "poster": "Andrei_Z",
+                        "content": "Selected Answer: D\nI would go for D as well",
+                        "timestamp": "1700497800.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "lelele2023",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\n\"Policy Controller can catch and enforce policy violations on those resources before they are deployed. \"\n\nhttps://cloud.google.com/anthos-config-management/docs/concepts/config-controller-overview",
+                        "timestamp": "1699090080.0",
+                        "comment_id": "1061985"
+                    }
+                ],
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "choices": {
+                    "C": "Use Cloud Build to render and deploy the network policies and the DaemonSet. Set up Config Sync to sync the configurations for the three environments.",
+                    "B": "Use Google Cloud Deploy to deploy the DaemonSet and use Policy Controller to configure the network policies. Use Cloud Monitoring to detect drifts from the source in the repository and Cloud Functions to correct the drifts.",
+                    "D": "Use Cloud Build to render and deploy the network policies and the DaemonSet. Set up a Policy Controller to enforce the configurations for the three environments.",
+                    "A": "Use Google Cloud Deploy to deploy the network policies and the DaemonSet. Use Cloud Monitoring to trigger an alert if the network policies and DaemonSet drift from your source in the repository."
+                },
+                "answer_description": "",
+                "answer_ET": "C",
+                "url": "https://www.examtopics.com/discussions/google/view/122018-exam-professional-cloud-devops-engineer-topic-1-question-95/",
+                "exam_id": 5,
+                "unix_timestamp": 1696150140,
+                "question_id": 162,
+                "question_images": [],
+                "answer": "D",
+                "question_text": "",
+                "timestamp": "2023-10-01 10:49:00",
+                "topic": "1",
+                "answer_images": []
+            },
+            {
+                "id": "MbJ8QH9XPBG2GWv3QfAG",
+                "question_text": "",
+                "question_images": [],
+                "timestamp": "2023-10-06 05:16:00",
+                "answer": "B",
+                "unix_timestamp": 1696562160,
+                "question_id": 163,
+                "choices": {
+                    "A": "Create a new pipeline to delete old infrastructure stacks when they are no longer needed.",
+                    "B": "Confirm that the pipeline is storing and retrieving the terraform.tfstate file from Cloud Storage with the Terraform gcs backend.",
+                    "D": "Update the pipeline to remove any existing infrastructure before you apply the latest configuration.",
+                    "C": "Verify that the pipeline is storing and retrieving the terraform.tfstate file from a source control."
+                },
+                "url": "https://www.examtopics.com/discussions/google/view/122634-exam-professional-cloud-devops-engineer-topic-1-question-96/",
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "exam_id": 5,
+                "topic": "1",
+                "answer_description": "",
+                "discussion": [
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "1151659",
+                        "poster": "Xoxoo",
+                        "timestamp": "1708044900.0",
+                        "content": "Selected Answer: B\nThe Terraform tfstate file contains the state of the infrastructure managed by Terraform. Storing this file in Cloud Storage with the Terraform Google Cloud Storage (GCS) backend ensures that it is shared across executions of the pipeline."
+                    },
+                    {
+                        "timestamp": "1707401040.0",
+                        "comment_id": "1144529",
+                        "upvote_count": "1",
+                        "poster": "alpha_canary",
+                        "content": "Selected Answer: B\nhttps://cloud.google.com/docs/terraform/resource-management/managing-infrastructure-as-code#configuring_terraform_to_store_state_in_a_cloud_storage_bucket"
+                    },
+                    {
+                        "poster": "kish18",
+                        "content": "B is correct, storing the state file to the gcs bucket maintains the state correctly",
+                        "timestamp": "1703603880.0",
+                        "upvote_count": "1",
+                        "comment_id": "1106128"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1701826080.0",
+                        "content": "Selected Answer: B\nOption B is the recommended approach to optimize cloud spending and ensure a single instance of your infrastructure stack exists at a time when using Terraform within a CI/CD pipeline.\n\nBy storing and retrieving the terraform.tfstate file from Cloud Storage with the Terraform Google Cloud Storage (GCS) backend, you centralize the state management. This ensures that Terraform has a single source of truth for the infrastructure state, preventing the creation of redundant instances.\n\nThe GCS backend enables state locking, consistency, and collaboration across the CI/CD pipeline, allowing for proper tracking and management of infrastructure changes. This practice helps avoid unnecessary duplication of resources and promotes efficient cloud spend management.",
+                        "comment_id": "1088928",
+                        "poster": "xhilmi"
+                    },
+                    {
+                        "content": "Selected Answer: B\nB is correct.",
+                        "comment_id": "1063508",
+                        "poster": "mshafa",
+                        "upvote_count": "1",
+                        "timestamp": "1699246020.0"
+                    },
+                    {
+                        "poster": "nhiguchi",
+                        "comment_id": "1050206",
+                        "upvote_count": "3",
+                        "timestamp": "1697949060.0",
+                        "content": "Selected Answer: B\nB is correct."
+                    },
+                    {
+                        "comment_id": "1026194",
+                        "timestamp": "1696562160.0",
+                        "content": "B appears correct to me.",
+                        "poster": "PrayasMohanty",
+                        "upvote_count": "3"
+                    }
+                ],
+                "answer_images": [],
+                "isMC": true,
+                "answer_ET": "D"
+            },
+            {
+                "id": "xalb2rkUcLZfbFNZFhMV",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "question_images": [],
+                "url": "https://www.examtopics.com/discussions/google/view/122020-exam-professional-cloud-devops-engineer-topic-1-question-97/",
+                "choices": {
+                    "B": "Create a log sink in each project.",
+                    "A": "Create a single aggregated log sink at the organization level.",
+                    "D": "Create an aggregated log sink in the Dev and Prod folders.",
+                    "C": "Create two aggregated log sinks at the organization level, and filter by project ID."
+                },
+                "answer": "D",
+                "answer_description": "",
+                "unix_timestamp": 1696152060,
+                "topic": "1",
+                "discussion": [
+                    {
+                        "content": "I vote for D",
+                        "upvote_count": "6",
+                        "poster": "PrayasMohanty",
+                        "timestamp": "1696564560.0",
+                        "comment_id": "1026220"
+                    },
+                    {
+                        "timestamp": "1701826260.0",
+                        "poster": "xhilmi",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: D\nTo minimize the number of log sinks and ensure that the log sink configurations are applied to future projects, the optimal choice is Option D.\n\nBy creating an aggregated log sink at the folder level for both the Dev and Prod folders, you can enforce consistent export configurations for all existing and forthcoming projects within each folder.\n\nThis approach facilitates centralized management, eliminating the need for creating individual sinks for each project. It reduces complexity and ensures that any new projects added to the Dev or Prod folders will automatically adopt the log sink configuration, streamlining the process and fostering uniformity throughout the organization.",
+                        "comment_id": "1088930"
+                    },
+                    {
+                        "comment_id": "1070358",
+                        "timestamp": "1699964520.0",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nneed to create two sinks at folder level. if there is new projects inside each folder, the rule will be applied to them too",
+                        "poster": "khoukha"
+                    },
+                    {
+                        "comment_id": "1052138",
+                        "timestamp": "1698083760.0",
+                        "upvote_count": "3",
+                        "poster": "PGontijo",
+                        "content": "D for sure."
+                    },
+                    {
+                        "poster": "ManishKS",
+                        "comments": [
+                            {
+                                "content": "I vote for D. If you use project ID, you can't scale. Your explanation also suggests D, because if you configure the sink at folder level, all projects into folder (present and future) inherit the sink.",
+                                "upvote_count": "2",
+                                "poster": "syslog",
+                                "timestamp": "1696330740.0",
+                                "comment_id": "1023857"
+                            },
+                            {
+                                "content": "but doesn't apply for future projects hence D is a better option",
+                                "timestamp": "1699552020.0",
+                                "comment_id": "1066578",
+                                "upvote_count": "3",
+                                "poster": "elskander"
+                            }
+                        ],
+                        "upvote_count": "2",
+                        "content": "C. Create two aggregated log sinks at the organization level, and filter by project ID.\n\nBy creating two aggregated log sinks at the organization level and applying filters based on project ID, you can achieve the desired log entry routing for both development and production projects. This approach allows for scalability and ensures that future projects in the respective folders will inherit the log sink configurations.",
+                        "comment_id": "1022145",
+                        "timestamp": "1696152060.0"
+                    }
+                ],
+                "exam_id": 5,
+                "isMC": true,
+                "question_id": 164,
+                "answer_images": [],
+                "timestamp": "2023-10-01 11:21:00",
+                "answer_ET": "A",
+                "question_text": ""
+            },
+            {
+                "id": "Awk5kFscl5R6bHwrW4kZ",
+                "question_id": 165,
+                "topic": "1",
+                "answer_images": [],
+                "url": "https://www.examtopics.com/discussions/google/view/122383-exam-professional-cloud-devops-engineer-topic-1-question-98/",
+                "exam_id": 5,
+                "timestamp": "2023-10-04 14:35:00",
+                "choices": {
+                    "B": "Configure workload metrics within Cloud Operations for GKE.",
+                    "D": "Configure Google Cloud Managed Service for Prometheus.",
+                    "C": "Configure Prometheus hierarchical federation for centralized data access.",
+                    "A": "Configure Prometheus cross-service federation for centralized data access."
+                },
+                "answer_description": "",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "question_text": "",
+                "discussion": [
+                    {
+                        "poster": "Skadian",
+                        "content": "D options is looking more sutaible.\nhttps://cloud.google.com/stackdriver/docs/managed-prometheus",
+                        "upvote_count": "7",
+                        "timestamp": "1697543400.0",
+                        "comment_id": "1045941"
+                    },
+                    {
+                        "content": "Selected Answer: D\nThe most effective solution for achieving scalable global Prometheus querying while minimizing management complexity is Option D, \"Configure Google Cloud Managed Service for Prometheus.\"\n\nThis approach involves leveraging the fully managed service offered by Google Cloud for Prometheus, which streamlines the collection, querying, and alerting on metrics. With this service, you can effortlessly centralize metrics from various globally distributed GKE clusters, eliminating the need for intricate configurations or federation mechanisms.\n\nBy opting for the Google Cloud Managed Service for Prometheus, you simplify operational tasks, reduce administrative overhead, and gain a unified and straightforward method for monitoring and analyzing metrics on a global scale across all clusters within the Google Cloud environment.",
+                        "comment_id": "1088936",
+                        "upvote_count": "1",
+                        "timestamp": "1701826500.0",
+                        "poster": "xhilmi"
+                    },
+                    {
+                        "timestamp": "1698509580.0",
+                        "content": "Selected Answer: D\nhttps://cloud.google.com/stackdriver/docs/managed-prometheus",
+                        "poster": "koo_kai",
+                        "upvote_count": "2",
+                        "comment_id": "1056322"
+                    },
+                    {
+                        "poster": "activist",
+                        "comment_id": "1052417",
+                        "timestamp": "1698112320.0",
+                        "content": "Answer D is the best.",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "PrayasMohanty",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "comment_id": "1026174",
+                                "timestamp": "1696560360.0",
+                                "content": "@PrayasMohanty : Could you please review the questions set all the way to the end",
+                                "comments": [
+                                    {
+                                        "upvote_count": "2",
+                                        "poster": "PrayasMohanty",
+                                        "comment_id": "1040098",
+                                        "content": "Google Cloud Managed Service for Prometheus is Google Cloud's fully managed, multi-cloud, cross-project solution for Prometheus metrics. It lets you globally monitor and alert on your workloads, using Prometheus, without having to manually manage and operate Prometheus at scale.\n\nManaged Service for Prometheus collects metrics from Prometheus exporters and lets you query the data globally using PromQL, meaning that you can keep using any existing Grafana dashboards, PromQL-based alerts, and workflows. It is hybrid- and multi-cloud compatible, can monitor both Kubernetes and VM workloads, retains data for 24 months, and maintains portability by staying compatible with upstream Prometheus.\n\nReference: https://cloud.google.com/stackdriver/docs/managed-prometheus",
+                                        "timestamp": "1696991100.0"
+                                    }
+                                ],
+                                "poster": "Trueeye"
+                            }
+                        ],
+                        "upvote_count": "4",
+                        "content": "Appear D is right",
+                        "timestamp": "1696422900.0",
+                        "comment_id": "1024749"
+                    }
+                ],
+                "answer": "D",
+                "unix_timestamp": 1696422900,
+                "isMC": true,
+                "question_images": [],
+                "answer_ET": "A"
+            }
+        ],
+        "exam": {
+            "isImplemented": true,
+            "lastUpdated": "1 May 2024",
+            "id": 5,
+            "provider": "Google",
+            "name": "Professional Cloud DevOps Engineer",
+            "numberOfQuestions": 166,
+            "isBeta": false,
+            "isMCOnly": true
+        },
+        "currentPage": 33
+    },
+    "__N_SSP": true
+}

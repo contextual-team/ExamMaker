@@ -10,7 +10,8 @@ async function readQuestions(questions) {
             const jsonObject = JSON.parse(data).pageProps.questions;
             jsonObject.forEach(element => {
                 let examQuestion = {
-                    answer: element.answer_ET,
+                    answer: element.answer,
+                    answer_ET: element.answer_ET,
                     url: element.url,
                     question_text: element.question_text,
                     choices: element.choices,

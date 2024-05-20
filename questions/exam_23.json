@@ -1,1 +1,865 @@
-{"pageProps":{"questions":[{"id":"po3AnT7zyyEnnLryq3Xg","timestamp":"2021-06-13 22:11:00","choices":{"A":"A scalable in-memory caching system.","B":"The organization's public-facing website.","D":"A GPU-accelerated video rendering platform that retrieves and stores videos in a storage bucket.","C":"A distributed, eventually consistent NoSQL database cluster with sufficient quorum."},"isMC":true,"topic":"1","question_id":111,"question_text":"You need to reduce the cost of virtual machines (VM) for your organization. After reviewing different options, you decide to leverage preemptible VM instances.\nWhich application is suitable for preemptible VMs?","exam_id":5,"url":"https://www.examtopics.com/discussions/google/view/55256-exam-professional-cloud-devops-engineer-topic-1-question-49/","answer_images":[],"unix_timestamp":1623615060,"answer_description":"Reference:\nhttps://cloud.google.com/preemptible-vms","answer":"A","answers_community":["A (50%)","D (35%)","C (15%)"],"answer_ET":"D","question_images":[],"discussion":[{"comments":[{"timestamp":"1680961140.0","comments":[{"poster":"xarom","upvote_count":"2","timestamp":"1692711720.0","comment_id":"987475","content":"https://cloud.google.com/compute/docs/instances/preemptible#preemptible-with-gpu"}],"poster":"NiveusSol","upvote_count":"2","content":"A\nA GPU-accelerated video rendering platform that retrieves and stores videos in a storage bucket: Video rendering requires a stable and powerful infrastructure with persistent storage, which is not provided by preemptible VMs. Additionally, GPUs are not available on all preemptible VM instances.","comment_id":"864716"}],"comment_id":"393472","timestamp":"1624938900.0","poster":"Charun","upvote_count":"15","content":"D is correct"},{"timestamp":"1623615060.0","upvote_count":"6","content":"ans: D","poster":"devopsbatch","comment_id":"381314","comments":[{"comment_id":"381546","content":"Agree with you on Answer D","timestamp":"1623646260.0","upvote_count":"4","poster":"akg001"},{"poster":"NiveusSol","upvote_count":"2","comment_id":"864717","timestamp":"1680961200.0","content":"D GPU-accelerated video rendering platform that retrieves and stores videos in a storage bucket: Video rendering requires a stable and powerful infrastructure with persistent storage, which is not provided by preemptible VMs. Additionally, GPUs are not available on all preemptible VM instances."}]},{"content":"Selected Answer: A\nIt seems A & D both as suitable answer. But I'll go with A, as attaching GPU with preemptible VM will increase cost, and in this question the purpose of opting for preemptible VM is reducing cost.\nhttps://cloud.google.com/compute/docs/instances/preemptible#preemptible-with-gpu","comment_id":"1168247","upvote_count":"1","timestamp":"1709834400.0","poster":"jinaldesailive"},{"upvote_count":"1","content":"Will go with D. \nLooking for cost effective. \nhttps://cloud.google.com/compute/docs/instances/preemptible#preemptible-with-gpu","comment_id":"1167663","poster":"FI22","timestamp":"1709787780.0"},{"comment_id":"1103844","timestamp":"1703301720.0","content":"Selected Answer: A\nans: A\nPreemptible VMs are best suited for fault-tolerant, non-critical applications due to their temporary nature. Among the options listed, A, a scalable in-memory caching system, aligns well with preemptible instances as it can handle interruptions and doesn't require continuous uptime.","poster":"MFay","upvote_count":"2"},{"upvote_count":"1","timestamp":"1701513360.0","content":"Selected Answer: D\nOption D","comment_id":"1086062","poster":"jomonkp"},{"content":"Selected Answer: A\nI would go with A compared to other options","comment_id":"1055137","upvote_count":"2","timestamp":"1698385560.0","poster":"Jason_Cloud_at"},{"timestamp":"1684561500.0","content":"Selected Answer: D\nAns is D\nVideo rendering service is like application type called Batch job. Therefore, we can use instance type preemptible for them. If they complete task, they could be destroy and generate new instance to work continuously next task.","poster":"Watcharin_start","comment_id":"902371","upvote_count":"2"},{"timestamp":"1678422480.0","poster":"izekc","comment_id":"834635","upvote_count":"2","content":"Selected Answer: C\nC is more accurate"},{"poster":"eks4x","upvote_count":"5","comment_id":"743465","content":"Selected Answer: A\nWhy not A? \"A scalable in-memory caching system.\"\nIn general a caching system is not critical to the function of an application.\nIf the cache is down it will cause requests to have cache miss and query the DB instead. User requests will still get served albeit slower.\nIn addition the answer specifies that the caching system is \"scalable\" reducing further the impact of 1 VM getting preempted, ie traffic can be automatically redirected to other cache replicas.\nTo me all other answers seem to have a more severe impact on the user in case the VM is preempted.","timestamp":"1670893320.0"},{"timestamp":"1670219280.0","content":"Selected Answer: C\nC is the right answer","comment_id":"735686","upvote_count":"1","poster":"kisshs"},{"upvote_count":"2","timestamp":"1669942680.0","comment_id":"733278","content":"i think is C, database cluster is storage, and distributed, eventually consistence is resistant for the preempted. and sufficient quorum can ensure the DB transitions.","poster":"hanweiCN"},{"poster":"eliC","comment_id":"614620","upvote_count":"2","content":"Selected Answer: D\nD is correct","timestamp":"1654875120.0"},{"poster":"psyx21","timestamp":"1652382300.0","content":"Selected Answer: D\nD is correct","upvote_count":"2","comment_id":"600781"},{"content":"D\nhttps://cloud.google.com/compute/docs/instances/preemptible","timestamp":"1630654380.0","poster":"TNT87","upvote_count":"4","comment_id":"438384"},{"comment_id":"385217","upvote_count":"4","poster":"ralf_cc","content":"D - external persistent storage","timestamp":"1624076760.0"}]},{"id":"ErPsuWFoyfQAl7l2jHef","topic":"1","answer_images":[],"question_text":"You are running an application in a virtual machine (VM) using a custom Debian image. The image has the Stackdriver Logging agent installed. The VM has the cloud-platform scope. The application is logging information via syslog. You want to use Stackdriver Logging in the Google Cloud Platform Console to visualize the logs. You notice that syslog is not showing up in the \"All logs\" dropdown list of the Logs Viewer. What is the first thing you should do?","answer_description":"Reference:\nhttps://groups.google.com/g/google-stackdriver-discussion/c/FXehB9a-5Vk?pli=1","timestamp":"2021-06-02 16:30:00","answers_community":["D (100%)"],"discussion":[{"comments":[{"comment_id":"443883","timestamp":"1631526600.0","upvote_count":"3","content":"Agree. If you check here: https://cloud.google.com/logging/docs/agent/logging/troubleshooting#checklist\nYou will see that first recommended troubleshooting step is to check if the agent is running or not... So it should be D.\n\nAlso if you refer to Google Groups link provided as the answer, you will see that they first checked if the agent is running/installed.","comments":[{"poster":"AzureDP900","upvote_count":"1","timestamp":"1667073420.0","comment_id":"707446","content":"Agreed. D is correct"}],"poster":"cetanx"}],"timestamp":"1628389500.0","upvote_count":"12","comment_id":"421450","poster":"raf2121","content":"Between C and D, I think D\n\nReason : When an instance is created, we can specify which service account the instance uses when calling Google Cloud APIs. The instance is automatically configured with access scope and one such access scope is monitoring.write (Link : https://cloud.google.com/compute/docs/access/service- read is to publish metric data and logging.write is to write compute engine logs.\n\nConsidering above, I believe D as the answer (check whether the agent is running)"},{"content":"Why nnot Answer A as a starting point?","poster":"desertlotus1211","upvote_count":"1","comment_id":"1193957","timestamp":"1712858760.0"},{"poster":"JonathanSJ","comment_id":"772012","upvote_count":"1","content":"Selected Answer: D\nAnswer is D.","timestamp":"1673411220.0"},{"poster":"floppino","content":"Selected Answer: D\nAns: D\n\nExam pased and taken on 19/12/2022, 50/50 from this dump without buying the full access.","upvote_count":"2","comment_id":"754742","timestamp":"1671865740.0"},{"upvote_count":"2","timestamp":"1669484160.0","comment_id":"727715","content":"Answer is D. \nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting. D. Check if fluentd is running is the right answer. C is incorrect as monitoring.write scope is for monitoring agent and not logging agent. The legacy scope for logging is https://www.googleapis.com/auth/logging.write","poster":"DoodleDo"},{"comment_id":"702997","content":"Selected Answer: D\nD is the answer.\n\nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting#checklist\nIf you are having trouble installing or using the Logging agent, here are some things to check:\n- Verify that the agent service is running on your VM instance","upvote_count":"1","poster":"zellck","timestamp":"1666613640.0"},{"comment_id":"635879","timestamp":"1658638980.0","content":"Selected Answer: D\nAns: D","upvote_count":"1","poster":"GCP72"},{"content":"Selected Answer: D\nAns: D","poster":"Devtestnew","comment_id":"617688","upvote_count":"1","timestamp":"1655466180.0"},{"content":"Selected Answer: D\nSubmitted D","upvote_count":"1","timestamp":"1652110560.0","poster":"Ananda","comment_id":"599113"},{"comment_id":"588428","upvote_count":"1","content":"answer is D","poster":"gomezzang","timestamp":"1650425640.0"},{"poster":"alexweberlopes","upvote_count":"2","comment_id":"547567","content":"The VM has cloud-platform scope on the VM means Full access if you using the default compute account. I would say answer D is right check is the fluentd daemon running.","timestamp":"1644907620.0"},{"poster":"pddddd","comment_id":"532759","content":"Selected Answer: D\nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting#test-agent","timestamp":"1643190540.0","upvote_count":"1"},{"upvote_count":"2","comment_id":"494289","timestamp":"1638705300.0","poster":"alaahakim","content":"Ans: D"},{"timestamp":"1637759700.0","poster":"Wwhite44","upvote_count":"2","content":"C is not good, “monitoring.write\" is use for metric not log","comment_id":"485969"},{"comment_id":"434694","poster":"danchoif2","timestamp":"1630250220.0","upvote_count":"1","comments":[{"comment_id":"455005","upvote_count":"1","timestamp":"1633016880.0","content":"i don't think so , reason is option-D is looking for fluent d which is specifically for customized logs , also by default the syslog will be captured with default monitoring agent and no need for fluent-d","comments":[{"content":"https://cloud.google.com/logging/docs/agent/logging/installation\n\nLogging agent is fluentd based (now fluentbit).\n\nThe Logging agent streams logs from your VM instances and from selected third-party software packages to Cloud Logging. It is a best practice to run the Logging agent on all your VM instances.\n\nThe VM images for Compute Engine and Amazon Elastic Compute Cloud (EC2) don't include the Logging agent, so you must complete these steps to install it on those instances. The agent runs under both Linux and Windows.\n\nIf your VMs are running in Google Kubernetes Engine or App Engine, the agent is already included in the VM image, so you can skip this page.","poster":"danchoif2","upvote_count":"1","timestamp":"1635691800.0","comment_id":"470717"}],"poster":"Manumj"}],"content":"https://cloud.google.com/compute/docs/access/service-accounts#associating_a_service_account_to_an_instance\n\nWhen you create an instance using the gcloud command-line tool or the Google Cloud Console, you can specify which service account the instance uses when calling Google Cloud APIs. The instance is automatically configured with the following access scopes:\n\n* https://www.googleapis.com/auth/monitoring.write\n* ...\n\nSo D is better than C."},{"content":"4- Then you should check that the agent is sending data to the correct project. See the following section, Verifying Compute Engine credentials.\nThe link for Verifying Compute Engine credentials is https://cloud.google.com/logging/docs/agent/logging/troubleshooting#verify-creds\nIn this link : \na- Verifying access scopes \nb- Verifying default service account permission\n==> Similar to Answer C) but C) Answer talks about monitoring.write instead of logging.write. And in the question\nthey say \"The VM has the cloud-platform scope\" ==> logging.write is already here.\n5- Verifying the agent installation using agent's test log entry in the Logs Explorer ==> Answer A)\n6- Testing the agent using ps ax | grep fluentd ==> Answer D)\nSo for me the good answer is A).","timestamp":"1627817880.0","upvote_count":"1","poster":"[Removed]","comment_id":"418243"},{"upvote_count":"1","timestamp":"1627817820.0","poster":"[Removed]","comment_id":"418242","content":"If we follow this link : https://cloud.google.com/logging/docs/agent/logging/troubleshooting\nThe action (for Linux VM) are in order : \n1- If Linux installation commands result in errors, then make sure that you prefix the installation commands with sudo.\n2- Verify that the agent service is running on your VM instance : sudo service google-fluentd status\n3- See if the agent has written error messages to the logs."},{"comments":[{"upvote_count":"1","poster":"Wwhite44","timestamp":"1637759640.0","content":"Monitoring.write is for metric, so C is not correct. In that case logging.write was the right command. So D is the correct ANS ;)","comment_id":"485966"}],"timestamp":"1624489320.0","poster":"guruguru","content":"C, first thing to check should be the access scope. There are 3 types of scopes, default, full access and access for each API. Even thought the default scope have the Stackdriver write access, it doesn't mean the instance has the default scope. It could be access for each API. Hence, first thing to check is the scope. After that, you can check the fluentd service in the system. C over D.","upvote_count":"2","comment_id":"389120"},{"upvote_count":"2","timestamp":"1624351680.0","comment_id":"387760","poster":"TNT87","comments":[{"poster":"TNT87","timestamp":"1632806460.0","content":"Sorry Ans is D","upvote_count":"2","comment_id":"453049"}],"content":"Ans C \nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting"},{"content":"Ans is C\nWhy?:\nA: Does not make sense at all\nB: the version it's not possible?\nC: Its OK because both (scope and service account) need access to write to logging\nD: Really? the question clearly says: \"The image has the Stackdriver Logging agent installed.\"\n\nExplanation:\nGenerally, you can just set the cloud-platform access scope to allow access to most of the Cloud APIs, then grant the service account only relevant IAM roles. The combination of access scopes granted to the virtual machine instance and the IAM roles granted to the service account determines the amount of access the service account has for that instance. The service account can execute API methods only if they are allowed by both the access scope and its IAM roles.\n\nhttps://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances\n\nPlease do not try to confuse people if you put your explanation add the link","comment_id":"385773","poster":"francisco_guerra","comments":[{"content":"I think it's D: https://cloud.google.com/logging/docs/agent/logging/troubleshooting#test-agent. Maybe the agent is installed but not running.","upvote_count":"5","timestamp":"1625570700.0","poster":"syslog","comment_id":"399920"},{"poster":"burndayl","timestamp":"1639381920.0","upvote_count":"1","content":"I think the answer is D. C couldn't be right because it suggest to verify the monitoring.write scope. But this kind of scope is for monitoring agent not for logging agent. If you see here:\nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting?hl=en\nthey say: If you do not have suitable access scopes in your Compute Engine instance, add the needed access scopes to your instance. The following table shows the scopes relevant to the Logging and Monitoring agents:\nAccess scope Agent permissions\nhttps://www.googleapis.com/auth/logging.write Adequate for the Logging agent\nhttps://www.googleapis.com/auth/monitoring.write Adequate for the Monitoring agent\nwhat do you think about it?","comment_id":"500444"}],"upvote_count":"3","timestamp":"1624134480.0"},{"poster":"devopsbatch","comment_id":"372781","timestamp":"1622644200.0","content":"C because vm need writer access and i feel D as well because fluent need to be available to export ,aggregate and process logs into stack driver monitoring tool... suggestions needed here","upvote_count":"3","comments":[{"comment_id":"376395","poster":"rinkeshgala1","upvote_count":"1","timestamp":"1623025500.0","content":"Cloud-platform scope covers all the GCP service scope so no need to add any other scope. hence answer should be D"},{"comment_id":"379751","timestamp":"1623410100.0","upvote_count":"1","poster":"akg001","content":"Default: read-only access to Storage and Service Management, write access to Stackdriver Logging and Monitoring, read/write access to Service Control.\n\nSo answer should be D"},{"comment_id":"408960","upvote_count":"2","timestamp":"1626613680.0","poster":"Zuy01","content":"i think it's D, cause ans C is less precise. on question mention \"logging agent\" not \"monitoring agent\" and from here :https://cloud.google.com/logging/docs/agent/logging/troubleshooting#verifying_access_scopes\nit should be \"logging.write\" not \"monitoring.write\""}]}],"exam_id":5,"url":"https://www.examtopics.com/discussions/google/view/54227-exam-professional-cloud-devops-engineer-topic-1-question-5/","answer":"D","unix_timestamp":1622644200,"question_images":[],"choices":{"C":"Verify the VM service account access scope includes the monitoring.write scope.","A":"Look for the agent's test log entry in the Logs Viewer.","D":"SSH to the VM and execute the following commands on your VM: ps ax | grep fluentd.","B":"Install the most recent version of the Stackdriver agent."},"answer_ET":"D","question_id":112,"isMC":true},{"id":"uI5YMciR3TDOo24HqRpT","answer":"D","url":"https://www.examtopics.com/discussions/google/view/55257-exam-professional-cloud-devops-engineer-topic-1-question-50/","question_text":"Your organization recently adopted a container-based workflow for application development. Your team develops numerous applications that are deployed continuously through an automated build pipeline to a Kubernetes cluster in the production environment. The security auditor is concerned that developers or operators could circumvent automated testing and push code changes to production without approval. What should you do to enforce approvals?","unix_timestamp":1623615120,"isMC":true,"answer_description":"","question_images":[],"topic":"1","choices":{"B":"Use an Admission Controller to verify that incoming requests originate from approved sources.","D":"Enable binary authorization inside the Kubernetes cluster and configure the build pipeline as an attestor.","C":"Leverage Kubernetes Role-Based Access Control (RBAC) to restrict access to only approved users.","A":"Configure the build system with protected branches that require pull request approval."},"discussion":[{"comment_id":"390711","upvote_count":"26","timestamp":"1624646340.0","poster":"francisco_guerra","content":"this question is a little bit strange, but first we need to remove the invalid answers\n\nB: Incorrect An admission controller is a piece of code that intercepts requests to the Kubernetes API server prior to persistence of the object, but after the request is authenticated and authorized. (its for security but not \"enforce approvals\")\nC: Incorrect, we need to \"enforce approvals\" roles apply in the cluster and Ops always could push to production without approval.\nA: Incorrect, for me this answer sound well but this does not sound that an answer for a gcp exam and this do not enforce the use of the pipeline.\nD: Correct, they cannot push code to production without approval because their images are not signed."},{"timestamp":"1625142180.0","content":"I win the exam today so this questions help me a lot","upvote_count":"15","poster":"francisco_guerra","comment_id":"395931"},{"content":"Selected Answer: D\nOption D","upvote_count":"1","comment_id":"1086087","timestamp":"1701514860.0","poster":"jomonkp"},{"timestamp":"1670259780.0","comment_id":"736129","poster":"WhyIronMan","comments":[{"upvote_count":"2","comment_id":"762560","poster":"Greg123123","comments":[{"upvote_count":"1","poster":"WhyIronMan","timestamp":"1673175900.0","comment_id":"769311","content":"That said, I send the question back to you, how about the developers?: \"is concerned that developers or operators could circumvent\" \nDeveloper will push code direct to master, with bug that is not caught by the tests and here we go: you do have a signed imaged, attested, with a BUG or something like that will be deployed\nso the question depends on the point of view, the combination of both are right\n\nand one more thing, D prevent to push to the registry, but the operator can get the kubernetes deployment yaml and point to other GCR..."}],"content":"but you missed the point here \"The security auditor is concerned that developers or operators could circumvent\". I see why you think pull request is the only way to circumvent the deployment process. But how about the operators? They have access to cluster and can simply redeploy it by some kubectl / cloud build command. So A is not correct.","timestamp":"1672475580.0"}],"upvote_count":"1","content":"Selected Answer: A\nIf you are not familiarised, Pull Requests are one way to bring changes from one branch (e.g. develop) into protected branches (e.g. master, main).\n\n1. First you need to protect the production branch (e.g, master, main)\n2. If a developer attempts to push new code to a production (now protected) it will trow a Permission denied error like this:\nremote: Permission denied to update branch master.\nTo git.com:org/repository.git\n ! [remote rejected] master -> master (pre-receive hook declined)\nerror: failed to push some refs to 'git.com:org/repository.git'\n\n3. in order to push their code to production branch, the developers will need to open a Pull Request (If you are using GitLab, it is called Merge Request) and ask someone to Review and Approve your changes.\n4. The pipeline points to the protected branch; any new code pushed trigger the pipeline, and runs the tests and then deploy it.\n\nThis is how we do devops."},{"content":"Selected Answer: D\nD is correct answer, binary auth is best practice","poster":"ramzez4815","timestamp":"1663727160.0","upvote_count":"3","comment_id":"674715"},{"poster":"lxs","comment_id":"613205","content":"Correct me if I am wrong, but this question is ambiguous. You can push the code at 3 stages:\n1. You can merge a branch to master without Merge Request if the master is not protected\n2. You can push the image to container registry to a repository if you have role assigned (only pipeline should be privileged to do).\n3. An operator can change the code altering image/yaml using kubectl cli. \n\nThe ultimate question is which problem are we trying to solve?","timestamp":"1654686960.0","upvote_count":"2"},{"content":"Selected Answer: D\nD - Binary authorisation","upvote_count":"3","comment_id":"546339","timestamp":"1644742440.0","poster":"PhilipKoku"},{"upvote_count":"2","poster":"DarkMatterOne","comment_id":"517831","timestamp":"1641420000.0","content":"D\nhttps://cloud.google.com/binary-authorization\nBinary Authorization is a deploy-time security control that ensures only trusted container images are deployed on Google Kubernetes Engine (GKE) or Cloud Run. With Binary Authorization, you can require images to be signed by trusted authorities during the development process and then enforce signature validation when deploying. By enforcing validation, you can gain tighter control over your container environment by ensuring only verified images are integrated into the build-and-release process."},{"upvote_count":"3","comment_id":"451807","content":"Questions 51-55 is not available.. can someone please help me to get 51-55 questions?","poster":"maddy94","timestamp":"1632656040.0"},{"upvote_count":"4","timestamp":"1625008500.0","comment_id":"394260","content":"Agreed with D. The keywords here is \"developers or operators\". Option A the operators could push images to production without approval (operators could touch the cluster directly and the cluster cannot do any action against them). Rest same as francisco_guerra.","poster":"zanhsieh"},{"comment_id":"385220","poster":"ralf_cc","upvote_count":"1","content":"D - PR approval will ensure the automated testing etc., the question is asking how to ensure all code changes go through the pipeline, where automated tests are integrated","timestamp":"1624076940.0"},{"content":"Answer C is the most close answer. Leverage best practice .\nanswer A is for pulling the code but in the question , the security auditor is concern about pushing the code .","timestamp":"1623646680.0","poster":"akg001","comments":[{"poster":"WhyIronMan","content":"If you are not familiarised, Pull Requests are one way to bring changes from one branch (e.g. develop) into protected branches (e.g. master, main).\n\nIn order to push their code to production branch, the developers will need to open a Pull Request (If you are using GitLab, it is called Merge Request) and ask someone to Review and Approve their changes.","comment_id":"736131","timestamp":"1670259900.0","upvote_count":"1"}],"comment_id":"381552","upvote_count":"1"},{"timestamp":"1623615120.0","content":"A could be the ans","comment_id":"381315","comments":[{"upvote_count":"2","content":"I think you are right : A\nhttps://github.community/t/best-practices-for-protected-branches/10204","timestamp":"1623647220.0","comment_id":"381560","poster":"akg001"},{"content":"IMHO the statement is concert about runnigs unsafe workload on a cluster Kubernet, and not how to protect the code repository, in this other case, pull request approval and an Admission Controller would be fine. Then D is the ans","poster":"Feliphus","upvote_count":"1","comment_id":"1101841","timestamp":"1703097840.0"}],"poster":"devopsbatch","upvote_count":"2"}],"answers_community":["D (88%)","13%"],"answer_images":[],"answer_ET":"C","question_id":113,"exam_id":5,"timestamp":"2021-06-13 22:12:00"},{"id":"0smIhpz2B8xTnpEHXU47","answers_community":["C (100%)"],"answer_ET":"C","isMC":true,"exam_id":5,"question_text":"You support a stateless web-based API that is deployed on a single Compute Engine instance in the europe-west2-a zone. The Service Level Indicator (SLI) for service availability is below the specified Service Level Objective (SLO). A postmortem has revealed that requests to the API regularly time out. The time outs are due to the API having a high number of requests and running out memory. You want to improve service availability. What should you do?","choices":{"C":"Set up additional service instances in other zones and load balance the traffic between all instances","D":"Set up additional service instances in other zones and use them as a failover in case the primary instance is unavailable","B":"Move the service to higher-specification compute instances with more memory","A":"Change the specified SLO to match the measured SLI"},"unix_timestamp":1635094140,"question_images":[],"answer_images":[],"answer_description":"","discussion":[{"poster":"Alaaelanwr","timestamp":"1635094140.0","comment_id":"467057","upvote_count":"12","content":"Ans: C"},{"poster":"jomonkp","content":"Selected Answer: C\nOption C","comment_id":"1086096","upvote_count":"1","timestamp":"1701515280.0"},{"comment_id":"1086089","timestamp":"1701515040.0","content":"Option C","poster":"jomonkp","upvote_count":"1"},{"poster":"JonathanSJ","content":"Selected Answer: C\nC. Set up additional service instances in other zones and load balance the traffic between all instances\n\nThis option will provide redundancy and increase the availability of the service by distributing the traffic across multiple instances. Additionally, if one instance goes down, the load balancer will redirect the traffic to the other healthy instances, minimizing the impact on the service availability.","comment_id":"776014","upvote_count":"2","timestamp":"1673738400.0"},{"upvote_count":"3","timestamp":"1665023580.0","comment_id":"687386","poster":"ramzez4815","content":"Selected Answer: C\nC is the correct anwer, it is required to increase reliability"},{"comment_id":"599138","poster":"Ananda","upvote_count":"2","content":"Selected Answer: C\nSubmitted C","timestamp":"1652112120.0"},{"comment_id":"528181","poster":"Sekierer","upvote_count":"1","content":"Ans: C","timestamp":"1642659600.0"},{"upvote_count":"1","poster":"muk5658","content":"C, this option will offer resilience and distribute the load, also provides ability to configure health checks at VM level and Load Balancer can send only to Healthy Instances.","timestamp":"1637629980.0","comment_id":"484675"},{"comment_id":"476025","timestamp":"1636613100.0","upvote_count":"2","content":"ANSWER: C","poster":"Manh"}],"url":"https://www.examtopics.com/discussions/google/view/64620-exam-professional-cloud-devops-engineer-topic-1-question-51/","question_id":114,"timestamp":"2021-10-24 18:49:00","topic":"1","answer":"C"},{"id":"j9DTfZaT6fFee7nstsmi","isMC":true,"question_id":115,"choices":{"D":"Enable VPC Flow Logs on the testing and production VPC network frontend and backend subnets with a volume scale of 1.0. Apply changes in testing before production.","A":"Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 0.5.","C":"Enable VPC Flow Logs on the testing and production VPC network frontend and backend subnets with a volume scale of 0.5. Apply changes in testing before production.","B":"Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 1.0."},"question_images":[],"discussion":[{"poster":"NXD","content":"B\n\nhttps://cloud.google.com/vpc/docs/flow-logs#log-sampling","upvote_count":"16","timestamp":"1635713940.0","comment_id":"470902"},{"upvote_count":"8","comment_id":"776019","content":"Selected Answer: B\nB. Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 1.0.\n\nVPC flow logs are a feature that allows you to capture network traffic data in your VPC network. To ensure that all network traffic is captured for analysis, you should enable VPC flow logs on the production VPC network frontend and backend subnets with a sample volume scale of 1.0. This will capture all network traffic data, including the potentially malicious process, for further analysis.\nOption A. Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 0.5 is not adequate, as it captures only half of the network traffic, there is a chance that the logs of the malicious process are not captured.\nOption C and D, Enable VPC Flow Logs on the testing and production VPC network frontend and backend subnets with a volume scale of 0.5/1.0. Apply changes in testing before production, is not necessary, it's important to have the logs in production environment to detect and mitigate the problem.","poster":"JonathanSJ","timestamp":"1673738700.0"},{"comment_id":"1086095","poster":"jomonkp","upvote_count":"1","content":"Selected Answer: B\nOption B","timestamp":"1701515280.0"},{"content":"Selected Answer: B\nB: enabling VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 1.0. This means that all traffic will be logged, ensuring that all network traffic is captured for analysis.","timestamp":"1699965240.0","upvote_count":"1","comment_id":"1070366","poster":"maxdanny"},{"timestamp":"1681087980.0","comment_id":"865912","content":"Selected Answer: D\nApp Engine grants the Error Reporting Writer role by default. The Error Reporting library for Python can be used without needing to explicitly provide credentials. Error Reporting is automatically enabled for App Engine flexible environment applications. No additional setup is required","upvote_count":"1","poster":"anshad666"},{"upvote_count":"1","content":"Selected Answer: D\nin real project background, first we should keep the consistency of configuration between test env and prod env. second, we should apply changes in testing before production.","comments":[{"timestamp":"1703098800.0","poster":"Feliphus","content":"That is true, but the statement says the problem is only in the production frontend servers, maybe you are not going to find the malicious process in the testing frontend servers","comment_id":"1101863","upvote_count":"1"}],"timestamp":"1676028420.0","comment_id":"804243","poster":"hello_aws"},{"poster":"WhyIronMan","upvote_count":"3","content":"Selected Answer: B\nquestion saying test envs can be eliminated","comment_id":"736145","timestamp":"1670260740.0"},{"content":"Selected Answer: B\nCorrect answer is B","comment_id":"674721","timestamp":"1663727400.0","poster":"ramzez4815","upvote_count":"2"},{"timestamp":"1652112120.0","upvote_count":"2","poster":"Ananda","comment_id":"599140","content":"Selected Answer: B\nSubmitted B"},{"upvote_count":"1","comment_id":"563839","poster":"ric79","content":"B is better that A because you are filtering 1:20 instead of 1:10 and the malicious process generates very low traffic","timestamp":"1646812440.0"},{"poster":"Sekierer","content":"Selected Answer: B\nAns: B","upvote_count":"1","comment_id":"528182","timestamp":"1642659660.0"},{"content":"The Answer for this is B","comments":[{"comment_id":"1133389","poster":"4246cd7","upvote_count":"1","timestamp":"1706363100.0","content":"Most people rated D, sure that is better, but it will require re-deployment other than just changing the instance type. If a company doesn't have the capacity or resources to setup D, B is the quickly way to improve SLI. At the end of the day customer first, then you focus on how to do D or move things to serverless like Cloud Run"}],"comment_id":"469163","poster":"Suraj2611","upvote_count":"6","timestamp":"1635414420.0"},{"comments":[{"upvote_count":"4","comment_id":"469808","poster":"giammydell","timestamp":"1635518400.0","content":"if there isnt problem in test environment why log it"},{"content":"Question clearly says only in Production they suspect, so we can eliminate the C and D options.","poster":"muk5658","timestamp":"1637630100.0","upvote_count":"3","comment_id":"484677"}],"upvote_count":"2","poster":"Alaaelanwr","comment_id":"467056","timestamp":"1635094080.0","content":"i think Answer: D"}],"timestamp":"2021-10-24 18:48:00","answer":"B","answer_description":"","url":"https://www.examtopics.com/discussions/google/view/64619-exam-professional-cloud-devops-engineer-topic-1-question-52/","answers_community":["B (90%)","10%"],"topic":"1","answer_ET":"D","exam_id":5,"answer_images":[],"unix_timestamp":1635094080,"question_text":"You are running a real-time gaming application on Compute Engine that has a production and testing environment. Each environment has their own Virtual Private\nCloud (VPC) network. The application frontend and backend servers are located on different subnets in the environment's VPC. You suspect there is a malicious process communicating intermittently in your production frontend servers. You want to ensure that network traffic is captured for analysis. What should you do?"}],"exam":{"isBeta":false,"provider":"Google","numberOfQuestions":166,"id":5,"lastUpdated":"1 May 2024","name":"Professional Cloud DevOps Engineer","isMCOnly":true,"isImplemented":true},"currentPage":23},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "po3AnT7zyyEnnLryq3Xg",
+                "timestamp": "2021-06-13 22:11:00",
+                "choices": {
+                    "A": "A scalable in-memory caching system.",
+                    "B": "The organization's public-facing website.",
+                    "D": "A GPU-accelerated video rendering platform that retrieves and stores videos in a storage bucket.",
+                    "C": "A distributed, eventually consistent NoSQL database cluster with sufficient quorum."
+                },
+                "isMC": true,
+                "topic": "1",
+                "question_id": 111,
+                "question_text": "You need to reduce the cost of virtual machines (VM) for your organization. After reviewing different options, you decide to leverage preemptible VM instances.\nWhich application is suitable for preemptible VMs?",
+                "exam_id": 5,
+                "url": "https://www.examtopics.com/discussions/google/view/55256-exam-professional-cloud-devops-engineer-topic-1-question-49/",
+                "answer_images": [],
+                "unix_timestamp": 1623615060,
+                "answer_description": "Reference:\nhttps://cloud.google.com/preemptible-vms",
+                "answer": "A",
+                "answers_community": [
+                    "A (50%)",
+                    "D (35%)",
+                    "C (15%)"
+                ],
+                "answer_ET": "D",
+                "question_images": [],
+                "discussion": [
+                    {
+                        "comments": [
+                            {
+                                "timestamp": "1680961140.0",
+                                "comments": [
+                                    {
+                                        "poster": "xarom",
+                                        "upvote_count": "2",
+                                        "timestamp": "1692711720.0",
+                                        "comment_id": "987475",
+                                        "content": "https://cloud.google.com/compute/docs/instances/preemptible#preemptible-with-gpu"
+                                    }
+                                ],
+                                "poster": "NiveusSol",
+                                "upvote_count": "2",
+                                "content": "A\nA GPU-accelerated video rendering platform that retrieves and stores videos in a storage bucket: Video rendering requires a stable and powerful infrastructure with persistent storage, which is not provided by preemptible VMs. Additionally, GPUs are not available on all preemptible VM instances.",
+                                "comment_id": "864716"
+                            }
+                        ],
+                        "comment_id": "393472",
+                        "timestamp": "1624938900.0",
+                        "poster": "Charun",
+                        "upvote_count": "15",
+                        "content": "D is correct"
+                    },
+                    {
+                        "timestamp": "1623615060.0",
+                        "upvote_count": "6",
+                        "content": "ans: D",
+                        "poster": "devopsbatch",
+                        "comment_id": "381314",
+                        "comments": [
+                            {
+                                "comment_id": "381546",
+                                "content": "Agree with you on Answer D",
+                                "timestamp": "1623646260.0",
+                                "upvote_count": "4",
+                                "poster": "akg001"
+                            },
+                            {
+                                "poster": "NiveusSol",
+                                "upvote_count": "2",
+                                "comment_id": "864717",
+                                "timestamp": "1680961200.0",
+                                "content": "D GPU-accelerated video rendering platform that retrieves and stores videos in a storage bucket: Video rendering requires a stable and powerful infrastructure with persistent storage, which is not provided by preemptible VMs. Additionally, GPUs are not available on all preemptible VM instances."
+                            }
+                        ]
+                    },
+                    {
+                        "content": "Selected Answer: A\nIt seems A & D both as suitable answer. But I'll go with A, as attaching GPU with preemptible VM will increase cost, and in this question the purpose of opting for preemptible VM is reducing cost.\nhttps://cloud.google.com/compute/docs/instances/preemptible#preemptible-with-gpu",
+                        "comment_id": "1168247",
+                        "upvote_count": "1",
+                        "timestamp": "1709834400.0",
+                        "poster": "jinaldesailive"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Will go with D. \nLooking for cost effective. \nhttps://cloud.google.com/compute/docs/instances/preemptible#preemptible-with-gpu",
+                        "comment_id": "1167663",
+                        "poster": "FI22",
+                        "timestamp": "1709787780.0"
+                    },
+                    {
+                        "comment_id": "1103844",
+                        "timestamp": "1703301720.0",
+                        "content": "Selected Answer: A\nans: A\nPreemptible VMs are best suited for fault-tolerant, non-critical applications due to their temporary nature. Among the options listed, A, a scalable in-memory caching system, aligns well with preemptible instances as it can handle interruptions and doesn't require continuous uptime.",
+                        "poster": "MFay",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1701513360.0",
+                        "content": "Selected Answer: D\nOption D",
+                        "comment_id": "1086062",
+                        "poster": "jomonkp"
+                    },
+                    {
+                        "content": "Selected Answer: A\nI would go with A compared to other options",
+                        "comment_id": "1055137",
+                        "upvote_count": "2",
+                        "timestamp": "1698385560.0",
+                        "poster": "Jason_Cloud_at"
+                    },
+                    {
+                        "timestamp": "1684561500.0",
+                        "content": "Selected Answer: D\nAns is D\nVideo rendering service is like application type called Batch job. Therefore, we can use instance type preemptible for them. If they complete task, they could be destroy and generate new instance to work continuously next task.",
+                        "poster": "Watcharin_start",
+                        "comment_id": "902371",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1678422480.0",
+                        "poster": "izekc",
+                        "comment_id": "834635",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: C\nC is more accurate"
+                    },
+                    {
+                        "poster": "eks4x",
+                        "upvote_count": "5",
+                        "comment_id": "743465",
+                        "content": "Selected Answer: A\nWhy not A? \"A scalable in-memory caching system.\"\nIn general a caching system is not critical to the function of an application.\nIf the cache is down it will cause requests to have cache miss and query the DB instead. User requests will still get served albeit slower.\nIn addition the answer specifies that the caching system is \"scalable\" reducing further the impact of 1 VM getting preempted, ie traffic can be automatically redirected to other cache replicas.\nTo me all other answers seem to have a more severe impact on the user in case the VM is preempted.",
+                        "timestamp": "1670893320.0"
+                    },
+                    {
+                        "timestamp": "1670219280.0",
+                        "content": "Selected Answer: C\nC is the right answer",
+                        "comment_id": "735686",
+                        "upvote_count": "1",
+                        "poster": "kisshs"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1669942680.0",
+                        "comment_id": "733278",
+                        "content": "i think is C, database cluster is storage, and distributed, eventually consistence is resistant for the preempted. and sufficient quorum can ensure the DB transitions.",
+                        "poster": "hanweiCN"
+                    },
+                    {
+                        "poster": "eliC",
+                        "comment_id": "614620",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: D\nD is correct",
+                        "timestamp": "1654875120.0"
+                    },
+                    {
+                        "poster": "psyx21",
+                        "timestamp": "1652382300.0",
+                        "content": "Selected Answer: D\nD is correct",
+                        "upvote_count": "2",
+                        "comment_id": "600781"
+                    },
+                    {
+                        "content": "D\nhttps://cloud.google.com/compute/docs/instances/preemptible",
+                        "timestamp": "1630654380.0",
+                        "poster": "TNT87",
+                        "upvote_count": "4",
+                        "comment_id": "438384"
+                    },
+                    {
+                        "comment_id": "385217",
+                        "upvote_count": "4",
+                        "poster": "ralf_cc",
+                        "content": "D - external persistent storage",
+                        "timestamp": "1624076760.0"
+                    }
+                ]
+            },
+            {
+                "id": "ErPsuWFoyfQAl7l2jHef",
+                "topic": "1",
+                "answer_images": [],
+                "question_text": "You are running an application in a virtual machine (VM) using a custom Debian image. The image has the Stackdriver Logging agent installed. The VM has the cloud-platform scope. The application is logging information via syslog. You want to use Stackdriver Logging in the Google Cloud Platform Console to visualize the logs. You notice that syslog is not showing up in the \"All logs\" dropdown list of the Logs Viewer. What is the first thing you should do?",
+                "answer_description": "Reference:\nhttps://groups.google.com/g/google-stackdriver-discussion/c/FXehB9a-5Vk?pli=1",
+                "timestamp": "2021-06-02 16:30:00",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "discussion": [
+                    {
+                        "comments": [
+                            {
+                                "comment_id": "443883",
+                                "timestamp": "1631526600.0",
+                                "upvote_count": "3",
+                                "content": "Agree. If you check here: https://cloud.google.com/logging/docs/agent/logging/troubleshooting#checklist\nYou will see that first recommended troubleshooting step is to check if the agent is running or not... So it should be D.\n\nAlso if you refer to Google Groups link provided as the answer, you will see that they first checked if the agent is running/installed.",
+                                "comments": [
+                                    {
+                                        "poster": "AzureDP900",
+                                        "upvote_count": "1",
+                                        "timestamp": "1667073420.0",
+                                        "comment_id": "707446",
+                                        "content": "Agreed. D is correct"
+                                    }
+                                ],
+                                "poster": "cetanx"
+                            }
+                        ],
+                        "timestamp": "1628389500.0",
+                        "upvote_count": "12",
+                        "comment_id": "421450",
+                        "poster": "raf2121",
+                        "content": "Between C and D, I think D\n\nReason : When an instance is created, we can specify which service account the instance uses when calling Google Cloud APIs. The instance is automatically configured with access scope and one such access scope is monitoring.write (Link : https://cloud.google.com/compute/docs/access/service- read is to publish metric data and logging.write is to write compute engine logs.\n\nConsidering above, I believe D as the answer (check whether the agent is running)"
+                    },
+                    {
+                        "content": "Why nnot Answer A as a starting point?",
+                        "poster": "desertlotus1211",
+                        "upvote_count": "1",
+                        "comment_id": "1193957",
+                        "timestamp": "1712858760.0"
+                    },
+                    {
+                        "poster": "JonathanSJ",
+                        "comment_id": "772012",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nAnswer is D.",
+                        "timestamp": "1673411220.0"
+                    },
+                    {
+                        "poster": "floppino",
+                        "content": "Selected Answer: D\nAns: D\n\nExam pased and taken on 19/12/2022, 50/50 from this dump without buying the full access.",
+                        "upvote_count": "2",
+                        "comment_id": "754742",
+                        "timestamp": "1671865740.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1669484160.0",
+                        "comment_id": "727715",
+                        "content": "Answer is D. \nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting. D. Check if fluentd is running is the right answer. C is incorrect as monitoring.write scope is for monitoring agent and not logging agent. The legacy scope for logging is https://www.googleapis.com/auth/logging.write",
+                        "poster": "DoodleDo"
+                    },
+                    {
+                        "comment_id": "702997",
+                        "content": "Selected Answer: D\nD is the answer.\n\nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting#checklist\nIf you are having trouble installing or using the Logging agent, here are some things to check:\n- Verify that the agent service is running on your VM instance",
+                        "upvote_count": "1",
+                        "poster": "zellck",
+                        "timestamp": "1666613640.0"
+                    },
+                    {
+                        "comment_id": "635879",
+                        "timestamp": "1658638980.0",
+                        "content": "Selected Answer: D\nAns: D",
+                        "upvote_count": "1",
+                        "poster": "GCP72"
+                    },
+                    {
+                        "content": "Selected Answer: D\nAns: D",
+                        "poster": "Devtestnew",
+                        "comment_id": "617688",
+                        "upvote_count": "1",
+                        "timestamp": "1655466180.0"
+                    },
+                    {
+                        "content": "Selected Answer: D\nSubmitted D",
+                        "upvote_count": "1",
+                        "timestamp": "1652110560.0",
+                        "poster": "Ananda",
+                        "comment_id": "599113"
+                    },
+                    {
+                        "comment_id": "588428",
+                        "upvote_count": "1",
+                        "content": "answer is D",
+                        "poster": "gomezzang",
+                        "timestamp": "1650425640.0"
+                    },
+                    {
+                        "poster": "alexweberlopes",
+                        "upvote_count": "2",
+                        "comment_id": "547567",
+                        "content": "The VM has cloud-platform scope on the VM means Full access if you using the default compute account. I would say answer D is right check is the fluentd daemon running.",
+                        "timestamp": "1644907620.0"
+                    },
+                    {
+                        "poster": "pddddd",
+                        "comment_id": "532759",
+                        "content": "Selected Answer: D\nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting#test-agent",
+                        "timestamp": "1643190540.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "494289",
+                        "timestamp": "1638705300.0",
+                        "poster": "alaahakim",
+                        "content": "Ans: D"
+                    },
+                    {
+                        "timestamp": "1637759700.0",
+                        "poster": "Wwhite44",
+                        "upvote_count": "2",
+                        "content": "C is not good, “monitoring.write\" is use for metric not log",
+                        "comment_id": "485969"
+                    },
+                    {
+                        "comment_id": "434694",
+                        "poster": "danchoif2",
+                        "timestamp": "1630250220.0",
+                        "upvote_count": "1",
+                        "comments": [
+                            {
+                                "comment_id": "455005",
+                                "upvote_count": "1",
+                                "timestamp": "1633016880.0",
+                                "content": "i don't think so , reason is option-D is looking for fluent d which is specifically for customized logs , also by default the syslog will be captured with default monitoring agent and no need for fluent-d",
+                                "comments": [
+                                    {
+                                        "content": "https://cloud.google.com/logging/docs/agent/logging/installation\n\nLogging agent is fluentd based (now fluentbit).\n\nThe Logging agent streams logs from your VM instances and from selected third-party software packages to Cloud Logging. It is a best practice to run the Logging agent on all your VM instances.\n\nThe VM images for Compute Engine and Amazon Elastic Compute Cloud (EC2) don't include the Logging agent, so you must complete these steps to install it on those instances. The agent runs under both Linux and Windows.\n\nIf your VMs are running in Google Kubernetes Engine or App Engine, the agent is already included in the VM image, so you can skip this page.",
+                                        "poster": "danchoif2",
+                                        "upvote_count": "1",
+                                        "timestamp": "1635691800.0",
+                                        "comment_id": "470717"
+                                    }
+                                ],
+                                "poster": "Manumj"
+                            }
+                        ],
+                        "content": "https://cloud.google.com/compute/docs/access/service-accounts#associating_a_service_account_to_an_instance\n\nWhen you create an instance using the gcloud command-line tool or the Google Cloud Console, you can specify which service account the instance uses when calling Google Cloud APIs. The instance is automatically configured with the following access scopes:\n\n* https://www.googleapis.com/auth/monitoring.write\n* ...\n\nSo D is better than C."
+                    },
+                    {
+                        "content": "4- Then you should check that the agent is sending data to the correct project. See the following section, Verifying Compute Engine credentials.\nThe link for Verifying Compute Engine credentials is https://cloud.google.com/logging/docs/agent/logging/troubleshooting#verify-creds\nIn this link : \na- Verifying access scopes \nb- Verifying default service account permission\n==> Similar to Answer C) but C) Answer talks about monitoring.write instead of logging.write. And in the question\nthey say \"The VM has the cloud-platform scope\" ==> logging.write is already here.\n5- Verifying the agent installation using agent's test log entry in the Logs Explorer ==> Answer A)\n6- Testing the agent using ps ax | grep fluentd ==> Answer D)\nSo for me the good answer is A).",
+                        "timestamp": "1627817880.0",
+                        "upvote_count": "1",
+                        "poster": "[Removed]",
+                        "comment_id": "418243"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1627817820.0",
+                        "poster": "[Removed]",
+                        "comment_id": "418242",
+                        "content": "If we follow this link : https://cloud.google.com/logging/docs/agent/logging/troubleshooting\nThe action (for Linux VM) are in order : \n1- If Linux installation commands result in errors, then make sure that you prefix the installation commands with sudo.\n2- Verify that the agent service is running on your VM instance : sudo service google-fluentd status\n3- See if the agent has written error messages to the logs."
+                    },
+                    {
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "poster": "Wwhite44",
+                                "timestamp": "1637759640.0",
+                                "content": "Monitoring.write is for metric, so C is not correct. In that case logging.write was the right command. So D is the correct ANS ;)",
+                                "comment_id": "485966"
+                            }
+                        ],
+                        "timestamp": "1624489320.0",
+                        "poster": "guruguru",
+                        "content": "C, first thing to check should be the access scope. There are 3 types of scopes, default, full access and access for each API. Even thought the default scope have the Stackdriver write access, it doesn't mean the instance has the default scope. It could be access for each API. Hence, first thing to check is the scope. After that, you can check the fluentd service in the system. C over D.",
+                        "upvote_count": "2",
+                        "comment_id": "389120"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1624351680.0",
+                        "comment_id": "387760",
+                        "poster": "TNT87",
+                        "comments": [
+                            {
+                                "poster": "TNT87",
+                                "timestamp": "1632806460.0",
+                                "content": "Sorry Ans is D",
+                                "upvote_count": "2",
+                                "comment_id": "453049"
+                            }
+                        ],
+                        "content": "Ans C \nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting"
+                    },
+                    {
+                        "content": "Ans is C\nWhy?:\nA: Does not make sense at all\nB: the version it's not possible?\nC: Its OK because both (scope and service account) need access to write to logging\nD: Really? the question clearly says: \"The image has the Stackdriver Logging agent installed.\"\n\nExplanation:\nGenerally, you can just set the cloud-platform access scope to allow access to most of the Cloud APIs, then grant the service account only relevant IAM roles. The combination of access scopes granted to the virtual machine instance and the IAM roles granted to the service account determines the amount of access the service account has for that instance. The service account can execute API methods only if they are allowed by both the access scope and its IAM roles.\n\nhttps://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances\n\nPlease do not try to confuse people if you put your explanation add the link",
+                        "comment_id": "385773",
+                        "poster": "francisco_guerra",
+                        "comments": [
+                            {
+                                "content": "I think it's D: https://cloud.google.com/logging/docs/agent/logging/troubleshooting#test-agent. Maybe the agent is installed but not running.",
+                                "upvote_count": "5",
+                                "timestamp": "1625570700.0",
+                                "poster": "syslog",
+                                "comment_id": "399920"
+                            },
+                            {
+                                "poster": "burndayl",
+                                "timestamp": "1639381920.0",
+                                "upvote_count": "1",
+                                "content": "I think the answer is D. C couldn't be right because it suggest to verify the monitoring.write scope. But this kind of scope is for monitoring agent not for logging agent. If you see here:\nhttps://cloud.google.com/logging/docs/agent/logging/troubleshooting?hl=en\nthey say: If you do not have suitable access scopes in your Compute Engine instance, add the needed access scopes to your instance. The following table shows the scopes relevant to the Logging and Monitoring agents:\nAccess scope Agent permissions\nhttps://www.googleapis.com/auth/logging.write Adequate for the Logging agent\nhttps://www.googleapis.com/auth/monitoring.write Adequate for the Monitoring agent\nwhat do you think about it?",
+                                "comment_id": "500444"
+                            }
+                        ],
+                        "upvote_count": "3",
+                        "timestamp": "1624134480.0"
+                    },
+                    {
+                        "poster": "devopsbatch",
+                        "comment_id": "372781",
+                        "timestamp": "1622644200.0",
+                        "content": "C because vm need writer access and i feel D as well because fluent need to be available to export ,aggregate and process logs into stack driver monitoring tool... suggestions needed here",
+                        "upvote_count": "3",
+                        "comments": [
+                            {
+                                "comment_id": "376395",
+                                "poster": "rinkeshgala1",
+                                "upvote_count": "1",
+                                "timestamp": "1623025500.0",
+                                "content": "Cloud-platform scope covers all the GCP service scope so no need to add any other scope. hence answer should be D"
+                            },
+                            {
+                                "comment_id": "379751",
+                                "timestamp": "1623410100.0",
+                                "upvote_count": "1",
+                                "poster": "akg001",
+                                "content": "Default: read-only access to Storage and Service Management, write access to Stackdriver Logging and Monitoring, read/write access to Service Control.\n\nSo answer should be D"
+                            },
+                            {
+                                "comment_id": "408960",
+                                "upvote_count": "2",
+                                "timestamp": "1626613680.0",
+                                "poster": "Zuy01",
+                                "content": "i think it's D, cause ans C is less precise. on question mention \"logging agent\" not \"monitoring agent\" and from here :https://cloud.google.com/logging/docs/agent/logging/troubleshooting#verifying_access_scopes\nit should be \"logging.write\" not \"monitoring.write\""
+                            }
+                        ]
+                    }
+                ],
+                "exam_id": 5,
+                "url": "https://www.examtopics.com/discussions/google/view/54227-exam-professional-cloud-devops-engineer-topic-1-question-5/",
+                "answer": "D",
+                "unix_timestamp": 1622644200,
+                "question_images": [],
+                "choices": {
+                    "C": "Verify the VM service account access scope includes the monitoring.write scope.",
+                    "A": "Look for the agent's test log entry in the Logs Viewer.",
+                    "D": "SSH to the VM and execute the following commands on your VM: ps ax | grep fluentd.",
+                    "B": "Install the most recent version of the Stackdriver agent."
+                },
+                "answer_ET": "D",
+                "question_id": 112,
+                "isMC": true
+            },
+            {
+                "id": "uI5YMciR3TDOo24HqRpT",
+                "answer": "D",
+                "url": "https://www.examtopics.com/discussions/google/view/55257-exam-professional-cloud-devops-engineer-topic-1-question-50/",
+                "question_text": "Your organization recently adopted a container-based workflow for application development. Your team develops numerous applications that are deployed continuously through an automated build pipeline to a Kubernetes cluster in the production environment. The security auditor is concerned that developers or operators could circumvent automated testing and push code changes to production without approval. What should you do to enforce approvals?",
+                "unix_timestamp": 1623615120,
+                "isMC": true,
+                "answer_description": "",
+                "question_images": [],
+                "topic": "1",
+                "choices": {
+                    "B": "Use an Admission Controller to verify that incoming requests originate from approved sources.",
+                    "D": "Enable binary authorization inside the Kubernetes cluster and configure the build pipeline as an attestor.",
+                    "C": "Leverage Kubernetes Role-Based Access Control (RBAC) to restrict access to only approved users.",
+                    "A": "Configure the build system with protected branches that require pull request approval."
+                },
+                "discussion": [
+                    {
+                        "comment_id": "390711",
+                        "upvote_count": "26",
+                        "timestamp": "1624646340.0",
+                        "poster": "francisco_guerra",
+                        "content": "this question is a little bit strange, but first we need to remove the invalid answers\n\nB: Incorrect An admission controller is a piece of code that intercepts requests to the Kubernetes API server prior to persistence of the object, but after the request is authenticated and authorized. (its for security but not \"enforce approvals\")\nC: Incorrect, we need to \"enforce approvals\" roles apply in the cluster and Ops always could push to production without approval.\nA: Incorrect, for me this answer sound well but this does not sound that an answer for a gcp exam and this do not enforce the use of the pipeline.\nD: Correct, they cannot push code to production without approval because their images are not signed."
+                    },
+                    {
+                        "timestamp": "1625142180.0",
+                        "content": "I win the exam today so this questions help me a lot",
+                        "upvote_count": "15",
+                        "poster": "francisco_guerra",
+                        "comment_id": "395931"
+                    },
+                    {
+                        "content": "Selected Answer: D\nOption D",
+                        "upvote_count": "1",
+                        "comment_id": "1086087",
+                        "timestamp": "1701514860.0",
+                        "poster": "jomonkp"
+                    },
+                    {
+                        "timestamp": "1670259780.0",
+                        "comment_id": "736129",
+                        "poster": "WhyIronMan",
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "comment_id": "762560",
+                                "poster": "Greg123123",
+                                "comments": [
+                                    {
+                                        "upvote_count": "1",
+                                        "poster": "WhyIronMan",
+                                        "timestamp": "1673175900.0",
+                                        "comment_id": "769311",
+                                        "content": "That said, I send the question back to you, how about the developers?: \"is concerned that developers or operators could circumvent\" \nDeveloper will push code direct to master, with bug that is not caught by the tests and here we go: you do have a signed imaged, attested, with a BUG or something like that will be deployed\nso the question depends on the point of view, the combination of both are right\n\nand one more thing, D prevent to push to the registry, but the operator can get the kubernetes deployment yaml and point to other GCR..."
+                                    }
+                                ],
+                                "content": "but you missed the point here \"The security auditor is concerned that developers or operators could circumvent\". I see why you think pull request is the only way to circumvent the deployment process. But how about the operators? They have access to cluster and can simply redeploy it by some kubectl / cloud build command. So A is not correct.",
+                                "timestamp": "1672475580.0"
+                            }
+                        ],
+                        "upvote_count": "1",
+                        "content": "Selected Answer: A\nIf you are not familiarised, Pull Requests are one way to bring changes from one branch (e.g. develop) into protected branches (e.g. master, main).\n\n1. First you need to protect the production branch (e.g, master, main)\n2. If a developer attempts to push new code to a production (now protected) it will trow a Permission denied error like this:\nremote: Permission denied to update branch master.\nTo git.com:org/repository.git\n ! [remote rejected] master -> master (pre-receive hook declined)\nerror: failed to push some refs to 'git.com:org/repository.git'\n\n3. in order to push their code to production branch, the developers will need to open a Pull Request (If you are using GitLab, it is called Merge Request) and ask someone to Review and Approve your changes.\n4. The pipeline points to the protected branch; any new code pushed trigger the pipeline, and runs the tests and then deploy it.\n\nThis is how we do devops."
+                    },
+                    {
+                        "content": "Selected Answer: D\nD is correct answer, binary auth is best practice",
+                        "poster": "ramzez4815",
+                        "timestamp": "1663727160.0",
+                        "upvote_count": "3",
+                        "comment_id": "674715"
+                    },
+                    {
+                        "poster": "lxs",
+                        "comment_id": "613205",
+                        "content": "Correct me if I am wrong, but this question is ambiguous. You can push the code at 3 stages:\n1. You can merge a branch to master without Merge Request if the master is not protected\n2. You can push the image to container registry to a repository if you have role assigned (only pipeline should be privileged to do).\n3. An operator can change the code altering image/yaml using kubectl cli. \n\nThe ultimate question is which problem are we trying to solve?",
+                        "timestamp": "1654686960.0",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Selected Answer: D\nD - Binary authorisation",
+                        "upvote_count": "3",
+                        "comment_id": "546339",
+                        "timestamp": "1644742440.0",
+                        "poster": "PhilipKoku"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "DarkMatterOne",
+                        "comment_id": "517831",
+                        "timestamp": "1641420000.0",
+                        "content": "D\nhttps://cloud.google.com/binary-authorization\nBinary Authorization is a deploy-time security control that ensures only trusted container images are deployed on Google Kubernetes Engine (GKE) or Cloud Run. With Binary Authorization, you can require images to be signed by trusted authorities during the development process and then enforce signature validation when deploying. By enforcing validation, you can gain tighter control over your container environment by ensuring only verified images are integrated into the build-and-release process."
+                    },
+                    {
+                        "upvote_count": "3",
+                        "comment_id": "451807",
+                        "content": "Questions 51-55 is not available.. can someone please help me to get 51-55 questions?",
+                        "poster": "maddy94",
+                        "timestamp": "1632656040.0"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "timestamp": "1625008500.0",
+                        "comment_id": "394260",
+                        "content": "Agreed with D. The keywords here is \"developers or operators\". Option A the operators could push images to production without approval (operators could touch the cluster directly and the cluster cannot do any action against them). Rest same as francisco_guerra.",
+                        "poster": "zanhsieh"
+                    },
+                    {
+                        "comment_id": "385220",
+                        "poster": "ralf_cc",
+                        "upvote_count": "1",
+                        "content": "D - PR approval will ensure the automated testing etc., the question is asking how to ensure all code changes go through the pipeline, where automated tests are integrated",
+                        "timestamp": "1624076940.0"
+                    },
+                    {
+                        "content": "Answer C is the most close answer. Leverage best practice .\nanswer A is for pulling the code but in the question , the security auditor is concern about pushing the code .",
+                        "timestamp": "1623646680.0",
+                        "poster": "akg001",
+                        "comments": [
+                            {
+                                "poster": "WhyIronMan",
+                                "content": "If you are not familiarised, Pull Requests are one way to bring changes from one branch (e.g. develop) into protected branches (e.g. master, main).\n\nIn order to push their code to production branch, the developers will need to open a Pull Request (If you are using GitLab, it is called Merge Request) and ask someone to Review and Approve their changes.",
+                                "comment_id": "736131",
+                                "timestamp": "1670259900.0",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "comment_id": "381552",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "timestamp": "1623615120.0",
+                        "content": "A could be the ans",
+                        "comment_id": "381315",
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "content": "I think you are right : A\nhttps://github.community/t/best-practices-for-protected-branches/10204",
+                                "timestamp": "1623647220.0",
+                                "comment_id": "381560",
+                                "poster": "akg001"
+                            },
+                            {
+                                "content": "IMHO the statement is concert about runnigs unsafe workload on a cluster Kubernet, and not how to protect the code repository, in this other case, pull request approval and an Admission Controller would be fine. Then D is the ans",
+                                "poster": "Feliphus",
+                                "upvote_count": "1",
+                                "comment_id": "1101841",
+                                "timestamp": "1703097840.0"
+                            }
+                        ],
+                        "poster": "devopsbatch",
+                        "upvote_count": "2"
+                    }
+                ],
+                "answers_community": [
+                    "D (88%)",
+                    "13%"
+                ],
+                "answer_images": [],
+                "answer_ET": "C",
+                "question_id": 113,
+                "exam_id": 5,
+                "timestamp": "2021-06-13 22:12:00"
+            },
+            {
+                "id": "0smIhpz2B8xTnpEHXU47",
+                "answers_community": [
+                    "C (100%)"
+                ],
+                "answer_ET": "C",
+                "isMC": true,
+                "exam_id": 5,
+                "question_text": "You support a stateless web-based API that is deployed on a single Compute Engine instance in the europe-west2-a zone. The Service Level Indicator (SLI) for service availability is below the specified Service Level Objective (SLO). A postmortem has revealed that requests to the API regularly time out. The time outs are due to the API having a high number of requests and running out memory. You want to improve service availability. What should you do?",
+                "choices": {
+                    "C": "Set up additional service instances in other zones and load balance the traffic between all instances",
+                    "D": "Set up additional service instances in other zones and use them as a failover in case the primary instance is unavailable",
+                    "B": "Move the service to higher-specification compute instances with more memory",
+                    "A": "Change the specified SLO to match the measured SLI"
+                },
+                "unix_timestamp": 1635094140,
+                "question_images": [],
+                "answer_images": [],
+                "answer_description": "",
+                "discussion": [
+                    {
+                        "poster": "Alaaelanwr",
+                        "timestamp": "1635094140.0",
+                        "comment_id": "467057",
+                        "upvote_count": "12",
+                        "content": "Ans: C"
+                    },
+                    {
+                        "poster": "jomonkp",
+                        "content": "Selected Answer: C\nOption C",
+                        "comment_id": "1086096",
+                        "upvote_count": "1",
+                        "timestamp": "1701515280.0"
+                    },
+                    {
+                        "comment_id": "1086089",
+                        "timestamp": "1701515040.0",
+                        "content": "Option C",
+                        "poster": "jomonkp",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "poster": "JonathanSJ",
+                        "content": "Selected Answer: C\nC. Set up additional service instances in other zones and load balance the traffic between all instances\n\nThis option will provide redundancy and increase the availability of the service by distributing the traffic across multiple instances. Additionally, if one instance goes down, the load balancer will redirect the traffic to the other healthy instances, minimizing the impact on the service availability.",
+                        "comment_id": "776014",
+                        "upvote_count": "2",
+                        "timestamp": "1673738400.0"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "timestamp": "1665023580.0",
+                        "comment_id": "687386",
+                        "poster": "ramzez4815",
+                        "content": "Selected Answer: C\nC is the correct anwer, it is required to increase reliability"
+                    },
+                    {
+                        "comment_id": "599138",
+                        "poster": "Ananda",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: C\nSubmitted C",
+                        "timestamp": "1652112120.0"
+                    },
+                    {
+                        "comment_id": "528181",
+                        "poster": "Sekierer",
+                        "upvote_count": "1",
+                        "content": "Ans: C",
+                        "timestamp": "1642659600.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "muk5658",
+                        "content": "C, this option will offer resilience and distribute the load, also provides ability to configure health checks at VM level and Load Balancer can send only to Healthy Instances.",
+                        "timestamp": "1637629980.0",
+                        "comment_id": "484675"
+                    },
+                    {
+                        "comment_id": "476025",
+                        "timestamp": "1636613100.0",
+                        "upvote_count": "2",
+                        "content": "ANSWER: C",
+                        "poster": "Manh"
+                    }
+                ],
+                "url": "https://www.examtopics.com/discussions/google/view/64620-exam-professional-cloud-devops-engineer-topic-1-question-51/",
+                "question_id": 114,
+                "timestamp": "2021-10-24 18:49:00",
+                "topic": "1",
+                "answer": "C"
+            },
+            {
+                "id": "j9DTfZaT6fFee7nstsmi",
+                "isMC": true,
+                "question_id": 115,
+                "choices": {
+                    "D": "Enable VPC Flow Logs on the testing and production VPC network frontend and backend subnets with a volume scale of 1.0. Apply changes in testing before production.",
+                    "A": "Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 0.5.",
+                    "C": "Enable VPC Flow Logs on the testing and production VPC network frontend and backend subnets with a volume scale of 0.5. Apply changes in testing before production.",
+                    "B": "Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 1.0."
+                },
+                "question_images": [],
+                "discussion": [
+                    {
+                        "poster": "NXD",
+                        "content": "B\n\nhttps://cloud.google.com/vpc/docs/flow-logs#log-sampling",
+                        "upvote_count": "16",
+                        "timestamp": "1635713940.0",
+                        "comment_id": "470902"
+                    },
+                    {
+                        "upvote_count": "8",
+                        "comment_id": "776019",
+                        "content": "Selected Answer: B\nB. Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 1.0.\n\nVPC flow logs are a feature that allows you to capture network traffic data in your VPC network. To ensure that all network traffic is captured for analysis, you should enable VPC flow logs on the production VPC network frontend and backend subnets with a sample volume scale of 1.0. This will capture all network traffic data, including the potentially malicious process, for further analysis.\nOption A. Enable VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 0.5 is not adequate, as it captures only half of the network traffic, there is a chance that the logs of the malicious process are not captured.\nOption C and D, Enable VPC Flow Logs on the testing and production VPC network frontend and backend subnets with a volume scale of 0.5/1.0. Apply changes in testing before production, is not necessary, it's important to have the logs in production environment to detect and mitigate the problem.",
+                        "poster": "JonathanSJ",
+                        "timestamp": "1673738700.0"
+                    },
+                    {
+                        "comment_id": "1086095",
+                        "poster": "jomonkp",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nOption B",
+                        "timestamp": "1701515280.0"
+                    },
+                    {
+                        "content": "Selected Answer: B\nB: enabling VPC Flow Logs on the production VPC network frontend and backend subnets only with a sample volume scale of 1.0. This means that all traffic will be logged, ensuring that all network traffic is captured for analysis.",
+                        "timestamp": "1699965240.0",
+                        "upvote_count": "1",
+                        "comment_id": "1070366",
+                        "poster": "maxdanny"
+                    },
+                    {
+                        "timestamp": "1681087980.0",
+                        "comment_id": "865912",
+                        "content": "Selected Answer: D\nApp Engine grants the Error Reporting Writer role by default. The Error Reporting library for Python can be used without needing to explicitly provide credentials. Error Reporting is automatically enabled for App Engine flexible environment applications. No additional setup is required",
+                        "upvote_count": "1",
+                        "poster": "anshad666"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nin real project background, first we should keep the consistency of configuration between test env and prod env. second, we should apply changes in testing before production.",
+                        "comments": [
+                            {
+                                "timestamp": "1703098800.0",
+                                "poster": "Feliphus",
+                                "content": "That is true, but the statement says the problem is only in the production frontend servers, maybe you are not going to find the malicious process in the testing frontend servers",
+                                "comment_id": "1101863",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "timestamp": "1676028420.0",
+                        "comment_id": "804243",
+                        "poster": "hello_aws"
+                    },
+                    {
+                        "poster": "WhyIronMan",
+                        "upvote_count": "3",
+                        "content": "Selected Answer: B\nquestion saying test envs can be eliminated",
+                        "comment_id": "736145",
+                        "timestamp": "1670260740.0"
+                    },
+                    {
+                        "content": "Selected Answer: B\nCorrect answer is B",
+                        "comment_id": "674721",
+                        "timestamp": "1663727400.0",
+                        "poster": "ramzez4815",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "timestamp": "1652112120.0",
+                        "upvote_count": "2",
+                        "poster": "Ananda",
+                        "comment_id": "599140",
+                        "content": "Selected Answer: B\nSubmitted B"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comment_id": "563839",
+                        "poster": "ric79",
+                        "content": "B is better that A because you are filtering 1:20 instead of 1:10 and the malicious process generates very low traffic",
+                        "timestamp": "1646812440.0"
+                    },
+                    {
+                        "poster": "Sekierer",
+                        "content": "Selected Answer: B\nAns: B",
+                        "upvote_count": "1",
+                        "comment_id": "528182",
+                        "timestamp": "1642659660.0"
+                    },
+                    {
+                        "content": "The Answer for this is B",
+                        "comments": [
+                            {
+                                "comment_id": "1133389",
+                                "poster": "4246cd7",
+                                "upvote_count": "1",
+                                "timestamp": "1706363100.0",
+                                "content": "Most people rated D, sure that is better, but it will require re-deployment other than just changing the instance type. If a company doesn't have the capacity or resources to setup D, B is the quickly way to improve SLI. At the end of the day customer first, then you focus on how to do D or move things to serverless like Cloud Run"
+                            }
+                        ],
+                        "comment_id": "469163",
+                        "poster": "Suraj2611",
+                        "upvote_count": "6",
+                        "timestamp": "1635414420.0"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "upvote_count": "4",
+                                "comment_id": "469808",
+                                "poster": "giammydell",
+                                "timestamp": "1635518400.0",
+                                "content": "if there isnt problem in test environment why log it"
+                            },
+                            {
+                                "content": "Question clearly says only in Production they suspect, so we can eliminate the C and D options.",
+                                "poster": "muk5658",
+                                "timestamp": "1637630100.0",
+                                "upvote_count": "3",
+                                "comment_id": "484677"
+                            }
+                        ],
+                        "upvote_count": "2",
+                        "poster": "Alaaelanwr",
+                        "comment_id": "467056",
+                        "timestamp": "1635094080.0",
+                        "content": "i think Answer: D"
+                    }
+                ],
+                "timestamp": "2021-10-24 18:48:00",
+                "answer": "B",
+                "answer_description": "",
+                "url": "https://www.examtopics.com/discussions/google/view/64619-exam-professional-cloud-devops-engineer-topic-1-question-52/",
+                "answers_community": [
+                    "B (90%)",
+                    "10%"
+                ],
+                "topic": "1",
+                "answer_ET": "D",
+                "exam_id": 5,
+                "answer_images": [],
+                "unix_timestamp": 1635094080,
+                "question_text": "You are running a real-time gaming application on Compute Engine that has a production and testing environment. Each environment has their own Virtual Private\nCloud (VPC) network. The application frontend and backend servers are located on different subnets in the environment's VPC. You suspect there is a malicious process communicating intermittently in your production frontend servers. You want to ensure that network traffic is captured for analysis. What should you do?"
+            }
+        ],
+        "exam": {
+            "isBeta": false,
+            "provider": "Google",
+            "numberOfQuestions": 166,
+            "id": 5,
+            "lastUpdated": "1 May 2024",
+            "name": "Professional Cloud DevOps Engineer",
+            "isMCOnly": true,
+            "isImplemented": true
+        },
+        "currentPage": 23
+    },
+    "__N_SSP": true
+}

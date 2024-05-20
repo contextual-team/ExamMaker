@@ -1,1 +1,668 @@
-{"pageProps":{"questions":[{"id":"qeQldi2goUUyd6310Ztg","question_images":[],"exam_id":5,"isMC":true,"question_id":146,"answer":"DE","choices":{"B":"Have more frequent or potentially risky application releases.","A":"Add more serving capacity to all of your application's zones.","E":"Announce planned downtime to consume more error budget, and ensure that users are not depending on a tighter SLO.","C":"Tighten the SLO match the application's observed reliability.","D":"Implement and measure additional Service Level Indicators (SLIs) fro the application."},"answer_description":"","answers_community":["DE (50%)","BE (39%)","11%"],"answer_images":[],"discussion":[{"poster":"Trony","timestamp":"1635931080.0","upvote_count":"24","content":"I would go for B+D:\n-A: no, there's no reason to add capacity if we are barely scratching error budget;\n-B: everything seems fine, so it's ok to dare with more innovative/risky releases;\n-C: no, stakeholders said SLO is ok;\n-D: adding additional SLIs (and so SLOs) might be a way to reflect observer reliability more closely;\n-E: put the servers down for no reason is a no-no.","comments":[{"timestamp":"1639434900.0","content":"there is no mention of innovation, only \"risky\"..hence not a right choices","poster":"Biden","upvote_count":"1","comment_id":"500935"}],"comment_id":"471995"},{"comment_id":"528281","content":"Selected Answer: DE\nI vote for D+E if you read \"The Global Chubby Planned Outage\"\nhttps://sre.google/sre-book/service-level-objectives/","poster":"Sekierer","upvote_count":"11","timestamp":"1642670280.0"},{"content":"Selected Answer: BD\nOption B and D","upvote_count":"1","timestamp":"1701525720.0","comment_id":"1086240","poster":"jomonkp"},{"comment_id":"835681","timestamp":"1678512420.0","upvote_count":"1","poster":"izekc","content":"Selected Answer: BE\nBE is correct"},{"comment_id":"819700","content":"Selected Answer: BE\nB is correct because when you dont use your error budget you can increase the release frequency. In the question it even mentions \"balancing velocity, reliability, and business needs\". The balance here can shift from reliability to velocity and business needs.\nD is correct as multiple other users already mentioned because of: \"The Global Chubby Planned Outage\" https://sre.google/sre-book/service-level-objectives/","upvote_count":"2","poster":"Catweazle1983","timestamp":"1677183540.0"},{"upvote_count":"1","content":"Selected Answer: DE\nI will go with D and E.\nOption B sounds good, but introducing new changes could add errors, that do not match the current objectives \"You want your application's SLO to more closely reflect its observed reliability. \"\n\nA doesn't make sense.\nC neither, because the SLO has been reviewed and its ok.","poster":"JonathanSJ","comment_id":"777223","timestamp":"1673830440.0"},{"content":"B and E:\nA. not relevant\nB. Yes because we have a lot of budget. Risky isn't necessary a negative word in SRE because what we learn from SRE is to embrace risk and failure.\nC. SLO is set appropriately they say.\nD. adding more SLI doesn't necessarily help.\nE. SRE practice suggest that we can have planned downtime.","timestamp":"1672502580.0","comment_id":"762697","upvote_count":"2","poster":"Greg123123"},{"comment_id":"755319","upvote_count":"3","poster":"shefalia","timestamp":"1671925920.0","content":"This was asked on (12/24/22), passed the exam . I opted for D & E"},{"timestamp":"1671701100.0","comment_id":"753129","poster":"JayDeng","upvote_count":"4","content":"B and E.\nWhen you only consume 5% of your error budget consistently it means that you can take more risk by releasing features more often (B) and/or bring down service to set user expectation close to SLO (and business has confirmed that this SLO is appropriate)"},{"upvote_count":"4","poster":"eks4x","comment_id":"743887","timestamp":"1670927100.0","content":"Selected Answer: BE\nB+E \nB because this if you constantly have a lot of spare error budgets it is an indication that you are not taking enough risk ie releasing new features. And you are ultimately depriving the users of new functionalities by being too cautious.\nE: Everyone agrees on E as it was mentioned in the SRE book as part of the The Global Chubby Planned Outage\n\nRe: why not D) The review indicated that the existing SLOs are good. So adding more SLIs not useful here plus does nothing to the user perceived reliability."},{"content":"Selected Answer: DE\nDE - You want your application's SLO to more closely reflect its observed reliability.","upvote_count":"1","poster":"dobby_elf","comment_id":"647376","timestamp":"1660602420.0"},{"content":"Selected Answer: BD\nB & D are correct.","upvote_count":"3","poster":"eliC","timestamp":"1655470380.0","comment_id":"617716"},{"timestamp":"1648292400.0","upvote_count":"5","poster":"[Removed]","content":"D+E\nYou want the application's SLO to more closely reflect it's observed reliability. The key here is error budget never goes over 5%. This means they can have additional downtime and still stay within their budget. \nE is correct as per Google SRE handbook (https://sre.google/sre-book/service-level-objectives/) \n'You can avoid over-dependence by deliberately taking the system offline occasionally (Google’s Chubby service introduced planned outages in response to being overly available)'\nD is a good answer because with more SLI's, this may more accurately reflect the system's reliability.\nA is wrong because adding more serving capacity would make the system even more available.\nC is wrong because: The question states 'The SLO is set appropriately'.","comment_id":"575478"},{"content":"Selected Answer: DE\nchekc link from Sekierer for why E is valid (https://sre.google/sre-book/service-level-objectives/)\nThen D is logical as well.","upvote_count":"2","timestamp":"1645462200.0","comment_id":"553025","poster":"zygomar"},{"content":"Selected Answer: BE\nB - You can increase the frequency of your releases and take higher risks as you have never exceeded your error budget.\nE - Planned downtime to use some of your error budget will help to make sure end users don’t get use a higher availability of your service.","comment_id":"546503","poster":"PhilipKoku","timestamp":"1644763440.0","upvote_count":"7"},{"poster":"TNT87","upvote_count":"2","timestamp":"1640713620.0","comment_id":"511401","content":"https://cloud.google.com/blog/products/management-tools/sre-error-budgets-and-maintenance-windows This is the link to the answers of this question"},{"timestamp":"1640598660.0","upvote_count":"3","comment_id":"510203","poster":"TNT87","content":"Selected Answer: DE\nThese are the correct choices"},{"poster":"Biden","content":"Ask is \"You want your application's SLO to MORE CLOSELY REFLECT its observed reliability\".\nBased on that C is correct, and also agree going ahead for a risky release.\nHence B&C !?","comment_id":"501722","upvote_count":"2","comments":[{"poster":"[Removed]","comment_id":"575477","upvote_count":"2","content":"No. You never change the SLO to match reliability and they have already said the SLO is set correctly in the question.","timestamp":"1648292220.0"}],"timestamp":"1639524540.0"},{"upvote_count":"2","timestamp":"1639434780.0","content":"C&D would be the closest correct answer.. risky release should never be considered - hence B is out.","poster":"Biden","comment_id":"500934"},{"content":"A doesnt make sense ..why to add more when there is no issue and the error budget is hardly utilized ?","upvote_count":"1","poster":"Biden","comment_id":"500933","timestamp":"1639434720.0"},{"poster":"TNT87","content":"Ans A,D\nIts not always the case that they post wrong answers here, some of them are correct and this is one of the few correct answers. go and read SRE book","timestamp":"1638773520.0","comment_id":"494952","upvote_count":"1"},{"upvote_count":"2","timestamp":"1637490600.0","comment_id":"483178","content":"in example global chubby outage plan they mentioned planned outages. \nAlso to increase the additional parameters in SLI\nhttps://sre.google/sre-book/service-level-objectives/\nI think it D & E","poster":"azuretestingpoc"},{"upvote_count":"4","comments":[{"content":"Though B says \"risky releases...\" , B&D seems to be the least controversial option.","timestamp":"1637018280.0","poster":"Biden","comment_id":"479059","upvote_count":"1"}],"content":"I think its B and D\n\nB because we can innovate since the error budget only hit 5% \nD it will help to obserb realitbiity better","poster":"sindra","timestamp":"1636707360.0","comment_id":"476808"},{"timestamp":"1636686720.0","comments":[{"comment_id":"488561","timestamp":"1638054180.0","upvote_count":"1","content":"The question says - You hold a Service Level Objective (SLO) review with business stakeholders and confirm that the SLO is set appropriately. Which means we should not make any changes to SLO. I would go with B and D - Adopt more risky releases and add more SLI's to better measure system.","poster":"muk5658"}],"poster":"Manh","content":"\"You want your application's SLO to more closely reflect its observed reliability.\"\n CD should be answer","comment_id":"476646","upvote_count":"3"},{"timestamp":"1636535700.0","content":"AD \nC is not correct, If you implement the tighter SLO, you'll be permanently out of SLO and subject to your error budget policy. In this situation, you can make the refined SLO. \nA ; - can add more zone to increase velocity, \nD : can push new releases if error budget allows","upvote_count":"3","poster":"Shasha1","comment_id":"475299"},{"content":"B+D. No way E because noone expects a downtime.","upvote_count":"1","poster":"MBA_1","timestamp":"1636092900.0","comment_id":"472904"},{"upvote_count":"2","content":"D+E, if SLO is ok for the business you have to increase the error budget using less resource or adding SLI monitoring other resourses","comment_id":"470157","comments":[{"poster":"TNT87","content":"True....","upvote_count":"1","timestamp":"1640713680.0","comment_id":"511403"}],"timestamp":"1635583200.0","poster":"giammydell"}],"timestamp":"2021-10-30 10:40:00","url":"https://www.examtopics.com/discussions/google/view/65115-exam-professional-cloud-devops-engineer-topic-1-question-80/","answer_ET":"AD","unix_timestamp":1635583200,"question_text":"You support a user-facing web application. When analyzing the application's error budget over the previous six months, you notice that the application has never consumed more than 5% of its error budget in any given time window. You hold a Service Level Objective (SLO) review with business stakeholders and confirm that the SLO is set appropriately. You want your application's SLO to more closely reflect its observed reliability. What steps can you take to further that goal while balancing velocity, reliability, and business needs? (Choose two.)","topic":"1"},{"id":"dhBcM349qO8xIj6DrtmF","choices":{"D":"Get the product team to prioritize reliability work over new features.","A":"Make the service's SLO more strict.","E":"Change the implementation of your Service Level Indicators (SLIs) to increase coverage.","C":"Shift engineering time to other services that need more reliability.","B":"Increase the service's deployment velocity and/or risk."},"isMC":true,"answers_community":["BC (100%)"],"question_text":"You support a service with a well-defined Service Level Objective (SLO). Over the previous 6 months, your service has consistently met its SLO and customer satisfaction has been consistently high. Most of your service's operations tasks are automated and few repetitive tasks occur frequently. You want to optimize the balance between reliability and deployment velocity while following site reliability engineering best practices. What should you do? (Choose two.)","question_id":147,"answer_ET":"DE","question_images":[],"answer_images":[],"answer":"BC","discussion":[{"timestamp":"1635722760.0","comments":[{"poster":"MF2C","upvote_count":"3","content":"yes B and C","timestamp":"1636268460.0","comment_id":"473790"},{"poster":"FunkyB","upvote_count":"3","content":"NXD, thank you for posting the link. The answer is explicitly stated in the post. The SLO matrix listed there is also great for future use cases. I personally love reading the discussions and posts to fully understand the concepts and services. Thanks again.","timestamp":"1655591280.0","comment_id":"618432"},{"comment_id":"476659","content":"Agree with BC","timestamp":"1636688520.0","upvote_count":"3","poster":"Manh"},{"timestamp":"1673831400.0","poster":"JonathanSJ","content":"Agree with BC","upvote_count":"1","comment_id":"777234"}],"upvote_count":"24","comment_id":"470959","poster":"NXD","content":"BC\n\nhttps://sre.google/workbook/implementing-slos/#slo-decision-matrix\n\nA: wrong – SLO is already well-defined, customer satisfaction is high.\nE: wrong – change SLI means how SLO, which is already well-defined.\n\nCD are valid, but the best option is C because current product is already quite reliable."},{"comment_id":"510206","timestamp":"1640598960.0","upvote_count":"6","content":"Selected Answer: BC\nThese are the correct answers. Thank me later. \n\nAll the best guys","poster":"TNT87"},{"comment_id":"952332","timestamp":"1689422280.0","comments":[{"upvote_count":"1","content":"Are the questions still relavant?","comment_id":"952755","timestamp":"1689462660.0","poster":"aswani"}],"content":"Selected Answer: BC\nAgree with BC","poster":"LaxmanTiwari","upvote_count":"1"},{"comment_id":"755320","content":"This was asked on (12/24/22), passed the exam . I opted for B & E","upvote_count":"2","poster":"shefalia","timestamp":"1671925920.0"},{"timestamp":"1669972740.0","upvote_count":"1","poster":"Angel_O","comment_id":"733599","content":"Agree with BC"},{"content":"Selected Answer: BC\nBC is the answer.\n\nhttps://sre.google/workbook/implementing-slos/#slo-decision-matrix\n \nChoose to (a) relax release and deployment processes and increase velocity, or (b) step back from the engagement and focus engineering time on services that need more reliability.","upvote_count":"3","poster":"zellck","comment_id":"701974","timestamp":"1666508640.0"},{"timestamp":"1660602600.0","poster":"dobby_elf","comment_id":"647377","content":"Selected Answer: BC\nletter B and C","upvote_count":"1"},{"upvote_count":"2","comment_id":"637427","content":"As mentioned by others, we can see in the SRE book table here https://sre.google/workbook/implementing-slos/#slo-decision-matrix that when:\nSLO=Met\nToil=Low\nCustomer Satisfaction=High\nthen:\nChoose to (a) relax release and deployment processes and increase velocity, or (b) step back from the engagement and focus engineering time on services that need more reliability.\nThis matches only B and C.","timestamp":"1658841540.0","poster":"Rupo7"},{"poster":"zygomar","content":"Selected Answer: BC\nas NXD 's link shows (https://sre.google/workbook/implementing-slos/#slo-decision-matrix)\nanswer is B C. See link.","upvote_count":"4","timestamp":"1645479000.0","comment_id":"553283"},{"poster":"Sekierer","content":"Selected Answer: BC\nB and C","timestamp":"1642670640.0","comment_id":"528284","upvote_count":"3"},{"timestamp":"1640430360.0","comment_id":"509063","poster":"TNT87","comments":[{"upvote_count":"1","timestamp":"1640599020.0","content":"B C, ,,,, D; E Are for the previous question, number 80","poster":"TNT87","comment_id":"510207"}],"content":"After perusing the SRE book...\nD, E Is correct, there is a question that is almost this very question but the wording is different","upvote_count":"3"},{"upvote_count":"1","comments":[],"timestamp":"1638862680.0","content":"Ans C; D are correct.","poster":"TNT87","comment_id":"495740"},{"content":"i think BC","comment_id":"476472","poster":"Alaaelanwr","timestamp":"1636661340.0","upvote_count":"3"},{"timestamp":"1636536600.0","comment_id":"475303","poster":"Shasha1","upvote_count":"2","content":"i think CD are correct \nregarding E i am not sure we can modify SLI after we defined"},{"upvote_count":"2","content":"I think B and E:\nA No: SLO is well defined\nB YES: the service met the SLO so you have error budget available for DEPLOY\nC I think NO, you will reduce your team number\nD NO higher reliability is unnecessary (SLO well defined)\nE YES you can modify SLI to extend coverage","timestamp":"1635583740.0","comment_id":"470159","poster":"giammydell"}],"unix_timestamp":1635583740,"timestamp":"2021-10-30 10:49:00","topic":"1","answer_description":"Reference:\nhttps://sre.google/sre-book/service-level-objectives/","url":"https://www.examtopics.com/discussions/google/view/65116-exam-professional-cloud-devops-engineer-topic-1-question-81/","exam_id":5},{"id":"pn2i1S4917yyAnRwfHbD","choices":{"D":"Design a policy that will require on-call teams to immediately call engineers and management to discuss a plan of action if an incident occurs.","A":"Identify engineers responsible for the incident and escalate to the senior management.","C":"Follow up with the employees who reviewed the changes and prescribe practices they should follow in the future.","B":"Ensure that test cases that catch errors of this type are run successfully before new software releases."},"answer_images":[],"question_id":148,"topic":"1","answer":"B","timestamp":"2023-10-01 07:48:00","answers_community":["B (100%)"],"unix_timestamp":1696139280,"url":"https://www.examtopics.com/discussions/google/view/122000-exam-professional-cloud-devops-engineer-topic-1-question-82/","discussion":[{"content":"Answer Should B","poster":"ManishKS","upvote_count":"8","timestamp":"1696139280.0","comment_id":"1022029"},{"content":"Selected Answer: B\nB makes the most sense","upvote_count":"2","timestamp":"1699970280.0","comment_id":"1070429","poster":"Andrei_Z"},{"timestamp":"1699287060.0","upvote_count":"1","content":"Selected Answer: B\nB is correct.","comment_id":"1064033","poster":"mshafa"},{"timestamp":"1697947260.0","content":"Selected Answer: B\nAnswer is B","upvote_count":"2","comment_id":"1050194","poster":"nhiguchi"},{"content":"Answer is B","timestamp":"1697947200.0","poster":"nhiguchi","comment_id":"1050193","upvote_count":"1"}],"isMC":true,"exam_id":5,"answer_ET":"C","answer_description":"","question_images":[],"question_text":""},{"id":"VxSGIha6tEmgH35ZwGKk","isMC":true,"url":"https://www.examtopics.com/discussions/google/view/122001-exam-professional-cloud-devops-engineer-topic-1-question-83/","answer":"CE","answer_description":"","answer_images":[],"choices":{"D":"Batch changes into larger but less frequent software releases.","B":"Let developers merge their own changes, but ensure that the team's deployment platform can roll back changes if any issues are discovered.","C":"Move to a peer-review based process for individual changes that is enforced at code check-in time and supported by automated tests.","E":"Ensure that the team's development platform enables developers to get fast feedback on the impact of their changes.","A":"Replace the CAB with a senior manager to ensure continuous oversight from development to deployment."},"question_id":149,"exam_id":5,"question_text":"","timestamp":"2023-10-01 07:53:00","answers_community":["CE (83%)","BC (17%)"],"topic":"1","discussion":[{"upvote_count":"5","comments":[{"timestamp":"1706368140.0","poster":"4246cd7","content":"I initially chose B & C, but now looking again, B says for developer to merge their own change and rollback if things go wrong, this doesn't mention things like peer review which is very risky if each developer just go do their own merges.","comment_id":"1133431","upvote_count":"1"}],"comment_id":"1022032","poster":"ManishKS","timestamp":"1696139580.0","content":"Answer should be C and E\nTo revise the change approval process and eliminate any negative impact on software delivery performance, you should consider the following approaches:\n\nC. Move to a peer-review based process for individual changes that is enforced at code check-in time and supported by automated tests: Implementing a peer-review process ensures that changes are reviewed by team members, which can catch issues early in the development process. Automated tests can provide additional confidence in the quality of changes. This approach encourages collaboration and reduces the need for a formal CAB.\n\nE. Ensure that the team's development platform enables developers to get fast feedback on the impact of their changes: Fast feedback mechanisms, such as automated testing and continuous integration pipelines, allow developers to quickly identify and address issues with their changes. This reduces the need for a formal approval board like CAB and promotes a culture of ownership and responsibility among developers."},{"poster":"alpha_canary","comment_id":"1144341","content":"Selected Answer: CE\nhttps://dora.dev/devops-capabilities/process/streamlining-change-approval/#:~:text=Use%20peer%20review,well%20as%20defects","upvote_count":"1","timestamp":"1707386340.0"},{"poster":"filipemotta","comment_id":"1087783","upvote_count":"1","timestamp":"1701708660.0","content":"Selected Answer: BC\nRegarding E, it is important, but it doesn't directly address the bottleneck caused by the CAB process."},{"upvote_count":"1","poster":"Andrei_Z","content":"Selected Answer: CE\nI would go for C E","timestamp":"1699970400.0","comment_id":"1070432"},{"comment_id":"1050195","timestamp":"1697947380.0","upvote_count":"3","content":"Selected Answer: CE\nC and E","poster":"nhiguchi"},{"upvote_count":"1","content":"C and E seems correct\nhttps://cloud.google.com/architecture/devops/devops-process-streamlining-change-approval","timestamp":"1696818000.0","poster":"tuanuv1","comment_id":"1028415"}],"question_images":[],"unix_timestamp":1696139580,"answer_ET":"AD"},{"id":"Tmorzgqdl8UW7MHcA18W","answer":"D","choices":{"A":"Deploy the canary release of the application to Cloud Run. Use traffic splitting to direct 10% of user traffic to the canary release based on the revision tag.","C":"Deploy the canary release of the application to Compute Engine. Use Anthos Service Mesh with Compute Engine to direct 10% of user traffic to the canary release by configuring the virtual service.","D":"Deploy the canary release to Google Kubernetes Engine with Anthos Service Mesh. Use traffic splitting to direct 10% of user traffic to the new version based on the user-agent header configured in the virtual service.","B":"Deploy the canary release of the application to App Engine. Use traffic splitting to direct a subset of user traffic to the new version based on the IP address."},"question_id":150,"topic":"1","unix_timestamp":1696140420,"question_images":[],"discussion":[{"poster":"ManishKS","timestamp":"1696140420.0","upvote_count":"8","content":"Option D allows for continuous testing of multiple versions of microservices, meets the traffic splitting requirements, and provides the necessary flexibility for controlling traffic based on user-agent headers, making it the most suitable choice based on the specified acceptance criteria.","comment_id":"1022038"},{"poster":"samirzubair","comment_id":"1164661","content":"OPtion D \nThis option offers a comprehensive solution that aligns well with your criteria. Anthos Service Mesh, integrated with Google Kubernetes Engine (GKE), supports advanced traffic management capabilities, including the ability to perform traffic splitting based on HTTP headers. This would allow you to use the user-agent header to identify Android devices and direct traffic accordingly. Additionally, it supports arbitrary percentage-based traffic splitting and allows for the testing of multiple versions of a microservice, meeting the requirement for continuous testing.","timestamp":"1709458680.0","upvote_count":"1"},{"upvote_count":"1","timestamp":"1701708720.0","poster":"filipemotta","content":"Selected Answer: D\nThis option provides a powerful combination for microservices deployment. Google Kubernetes Engine offers a robust environment for containerized applications, and Anthos Service Mesh (built on Istio) enables sophisticated traffic management. You can configure traffic splitting and direct traffic based on headers (like user-agent for Android devices), which aligns perfectly with your requirements.","comment_id":"1087786"},{"timestamp":"1699970760.0","comment_id":"1070445","poster":"Andrei_Z","upvote_count":"1","content":"Selected Answer: D\nAnthos Service Mesh allows for traffic routing based on HTTP headers such as the user-agent, which can be used to direct traffic from Android devices to an Android-specific microservice.\nAnthos Service Mesh supports arbitrary percentage-based traffic splitting.\nGoogle Kubernetes Engine with Anthos Service Mesh allows for continuous testing of multiple versions of any microservice. You can deploy different versions of your microservices as separate Kubernetes deployments and use Anthos Service Mesh to control the traffic between them."},{"poster":"emauart","timestamp":"1699323720.0","content":"Selected Answer: D\nD is correct","upvote_count":"2","comment_id":"1064433"}],"question_text":"Your organization has a containerized web application that runs on-premises. As part of the migration plan to Google Cloud, you need to select a deployment strategy and platform that meets the following acceptance criteria:\n\n1. The platform must be able to direct traffic from Android devices to an Android-specific microservice.\n2. The platform must allow for arbitrary percentage-based traffic splitting\n3. The deployment strategy must allow for continuous testing of multiple versions of any microservice.\n","timestamp":"2023-10-01 08:07:00","answer_description":"","isMC":true,"answer_images":[],"url":"https://www.examtopics.com/discussions/google/view/122002-exam-professional-cloud-devops-engineer-topic-1-question-84/","exam_id":5,"answer_ET":"C","answers_community":["D (100%)"]}],"exam":{"isBeta":false,"id":5,"isImplemented":true,"lastUpdated":"1 May 2024","name":"Professional Cloud DevOps Engineer","provider":"Google","isMCOnly":true,"numberOfQuestions":166},"currentPage":30},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "qeQldi2goUUyd6310Ztg",
+                "question_images": [],
+                "exam_id": 5,
+                "isMC": true,
+                "question_id": 146,
+                "answer": "DE",
+                "choices": {
+                    "B": "Have more frequent or potentially risky application releases.",
+                    "A": "Add more serving capacity to all of your application's zones.",
+                    "E": "Announce planned downtime to consume more error budget, and ensure that users are not depending on a tighter SLO.",
+                    "C": "Tighten the SLO match the application's observed reliability.",
+                    "D": "Implement and measure additional Service Level Indicators (SLIs) fro the application."
+                },
+                "answer_description": "",
+                "answers_community": [
+                    "DE (50%)",
+                    "BE (39%)",
+                    "11%"
+                ],
+                "answer_images": [],
+                "discussion": [
+                    {
+                        "poster": "Trony",
+                        "timestamp": "1635931080.0",
+                        "upvote_count": "24",
+                        "content": "I would go for B+D:\n-A: no, there's no reason to add capacity if we are barely scratching error budget;\n-B: everything seems fine, so it's ok to dare with more innovative/risky releases;\n-C: no, stakeholders said SLO is ok;\n-D: adding additional SLIs (and so SLOs) might be a way to reflect observer reliability more closely;\n-E: put the servers down for no reason is a no-no.",
+                        "comments": [
+                            {
+                                "timestamp": "1639434900.0",
+                                "content": "there is no mention of innovation, only \"risky\"..hence not a right choices",
+                                "poster": "Biden",
+                                "upvote_count": "1",
+                                "comment_id": "500935"
+                            }
+                        ],
+                        "comment_id": "471995"
+                    },
+                    {
+                        "comment_id": "528281",
+                        "content": "Selected Answer: DE\nI vote for D+E if you read \"The Global Chubby Planned Outage\"\nhttps://sre.google/sre-book/service-level-objectives/",
+                        "poster": "Sekierer",
+                        "upvote_count": "11",
+                        "timestamp": "1642670280.0"
+                    },
+                    {
+                        "content": "Selected Answer: BD\nOption B and D",
+                        "upvote_count": "1",
+                        "timestamp": "1701525720.0",
+                        "comment_id": "1086240",
+                        "poster": "jomonkp"
+                    },
+                    {
+                        "comment_id": "835681",
+                        "timestamp": "1678512420.0",
+                        "upvote_count": "1",
+                        "poster": "izekc",
+                        "content": "Selected Answer: BE\nBE is correct"
+                    },
+                    {
+                        "comment_id": "819700",
+                        "content": "Selected Answer: BE\nB is correct because when you dont use your error budget you can increase the release frequency. In the question it even mentions \"balancing velocity, reliability, and business needs\". The balance here can shift from reliability to velocity and business needs.\nD is correct as multiple other users already mentioned because of: \"The Global Chubby Planned Outage\" https://sre.google/sre-book/service-level-objectives/",
+                        "upvote_count": "2",
+                        "poster": "Catweazle1983",
+                        "timestamp": "1677183540.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: DE\nI will go with D and E.\nOption B sounds good, but introducing new changes could add errors, that do not match the current objectives \"You want your application's SLO to more closely reflect its observed reliability. \"\n\nA doesn't make sense.\nC neither, because the SLO has been reviewed and its ok.",
+                        "poster": "JonathanSJ",
+                        "comment_id": "777223",
+                        "timestamp": "1673830440.0"
+                    },
+                    {
+                        "content": "B and E:\nA. not relevant\nB. Yes because we have a lot of budget. Risky isn't necessary a negative word in SRE because what we learn from SRE is to embrace risk and failure.\nC. SLO is set appropriately they say.\nD. adding more SLI doesn't necessarily help.\nE. SRE practice suggest that we can have planned downtime.",
+                        "timestamp": "1672502580.0",
+                        "comment_id": "762697",
+                        "upvote_count": "2",
+                        "poster": "Greg123123"
+                    },
+                    {
+                        "comment_id": "755319",
+                        "upvote_count": "3",
+                        "poster": "shefalia",
+                        "timestamp": "1671925920.0",
+                        "content": "This was asked on (12/24/22), passed the exam . I opted for D & E"
+                    },
+                    {
+                        "timestamp": "1671701100.0",
+                        "comment_id": "753129",
+                        "poster": "JayDeng",
+                        "upvote_count": "4",
+                        "content": "B and E.\nWhen you only consume 5% of your error budget consistently it means that you can take more risk by releasing features more often (B) and/or bring down service to set user expectation close to SLO (and business has confirmed that this SLO is appropriate)"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "poster": "eks4x",
+                        "comment_id": "743887",
+                        "timestamp": "1670927100.0",
+                        "content": "Selected Answer: BE\nB+E \nB because this if you constantly have a lot of spare error budgets it is an indication that you are not taking enough risk ie releasing new features. And you are ultimately depriving the users of new functionalities by being too cautious.\nE: Everyone agrees on E as it was mentioned in the SRE book as part of the The Global Chubby Planned Outage\n\nRe: why not D) The review indicated that the existing SLOs are good. So adding more SLIs not useful here plus does nothing to the user perceived reliability."
+                    },
+                    {
+                        "content": "Selected Answer: DE\nDE - You want your application's SLO to more closely reflect its observed reliability.",
+                        "upvote_count": "1",
+                        "poster": "dobby_elf",
+                        "comment_id": "647376",
+                        "timestamp": "1660602420.0"
+                    },
+                    {
+                        "content": "Selected Answer: BD\nB & D are correct.",
+                        "upvote_count": "3",
+                        "poster": "eliC",
+                        "timestamp": "1655470380.0",
+                        "comment_id": "617716"
+                    },
+                    {
+                        "timestamp": "1648292400.0",
+                        "upvote_count": "5",
+                        "poster": "[Removed]",
+                        "content": "D+E\nYou want the application's SLO to more closely reflect it's observed reliability. The key here is error budget never goes over 5%. This means they can have additional downtime and still stay within their budget. \nE is correct as per Google SRE handbook (https://sre.google/sre-book/service-level-objectives/) \n'You can avoid over-dependence by deliberately taking the system offline occasionally (Google’s Chubby service introduced planned outages in response to being overly available)'\nD is a good answer because with more SLI's, this may more accurately reflect the system's reliability.\nA is wrong because adding more serving capacity would make the system even more available.\nC is wrong because: The question states 'The SLO is set appropriately'.",
+                        "comment_id": "575478"
+                    },
+                    {
+                        "content": "Selected Answer: DE\nchekc link from Sekierer for why E is valid (https://sre.google/sre-book/service-level-objectives/)\nThen D is logical as well.",
+                        "upvote_count": "2",
+                        "timestamp": "1645462200.0",
+                        "comment_id": "553025",
+                        "poster": "zygomar"
+                    },
+                    {
+                        "content": "Selected Answer: BE\nB - You can increase the frequency of your releases and take higher risks as you have never exceeded your error budget.\nE - Planned downtime to use some of your error budget will help to make sure end users don’t get use a higher availability of your service.",
+                        "comment_id": "546503",
+                        "poster": "PhilipKoku",
+                        "timestamp": "1644763440.0",
+                        "upvote_count": "7"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "upvote_count": "2",
+                        "timestamp": "1640713620.0",
+                        "comment_id": "511401",
+                        "content": "https://cloud.google.com/blog/products/management-tools/sre-error-budgets-and-maintenance-windows This is the link to the answers of this question"
+                    },
+                    {
+                        "timestamp": "1640598660.0",
+                        "upvote_count": "3",
+                        "comment_id": "510203",
+                        "poster": "TNT87",
+                        "content": "Selected Answer: DE\nThese are the correct choices"
+                    },
+                    {
+                        "poster": "Biden",
+                        "content": "Ask is \"You want your application's SLO to MORE CLOSELY REFLECT its observed reliability\".\nBased on that C is correct, and also agree going ahead for a risky release.\nHence B&C !?",
+                        "comment_id": "501722",
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "poster": "[Removed]",
+                                "comment_id": "575477",
+                                "upvote_count": "2",
+                                "content": "No. You never change the SLO to match reliability and they have already said the SLO is set correctly in the question.",
+                                "timestamp": "1648292220.0"
+                            }
+                        ],
+                        "timestamp": "1639524540.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1639434780.0",
+                        "content": "C&D would be the closest correct answer.. risky release should never be considered - hence B is out.",
+                        "poster": "Biden",
+                        "comment_id": "500934"
+                    },
+                    {
+                        "content": "A doesnt make sense ..why to add more when there is no issue and the error budget is hardly utilized ?",
+                        "upvote_count": "1",
+                        "poster": "Biden",
+                        "comment_id": "500933",
+                        "timestamp": "1639434720.0"
+                    },
+                    {
+                        "poster": "TNT87",
+                        "content": "Ans A,D\nIts not always the case that they post wrong answers here, some of them are correct and this is one of the few correct answers. go and read SRE book",
+                        "timestamp": "1638773520.0",
+                        "comment_id": "494952",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "timestamp": "1637490600.0",
+                        "comment_id": "483178",
+                        "content": "in example global chubby outage plan they mentioned planned outages. \nAlso to increase the additional parameters in SLI\nhttps://sre.google/sre-book/service-level-objectives/\nI think it D & E",
+                        "poster": "azuretestingpoc"
+                    },
+                    {
+                        "upvote_count": "4",
+                        "comments": [
+                            {
+                                "content": "Though B says \"risky releases...\" , B&D seems to be the least controversial option.",
+                                "timestamp": "1637018280.0",
+                                "poster": "Biden",
+                                "comment_id": "479059",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "content": "I think its B and D\n\nB because we can innovate since the error budget only hit 5% \nD it will help to obserb realitbiity better",
+                        "poster": "sindra",
+                        "timestamp": "1636707360.0",
+                        "comment_id": "476808"
+                    },
+                    {
+                        "timestamp": "1636686720.0",
+                        "comments": [
+                            {
+                                "comment_id": "488561",
+                                "timestamp": "1638054180.0",
+                                "upvote_count": "1",
+                                "content": "The question says - You hold a Service Level Objective (SLO) review with business stakeholders and confirm that the SLO is set appropriately. Which means we should not make any changes to SLO. I would go with B and D - Adopt more risky releases and add more SLI's to better measure system.",
+                                "poster": "muk5658"
+                            }
+                        ],
+                        "poster": "Manh",
+                        "content": "\"You want your application's SLO to more closely reflect its observed reliability.\"\n CD should be answer",
+                        "comment_id": "476646",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "timestamp": "1636535700.0",
+                        "content": "AD \nC is not correct, If you implement the tighter SLO, you'll be permanently out of SLO and subject to your error budget policy. In this situation, you can make the refined SLO. \nA ; - can add more zone to increase velocity, \nD : can push new releases if error budget allows",
+                        "upvote_count": "3",
+                        "poster": "Shasha1",
+                        "comment_id": "475299"
+                    },
+                    {
+                        "content": "B+D. No way E because noone expects a downtime.",
+                        "upvote_count": "1",
+                        "poster": "MBA_1",
+                        "timestamp": "1636092900.0",
+                        "comment_id": "472904"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "D+E, if SLO is ok for the business you have to increase the error budget using less resource or adding SLI monitoring other resourses",
+                        "comment_id": "470157",
+                        "comments": [
+                            {
+                                "poster": "TNT87",
+                                "content": "True....",
+                                "upvote_count": "1",
+                                "timestamp": "1640713680.0",
+                                "comment_id": "511403"
+                            }
+                        ],
+                        "timestamp": "1635583200.0",
+                        "poster": "giammydell"
+                    }
+                ],
+                "timestamp": "2021-10-30 10:40:00",
+                "url": "https://www.examtopics.com/discussions/google/view/65115-exam-professional-cloud-devops-engineer-topic-1-question-80/",
+                "answer_ET": "AD",
+                "unix_timestamp": 1635583200,
+                "question_text": "You support a user-facing web application. When analyzing the application's error budget over the previous six months, you notice that the application has never consumed more than 5% of its error budget in any given time window. You hold a Service Level Objective (SLO) review with business stakeholders and confirm that the SLO is set appropriately. You want your application's SLO to more closely reflect its observed reliability. What steps can you take to further that goal while balancing velocity, reliability, and business needs? (Choose two.)",
+                "topic": "1"
+            },
+            {
+                "id": "dhBcM349qO8xIj6DrtmF",
+                "choices": {
+                    "D": "Get the product team to prioritize reliability work over new features.",
+                    "A": "Make the service's SLO more strict.",
+                    "E": "Change the implementation of your Service Level Indicators (SLIs) to increase coverage.",
+                    "C": "Shift engineering time to other services that need more reliability.",
+                    "B": "Increase the service's deployment velocity and/or risk."
+                },
+                "isMC": true,
+                "answers_community": [
+                    "BC (100%)"
+                ],
+                "question_text": "You support a service with a well-defined Service Level Objective (SLO). Over the previous 6 months, your service has consistently met its SLO and customer satisfaction has been consistently high. Most of your service's operations tasks are automated and few repetitive tasks occur frequently. You want to optimize the balance between reliability and deployment velocity while following site reliability engineering best practices. What should you do? (Choose two.)",
+                "question_id": 147,
+                "answer_ET": "DE",
+                "question_images": [],
+                "answer_images": [],
+                "answer": "BC",
+                "discussion": [
+                    {
+                        "timestamp": "1635722760.0",
+                        "comments": [
+                            {
+                                "poster": "MF2C",
+                                "upvote_count": "3",
+                                "content": "yes B and C",
+                                "timestamp": "1636268460.0",
+                                "comment_id": "473790"
+                            },
+                            {
+                                "poster": "FunkyB",
+                                "upvote_count": "3",
+                                "content": "NXD, thank you for posting the link. The answer is explicitly stated in the post. The SLO matrix listed there is also great for future use cases. I personally love reading the discussions and posts to fully understand the concepts and services. Thanks again.",
+                                "timestamp": "1655591280.0",
+                                "comment_id": "618432"
+                            },
+                            {
+                                "comment_id": "476659",
+                                "content": "Agree with BC",
+                                "timestamp": "1636688520.0",
+                                "upvote_count": "3",
+                                "poster": "Manh"
+                            },
+                            {
+                                "timestamp": "1673831400.0",
+                                "poster": "JonathanSJ",
+                                "content": "Agree with BC",
+                                "upvote_count": "1",
+                                "comment_id": "777234"
+                            }
+                        ],
+                        "upvote_count": "24",
+                        "comment_id": "470959",
+                        "poster": "NXD",
+                        "content": "BC\n\nhttps://sre.google/workbook/implementing-slos/#slo-decision-matrix\n\nA: wrong – SLO is already well-defined, customer satisfaction is high.\nE: wrong – change SLI means how SLO, which is already well-defined.\n\nCD are valid, but the best option is C because current product is already quite reliable."
+                    },
+                    {
+                        "comment_id": "510206",
+                        "timestamp": "1640598960.0",
+                        "upvote_count": "6",
+                        "content": "Selected Answer: BC\nThese are the correct answers. Thank me later. \n\nAll the best guys",
+                        "poster": "TNT87"
+                    },
+                    {
+                        "comment_id": "952332",
+                        "timestamp": "1689422280.0",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "content": "Are the questions still relavant?",
+                                "comment_id": "952755",
+                                "timestamp": "1689462660.0",
+                                "poster": "aswani"
+                            }
+                        ],
+                        "content": "Selected Answer: BC\nAgree with BC",
+                        "poster": "LaxmanTiwari",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "comment_id": "755320",
+                        "content": "This was asked on (12/24/22), passed the exam . I opted for B & E",
+                        "upvote_count": "2",
+                        "poster": "shefalia",
+                        "timestamp": "1671925920.0"
+                    },
+                    {
+                        "timestamp": "1669972740.0",
+                        "upvote_count": "1",
+                        "poster": "Angel_O",
+                        "comment_id": "733599",
+                        "content": "Agree with BC"
+                    },
+                    {
+                        "content": "Selected Answer: BC\nBC is the answer.\n\nhttps://sre.google/workbook/implementing-slos/#slo-decision-matrix\n \nChoose to (a) relax release and deployment processes and increase velocity, or (b) step back from the engagement and focus engineering time on services that need more reliability.",
+                        "upvote_count": "3",
+                        "poster": "zellck",
+                        "comment_id": "701974",
+                        "timestamp": "1666508640.0"
+                    },
+                    {
+                        "timestamp": "1660602600.0",
+                        "poster": "dobby_elf",
+                        "comment_id": "647377",
+                        "content": "Selected Answer: BC\nletter B and C",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comment_id": "637427",
+                        "content": "As mentioned by others, we can see in the SRE book table here https://sre.google/workbook/implementing-slos/#slo-decision-matrix that when:\nSLO=Met\nToil=Low\nCustomer Satisfaction=High\nthen:\nChoose to (a) relax release and deployment processes and increase velocity, or (b) step back from the engagement and focus engineering time on services that need more reliability.\nThis matches only B and C.",
+                        "timestamp": "1658841540.0",
+                        "poster": "Rupo7"
+                    },
+                    {
+                        "poster": "zygomar",
+                        "content": "Selected Answer: BC\nas NXD 's link shows (https://sre.google/workbook/implementing-slos/#slo-decision-matrix)\nanswer is B C. See link.",
+                        "upvote_count": "4",
+                        "timestamp": "1645479000.0",
+                        "comment_id": "553283"
+                    },
+                    {
+                        "poster": "Sekierer",
+                        "content": "Selected Answer: BC\nB and C",
+                        "timestamp": "1642670640.0",
+                        "comment_id": "528284",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "timestamp": "1640430360.0",
+                        "comment_id": "509063",
+                        "poster": "TNT87",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "timestamp": "1640599020.0",
+                                "content": "B C, ,,,, D; E Are for the previous question, number 80",
+                                "poster": "TNT87",
+                                "comment_id": "510207"
+                            }
+                        ],
+                        "content": "After perusing the SRE book...\nD, E Is correct, there is a question that is almost this very question but the wording is different",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "comments": [],
+                        "timestamp": "1638862680.0",
+                        "content": "Ans C; D are correct.",
+                        "poster": "TNT87",
+                        "comment_id": "495740"
+                    },
+                    {
+                        "content": "i think BC",
+                        "comment_id": "476472",
+                        "poster": "Alaaelanwr",
+                        "timestamp": "1636661340.0",
+                        "upvote_count": "3"
+                    },
+                    {
+                        "timestamp": "1636536600.0",
+                        "comment_id": "475303",
+                        "poster": "Shasha1",
+                        "upvote_count": "2",
+                        "content": "i think CD are correct \nregarding E i am not sure we can modify SLI after we defined"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "content": "I think B and E:\nA No: SLO is well defined\nB YES: the service met the SLO so you have error budget available for DEPLOY\nC I think NO, you will reduce your team number\nD NO higher reliability is unnecessary (SLO well defined)\nE YES you can modify SLI to extend coverage",
+                        "timestamp": "1635583740.0",
+                        "comment_id": "470159",
+                        "poster": "giammydell"
+                    }
+                ],
+                "unix_timestamp": 1635583740,
+                "timestamp": "2021-10-30 10:49:00",
+                "topic": "1",
+                "answer_description": "Reference:\nhttps://sre.google/sre-book/service-level-objectives/",
+                "url": "https://www.examtopics.com/discussions/google/view/65116-exam-professional-cloud-devops-engineer-topic-1-question-81/",
+                "exam_id": 5
+            },
+            {
+                "id": "pn2i1S4917yyAnRwfHbD",
+                "choices": {
+                    "D": "Design a policy that will require on-call teams to immediately call engineers and management to discuss a plan of action if an incident occurs.",
+                    "A": "Identify engineers responsible for the incident and escalate to the senior management.",
+                    "C": "Follow up with the employees who reviewed the changes and prescribe practices they should follow in the future.",
+                    "B": "Ensure that test cases that catch errors of this type are run successfully before new software releases."
+                },
+                "answer_images": [],
+                "question_id": 148,
+                "topic": "1",
+                "answer": "B",
+                "timestamp": "2023-10-01 07:48:00",
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "unix_timestamp": 1696139280,
+                "url": "https://www.examtopics.com/discussions/google/view/122000-exam-professional-cloud-devops-engineer-topic-1-question-82/",
+                "discussion": [
+                    {
+                        "content": "Answer Should B",
+                        "poster": "ManishKS",
+                        "upvote_count": "8",
+                        "timestamp": "1696139280.0",
+                        "comment_id": "1022029"
+                    },
+                    {
+                        "content": "Selected Answer: B\nB makes the most sense",
+                        "upvote_count": "2",
+                        "timestamp": "1699970280.0",
+                        "comment_id": "1070429",
+                        "poster": "Andrei_Z"
+                    },
+                    {
+                        "timestamp": "1699287060.0",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nB is correct.",
+                        "comment_id": "1064033",
+                        "poster": "mshafa"
+                    },
+                    {
+                        "timestamp": "1697947260.0",
+                        "content": "Selected Answer: B\nAnswer is B",
+                        "upvote_count": "2",
+                        "comment_id": "1050194",
+                        "poster": "nhiguchi"
+                    },
+                    {
+                        "content": "Answer is B",
+                        "timestamp": "1697947200.0",
+                        "poster": "nhiguchi",
+                        "comment_id": "1050193",
+                        "upvote_count": "1"
+                    }
+                ],
+                "isMC": true,
+                "exam_id": 5,
+                "answer_ET": "C",
+                "answer_description": "",
+                "question_images": [],
+                "question_text": ""
+            },
+            {
+                "id": "VxSGIha6tEmgH35ZwGKk",
+                "isMC": true,
+                "url": "https://www.examtopics.com/discussions/google/view/122001-exam-professional-cloud-devops-engineer-topic-1-question-83/",
+                "answer": "CE",
+                "answer_description": "",
+                "answer_images": [],
+                "choices": {
+                    "D": "Batch changes into larger but less frequent software releases.",
+                    "B": "Let developers merge their own changes, but ensure that the team's deployment platform can roll back changes if any issues are discovered.",
+                    "C": "Move to a peer-review based process for individual changes that is enforced at code check-in time and supported by automated tests.",
+                    "E": "Ensure that the team's development platform enables developers to get fast feedback on the impact of their changes.",
+                    "A": "Replace the CAB with a senior manager to ensure continuous oversight from development to deployment."
+                },
+                "question_id": 149,
+                "exam_id": 5,
+                "question_text": "",
+                "timestamp": "2023-10-01 07:53:00",
+                "answers_community": [
+                    "CE (83%)",
+                    "BC (17%)"
+                ],
+                "topic": "1",
+                "discussion": [
+                    {
+                        "upvote_count": "5",
+                        "comments": [
+                            {
+                                "timestamp": "1706368140.0",
+                                "poster": "4246cd7",
+                                "content": "I initially chose B & C, but now looking again, B says for developer to merge their own change and rollback if things go wrong, this doesn't mention things like peer review which is very risky if each developer just go do their own merges.",
+                                "comment_id": "1133431",
+                                "upvote_count": "1"
+                            }
+                        ],
+                        "comment_id": "1022032",
+                        "poster": "ManishKS",
+                        "timestamp": "1696139580.0",
+                        "content": "Answer should be C and E\nTo revise the change approval process and eliminate any negative impact on software delivery performance, you should consider the following approaches:\n\nC. Move to a peer-review based process for individual changes that is enforced at code check-in time and supported by automated tests: Implementing a peer-review process ensures that changes are reviewed by team members, which can catch issues early in the development process. Automated tests can provide additional confidence in the quality of changes. This approach encourages collaboration and reduces the need for a formal CAB.\n\nE. Ensure that the team's development platform enables developers to get fast feedback on the impact of their changes: Fast feedback mechanisms, such as automated testing and continuous integration pipelines, allow developers to quickly identify and address issues with their changes. This reduces the need for a formal approval board like CAB and promotes a culture of ownership and responsibility among developers."
+                    },
+                    {
+                        "poster": "alpha_canary",
+                        "comment_id": "1144341",
+                        "content": "Selected Answer: CE\nhttps://dora.dev/devops-capabilities/process/streamlining-change-approval/#:~:text=Use%20peer%20review,well%20as%20defects",
+                        "upvote_count": "1",
+                        "timestamp": "1707386340.0"
+                    },
+                    {
+                        "poster": "filipemotta",
+                        "comment_id": "1087783",
+                        "upvote_count": "1",
+                        "timestamp": "1701708660.0",
+                        "content": "Selected Answer: BC\nRegarding E, it is important, but it doesn't directly address the bottleneck caused by the CAB process."
+                    },
+                    {
+                        "upvote_count": "1",
+                        "poster": "Andrei_Z",
+                        "content": "Selected Answer: CE\nI would go for C E",
+                        "timestamp": "1699970400.0",
+                        "comment_id": "1070432"
+                    },
+                    {
+                        "comment_id": "1050195",
+                        "timestamp": "1697947380.0",
+                        "upvote_count": "3",
+                        "content": "Selected Answer: CE\nC and E",
+                        "poster": "nhiguchi"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "C and E seems correct\nhttps://cloud.google.com/architecture/devops/devops-process-streamlining-change-approval",
+                        "timestamp": "1696818000.0",
+                        "poster": "tuanuv1",
+                        "comment_id": "1028415"
+                    }
+                ],
+                "question_images": [],
+                "unix_timestamp": 1696139580,
+                "answer_ET": "AD"
+            },
+            {
+                "id": "Tmorzgqdl8UW7MHcA18W",
+                "answer": "D",
+                "choices": {
+                    "A": "Deploy the canary release of the application to Cloud Run. Use traffic splitting to direct 10% of user traffic to the canary release based on the revision tag.",
+                    "C": "Deploy the canary release of the application to Compute Engine. Use Anthos Service Mesh with Compute Engine to direct 10% of user traffic to the canary release by configuring the virtual service.",
+                    "D": "Deploy the canary release to Google Kubernetes Engine with Anthos Service Mesh. Use traffic splitting to direct 10% of user traffic to the new version based on the user-agent header configured in the virtual service.",
+                    "B": "Deploy the canary release of the application to App Engine. Use traffic splitting to direct a subset of user traffic to the new version based on the IP address."
+                },
+                "question_id": 150,
+                "topic": "1",
+                "unix_timestamp": 1696140420,
+                "question_images": [],
+                "discussion": [
+                    {
+                        "poster": "ManishKS",
+                        "timestamp": "1696140420.0",
+                        "upvote_count": "8",
+                        "content": "Option D allows for continuous testing of multiple versions of microservices, meets the traffic splitting requirements, and provides the necessary flexibility for controlling traffic based on user-agent headers, making it the most suitable choice based on the specified acceptance criteria.",
+                        "comment_id": "1022038"
+                    },
+                    {
+                        "poster": "samirzubair",
+                        "comment_id": "1164661",
+                        "content": "OPtion D \nThis option offers a comprehensive solution that aligns well with your criteria. Anthos Service Mesh, integrated with Google Kubernetes Engine (GKE), supports advanced traffic management capabilities, including the ability to perform traffic splitting based on HTTP headers. This would allow you to use the user-agent header to identify Android devices and direct traffic accordingly. Additionally, it supports arbitrary percentage-based traffic splitting and allows for the testing of multiple versions of a microservice, meeting the requirement for continuous testing.",
+                        "timestamp": "1709458680.0",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1701708720.0",
+                        "poster": "filipemotta",
+                        "content": "Selected Answer: D\nThis option provides a powerful combination for microservices deployment. Google Kubernetes Engine offers a robust environment for containerized applications, and Anthos Service Mesh (built on Istio) enables sophisticated traffic management. You can configure traffic splitting and direct traffic based on headers (like user-agent for Android devices), which aligns perfectly with your requirements.",
+                        "comment_id": "1087786"
+                    },
+                    {
+                        "timestamp": "1699970760.0",
+                        "comment_id": "1070445",
+                        "poster": "Andrei_Z",
+                        "upvote_count": "1",
+                        "content": "Selected Answer: D\nAnthos Service Mesh allows for traffic routing based on HTTP headers such as the user-agent, which can be used to direct traffic from Android devices to an Android-specific microservice.\nAnthos Service Mesh supports arbitrary percentage-based traffic splitting.\nGoogle Kubernetes Engine with Anthos Service Mesh allows for continuous testing of multiple versions of any microservice. You can deploy different versions of your microservices as separate Kubernetes deployments and use Anthos Service Mesh to control the traffic between them."
+                    },
+                    {
+                        "poster": "emauart",
+                        "timestamp": "1699323720.0",
+                        "content": "Selected Answer: D\nD is correct",
+                        "upvote_count": "2",
+                        "comment_id": "1064433"
+                    }
+                ],
+                "question_text": "Your organization has a containerized web application that runs on-premises. As part of the migration plan to Google Cloud, you need to select a deployment strategy and platform that meets the following acceptance criteria:\n\n1. The platform must be able to direct traffic from Android devices to an Android-specific microservice.\n2. The platform must allow for arbitrary percentage-based traffic splitting\n3. The deployment strategy must allow for continuous testing of multiple versions of any microservice.\n",
+                "timestamp": "2023-10-01 08:07:00",
+                "answer_description": "",
+                "isMC": true,
+                "answer_images": [],
+                "url": "https://www.examtopics.com/discussions/google/view/122002-exam-professional-cloud-devops-engineer-topic-1-question-84/",
+                "exam_id": 5,
+                "answer_ET": "C",
+                "answers_community": [
+                    "D (100%)"
+                ]
+            }
+        ],
+        "exam": {
+            "isBeta": false,
+            "id": 5,
+            "isImplemented": true,
+            "lastUpdated": "1 May 2024",
+            "name": "Professional Cloud DevOps Engineer",
+            "provider": "Google",
+            "isMCOnly": true,
+            "numberOfQuestions": 166
+        },
+        "currentPage": 30
+    },
+    "__N_SSP": true
+}

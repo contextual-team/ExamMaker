@@ -1,1 +1,526 @@
-{"pageProps":{"questions":[{"id":"DqOlBS9UM5m8Yprgl5Vc","choices":{"C":"Use a custom builder in Cloud Build to trigger Jenkins pipeline.","D":"Use Cloud Pub/Sub to trigger a custom deployment service running in Google Kubernetes Engine (GKE).","A":"Use Cloud Build to trigger a Spinnaker pipeline.","B":"Use Cloud Pub/Sub to trigger a Spinnaker pipeline."},"unix_timestamp":1622646600,"timestamp":"2021-06-02 17:10:00","answers_community":["B (100%)"],"question_images":[],"question_text":"Your application images are built and pushed to Google Container Registry (GCR). You want to build an automated pipeline that deploys the application when the image is updated while minimizing the development effort. What should you do?","isMC":true,"discussion":[{"poster":"MF2C","comment_id":"440873","upvote_count":"21","timestamp":"1631013420.0","comments":[{"upvote_count":"1","content":"Agree B is right","timestamp":"1667074200.0","poster":"AzureDP900","comment_id":"707461"}],"content":"B is correct : https://cloud.google.com/architecture/continuous-delivery-toolchain-spinnaker-cloud#triggering_a_spinnaker_pipeline_when_a_docker_image_is_pushed_to_container_registry"},{"upvote_count":"8","timestamp":"1624916040.0","comment_id":"393261","poster":"Charun","content":"B is correct"},{"content":"option B","poster":"jomonkp","comment_id":"1085740","upvote_count":"1","timestamp":"1701497400.0"},{"upvote_count":"1","content":"Selected Answer: B\nAgree with B option.","poster":"JonathanSJ","comment_id":"772047","timestamp":"1673414040.0"},{"comment_id":"755465","timestamp":"1671952680.0","upvote_count":"2","poster":"floppino","content":"Selected Answer: B\nAns: B\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/"},{"comment_id":"677826","upvote_count":"2","content":"B is correct","timestamp":"1664023800.0","poster":"Trinabh"},{"comment_id":"635918","poster":"GCP72","timestamp":"1658649000.0","upvote_count":"3","content":"Selected Answer: B\nB is correct"},{"timestamp":"1644149160.0","poster":"rfd","upvote_count":"4","comment_id":"541677","content":"Selected Answer: B\nmost sensible choice"},{"timestamp":"1638706140.0","comment_id":"494309","content":"Ans : B","upvote_count":"1","poster":"alaahakim"},{"upvote_count":"7","comment_id":"466824","timestamp":"1635051780.0","poster":"Luvero","content":"Its B\n\nGoogle Cloud Build vs Spinnaker: What are the differences?\n\nWhat is Google Cloud Build? Continuously build, test, and deploy. Cloud Build lets you build software quickly across all languages. Get complete control over defining custom workflows for building, testing, and deploying across multiple environments such as VMs, serverless, Kubernetes, or Firebase.\n\nWhat is Spinnaker? Multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence. Created at Netflix, it has been battle-tested in production by hundreds of teams over millions of deployments. It combines a powerful and flexible pipeline management system with integrations to the major cloud providers.\n\nGoogle Cloud Build and Spinnaker belong to \"Continuous Deployment\" category of the tech stack."},{"upvote_count":"2","poster":"gcpengineer","timestamp":"1628685780.0","comments":[{"upvote_count":"2","timestamp":"1643484720.0","content":"Cloud Build can't deploy inform Spinnaker to initiate a pipeline as and when the GCR is updated with new image. Whereas CloudPub/Sub can do. Answer should B.","comment_id":"535681","poster":"jagadeeshs"}],"content":"A is the answer","comment_id":"423310"},{"timestamp":"1626505020.0","content":"B, the pub/sub can trigger any deployment tool(spinnaker, cloud Run etc), but in platform native approach is to use spinnnaker.\n\nYou can also validate this, because they have only used platform native tools in the question like google container registry(instead of docker hub)","comment_id":"408297","poster":"Dark_Lord","upvote_count":"5","comments":[{"poster":"desertlotus1211","upvote_count":"1","comment_id":"1194994","timestamp":"1713017040.0","content":"Yes, Spinnaker for Google Cloud can be configured to trigger pipelines from Cloud Build when an image is updated in Google Cloud Registry"},{"upvote_count":"1","comments":[{"content":"eyyy,sorry meant B","timestamp":"1630645560.0","poster":"TNT87","upvote_count":"2","comment_id":"438269"}],"timestamp":"1630645380.0","comment_id":"438268","poster":"TNT87","content":"no no no"}]},{"poster":"MikeFR","upvote_count":"2","comment_id":"403275","content":"OK for B but there is mistake by saying to bigger instead of to trigger","timestamp":"1625913840.0"},{"upvote_count":"2","comments":[{"comment_id":"1194995","upvote_count":"1","content":"Yes, Spinnaker for Google Cloud can be configured to trigger pipelines from Cloud Build when an image is updated in Google Cloud Registry","timestamp":"1713017100.0","poster":"desertlotus1211"}],"poster":"holahola","timestamp":"1624015140.0","comment_id":"384767","content":"B is correct, because it says that image is built already, then there must be a trigger of some sort for spinnaker. Cloud Build does not trigger Spinnaker itself. Cloud Pub/Sub trigger can be configured in Spinnaker as documented: https://spinnaker.io/guides/user/pipeline/triggers/pubsub/"},{"comments":[{"comment_id":"377986","content":"instead of using custom deployment service. We should focus on native tools for deployment. so should be -B the right option.","upvote_count":"3","poster":"akg001","timestamp":"1623214560.0"},{"comment_id":"588563","upvote_count":"1","poster":"imnitin28","timestamp":"1650450780.0","content":"It says to reduce development effort."}],"poster":"MFay","comment_id":"377574","timestamp":"1623160380.0","upvote_count":"1","content":"Sorry the correct is D. Cloud Pub/Sub can trigger custom deployment service like Spinnaker pipeline etc."},{"comment_id":"377568","poster":"MFay","content":"B is correct.","upvote_count":"1","timestamp":"1623159960.0","comments":[{"content":"agree B looks correct.\nhttps://cloud.google.com/architecture/continuous-delivery-toolchain-spinnaker-cloud","timestamp":"1623214620.0","poster":"akg001","upvote_count":"1","comment_id":"377987"}]},{"comment_id":"372816","upvote_count":"4","content":"A cloud build spinakker pipeline","poster":"devopsbatch","comments":[{"comment_id":"376430","timestamp":"1623031200.0","upvote_count":"3","content":"Cloud build directly can't trigger spinnaker pipeline. you have to use cloud pub/sub to trigger spinnaker pipeline. ( In the backend it will use cloud build notifiers","poster":"rinkeshgala1"}],"timestamp":"1622646600.0"}],"answer_images":[],"topic":"1","answer":"B","answer_ET":"D","question_id":46,"answer_description":"","exam_id":5,"url":"https://www.examtopics.com/discussions/google/view/54241-exam-professional-cloud-devops-engineer-topic-1-question-14/"},{"id":"JoDPVDp1v8Pybnp60zu2","topic":"1","isMC":true,"question_id":47,"answer_ET":"C","unix_timestamp":1697907840,"choices":{"B":"Grant the logging.admin and monitoring.editor roles to the Compute Engine service accounts.","D":"Grant the logging.logWriter and monitoring.editor roles to the Compute Engine service accounts.","A":"Grant the logging.logWriter and monitoring.metricWriter roles to the Compute Engine service accounts.","C":"Grant the logging.editor and monitoring.metricWriter roles to the Compute Engine service accounts."},"url":"https://www.examtopics.com/discussions/google/view/124241-exam-professional-cloud-devops-engineer-topic-1-question-140/","timestamp":"2023-10-21 19:04:00","answer_images":[],"answers_community":["A (100%)"],"exam_id":5,"question_text":"","answer_description":"","discussion":[{"poster":"xhilmi","upvote_count":"2","content":"Selected Answer: A\nChoose option A\nGrant the logging.logWriter and monitoring.metricWriter roles to the Compute Engine service accounts.\n\nThese roles provide the necessary permissions for writing logs and metrics to Cloud Logging and Cloud Monitoring, respectively, without granting overly broad access. This aligns with the principle of least privilege, ensuring that the Compute Engine service accounts have the specific permissions needed for monitoring tasks without unnecessary additional privileges.\n\nThis approach enables effective visibility for both operations and cyber security teams while maintaining a secure and well-defined access model.","comment_id":"1090020","timestamp":"1701933720.0"},{"content":"Selected Answer: A\nLogs Writer (roles/logging.logWriter): Provides the permissions to write log entries.\n\nMonitoring Metric Writer (roles/monitoring.metricWriter): Provides write-only access to metrics. This provides exactly the permissions needed by the Cloud Monitoring agent and other systems that send metrics.","upvote_count":"1","poster":"lelele2023","comment_id":"1059643","timestamp":"1698838140.0"},{"content":"Selected Answer: A\nRemove admin role from the options and there is no such role as logging.editor, so it is A","comment_id":"1054716","timestamp":"1698334920.0","upvote_count":"4","poster":"Jason_Cloud_at"},{"upvote_count":"3","poster":"activist","content":"Answer A seems to be correct as the two \"writer\" roles are least privilege granted to the service account.","timestamp":"1697907840.0","comment_id":"1049685"}],"answer":"A","question_images":[]},{"id":"BPAr8xUNkOdiUHCHv0xO","exam_id":5,"timestamp":"2023-10-21 19:07:00","isMC":true,"answer_description":"","answer":"D","discussion":[{"comment_id":"1151772","content":"Selected Answer: D\nEngaging with the product development team early in the design phase allows you to provide valuable input based on your operational experience","poster":"Xoxoo","upvote_count":"2","timestamp":"1708064820.0"},{"poster":"xhilmi","comment_id":"1090728","upvote_count":"2","content":"Selected Answer: D\nTo provide operational input on the new data ingestion product in Google Cloud, the recommended approach is (option D)\n\nReview the design of the product with the product development team to provide feedback early in the design phase. By engaging in the design phase, you can contribute valuable insights from an operational perspective, helping to identify potential challenges and considerations related to data volume, cost, and overall operability.\n\nThis early collaboration allows for proactive discussions on scalability, reliability, and cost-effectiveness, leading to a more robust and operationally sound product. Providing input during the design phase ensures that operational concerns are addressed from the outset, reducing the likelihood of issues during the development and deployment phases.","timestamp":"1702003680.0"},{"timestamp":"1701514620.0","comment_id":"1086078","content":"Selected Answer: D\nVote D","upvote_count":"1","poster":"nqthien041292"},{"timestamp":"1698874740.0","poster":"lelele2023","upvote_count":"1","comment_id":"1060073","content":"Selected Answer: D\nD: early collaboration is a good practice"},{"poster":"activist","timestamp":"1697908080.0","content":"Why Answer D? Operations and product development teams collaborate early in the design phase.","comment_id":"1049688","upvote_count":"1"},{"comment_id":"1049687","poster":"activist","upvote_count":"1","timestamp":"1697908020.0","content":"Answer D appears correct."}],"answer_ET":"D","question_images":[],"answer_images":[],"choices":{"B":"When the initial product version passes the quality assurance phase and compliance assessments, deploy the product to a staging environment. Share error logs and performance metrics with the product development team.","D":"Review the design of the product with the product development team to provide feedback early in the design phase.","A":"Deploy the prototype product in a test environment, run a load test, and share the results with the product development team.","C":"When the new product is used by at least one internal customer in production, share error logs and monitoring metrics with the product development team."},"question_id":48,"url":"https://www.examtopics.com/discussions/google/view/124242-exam-professional-cloud-devops-engineer-topic-1-question-141/","topic":"1","question_text":"","answers_community":["D (100%)"],"unix_timestamp":1697908020},{"id":"McB2gT4CN3Sn7URpNs0h","answer_ET":"B","question_images":[],"question_id":49,"url":"https://www.examtopics.com/discussions/google/view/124376-exam-professional-cloud-devops-engineer-topic-1-question-142/","exam_id":5,"discussion":[{"poster":"alpha_canary","content":"Selected Answer: B\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/about-container-images#disadvantages_of_image_tags\nBecause the code change is not known, it may be possible that the image was updated with same tag and now it's not working, so pointing using the tag won't solve the issue as it will always point to the latest digest sha256 (which is faulty). \nSo we must point the deployment to the sha256 digest of the previously working container.","comment_id":"1151901","upvote_count":"1","timestamp":"1708079340.0"},{"timestamp":"1708065000.0","content":"Selected Answer: B\nUsing the SHA256 digest ensures that you specifically deploy the exact version of the container that was previously working as intended, regardless of any changes made to the latest tag.","upvote_count":"1","poster":"Xoxoo","comment_id":"1151774"},{"upvote_count":"1","content":"Selected Answer: B\nTo update your Google Kubernetes Engine (GKE) cluster to run a version of the container that functions as intended, despite the unknown change in the latest container image, the recommended approach is (option B).\n\nAlter the deployment to point to the sha256 digest of the previously working container. Using the sha256 digest provides a precise and immutable reference to a specific version of the container image, ensuring that the exact image that was known to work is deployed. This approach eliminates any ambiguity associated with using tags like \"latest\" and provides a reliable way to rollback to a known-good state.\n\nBy referencing the sha256 digest, you maintain control over the version of the container image deployed in the cluster and can effectively address issues arising from unanticipated changes in the latest tag.","poster":"xhilmi","comment_id":"1090730","timestamp":"1702003920.0"},{"upvote_count":"1","timestamp":"1701514620.0","content":"Selected Answer: B\nVote B","poster":"nqthien041292","comment_id":"1086079"},{"content":"Selected Answer: B\nThis question looks to tease out the knowledge of tag vs digest while deploying containers. The best approach is to figure out the previously functional digest and apply to deployment. Tag is mutable, using a tag like latest in deployment is confusing and prone to cause deployment inconsistency.\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/about-container-images","comment_id":"1060116","timestamp":"1698880800.0","upvote_count":"3","poster":"lelele2023"},{"comment_id":"1056367","upvote_count":"3","poster":"koo_kai","timestamp":"1698515820.0","content":"Selected Answer: B\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/about-container-images"},{"poster":"activist","content":"Answer D seems correct.\nhttps://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps","timestamp":"1698001380.0","comment_id":"1050989","upvote_count":"1"}],"isMC":true,"unix_timestamp":1698001380,"choices":{"A":"Create a new tag called stable that points to the previously working container, and change the deployment to point to the new tag.","B":"Alter the deployment to point to the sha256 digest of the previously working container.","D":"Apply the latest tag to the previous container image, and do a rolling update on the deployment.","C":"Build a new container from a previous Git tag, and do a rolling update on the deployment to the new container."},"question_text":"","answers_community":["B (100%)"],"topic":"1","answer":"B","answer_images":[],"timestamp":"2023-10-22 21:03:00","answer_description":""},{"id":"LqZeN6tdUqAxafif3Kuu","answer_images":[],"question_images":[],"timestamp":"2023-10-21 19:13:00","url":"https://www.examtopics.com/discussions/google/view/124243-exam-professional-cloud-devops-engineer-topic-1-question-143/","answer_ET":"D","discussion":[{"poster":"activist","content":"Answer B seems to be correct for latency and windows-based.\n\"service will be addressed in fewer than 300 ms at least 90% of the time per calendar month. \"","timestamp":"1697908380.0","comment_id":"1049692","upvote_count":"8"},{"content":"Selected Answer: A\nit asks to be fewer than 300ms hence it excludes C and D which are availability metrics. Then it cares about the percentage of requests(90%) but never mentioned windows requirements hence A. Actually mentioning calendar in the question is a trick, it misled you to think about a time range, but both request-metrics and windows-metrics would require a setting of compliance periods, this could be either calendar or rolling-windows\nhttps://cloud.google.com/stackdriver/docs/solutions/slo-monitoring#compliance-period","comment_id":"1060141","upvote_count":"5","poster":"lelele2023","timestamp":"1698884160.0"},{"comment_id":"1151922","poster":"alpha_canary","timestamp":"1708081140.0","content":"Selected Answer: A\nhttps://cloud.google.com/stackdriver/docs/solutions/slo-monitoring#slo-type-request","upvote_count":"1"},{"content":"Selected Answer: A\nThe request-based method of evaluation will calculate the percentage of requests that meet the latency threshold of 300 ms over the entire calendar month.","upvote_count":"1","comment_id":"1151777","poster":"Xoxoo","timestamp":"1708065360.0"},{"content":"Selected Answer: A\nTo create a Cloud Monitoring Service Level Objective (SLO) for a service with the requirement of ensuring that requests are addressed in fewer than 300 ms at least 90% of the time per calendar month, the recommended approach is (option A).\n\nSelect a latency metric for a request-based method of evaluation. Latency metrics, which measure the time it takes for requests to be processed, are appropriate for evaluating the specific performance requirements outlined in the scenario. By selecting a latency metric for a request-based method, such as P95 (percentile 95), you can precisely measure and evaluate the desired performance level—requests being addressed in fewer than 300 ms at least 90% of the time.\n\nThis approach aligns with the specific performance criteria and allows for a granular assessment of the service's responsiveness.","comment_id":"1090733","timestamp":"1702004100.0","poster":"xhilmi","upvote_count":"2"},{"content":"Selected Answer: A\nVote A","comment_id":"1086080","timestamp":"1701514680.0","upvote_count":"1","poster":"nqthien041292"},{"timestamp":"1698787620.0","poster":"YushiSato","content":"Selected Answer: A\nI think A is correct answer.\nWindow-based metrics evaluate the percentage of time the condition is met.\nhttps://cloud.google.com/stackdriver/docs/solutions/slo-monitoring#slo-types","upvote_count":"4","comment_id":"1059217"}],"exam_id":5,"unix_timestamp":1697908380,"answers_community":["A (100%)"],"isMC":true,"question_text":"","question_id":50,"answer":"A","topic":"1","answer_description":"","choices":{"D":"Select an availability metric for a window-based method of evaluation.","B":"Select a latency metric for a window-based method of evaluation.","C":"Select an availability metric for a request-based method of evaluation.","A":"Select a latency metric for a request-based method of evaluation."}}],"exam":{"numberOfQuestions":166,"lastUpdated":"1 May 2024","name":"Professional Cloud DevOps Engineer","provider":"Google","isBeta":false,"isImplemented":true,"isMCOnly":true,"id":5},"currentPage":10},"__N_SSP":true}
+{
+    "pageProps": {
+        "questions": [
+            {
+                "id": "DqOlBS9UM5m8Yprgl5Vc",
+                "choices": {
+                    "C": "Use a custom builder in Cloud Build to trigger Jenkins pipeline.",
+                    "D": "Use Cloud Pub/Sub to trigger a custom deployment service running in Google Kubernetes Engine (GKE).",
+                    "A": "Use Cloud Build to trigger a Spinnaker pipeline.",
+                    "B": "Use Cloud Pub/Sub to trigger a Spinnaker pipeline."
+                },
+                "unix_timestamp": 1622646600,
+                "timestamp": "2021-06-02 17:10:00",
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "question_images": [],
+                "question_text": "Your application images are built and pushed to Google Container Registry (GCR). You want to build an automated pipeline that deploys the application when the image is updated while minimizing the development effort. What should you do?",
+                "isMC": true,
+                "discussion": [
+                    {
+                        "poster": "MF2C",
+                        "comment_id": "440873",
+                        "upvote_count": "21",
+                        "timestamp": "1631013420.0",
+                        "comments": [
+                            {
+                                "upvote_count": "1",
+                                "content": "Agree B is right",
+                                "timestamp": "1667074200.0",
+                                "poster": "AzureDP900",
+                                "comment_id": "707461"
+                            }
+                        ],
+                        "content": "B is correct : https://cloud.google.com/architecture/continuous-delivery-toolchain-spinnaker-cloud#triggering_a_spinnaker_pipeline_when_a_docker_image_is_pushed_to_container_registry"
+                    },
+                    {
+                        "upvote_count": "8",
+                        "timestamp": "1624916040.0",
+                        "comment_id": "393261",
+                        "poster": "Charun",
+                        "content": "B is correct"
+                    },
+                    {
+                        "content": "option B",
+                        "poster": "jomonkp",
+                        "comment_id": "1085740",
+                        "upvote_count": "1",
+                        "timestamp": "1701497400.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nAgree with B option.",
+                        "poster": "JonathanSJ",
+                        "comment_id": "772047",
+                        "timestamp": "1673414040.0"
+                    },
+                    {
+                        "comment_id": "755465",
+                        "timestamp": "1671952680.0",
+                        "upvote_count": "2",
+                        "poster": "floppino",
+                        "content": "Selected Answer: B\nAns: B\n\nExam passed and taken on 19/12/2022, 50/50 from this dump without buying the full access and looking for 'devops' word here: https://www.examtopics.com/discussions/google/1/"
+                    },
+                    {
+                        "comment_id": "677826",
+                        "upvote_count": "2",
+                        "content": "B is correct",
+                        "timestamp": "1664023800.0",
+                        "poster": "Trinabh"
+                    },
+                    {
+                        "comment_id": "635918",
+                        "poster": "GCP72",
+                        "timestamp": "1658649000.0",
+                        "upvote_count": "3",
+                        "content": "Selected Answer: B\nB is correct"
+                    },
+                    {
+                        "timestamp": "1644149160.0",
+                        "poster": "rfd",
+                        "upvote_count": "4",
+                        "comment_id": "541677",
+                        "content": "Selected Answer: B\nmost sensible choice"
+                    },
+                    {
+                        "timestamp": "1638706140.0",
+                        "comment_id": "494309",
+                        "content": "Ans : B",
+                        "upvote_count": "1",
+                        "poster": "alaahakim"
+                    },
+                    {
+                        "upvote_count": "7",
+                        "comment_id": "466824",
+                        "timestamp": "1635051780.0",
+                        "poster": "Luvero",
+                        "content": "Its B\n\nGoogle Cloud Build vs Spinnaker: What are the differences?\n\nWhat is Google Cloud Build? Continuously build, test, and deploy. Cloud Build lets you build software quickly across all languages. Get complete control over defining custom workflows for building, testing, and deploying across multiple environments such as VMs, serverless, Kubernetes, or Firebase.\n\nWhat is Spinnaker? Multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence. Created at Netflix, it has been battle-tested in production by hundreds of teams over millions of deployments. It combines a powerful and flexible pipeline management system with integrations to the major cloud providers.\n\nGoogle Cloud Build and Spinnaker belong to \"Continuous Deployment\" category of the tech stack."
+                    },
+                    {
+                        "upvote_count": "2",
+                        "poster": "gcpengineer",
+                        "timestamp": "1628685780.0",
+                        "comments": [
+                            {
+                                "upvote_count": "2",
+                                "timestamp": "1643484720.0",
+                                "content": "Cloud Build can't deploy inform Spinnaker to initiate a pipeline as and when the GCR is updated with new image. Whereas CloudPub/Sub can do. Answer should B.",
+                                "comment_id": "535681",
+                                "poster": "jagadeeshs"
+                            }
+                        ],
+                        "content": "A is the answer",
+                        "comment_id": "423310"
+                    },
+                    {
+                        "timestamp": "1626505020.0",
+                        "content": "B, the pub/sub can trigger any deployment tool(spinnaker, cloud Run etc), but in platform native approach is to use spinnnaker.\n\nYou can also validate this, because they have only used platform native tools in the question like google container registry(instead of docker hub)",
+                        "comment_id": "408297",
+                        "poster": "Dark_Lord",
+                        "upvote_count": "5",
+                        "comments": [
+                            {
+                                "poster": "desertlotus1211",
+                                "upvote_count": "1",
+                                "comment_id": "1194994",
+                                "timestamp": "1713017040.0",
+                                "content": "Yes, Spinnaker for Google Cloud can be configured to trigger pipelines from Cloud Build when an image is updated in Google Cloud Registry"
+                            },
+                            {
+                                "upvote_count": "1",
+                                "comments": [
+                                    {
+                                        "content": "eyyy,sorry meant B",
+                                        "timestamp": "1630645560.0",
+                                        "poster": "TNT87",
+                                        "upvote_count": "2",
+                                        "comment_id": "438269"
+                                    }
+                                ],
+                                "timestamp": "1630645380.0",
+                                "comment_id": "438268",
+                                "poster": "TNT87",
+                                "content": "no no no"
+                            }
+                        ]
+                    },
+                    {
+                        "poster": "MikeFR",
+                        "upvote_count": "2",
+                        "comment_id": "403275",
+                        "content": "OK for B but there is mistake by saying to bigger instead of to trigger",
+                        "timestamp": "1625913840.0"
+                    },
+                    {
+                        "upvote_count": "2",
+                        "comments": [
+                            {
+                                "comment_id": "1194995",
+                                "upvote_count": "1",
+                                "content": "Yes, Spinnaker for Google Cloud can be configured to trigger pipelines from Cloud Build when an image is updated in Google Cloud Registry",
+                                "timestamp": "1713017100.0",
+                                "poster": "desertlotus1211"
+                            }
+                        ],
+                        "poster": "holahola",
+                        "timestamp": "1624015140.0",
+                        "comment_id": "384767",
+                        "content": "B is correct, because it says that image is built already, then there must be a trigger of some sort for spinnaker. Cloud Build does not trigger Spinnaker itself. Cloud Pub/Sub trigger can be configured in Spinnaker as documented: https://spinnaker.io/guides/user/pipeline/triggers/pubsub/"
+                    },
+                    {
+                        "comments": [
+                            {
+                                "comment_id": "377986",
+                                "content": "instead of using custom deployment service. We should focus on native tools for deployment. so should be -B the right option.",
+                                "upvote_count": "3",
+                                "poster": "akg001",
+                                "timestamp": "1623214560.0"
+                            },
+                            {
+                                "comment_id": "588563",
+                                "upvote_count": "1",
+                                "poster": "imnitin28",
+                                "timestamp": "1650450780.0",
+                                "content": "It says to reduce development effort."
+                            }
+                        ],
+                        "poster": "MFay",
+                        "comment_id": "377574",
+                        "timestamp": "1623160380.0",
+                        "upvote_count": "1",
+                        "content": "Sorry the correct is D. Cloud Pub/Sub can trigger custom deployment service like Spinnaker pipeline etc."
+                    },
+                    {
+                        "comment_id": "377568",
+                        "poster": "MFay",
+                        "content": "B is correct.",
+                        "upvote_count": "1",
+                        "timestamp": "1623159960.0",
+                        "comments": [
+                            {
+                                "content": "agree B looks correct.\nhttps://cloud.google.com/architecture/continuous-delivery-toolchain-spinnaker-cloud",
+                                "timestamp": "1623214620.0",
+                                "poster": "akg001",
+                                "upvote_count": "1",
+                                "comment_id": "377987"
+                            }
+                        ]
+                    },
+                    {
+                        "comment_id": "372816",
+                        "upvote_count": "4",
+                        "content": "A cloud build spinakker pipeline",
+                        "poster": "devopsbatch",
+                        "comments": [
+                            {
+                                "comment_id": "376430",
+                                "timestamp": "1623031200.0",
+                                "upvote_count": "3",
+                                "content": "Cloud build directly can't trigger spinnaker pipeline. you have to use cloud pub/sub to trigger spinnaker pipeline. ( In the backend it will use cloud build notifiers",
+                                "poster": "rinkeshgala1"
+                            }
+                        ],
+                        "timestamp": "1622646600.0"
+                    }
+                ],
+                "answer_images": [],
+                "topic": "1",
+                "answer": "B",
+                "answer_ET": "D",
+                "question_id": 46,
+                "answer_description": "",
+                "exam_id": 5,
+                "url": "https://www.examtopics.com/discussions/google/view/54241-exam-professional-cloud-devops-engineer-topic-1-question-14/"
+            },
+            {
+                "id": "JoDPVDp1v8Pybnp60zu2",
+                "topic": "1",
+                "isMC": true,
+                "question_id": 47,
+                "answer_ET": "C",
+                "unix_timestamp": 1697907840,
+                "choices": {
+                    "B": "Grant the logging.admin and monitoring.editor roles to the Compute Engine service accounts.",
+                    "D": "Grant the logging.logWriter and monitoring.editor roles to the Compute Engine service accounts.",
+                    "A": "Grant the logging.logWriter and monitoring.metricWriter roles to the Compute Engine service accounts.",
+                    "C": "Grant the logging.editor and monitoring.metricWriter roles to the Compute Engine service accounts."
+                },
+                "url": "https://www.examtopics.com/discussions/google/view/124241-exam-professional-cloud-devops-engineer-topic-1-question-140/",
+                "timestamp": "2023-10-21 19:04:00",
+                "answer_images": [],
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "exam_id": 5,
+                "question_text": "",
+                "answer_description": "",
+                "discussion": [
+                    {
+                        "poster": "xhilmi",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: A\nChoose option A\nGrant the logging.logWriter and monitoring.metricWriter roles to the Compute Engine service accounts.\n\nThese roles provide the necessary permissions for writing logs and metrics to Cloud Logging and Cloud Monitoring, respectively, without granting overly broad access. This aligns with the principle of least privilege, ensuring that the Compute Engine service accounts have the specific permissions needed for monitoring tasks without unnecessary additional privileges.\n\nThis approach enables effective visibility for both operations and cyber security teams while maintaining a secure and well-defined access model.",
+                        "comment_id": "1090020",
+                        "timestamp": "1701933720.0"
+                    },
+                    {
+                        "content": "Selected Answer: A\nLogs Writer (roles/logging.logWriter): Provides the permissions to write log entries.\n\nMonitoring Metric Writer (roles/monitoring.metricWriter): Provides write-only access to metrics. This provides exactly the permissions needed by the Cloud Monitoring agent and other systems that send metrics.",
+                        "upvote_count": "1",
+                        "poster": "lelele2023",
+                        "comment_id": "1059643",
+                        "timestamp": "1698838140.0"
+                    },
+                    {
+                        "content": "Selected Answer: A\nRemove admin role from the options and there is no such role as logging.editor, so it is A",
+                        "comment_id": "1054716",
+                        "timestamp": "1698334920.0",
+                        "upvote_count": "4",
+                        "poster": "Jason_Cloud_at"
+                    },
+                    {
+                        "upvote_count": "3",
+                        "poster": "activist",
+                        "content": "Answer A seems to be correct as the two \"writer\" roles are least privilege granted to the service account.",
+                        "timestamp": "1697907840.0",
+                        "comment_id": "1049685"
+                    }
+                ],
+                "answer": "A",
+                "question_images": []
+            },
+            {
+                "id": "BPAr8xUNkOdiUHCHv0xO",
+                "exam_id": 5,
+                "timestamp": "2023-10-21 19:07:00",
+                "isMC": true,
+                "answer_description": "",
+                "answer": "D",
+                "discussion": [
+                    {
+                        "comment_id": "1151772",
+                        "content": "Selected Answer: D\nEngaging with the product development team early in the design phase allows you to provide valuable input based on your operational experience",
+                        "poster": "Xoxoo",
+                        "upvote_count": "2",
+                        "timestamp": "1708064820.0"
+                    },
+                    {
+                        "poster": "xhilmi",
+                        "comment_id": "1090728",
+                        "upvote_count": "2",
+                        "content": "Selected Answer: D\nTo provide operational input on the new data ingestion product in Google Cloud, the recommended approach is (option D)\n\nReview the design of the product with the product development team to provide feedback early in the design phase. By engaging in the design phase, you can contribute valuable insights from an operational perspective, helping to identify potential challenges and considerations related to data volume, cost, and overall operability.\n\nThis early collaboration allows for proactive discussions on scalability, reliability, and cost-effectiveness, leading to a more robust and operationally sound product. Providing input during the design phase ensures that operational concerns are addressed from the outset, reducing the likelihood of issues during the development and deployment phases.",
+                        "timestamp": "1702003680.0"
+                    },
+                    {
+                        "timestamp": "1701514620.0",
+                        "comment_id": "1086078",
+                        "content": "Selected Answer: D\nVote D",
+                        "upvote_count": "1",
+                        "poster": "nqthien041292"
+                    },
+                    {
+                        "timestamp": "1698874740.0",
+                        "poster": "lelele2023",
+                        "upvote_count": "1",
+                        "comment_id": "1060073",
+                        "content": "Selected Answer: D\nD: early collaboration is a good practice"
+                    },
+                    {
+                        "poster": "activist",
+                        "timestamp": "1697908080.0",
+                        "content": "Why Answer D? Operations and product development teams collaborate early in the design phase.",
+                        "comment_id": "1049688",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "comment_id": "1049687",
+                        "poster": "activist",
+                        "upvote_count": "1",
+                        "timestamp": "1697908020.0",
+                        "content": "Answer D appears correct."
+                    }
+                ],
+                "answer_ET": "D",
+                "question_images": [],
+                "answer_images": [],
+                "choices": {
+                    "B": "When the initial product version passes the quality assurance phase and compliance assessments, deploy the product to a staging environment. Share error logs and performance metrics with the product development team.",
+                    "D": "Review the design of the product with the product development team to provide feedback early in the design phase.",
+                    "A": "Deploy the prototype product in a test environment, run a load test, and share the results with the product development team.",
+                    "C": "When the new product is used by at least one internal customer in production, share error logs and monitoring metrics with the product development team."
+                },
+                "question_id": 48,
+                "url": "https://www.examtopics.com/discussions/google/view/124242-exam-professional-cloud-devops-engineer-topic-1-question-141/",
+                "topic": "1",
+                "question_text": "",
+                "answers_community": [
+                    "D (100%)"
+                ],
+                "unix_timestamp": 1697908020
+            },
+            {
+                "id": "McB2gT4CN3Sn7URpNs0h",
+                "answer_ET": "B",
+                "question_images": [],
+                "question_id": 49,
+                "url": "https://www.examtopics.com/discussions/google/view/124376-exam-professional-cloud-devops-engineer-topic-1-question-142/",
+                "exam_id": 5,
+                "discussion": [
+                    {
+                        "poster": "alpha_canary",
+                        "content": "Selected Answer: B\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/about-container-images#disadvantages_of_image_tags\nBecause the code change is not known, it may be possible that the image was updated with same tag and now it's not working, so pointing using the tag won't solve the issue as it will always point to the latest digest sha256 (which is faulty). \nSo we must point the deployment to the sha256 digest of the previously working container.",
+                        "comment_id": "1151901",
+                        "upvote_count": "1",
+                        "timestamp": "1708079340.0"
+                    },
+                    {
+                        "timestamp": "1708065000.0",
+                        "content": "Selected Answer: B\nUsing the SHA256 digest ensures that you specifically deploy the exact version of the container that was previously working as intended, regardless of any changes made to the latest tag.",
+                        "upvote_count": "1",
+                        "poster": "Xoxoo",
+                        "comment_id": "1151774"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "content": "Selected Answer: B\nTo update your Google Kubernetes Engine (GKE) cluster to run a version of the container that functions as intended, despite the unknown change in the latest container image, the recommended approach is (option B).\n\nAlter the deployment to point to the sha256 digest of the previously working container. Using the sha256 digest provides a precise and immutable reference to a specific version of the container image, ensuring that the exact image that was known to work is deployed. This approach eliminates any ambiguity associated with using tags like \"latest\" and provides a reliable way to rollback to a known-good state.\n\nBy referencing the sha256 digest, you maintain control over the version of the container image deployed in the cluster and can effectively address issues arising from unanticipated changes in the latest tag.",
+                        "poster": "xhilmi",
+                        "comment_id": "1090730",
+                        "timestamp": "1702003920.0"
+                    },
+                    {
+                        "upvote_count": "1",
+                        "timestamp": "1701514620.0",
+                        "content": "Selected Answer: B\nVote B",
+                        "poster": "nqthien041292",
+                        "comment_id": "1086079"
+                    },
+                    {
+                        "content": "Selected Answer: B\nThis question looks to tease out the knowledge of tag vs digest while deploying containers. The best approach is to figure out the previously functional digest and apply to deployment. Tag is mutable, using a tag like latest in deployment is confusing and prone to cause deployment inconsistency.\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/about-container-images",
+                        "comment_id": "1060116",
+                        "timestamp": "1698880800.0",
+                        "upvote_count": "3",
+                        "poster": "lelele2023"
+                    },
+                    {
+                        "comment_id": "1056367",
+                        "upvote_count": "3",
+                        "poster": "koo_kai",
+                        "timestamp": "1698515820.0",
+                        "content": "Selected Answer: B\nhttps://cloud.google.com/kubernetes-engine/docs/concepts/about-container-images"
+                    },
+                    {
+                        "poster": "activist",
+                        "content": "Answer D seems correct.\nhttps://cloud.google.com/kubernetes-engine/docs/how-to/updating-apps",
+                        "timestamp": "1698001380.0",
+                        "comment_id": "1050989",
+                        "upvote_count": "1"
+                    }
+                ],
+                "isMC": true,
+                "unix_timestamp": 1698001380,
+                "choices": {
+                    "A": "Create a new tag called stable that points to the previously working container, and change the deployment to point to the new tag.",
+                    "B": "Alter the deployment to point to the sha256 digest of the previously working container.",
+                    "D": "Apply the latest tag to the previous container image, and do a rolling update on the deployment.",
+                    "C": "Build a new container from a previous Git tag, and do a rolling update on the deployment to the new container."
+                },
+                "question_text": "",
+                "answers_community": [
+                    "B (100%)"
+                ],
+                "topic": "1",
+                "answer": "B",
+                "answer_images": [],
+                "timestamp": "2023-10-22 21:03:00",
+                "answer_description": ""
+            },
+            {
+                "id": "LqZeN6tdUqAxafif3Kuu",
+                "answer_images": [],
+                "question_images": [],
+                "timestamp": "2023-10-21 19:13:00",
+                "url": "https://www.examtopics.com/discussions/google/view/124243-exam-professional-cloud-devops-engineer-topic-1-question-143/",
+                "answer_ET": "D",
+                "discussion": [
+                    {
+                        "poster": "activist",
+                        "content": "Answer B seems to be correct for latency and windows-based.\n\"service will be addressed in fewer than 300 ms at least 90% of the time per calendar month. \"",
+                        "timestamp": "1697908380.0",
+                        "comment_id": "1049692",
+                        "upvote_count": "8"
+                    },
+                    {
+                        "content": "Selected Answer: A\nit asks to be fewer than 300ms hence it excludes C and D which are availability metrics. Then it cares about the percentage of requests(90%) but never mentioned windows requirements hence A. Actually mentioning calendar in the question is a trick, it misled you to think about a time range, but both request-metrics and windows-metrics would require a setting of compliance periods, this could be either calendar or rolling-windows\nhttps://cloud.google.com/stackdriver/docs/solutions/slo-monitoring#compliance-period",
+                        "comment_id": "1060141",
+                        "upvote_count": "5",
+                        "poster": "lelele2023",
+                        "timestamp": "1698884160.0"
+                    },
+                    {
+                        "comment_id": "1151922",
+                        "poster": "alpha_canary",
+                        "timestamp": "1708081140.0",
+                        "content": "Selected Answer: A\nhttps://cloud.google.com/stackdriver/docs/solutions/slo-monitoring#slo-type-request",
+                        "upvote_count": "1"
+                    },
+                    {
+                        "content": "Selected Answer: A\nThe request-based method of evaluation will calculate the percentage of requests that meet the latency threshold of 300 ms over the entire calendar month.",
+                        "upvote_count": "1",
+                        "comment_id": "1151777",
+                        "poster": "Xoxoo",
+                        "timestamp": "1708065360.0"
+                    },
+                    {
+                        "content": "Selected Answer: A\nTo create a Cloud Monitoring Service Level Objective (SLO) for a service with the requirement of ensuring that requests are addressed in fewer than 300 ms at least 90% of the time per calendar month, the recommended approach is (option A).\n\nSelect a latency metric for a request-based method of evaluation. Latency metrics, which measure the time it takes for requests to be processed, are appropriate for evaluating the specific performance requirements outlined in the scenario. By selecting a latency metric for a request-based method, such as P95 (percentile 95), you can precisely measure and evaluate the desired performance level—requests being addressed in fewer than 300 ms at least 90% of the time.\n\nThis approach aligns with the specific performance criteria and allows for a granular assessment of the service's responsiveness.",
+                        "comment_id": "1090733",
+                        "timestamp": "1702004100.0",
+                        "poster": "xhilmi",
+                        "upvote_count": "2"
+                    },
+                    {
+                        "content": "Selected Answer: A\nVote A",
+                        "comment_id": "1086080",
+                        "timestamp": "1701514680.0",
+                        "upvote_count": "1",
+                        "poster": "nqthien041292"
+                    },
+                    {
+                        "timestamp": "1698787620.0",
+                        "poster": "YushiSato",
+                        "content": "Selected Answer: A\nI think A is correct answer.\nWindow-based metrics evaluate the percentage of time the condition is met.\nhttps://cloud.google.com/stackdriver/docs/solutions/slo-monitoring#slo-types",
+                        "upvote_count": "4",
+                        "comment_id": "1059217"
+                    }
+                ],
+                "exam_id": 5,
+                "unix_timestamp": 1697908380,
+                "answers_community": [
+                    "A (100%)"
+                ],
+                "isMC": true,
+                "question_text": "",
+                "question_id": 50,
+                "answer": "A",
+                "topic": "1",
+                "answer_description": "",
+                "choices": {
+                    "D": "Select an availability metric for a window-based method of evaluation.",
+                    "B": "Select a latency metric for a window-based method of evaluation.",
+                    "C": "Select an availability metric for a request-based method of evaluation.",
+                    "A": "Select a latency metric for a request-based method of evaluation."
+                }
+            }
+        ],
+        "exam": {
+            "numberOfQuestions": 166,
+            "lastUpdated": "1 May 2024",
+            "name": "Professional Cloud DevOps Engineer",
+            "provider": "Google",
+            "isBeta": false,
+            "isImplemented": true,
+            "isMCOnly": true,
+            "id": 5
+        },
+        "currentPage": 10
+    },
+    "__N_SSP": true
+}

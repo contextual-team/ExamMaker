@@ -2,7 +2,7 @@ const fs = require('fs');
 const readlineSync = require('readline-sync');
 
 // Read questions from JSON file
-const questions = JSON.parse(fs.readFileSync('updated_questions_v2.json', 'utf8'));
+const questions = JSON.parse(fs.readFileSync('questions_backup.json', 'utf8'));
 
 // Function to generate a practice exam
 function generatePracticeExam(questions) {
@@ -19,7 +19,7 @@ function generatePracticeExam(questions) {
 
     // Display questions and get user's answers
     shuffledQuestions.forEach((question, index) => {
-        console.log(`Question ${question.question_id}: ${question.question_text}:`);
+        console.log(`Question ${question.id}: ${question.question_text}:`);
         const sortedChoices = Object.keys(question.choices).sort().reduce((acc, key) => {
             acc[key] = question.choices[key];
             return acc;
@@ -64,7 +64,7 @@ function generatePracticeExam(questions) {
         console.log('None');
     } else {
         wrongAnswers.forEach(wrongAnswer => {
-            console.log(`Question ${wrongAnswer.number}:`);
+            console.log(`Question ${wrongAnswer.id}:`);
             console.log(`Your Answer: ${wrongAnswer.yourAnswer}`);
             console.log(`Correct Answer: ${wrongAnswer.correctAnswer}`);
             console.log(`Discussion: ${wrongAnswer.discussion}`);

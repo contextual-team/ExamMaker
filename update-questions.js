@@ -3,7 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 // Read the JSON file
-const questions = JSON.parse(fs.readFileSync('updated_questions.json', 'utf8'));
+const questions = JSON.parse(fs.readFileSync('updated_questions_v2.json', 'utf8'));
 
 // Function to crawl the URL and get the question text
 function getQuestionTextFromUrl(url) {
