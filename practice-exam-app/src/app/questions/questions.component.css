@@ -1,35 +1,45 @@
-
-.center-container-question {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%; /* Full viewport height */
-  box-sizing: border-box;
-
-}
-.center-container-results {
+/* Styles for larger screens */
+.center-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100%; /* Full viewport height */
+  min-height: 100vh;
+  padding: 20px;
   box-sizing: border-box;
+}
 
+.results-wrapper {
+  width: 100%;
+  max-width: 800px;
 }
 
 .result-card {
-  width: 100%; /* Adjust the width as necessary */
-  max-width: 80%; /* Limit the maximum width */
+  width: 100%;
   margin-bottom: 20px;
 }
 
 mat-card {
   width: 100%;
 }
-:host::ng-deep.mat-mdc-checkbox .mdc-checkbox {
-  margin-top: -0.5em !important;
-}
-:host::ng-deep.mat-mdc-checkbox .mdc-form-field {
-  align-items: start !important;
+
+/* Styles for smaller screens */
+@media (max-width: 600px) {
+  .mat-card-content {
+    font-size: 14px;
+  }
+
+  mat-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .result-card {
+    margin-bottom: 15px;
+  }
+
+  .center-container {
+    padding: 10px;
+  }
 }

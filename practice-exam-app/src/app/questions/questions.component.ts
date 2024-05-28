@@ -63,6 +63,16 @@ export class QuestionComponent {
     });
 
     this.questionService.markQuestionAsUsed(this.currentQuestion);
+    this.results.sort((a, b) => {
+
+      if (a.correct === b.correct) {
+        // If the flag property is the same, then sort by id in ascending order
+        return a.question.id - b.question.id;
+      } else {
+        // Sort by flag (true should come before false)
+      }
+      return a.correct ? 1 : -1;
+    })
     this.currentQuestionIndex++;
     this.loadNextQuestion();
   }
