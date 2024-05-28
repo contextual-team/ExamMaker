@@ -1,0 +1,46 @@
+<div class="center-container-question">
+  <div *ngIf="examFinished==false; else resultsTemplate" class="result-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Question {{currentQuestionIndex + 1}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{currentQuestion.question_text}}</p>
+        <mat-list>
+          <mat-list-item *ngFor="let choice of currentQuestion.choices | keyvalue">
+            <label>
+              <mat-checkbox [(ngModel)]="userAnswers[choice.key]"><span style="white-space:normal;">{{choice.key}}) {{choice.value}}</span></mat-checkbox>
+            </label>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="submitAnswer()">Submit</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<ng-template #resultsTemplate>
+  <h1>Results</h1>
+  <h2>Score:  {{score}}</h2>
+  <div class="center-container-results">
+    <div *ngFor="let result of results" class="result-card">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Question {{result.question.id}}
+          <mat-icon>{{result.correct ? 'check' : 'error'}}</mat-icon>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p><strong>{{result.question.question_text}}</strong></p>
+
+          <p><strong>Your Answers:</strong> {{result.userAnswers.join(', ')}}</p>
+          <p><strong>Correct Answers:</strong> {{result.correctAnswers.join(', ')}}</p>
+          <p><strong>Result:</strong> {{result.correct ? 'Correct' : 'Incorrect'}}</p>
+          <a mat-button href="{{result.question.url}}" target="_blank">URL</a>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</ng-template>

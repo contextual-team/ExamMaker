@@ -1,0 +1,21 @@
+<ng-container *ngIf="!examStarted; else elseTemplate">
+  <div class="center-container">
+    <div class="result-card">
+      <ng-container *ngIf="!questionsInitialized; else examTemplate">
+        <input type="file" (change)="onFileUpload($event)" accept=".json">
+
+      </ng-container>
+      <ng-template #examTemplate>
+        <mat-form-field appearance="fill">
+          <mat-label>Number of Questions</mat-label>
+          <input matInput type="number" [(ngModel)]="numberOfQuestions">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="startExam()">Start Exam</button>
+      </ng-template>
+    </div>
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <router-outlet></router-outlet>
+</ng-template>

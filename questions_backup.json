@@ -249,9 +249,10 @@
     "url": "https://www.examtopics.com/discussions/google/view/122338-exam-professional-cloud-devops-engineer-topic-1-question-113/",
     "question_text": "You are running a web application deployed to a Compute Engine managed instance group. Ops Agent is installed on all instances. You recently noticed suspicious activity from a specific IP address. You need to configure Cloud Monitoring to view the number of requests from that specific IP address with minimal operational overhead. What should you do?",
     "choices": {
-      "B": "Update the application to export the IP address request metrics to the Cloud Monitoring API.",
-      "C": "Configure the Ops Agent with a metrics receiver.",
-      "A": "Configure the Ops Agent with a logging receiver. Create a logs-based metric.\nB Create a script to scrape the web server log. Export the IP address request metrics to the Cloud Monitoring API."
+      "C": "Update the application to export the IP address request metrics to the Cloud Monitoring API.",
+      "D": "Configure the Ops Agent with a metrics receiver.",
+      "A": "Configure the Ops Agent with a logging receiver. Create a logs-based metric.",
+      "B": "Create a script to scrape the web server log. Export the IP address request metrics to the Cloud Monitoring API."
     },
     "id": 17
   },
@@ -330,21 +331,7 @@
     },
     "id": 22
   },
-  {
-    "answer": "C",
-    "answer_ET": "A",
-    
-    
-    "url": "https://www.examtopics.com/discussions/google/view/123008-exam-professional-cloud-devops-engineer-topic-1-question-119/",
-    "question_text": "You are building and running client applications in Cloud Run and Cloud Functions. Your client requires that all logs must be available for one year so that the client can import the logs into their logging service. You must minimize required code changes. What should you do?",
-    "choices": {
-      "D": "Enable Container Analysis in Artifact Registry, and check for common vulnerabilities and exposures (CVEs) in your container images.",
-      "A": "Deploy Falco or Twistlock on GKE to monitor for vulnerabilities on your running Pods.",
-      "C": "Use Binary Authorization to attest images during your CI/CD pipeline.",
-      "B": "Configure Identity and Access Management (IAM) policies to create a least privilege model on your GKE clusters."
-    },
-    "id": 23
-  },
+  
   {
     "answer": "B",
     "answer_ET": "A",

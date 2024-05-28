@@ -1,16 +1,42 @@
 const fs = require('fs');
 const readlineSync = require('readline-sync');
 
+const questionsFile = 'questions_backup.json';
+const usedQuestionsFile = 'used_questions.json';
+
 // Read questions from JSON file
-const questions = JSON.parse(fs.readFileSync('questions_backup.json', 'utf8'));
+const questions = JSON.parse(fs.readFileSync(questionsFile, 'utf8'));
+
+// Read used questions from JSON file, or initialize an empty array if the file doesn't exist
+let usedQuestions = [];
+if (fs.existsSync(usedQuestionsFile)) {
+    usedQuestions = JSON.parse(fs.readFileSync(usedQuestionsFile, 'utf8'));
+} else {
+    fs.writeFileSync(usedQuestionsFile, JSON.stringify([]));
+}
+
+// Function to save used questions to the file
+function saveUsedQuestions(usedQuestions) {
+    fs.writeFileSync(usedQuestionsFile, JSON.stringify(usedQuestions, null, 2));
+}
 
 // Function to generate a practice exam
-function generatePracticeExam(questions) {
+function generatePracticeExam(questions, usedQuestions) {
     console.clear();
 
-    const numQuestions = readlineSync.question('How many questions will the test have?: ')
-    // Shuffle questions to randomize order
-    const shuffledQuestions = questions.sort(() => Math.random() - 0.5).slice(0, numQuestions);
+    const numQuestions = parseInt(readlineSync.question('How many questions will the test have?: '), 10);
+
+    // Filter out used questions
+    const unusedQuestions = questions.filter(q => !usedQuestions.some(uq => uq.question_text === q.question_text));
+
+    let selectedQuestions;
+    if (unusedQuestions.length >= numQuestions) {
+        // If there are enough unused questions, use them
+        selectedQuestions = unusedQuestions.sort(() => Math.random() - 0.5).slice(0, numQuestions);
+    } else {
+        // If not, combine unused and used questions and shuffle
+        selectedQuestions = [...unusedQuestions, ...questions].sort(() => Math.random() - 0.5).slice(0, numQuestions);
+    }
 
     // Initialize variables to track errors and total questions
     let errors = 0;
@@ -18,8 +44,8 @@ function generatePracticeExam(questions) {
     const wrongAnswers = [];
 
     // Display questions and get user's answers
-    shuffledQuestions.forEach((question, index) => {
-        console.log(`Question ${question.id}: ${question.question_text}:`);
+    selectedQuestions.forEach((question, index) => {
+        console.log(`Question ${index + 1}: ${question.question_text}:`);
         const sortedChoices = Object.keys(question.choices).sort().reduce((acc, key) => {
             acc[key] = question.choices[key];
             return acc;
@@ -36,7 +62,7 @@ function generatePracticeExam(questions) {
         if (answer !== question.answer) {
             errors++;
             wrongAnswers.push({
-                number: question.question_id,
+                id: question.id,
                 question: question.question_text,
                 yourAnswer: answer,
                 correctAnswer: question.answer,
@@ -71,7 +97,13 @@ function generatePracticeExam(questions) {
             console.log('---------------------------');
         });
     }
+
+    // Add selected questions to usedQuestions
+    usedQuestions.push(...selectedQuestions);
+
+    // Save used questions
+    saveUsedQuestions(usedQuestions);
 }
 
 // Usage
-generatePracticeExam(questions);
+generatePracticeExam(questions, usedQuestions);
