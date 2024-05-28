@@ -7,10 +7,9 @@
       <mat-card-content>
         <p>{{currentQuestion.question_text}}</p>
         <mat-list>
-          <mat-list-item *ngFor="let choice of currentQuestion.choices | keyvalue">
-            <label>
-              <mat-checkbox [(ngModel)]="userAnswers[choice.key]" style="margin: 0 12px"><span
-                  style="white-space:normal;">{{choice.key}}) {{choice.value}}</span></mat-checkbox>
+          <mat-list-item *ngFor="let choice of currentQuestion.choices | keyvalue" fxLayout="column" fxLayoutGap="10px">
+            <label class="checkbox-wrap">
+              <mat-checkbox [(ngModel)]="userAnswers[choice.key]">{{choice.key}}) {{choice.value}}</mat-checkbox>
             </label>
           </mat-list-item>
         </mat-list>
@@ -25,7 +24,7 @@
 <ng-template #resultsTemplate>
   <h1>Results</h1>
   <h2>Score: {{score}}</h2>
-  <div class="center-container-results">
+  <div class="center-container-results" fxLayout="column" >
     <div *ngFor="let result of results" class="result-card">
       <mat-card>
         <mat-card-header>

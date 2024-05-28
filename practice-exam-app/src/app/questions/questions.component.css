@@ -1,17 +1,32 @@
-/* Styles for larger screens */
-.center-container {
+.results-wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+.center-container-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* Full viewport height */
+  padding: 20px;
+
+  box-sizing: border-box;
+
+}
+
+.center-container-results {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
+  height: 100%;
+  /* Full viewport height */
   padding: 20px;
-  box-sizing: border-box;
-}
 
-.results-wrapper {
-  width: 100%;
-  max-width: 800px;
+  box-sizing: border-box;
+
 }
 
 .result-card {
@@ -20,6 +35,18 @@
 }
 
 mat-card {
+  width: 100%;
+}
+
+.checkbox-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+mat-checkbox {
+  white-space: normal;
+  word-wrap: break-word;
   width: 100%;
 }
 
@@ -33,6 +60,12 @@ mat-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+  }
+
+  mat-checkbox {
+    width: 100%;
+    white-space: normal;
   }
 
   .result-card {
