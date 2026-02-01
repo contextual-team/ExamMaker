@@ -2,11 +2,11 @@ const fs = require('fs');
 const axios = require('axios');
 const cheerio = require('cheerio');
 // Read the JSON files and return a Promise that resolves with the questions array
-const questions = [];
+let questions = [];
 async function readQuestions(questions) {
-    for (let i = 1; i < 35; i++) {
+    for (let i = 1; i < 64; i++) {
         try {
-            const data = await fs.promises.readFile(`questions/exam_${i}.json`, 'utf8');
+            const data = await fs.promises.readFile(`dataengineer-new/exam_${i}.json`, 'utf8');
             const jsonObject = JSON.parse(data).pageProps.questions;
             jsonObject.forEach(element => {
                 let examQuestion = {
@@ -76,8 +76,8 @@ async function processQuestions() {
     }
 
     // Write updated questions array to a new JSON file
-    fs.writeFileSync('updated_questions_v2.json', JSON.stringify(questions, null, 2));
-    console.log('Updated questions written to updated_questions.json');
+    fs.writeFileSync('dataengineer-processed.json', JSON.stringify(questions, null, 2));
+    console.log('Updated questions written to dataengineer-processed.json');
 }
 
 // Start processing questions
