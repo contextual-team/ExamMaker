@@ -9,35 +9,29 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   title = 'practice-exam-app';
-  numberOfQuestions: number = 10;
+  numberOfQuestions: number = 25;
   examStarted: boolean = false;
-  questionsInitialized = false;
+  selectedExam: string = 'cloud-architect';
+  
+  exams = [
+    { value: 'cloud-architect', viewValue: 'Professional Cloud Architect' },
+    { value: 'CloudData', viewValue: 'Professional Data Engineer' },
+    { value: 'network', viewValue: 'Professional Cloud Network Engineer' },
+    { value: 'questions', viewValue: 'General Questions' }
+  ];
+
   constructor(private questionService: QuestionService, private router: Router) {
 
    }
 
    ngOnInit(): void {
-     if (localStorage.getItem('questions')) {
-       this.questionsInitialized = true
-     }
    }
-
-  onFileUpload(event: any): void {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (e: any) => {
-      const questions = JSON.parse(e.target.result);
-      this.questionService.saveQuestions(questions);
-      alert('Questions uploaded and stored in local storage.');
-    };
-    reader.readAsText(file);
-    this.questionsInitialized = true
-  }
 
   startExam(): void {
     this.examStarted = true;
-    this.questionService.loadQuestionsFromLocalStorage();
-    this.questionService.loadUsedQuestionsFromLocalStorage();
-    this.router.navigate(['/question', { numQuestions: this.numberOfQuestions }]);
+    this.questionService.loadQuestions(this.selectedExam).subscribe(() => {
+        this.questionService.loadUsedQuestionsFromLocalStorage();
+        this.router.navigate(['/question', { numQuestions: this.numberOfQuestions }]);
+    });
   }
 }

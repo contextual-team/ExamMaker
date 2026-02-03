@@ -1,21 +1,33 @@
-<ng-container *ngIf="!examStarted; else elseTemplate">
-  <div class="center-container">
-    <div class="result-card">
-      <ng-container *ngIf="!questionsInitialized; else examTemplate">
-        <input type="file" (change)="onFileUpload($event)" accept=".json">
+<mat-toolbar color="primary">
+  <span>Exam Maker</span>
+</mat-toolbar>
 
-      </ng-container>
-      <ng-template #examTemplate>
+<div class="container" fxLayout="column" fxLayoutAlign="center center" *ngIf="!examStarted">
+  <mat-card class="exam-card">
+    <mat-card-header>
+      <mat-card-title>Select Exam</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="column" fxLayoutGap="20px">
+        <mat-form-field appearance="fill">
+          <mat-label>Exam Type</mat-label>
+          <select matNativeControl [(ngModel)]="selectedExam">
+            <option *ngFor="let exam of exams" [value]="exam.value">
+              {{exam.viewValue}}
+            </option>
+          </select>
+        </mat-form-field>
+
         <mat-form-field appearance="fill">
           <mat-label>Number of Questions</mat-label>
           <input matInput type="number" [(ngModel)]="numberOfQuestions">
         </mat-form-field>
-        <br>
-        <button mat-raised-button color="primary" (click)="startExam()">Start Exam</button>
-      </ng-template>
-    </div>
-  </div>
-</ng-container>
-<ng-template #elseTemplate>
-  <router-outlet></router-outlet>
-</ng-template>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="startExam()">Start Exam</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<router-outlet *ngIf="examStarted"></router-outlet>

@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Question } from './questions/question.model';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +11,17 @@ export class QuestionService {
   private questions: Question[] = [];
   private usedQuestions: Question[] = []
 
-  constructor() {
+  constructor(private http: HttpClient) {
     
+  }
+
+  loadQuestions(examType: string): Observable<void> {
+    return this.http.get<any[]>(`/${examType}.json`).pipe(
+      map(questions => {
+        this.questions = questions;
+        this.saveQuestionsToLocalStorage();
+      })
+    );
   }
 
   saveQuestions(questions: any[]): void {
