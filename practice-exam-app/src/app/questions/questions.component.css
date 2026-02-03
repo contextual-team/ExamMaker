@@ -8,12 +8,10 @@
   flex-direction: column;
   align-content: start;
   justify-content: center;
-  height: 100%;
-  /* Full viewport height */
+  min-height: 100vh;
+  /* Full viewport height allowing scroll */
   padding: 20px;
-
   box-sizing: border-box;
-
 }
 
 .center-container-results {
@@ -21,12 +19,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100%;
-  /* Full viewport height */
+  min-height: 100vh;
+  /* Full viewport height allowing scroll */
   padding: 20px;
-
   box-sizing: border-box;
-
 }
 
 .result-card {
@@ -51,6 +47,30 @@ mat-checkbox {
   width: 100%;
 }
 
+/* Ensure list items adjust height to content */
+mat-list-item {
+  height: auto !important;
+  min-height: 48px; /* Standard touch target size */
+  margin-bottom: 8px;
+}
+
+/* Deep selection to force wrapping on Angular Material internals */
+::ng-deep .mat-checkbox-layout {
+  white-space: normal !important;
+  align-items: flex-start !important; /* Align checkbox to top of text */
+  padding-top: 4px;
+}
+
+::ng-deep .mat-checkbox-inner-container {
+  margin-top: 4px !important; /* Adjust check box position */
+}
+
+::ng-deep .mat-checkbox-label {
+  white-space: normal !important;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
 /* Styles for smaller screens */
 @media (max-width: 600px) {
   .mat-card-content {
@@ -62,6 +82,7 @@ mat-checkbox {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    padding: 4px 0;
   }
 
   mat-checkbox {
@@ -73,7 +94,9 @@ mat-checkbox {
     margin-bottom: 15px;
   }
 
-  .center-container {
+  .center-container-question,
+  .center-container-results {
     padding: 10px;
+    justify-content: flex-start; /* Start from top on mobile */
   }
 }
