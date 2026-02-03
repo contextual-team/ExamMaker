@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { QuestionService } from './questions.service';
 import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,19 @@ export class AppComponent implements OnInit{
   numberOfQuestions: number = 10;
   examStarted: boolean = false;
   questionsInitialized = false;
-  constructor(private questionService: QuestionService, private router: Router) {
+  constructor(
+    private questionService: QuestionService, 
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
 
    }
 
    ngOnInit(): void {
-     if (localStorage.getItem('questions')) {
-       this.questionsInitialized = true
+     if (isPlatformBrowser(this.platformId)) {
+       if (localStorage.getItem('questions')) {
+         this.questionsInitialized = true
+       }
      }
    }
 

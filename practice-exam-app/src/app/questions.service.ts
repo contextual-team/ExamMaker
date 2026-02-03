@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { Question } from './questions/question.model';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class QuestionService {
   private questions: Question[] = [];
   private usedQuestions: Question[] = []
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     
   }
 
@@ -27,25 +28,33 @@ export class QuestionService {
   markQuestionAsUsed(question: any): void {
     const usedQuestions = this.getUsedQuestions();
     usedQuestions.push(question);
-    localStorage.setItem('usedQuestions', JSON.stringify(usedQuestions));
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('usedQuestions', JSON.stringify(usedQuestions));
+    }
   }
 
   loadQuestionsFromLocalStorage(): void {
-    const storedQuestions = localStorage.getItem('questions');
-    if (storedQuestions) {
-      this.questions = JSON.parse(storedQuestions);
+    if (isPlatformBrowser(this.platformId)) {
+      const storedQuestions = localStorage.getItem('questions');
+      if (storedQuestions) {
+        this.questions = JSON.parse(storedQuestions);
+      }
     }
   }
   loadUsedQuestionsFromLocalStorage(): void {
-    const usedQuestions = localStorage.getItem('usedQuestions');
-    if(usedQuestions){
-      this.usedQuestions = JSON.parse(usedQuestions);
+    if (isPlatformBrowser(this.platformId)) {
+      const usedQuestions = localStorage.getItem('usedQuestions');
+      if(usedQuestions){
+        this.usedQuestions = JSON.parse(usedQuestions);
 
+      }
     }
   }
   private saveQuestionsToLocalStorage(): void {
-    localStorage.setItem('questions', JSON.stringify(this.questions));
-    localStorage.setItem('usedQuestions', JSON.stringify(this.usedQuestions));
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('questions', JSON.stringify(this.questions));
+      localStorage.setItem('usedQuestions', JSON.stringify(this.usedQuestions));
+    }
   }
 
 }
